@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
+/* ── Static brand tokens ──────────────────────────── */
+@theme {
+  --color-coral:       #FF6B6B;
+  --color-coral-light: #FF8E9E;
+  --color-pink-soft:   #F9A8D4;
+
+  /* Light mode defaults */
+  --color-app-bg:       #FFFBFB;
+  --color-nav-bg:       #FFFFFF;
+  --color-card:         #FFFFFF;
+  --color-card-surface: #FFF5F6;
+  --color-border:       #EDD5D8;
+  --color-border-hover: #FF8E9E;
+  --color-text:         #1A1A1A;
+  --color-text-muted:   #7A3040;
+  --color-text-subtle:  #A85060;
+  --color-text-faint:   #C88090;
+}
+
+/* ── Light mode component vars ────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --t-hero-bg:            radial-gradient(ellipse 80% 60% at 50% -10%, #FFD0DC 0%, #FFFBFB 65%);
+  --t-hero-title:         linear-gradient(135deg, #FF4060 0%, #FF6B6B 50%, #D03060 100%);
+  --t-card-back-from:     #FFE8EC;
+  --t-card-back-to:       #FFD5DE;
+  --t-card-back-border:   #F0B0C0;
+  --t-conjugation-bg:     #FFF0F2;
+  --t-conjugation-border: #F5C0C8;
+  --t-conjugation-label:  #D04060;
+  --t-result-ok-bg:       #F0FFF4;
+  --t-result-ok-border:   #86EFAC;
+  --t-result-err-bg:      #FFF0F2;
+  --t-result-err-border:  #F5C0C8;
+  --t-input-wrong-bg:     #FFF0F2;
+  --t-input-wrong-border: #F5C0C8;
+  --t-error-box-bg:       #FFF0F2;
+  --t-error-box-border:   #F5C0C8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ── Dark mode ────────────────────────────────────── */
+.dark {
+  --color-app-bg:       #1F1520;
+  --color-nav-bg:       #170F1A;
+  --color-card:         #2A1A2E;
+  --color-card-surface: #341E3A;
+  --color-border:       #4A2845;
+  --color-border-hover: #8B4870;
+  --color-text:         #FDE8F0;
+  --color-text-muted:   #C4889E;
+  --color-text-subtle:  #8B5570;
+  --color-text-faint:   #5C3350;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --t-hero-bg:            radial-gradient(ellipse 80% 60% at 50% -10%, #4A1A3A 0%, #1F1520 65%);
+  --t-hero-title:         linear-gradient(135deg, #FDE8F0 30%, #FF8E9E 70%, #FF6B6B 100%);
+  --t-card-back-from:     #2A1A2E;
+  --t-card-back-to:       #341E3A;
+  --t-card-back-border:   #6B3050;
+  --t-conjugation-bg:     #2A1035;
+  --t-conjugation-border: #5A2860;
+  --t-conjugation-label:  #F9A8D4;
+  --t-result-ok-bg:       #052E16;
+  --t-result-ok-border:   #166534;
+  --t-result-err-bg:      #2A1020;
+  --t-result-err-border:  #6B3040;
+  --t-input-wrong-bg:     #2A1020;
+  --t-input-wrong-border: #6B3040;
+  --t-error-box-bg:       #2A1020;
+  --t-error-box-border:   #6B3040;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-app-bg);
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── Buttons ──────────────────────────────────────── */
+.btn-coral {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E9E);
+  color: white;
+  font-weight: 700;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.btn-coral:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.btn-coral:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: var(--color-card-surface);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-ghost:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+.btn-ghost:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }

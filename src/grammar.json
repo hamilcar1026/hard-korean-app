@@ -1,0 +1,4026 @@
+[
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "이/가",
+    "related": "",
+    "conjugation_rule": "이 after consonant-ending stems; 가 after vowel-ending stems",
+    "meaning": "subject marker (nominative particle)",
+    "examples": [
+      "책이 있어요. (There is a book.)",
+      "의자가 있어요. (There is a chair.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "과/와",
+    "related": "",
+    "conjugation_rule": "과 after consonant-ending stems; 와 after vowel-ending stems",
+    "meaning": "and; with (conjunction / comitative particle)",
+    "examples": [
+      "밥과 국을 먹었어요. (I ate rice and soup.)",
+      "사과와 바나나를 샀어요. (I bought apples and bananas.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "까지",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "from … to …",
+    "examples": [
+      "서울에서 부산까지 기차로 가요. (I go from Seoul to Busan by train.)",
+      "아홉 시까지 기다렸어요. (I waited until 9 o'clock.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "께서",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "subject marker (honorific, for respected persons)",
+    "examples": [
+      "선생님께서 교실에 들어오셨어요. (The teacher entered the classroom.)",
+      "할머니께서 밥을 드세요. (Grandmother is eating.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "은1/는1",
+    "related": "ㄴ1",
+    "conjugation_rule": "은 after consonant-ending stems; 는 after vowel-ending stems",
+    "meaning": "contrast",
+    "examples": [
+      "책은 읽었지만 숙제는 안 했어요. (I read the book but didn't do the homework.)",
+      "언니는 키가 크지만 저는 작아요. (My sister is tall but I am short.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "도",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "also; too; even (additive particle)",
+    "examples": [
+      "저도 한국어를 공부해요. (I also study Korean.)",
+      "이 음식도 맛있어요. (This food is also delicious.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "을1/를",
+    "related": "ㄹ1",
+    "conjugation_rule": "을 after consonant-ending stems; 를 after vowel-ending stems",
+    "meaning": "object marker (accusative particle)",
+    "examples": [
+      "책을 읽어요. (I read a book.)",
+      "사과를 먹어요. (I eat an apple.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "이랑/랑",
+    "related": "",
+    "conjugation_rule": "이랑 after consonant-ending stems; 랑 after vowel-ending stems",
+    "meaning": "and; with (colloquial conjunction / comitative)",
+    "examples": [
+      "국이랑 밥을 같이 먹어요. (I eat soup and rice together.)",
+      "친구랑 같이 영화를 봤어요. (I watched a movie with a friend.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "으로/로",
+    "related": "",
+    "conjugation_rule": "으로 after consonant-ending stems (except ㄹ); 로 after vowel-ending stems or ㄹ-ending stems",
+    "meaning": "to; by; with; as (direction, means, manner, cause)",
+    "examples": [
+      "오른쪽으로 가세요. (Please go to the right.)",
+      "버스로 가요. (I go by bus.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "부터",
+    "related": "에서부터(서부터)",
+    "conjugation_rule": "",
+    "meaning": "from; starting from (starting-point particle)",
+    "examples": [
+      "아홉 시부터 일해요. (I work from 9 o'clock.)",
+      "어제부터 비가 와요. (It has been raining since yesterday.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "에",
+    "related": "다가, 에다가(에다)",
+    "conjugation_rule": "",
+    "meaning": "at; in; to; on (location, destination, time)",
+    "examples": [
+      "학교에 가요. (I go to school.)",
+      "서울에 살아요. (I live in Seoul.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "에게",
+    "related": "에게로, 에게서",
+    "conjugation_rule": "",
+    "meaning": "to; for (indirect object marker — person)",
+    "examples": [
+      "친구에게 편지를 썼어요. (I wrote a letter to a friend.)",
+      "선생님에게 질문했어요. (I asked the teacher a question.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "에서",
+    "related": "서2",
+    "conjugation_rule": "",
+    "meaning": "at; in; from (location of action, origin)",
+    "examples": [
+      "학교에서 공부해요. (I study at school.)",
+      "미국에서 왔어요. (I came from the United States.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "의",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "'s; of (possessive / genitive particle)",
+    "examples": [
+      "이것은 선생님의 책이에요. (This is the teacher's book.)",
+      "나의 꿈은 의사가 되는 거예요. (My dream is to become a doctor.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "하고",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "and; with (colloquial conjunction / comitative)",
+    "examples": [
+      "사과하고 배를 샀어요. (I bought apples and pears.)",
+      "나하고 같이 가요. (Go with me.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "만",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "단독",
+    "examples": [
+      "저만 한국어를 공부해요. (Only I study Korean.)",
+      "물만 마셔요. (I only drink water.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "이다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "designation",
+    "examples": [
+      "저는 학생이에요. (I am a student.)",
+      "이것은 책이에요. (This is a book.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "한테",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "to; for (indirect object — colloquial, person)",
+    "examples": [
+      "친구한테 전화했어요. (I called a friend.)",
+      "선생님한테 물어봤어요. (I asked the teacher.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "particle",
+    "form": "보다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "than (comparison particle)",
+    "examples": [
+      "오늘이 어제보다 더 추워요. (Today is colder than yesterday.)",
+      "언니보다 제가 더 커요. (I am taller than my older sister.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "pre-final ending",
+    "form": "-겠-",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "expresses intention, supposition, or future",
+    "examples": [
+      "내일 일찍 일어나겠어요. (I will wake up early tomorrow.)",
+      "많이 배고프시겠어요. (You must be very hungry.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "pre-final ending",
+    "form": "-었-",
+    "related": "-았-, -였-",
+    "conjugation_rule": "",
+    "meaning": "past tense marker",
+    "examples": [
+      "어제 밥을 먹었어요. (I ate rice yesterday.)",
+      "어제 친구를 만났어요. (I met a friend yesterday.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "pre-final ending",
+    "form": "-으시-/-시-",
+    "related": "",
+    "conjugation_rule": "-으시- after consonant-ending stems; -시- after vowel-ending stems (honorific marker)",
+    "meaning": "subject honorific marker",
+    "examples": [
+      "선생님께서 앉으셨어요. (The teacher sat down.)",
+      "어머니께서 오셨어요. (Mother came.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-고3",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "enumeration / listing",
+    "examples": [
+      "음악을 듣고 책을 읽어요. (I listen to music and read books.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-으니까/-니까",
+    "related": "",
+    "conjugation_rule": "-으니까 after consonant-ending stems; -니까 after vowel-ending stems",
+    "meaning": "because; since (causal — speaker's judgment / recommendation)",
+    "examples": [
+      "배가 고프니까 밥을 먹어요. (Since I'm hungry, I eat.)",
+      "시간이 없으니까 빨리 갑시다. (Since we have no time, let's go quickly.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-으러/-러",
+    "related": "",
+    "conjugation_rule": "-으러 after consonant-ending stems; -러 after vowel-ending stems",
+    "meaning": "in order to (purpose, used with movement verbs)",
+    "examples": [
+      "책을 사러 서점에 가요. (I go to the bookstore to buy books.)",
+      "밥을 먹으러 식당에 갔어요. (I went to the restaurant to eat.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-어서/-아서",
+    "related": "-여서, -어2, -아2, -여1, -라서, -라4",
+    "conjugation_rule": "아서 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여서 after 하다 stems (contracted to 해서); 어서 after all other stems",
+    "meaning": "because; and then (cause/reason or sequential action)",
+    "examples": [
+      "배가 고파서 밥을 먹어요. (I'm hungry so I eat.)",
+      "비가 와서 우산을 가져왔어요. (It rained so I brought an umbrella.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-지만",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "but; although (contrast)",
+    "examples": [
+      "비가 오지만 나가요. (It rains but I go out.)",
+      "가격이 비싸지만 맛있어요. (It's expensive but delicious.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "connective ending",
+    "form": "-으려고1",
+    "related": "-려고1, 으려, 려",
+    "conjugation_rule": "",
+    "meaning": "의도",
+    "examples": [
+      "건강해지려고 운동을 해요. (I exercise in order to get healthy.)",
+      "한국어를 배우려고 학원에 다녀요. (I attend a language school to learn Korean.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-습니까/-ㅂ니까",
+    "related": "",
+    "conjugation_rule": "습니까 after consonant-ending stems; ㅂ니까 after vowel-ending stems",
+    "meaning": "polite formal question ending (합쇼체)",
+    "examples": [
+      "지금 어디에 가십니까? (Where are you going now?)",
+      "밥을 먹습니까? (Are you eating?)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-습니다/-ㅂ니다",
+    "related": "",
+    "conjugation_rule": "습니다 after consonant-ending stems; ㅂ니다 after vowel-ending stems",
+    "meaning": "polite formal declarative ending (합쇼체)",
+    "examples": [
+      "저는 학생입니다. (I am a student.)",
+      "밥을 먹습니다. (I eat rice.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-읍시다/-ㅂ시다",
+    "related": "",
+    "conjugation_rule": "읍시다 after consonant-ending stems; ㅂ시다 after vowel-ending stems",
+    "meaning": "let's (formal proposal / suggestion)",
+    "examples": [
+      "같이 먹읍시다. (Let's eat together.)",
+      "빨리 갑시다. (Let's go quickly.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-으세요",
+    "related": "-세요. -으셔요, -셔요, -으시어요, -시어요",
+    "conjugation_rule": "",
+    "meaning": "please do; are you doing? (honorific request / question)",
+    "examples": [
+      "여기 앉으세요. (Please sit here.)",
+      "이쪽으로 오세요. (Please come this way.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-으십시오/-십시오",
+    "related": "",
+    "conjugation_rule": "-으십시오 after consonant-ending stems; -십시오 after vowel-ending stems",
+    "meaning": "please do (formal honorific command)",
+    "examples": [
+      "자리에 앉으십시오. (Please take a seat.)",
+      "이쪽으로 오십시오. (Please come this way.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-고433)",
+    "related": "-고요",
+    "conjugation_rule": "",
+    "meaning": "덧붙여 서술",
+    "examples": [
+      "저도 학생이에요. 언니도 학생이고요. (I'm a student too. And my sister is also a student.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-을까",
+    "related": "-ㄹ까, 을까요, -ㄹ까요",
+    "conjugation_rule": "",
+    "meaning": "shall we; I wonder if (proposal / conjecture)",
+    "examples": [
+      "우리 같이 밥 먹을까요? (Shall we eat together?)",
+      "지금 갈까요? (Shall we go now?)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "sentence-final ending",
+    "form": "-어2/-아2",
+    "related": "-여2, -야3, -어요, -아요, -여요, -에요",
+    "conjugation_rule": "아2 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여2 after 하다 stems (contracted to 해2); 어2 after all other stems",
+    "meaning": "informal polite statement or question (해요체 base)",
+    "examples": [
+      "오늘 뭐 해? (What are you doing today?)",
+      "밥 먹어? (Are you eating?)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "이 아니다",
+    "related": "가 아니다",
+    "conjugation_rule": "",
+    "meaning": "is not (negation of the copula 이다)",
+    "examples": [
+      "이것은 제 가방이 아니에요. (This is not my bag.)",
+      "저는 의사가 아니에요. (I am not a doctor.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-고 싶다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "want to (expressing desire)",
+    "examples": [
+      "한국에 가고 싶어요. (I want to go to Korea.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-고 있다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "be doing; be in a state of (progressive / continuative)",
+    "examples": [
+      "지금 공부하고 있어요. (I am studying now.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-어야 되다/-아야 되다",
+    "related": "-여야, 되다, <유의> -어야, 하다, -아야 하다, -어야 하다",
+    "conjugation_rule": "아야 되다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여야 되다 after 하다 stems (contracted to 해야 되다); 어야 되다 after all other stems",
+    "meaning": "must; have to (obligation — neutral)",
+    "examples": [
+      "8시까지 와야 돼요. (You have to come by 8 o'clock.)",
+      "이 약을 먹어야 돼요. (You have to take this medicine.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-지 않다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "not (verbal / adjectival negation)",
+    "examples": [
+      "오늘은 학교에 가지 않아요. (I don't go to school today.)",
+      "이 음식은 맛있지 않아요. (This food is not delicious.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-을 수 있다",
+    "related": "-ㄹ 수 있다, <반의> -ㄹ 수 없다, -을 수 없다",
+    "conjugation_rule": "",
+    "meaning": "can; be able to (possibility / ability)",
+    "examples": [
+      "한국어를 할 수 있어요. (I can speak Korean.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-지 못하다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "cannot; be unable to (inability)",
+    "examples": [
+      "오늘은 밥을 먹지 못했어요. (I couldn't eat today.)",
+      "한국어를 잘 하지 못해요. (I can't speak Korean well.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-기 전에",
+    "related": "-기 전",
+    "conjugation_rule": "",
+    "meaning": "before (doing something)",
+    "examples": [
+      "밥을 먹기 전에 손을 씻어요. (I wash my hands before eating.)",
+      "자기 전에 이를 닦아요. (I brush my teeth before sleeping.)"
+    ]
+  },
+  {
+    "level": 1,
+    "category": "expression",
+    "form": "-은 후에",
+    "related": "-은 후, -ㄴ 후, <유의> -은 뒤에, -ㄴ 뒤에, -은 뒤, -ㄴ 뒤",
+    "conjugation_rule": "",
+    "meaning": "after (doing something)",
+    "examples": [
+      "밥을 먹은 후에 산책해요. (I take a walk after eating.)",
+      "학교에 간 후에 공부해요. (I study after going to school.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "께",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "to; for (indirect object marker — honorific)",
+    "examples": [
+      "선생님께 선물을 드렸어요. (I gave a gift to the teacher.)",
+      "할머니께 전화를 드렸어요. (I called my grandmother.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "마다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "every; each (distributive particle)",
+    "examples": [
+      "매일 운동을 해요. (I exercise every day.)",
+      "주마다 한 번씩 청소해요. (I clean once every week.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "밖에",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "only; nothing but (limiting particle, used with negation)",
+    "examples": [
+      "천 원밖에 없어요. (I only have 1,000 won.)",
+      "이것밖에 없어요. (There is only this.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "처럼",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "like; as (similarity / comparison particle)",
+    "examples": [
+      "얼음처럼 차가워요. (It's cold like ice.)",
+      "선생님처럼 잘 가르쳐요. (I teach well like the teacher.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "에서부터(서부터)",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "starting from (location / time starting point)",
+    "examples": [
+      "서울에서부터 걸어왔어요. (I walked all the way from Seoul.)",
+      "아침부터 공부했어요. (I studied from morning.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "에다가",
+    "related": "에다",
+    "conjugation_rule": "",
+    "meaning": "onto; in addition to (additive location particle)",
+    "examples": [
+      "책상에다가 꽃을 놓았어요. (I put flowers on the desk.)",
+      "가방에다가 책을 넣었어요. (I put books in the bag.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "에게로",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "toward (combining direction + person indirect-object marker)",
+    "examples": [
+      "친구에게로 편지를 보냈어요. (I sent a letter toward my friend.)",
+      "선생님에게로 다가갔어요. (I approached toward the teacher.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "에게서",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "from (source — person, formal)",
+    "examples": [
+      "친구에게서 편지를 받았어요. (I received a letter from a friend.)",
+      "선생님에게서 배웠어요. (I learned from the teacher.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "한테서",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "from (source — person, colloquial)",
+    "examples": [
+      "친구한테서 선물을 받았어요. (I received a gift from a friend.)",
+      "동생한테서 전화가 왔어요. (A call came from my younger sibling.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "particle",
+    "form": "이나/나1",
+    "related": "",
+    "conjugation_rule": "이나 after consonant-ending stems; 나 after vowel-ending stems",
+    "meaning": "or; as many/much as (alternative choice or approximation)",
+    "examples": [
+      "국이나 찌개를 먹어요. (I eat soup or stew.)",
+      "커피나 차를 마셔요. (I drink coffee or tea.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-거나",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "or (connecting two alternative actions or states)",
+    "examples": [
+      "집에 가거나 카페에 가요. (I go home or I go to a cafe.)",
+      "먹거나 마셔요. (I eat or drink.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-는데1",
+    "related": "-은데1, -ㄴ데1",
+    "conjugation_rule": "",
+    "meaning": "contrast / opposition",
+    "examples": [
+      "날씨가 좋은데 밖에 안 나가요. (The weather is nice but I'm not going out.)",
+      "배가 고픈데 음식이 없어요. (I'm hungry but there's no food.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-으면/-면",
+    "related": "",
+    "conjugation_rule": "-으면 after consonant-ending stems; -면 after vowel-ending stems",
+    "meaning": "가정",
+    "examples": [
+      "시간이 있으면 와요. (If you have time, come.)",
+      "돈이 많으면 여행을 가겠어요. (If I had a lot of money, I would travel.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-으면서/-면서",
+    "related": "",
+    "conjugation_rule": "-으면서 after consonant-ending stems; -면서 after vowel-ending stems",
+    "meaning": "while; as (simultaneous action)",
+    "examples": [
+      "음악을 들으면서 공부해요. (I study while listening to music.)",
+      "웃으면서 이야기해요. (I talk while smiling.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-게2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "purpose",
+    "examples": [
+      "잘 보이게 크게 써 주세요. (Please write it big so it's easy to see.)",
+      "따뜻하게 입으세요. (Please dress warmly.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "connective ending",
+    "form": "-다가1(1)34)",
+    "related": "-다5, 다가도",
+    "conjugation_rule": "",
+    "meaning": "interruption / transition",
+    "examples": [
+      "TV를 보다가 잠이 들었어요. (I fell asleep while watching TV.)",
+      "밥을 먹다가 전화가 왔어요. (A call came while I was eating.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-기",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "명사형",
+    "examples": [
+      "수영하기가 좋아요. (I like swimming.)",
+      "한국어 공부하기가 어려워요. (Studying Korean is difficult.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-는2",
+    "related": "-은3, -ㄴ3",
+    "conjugation_rule": "",
+    "meaning": "관형사형 (현재)",
+    "examples": [
+      "지금 먹는 음식이 뭐예요? (What food are you eating now?)",
+      "한국어를 가르치는 선생님이에요. (He is a teacher who teaches Korean.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-은2/-ㄴ4",
+    "related": "",
+    "conjugation_rule": "-은 after consonant-ending stems; -ㄴ after vowel-ending stems (adnominal past/descriptive)",
+    "meaning": "관형사형 (과거)",
+    "examples": [
+      "어제 먹은 음식이 맛있었어요. (The food I ate yesterday was delicious.)",
+      "읽은 책을 반납했어요. (I returned the book I read.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-을2/-ㄹ2",
+    "related": "",
+    "conjugation_rule": "-을 after consonant-ending stems; -ㄹ after vowel-ending stems (adnominal future/presumptive)",
+    "meaning": "관형사형",
+    "examples": [
+      "내일 먹을 음식을 준비했어요. (I prepared food to eat tomorrow.)",
+      "갈 곳이 있어요. (I have a place to go.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-은3",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "adnominal modifier for past or completed state",
+    "examples": [
+      "닫힌 문을 열었어요. (I opened the closed door.)",
+      "배운 내용을 복습했어요. (I reviewed what I learned.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "adnominal/nominalizing ending",
+    "form": "-음/-ㅁ",
+    "related": "",
+    "conjugation_rule": "-음 after consonant-ending stems; -ㅁ after vowel-ending stems (nominalizer)",
+    "meaning": "명사형",
+    "examples": [
+      "그의 웃음이 보기 좋았어요. (His smile was nice to see.)",
+      "성공함이 목표예요. (Succeeding is the goal.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-는군",
+    "related": "-군, -는군요, -군요",
+    "conjugation_rule": "",
+    "meaning": "oh! (exclamation of discovery — informal)",
+    "examples": [
+      "날씨가 정말 좋은군! (The weather is really nice!)",
+      "그 사람이 벌써 왔군! (That person already came!)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-을게",
+    "related": "-ㄹ게, 을게요, -ㄹ게요",
+    "conjugation_rule": "",
+    "meaning": "I will (first-person promise or intention)",
+    "examples": [
+      "내가 할게요. (I will do it.)",
+      "제가 도와줄게요. (I will help you.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-지",
+    "related": "-지요(-죠)",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "빨리 와, 기다리고 있잖아. (Come quickly, we're waiting.)",
+      "그냥 말하지 그래요. (Just go ahead and say it.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-는데2",
+    "related": "-ㄴ데2, -은데2, -는데요, -ㄴ데요, -은데요",
+    "conjugation_rule": "",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "오늘 날씨가 정말 좋은데요! (The weather is really nice today!)",
+      "이 음식이 맛있는데요! (This food is really delicious!)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-네",
+    "related": "-네요",
+    "conjugation_rule": "-네 is the plain/informal form; -네요 adds -요 for polite speech",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "꽃이 정말 예쁘네요. (The flowers are really pretty.)",
+      "오늘 날씨가 춥네요. (The weather is cold today.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "sentence-final ending",
+    "form": "-을래",
+    "related": "-을래요, -ㄹ래요",
+    "conjugation_rule": "-을래 is the plain/informal form; -을래요 adds -요 for polite speech",
+    "meaning": "will you?; I want to (informal question or intention)",
+    "examples": [
+      "같이 갈래요? (Would you like to go together?)",
+      "뭐 먹을래요? (What do you want to eat?)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-게 되다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "come to; end up; result in (unplanned change)",
+    "examples": [
+      "한국어를 배우게 됐어요. (I came to learn Korean.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-기 때문에",
+    "related": "-기 때문이다",
+    "conjugation_rule": "",
+    "meaning": "because; due to (reason / cause)",
+    "examples": [
+      "피곤하기 때문에 쉬어요. (I rest because I'm tired.)",
+      "바쁘기 때문에 못 가요. (I can't go because I'm busy.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-기로 하다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "decide to; agree to (decision / plan)",
+    "examples": [
+      "내일부터 운동하기로 했어요. (I decided to exercise starting tomorrow.)",
+      "같이 여행 가기로 했어요. (We decided to go on a trip together.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-는 것 같다",
+    "related": "-ㄴ 것 같다, -은 것, 같다, -ㄹ 것 같다, -을 것 같다",
+    "conjugation_rule": "",
+    "meaning": "seems like; looks like (conjecture)",
+    "examples": [
+      "비가 올 것 같아요. (It seems like it will rain.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-은 지2",
+    "related": "-ㄴ 지2",
+    "conjugation_rule": "",
+    "meaning": "since; it has been (time elapsed since action)",
+    "examples": [
+      "한국에 온 지 3년이 됐어요. (It has been 3 years since I came to Korea.)",
+      "밥을 먹은 지 두 시간이 지났어요. (Two hours have passed since I ate.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-는 것",
+    "related": "-은 것, -ㄴ 것, -을, 것2, -ㄹ 것2",
+    "conjugation_rule": "",
+    "meaning": "the act of doing; the fact that (nominalization)",
+    "examples": [
+      "운동하는 것이 건강에 좋아요. (Exercising is good for health.)",
+      "한국어를 공부하는 것이 재미있어요. (Studying Korean is fun.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-는 동안에",
+    "related": "-는 동안",
+    "conjugation_rule": "",
+    "meaning": "while; during (concurrent duration)",
+    "examples": [
+      "수업하는 동안에 조용히 하세요. (Please be quiet while class is in session.)",
+      "밥 먹는 동안에 TV를 봐요. (I watch TV while eating.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-은 적이 있다",
+    "related": "-ㄴ 적이 있다, -는, 적이 있다 <반의>, -은 적이 없다, -ㄴ, 적이 없다, -는 적이, 없다",
+    "conjugation_rule": "",
+    "meaning": "have (ever) done (experience)",
+    "examples": [
+      "제주도에 가 본 적이 있어요. (I have been to Jeju Island.)",
+      "한국 음식을 먹어 본 적이 있어요. (I have tried Korean food.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-을 것1",
+    "related": "-ㄹ 것1",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "지시에 따를 것! (Follow the instructions!)",
+      "안전벨트를 착용할 것. (Wear a seatbelt.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-을 때",
+    "related": "-ㄹ 때",
+    "conjugation_rule": "",
+    "meaning": "when; at the time of",
+    "examples": [
+      "어릴 때 공부를 열심히 했어요. (I studied hard when I was young.)",
+      "피곤할 때 쉬어야 해요. (You should rest when you're tired.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-을까 보다",
+    "related": "-ㄹ까 보다",
+    "conjugation_rule": "",
+    "meaning": "(was) going to but; contemplating (near-intention)",
+    "examples": [
+      "비가 올까 봐 우산을 가져왔어요. (I brought an umbrella in case it rains.)",
+      "늦을까 봐 일찍 출발했어요. (I left early in case I would be late.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-어 보다/-아 보다",
+    "related": "-여 보다",
+    "conjugation_rule": "아보다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여보다 after 하다 stems (contracted to 해보다); 어보다 after all other stems",
+    "meaning": "try doing (attempt)",
+    "examples": [
+      "한번 먹어 봐요. (Try eating it once.)",
+      "한번 입어 봐요. (Try wearing it once.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-어 있다/-아 있다",
+    "related": "-여 있다",
+    "conjugation_rule": "아있다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여있다 after 하다 stems (contracted to 해있다); 어있다 after all other stems",
+    "meaning": "be in the state of (resultant state)",
+    "examples": [
+      "문이 열려 있어요. (The door is open.)",
+      "꽃이 피어 있어요. (The flowers are in bloom.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-어 주다/-아 주다",
+    "related": "-여 주다",
+    "conjugation_rule": "아주다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여주다 after 하다 stems (contracted to 해주다); 어주다 after all other stems",
+    "meaning": "do for (someone) (benefactive)",
+    "examples": [
+      "문을 열어 줬어요. (I opened the door for someone.)",
+      "가방을 들어 줬어요. (I carried the bag for someone.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-어도 되다/-아도 되다",
+    "related": "-여도, 되다",
+    "conjugation_rule": "아도 되다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여도 되다 after 하다 stems (contracted to 해도 되다); 어도 되다 after all other stems",
+    "meaning": "may; it is okay to (permission)",
+    "examples": [
+      "여기 앉아도 돼요. (You may sit here.)",
+      "이거 먹어도 돼요. (You may eat this.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-지 말다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "don't do (negative command / request)",
+    "examples": [
+      "여기서 담배를 피우지 마세요. (Please don't smoke here.)",
+      "큰 소리로 말하지 마세요. (Please don't speak loudly.)"
+    ]
+  },
+  {
+    "level": 2,
+    "category": "expression",
+    "form": "-을 수밖에 없다",
+    "related": "-ㄹ 수밖에 없다",
+    "conjugation_rule": "",
+    "meaning": "have no choice but to (inevitability)",
+    "examples": [
+      "그 영화를 볼 수밖에 없었어요. (I had no choice but to watch that movie.)",
+      "기다릴 수밖에 없어요. (I have no choice but to wait.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "같이",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "like; as; together (similarity / comitative)",
+    "examples": [
+      "선생님같이 말해요. (I speak like the teacher.)",
+      "친구같이 편하게 이야기해요. (I talk comfortably like a friend.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "이고/고1",
+    "related": "",
+    "conjugation_rule": "이고 after consonant-ending nouns; 고 after vowel-ending nouns",
+    "meaning": "inclusive ('all' or 'every')",
+    "examples": [
+      "학생이고 선생님이고 모두 왔어요. (Both students and teachers came.)",
+      "일이고 공부고 다 잘해요. (He does well in both work and study.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "대로",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as; according to; right after (conformity / immediacy)",
+    "examples": [
+      "말한 대로 해요. (Do it as I said.)",
+      "약속한 대로 왔어요. (I came as I promised.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "으로부터",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "from (source / origin — formal)",
+    "examples": [
+      "부모님으로부터 용돈을 받았어요. (I received allowance from my parents.)",
+      "회사로부터 연락이 왔어요. (A message came from the company.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "만큼",
+    "related": "<유의> 만치",
+    "conjugation_rule": "",
+    "meaning": "as much as; to the extent of (degree / proportion)",
+    "examples": [
+      "생각만큼 어렵지 않아요. (It's not as difficult as I thought.)",
+      "키가 저만큼 커요. (He is as tall as me.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "보고",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "to (telling or complaining target — colloquial)",
+    "examples": [
+      "엄마보고 왜 그랬냐고 했어요. (I asked my mom why she did that.)",
+      "친구보고 빨리 오라고 했어요. (I told my friend to come quickly.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "뿐",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "only; just (exclusive limiting particle)",
+    "examples": [
+      "저뿐만 아니라 친구도 왔어요. (Not only I but my friend also came.)",
+      "이것뿐이에요. (This is all there is.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "아1/야1",
+    "related": "",
+    "conjugation_rule": "아 after consonant-ending names; 야 after vowel-ending names (vocative)",
+    "meaning": "vocative / address",
+    "examples": [
+      "철수야, 밥 먹어! (Cheolsu, eat!)",
+      "민수야, 여기 와! (Minsu, come here!)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "요1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "honorific",
+    "examples": [
+      "저도요. (Me too.)",
+      "맞아요. 그리고요? (That's right. And?)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "particle",
+    "form": "이라고1",
+    "related": "라고1, 라3, 이라",
+    "conjugation_rule": "",
+    "meaning": "direct quotation",
+    "examples": [
+      "집이라고 해요. (They call it 'house'.)",
+      "선생님이라고 불러요. (Please call me teacher.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "pre-final ending",
+    "form": "-었었-",
+    "related": "-았었-, -였었-",
+    "conjugation_rule": "",
+    "meaning": "past perfect; distant past (action completed before reference time)",
+    "examples": [
+      "그때는 학생이었었어요. (I had been a student back then.)",
+      "예전에 거기 살았었어요. (I used to live there before.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-거든1",
+    "related": "거들랑",
+    "conjugation_rule": "",
+    "meaning": "condition",
+    "examples": [
+      "비가 오거든 전화해요. (Call me if it rains.)",
+      "시간이 있거든 와요. (Come if you have time.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-는다거나1",
+    "related": "-ㄴ다거나1, -다거나1, -라거나1",
+    "conjugation_rule": "",
+    "meaning": "enumeration / listing",
+    "examples": [
+      "먹는다거나 마신다거나 해요. (I eat or drink, things like that.)",
+      "공부한다거나 운동한다거나 해요. (I study or exercise, things like that.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-는다고1",
+    "related": "-다고1, -라고3, -으라고1, -자고1",
+    "conjugation_rule": "",
+    "meaning": "reason / cause",
+    "examples": [
+      "바쁘다고 못 간대요. (They say they can't go because they're busy.)",
+      "맛있다고 많이 먹었어요. (I ate a lot saying it was delicious.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-으나/-나4",
+    "related": "",
+    "conjugation_rule": "-으나 after consonant-ending stems; -나 after vowel-ending stems",
+    "meaning": "contrast / opposition",
+    "examples": [
+      "날씨가 좋으나 춥네요. (The weather is nice but cold.)",
+      "열심히 하나 결과가 없어요. (I work hard but there are no results.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-느라고",
+    "related": "-느라",
+    "conjugation_rule": "",
+    "meaning": "because of; while (cause = negative consequence from effort)",
+    "examples": [
+      "공부하느라고 잠을 못 잤어요. (I couldn't sleep because I was studying.)",
+      "숙제를 하느라고 늦었어요. (I was late because I was doing homework.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-도록",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "so that; until; enough to (goal / degree / limit)",
+    "examples": [
+      "알아듣도록 천천히 말해요. (I speak slowly so that they can understand.)",
+      "빨리 오도록 전화했어요. (I called so that they would come quickly.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-어다가/-아다가",
+    "related": "-여다가, -어다, -아다, -여다",
+    "conjugation_rule": "아다가 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여다가 after 하다 stems (contracted to 해다가); 어다가 after all other stems",
+    "meaning": "brings and does; fetches and then does (transfer + action)",
+    "examples": [
+      "마트에서 사다가 냉장고에 넣었어요. (I bought it from the market and put it in the fridge.)",
+      "도서관에서 빌려다가 읽었어요. (I borrowed it from the library and read it.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-어도/-아도",
+    "related": "-여도, -라도2, 이라도",
+    "conjugation_rule": "아도 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여도 after 하다 stems (contracted to 해도); 어도 after all other stems",
+    "meaning": "even if; even though (concession)",
+    "examples": [
+      "비가 와도 가요. (Even if it rains, I go.)",
+      "돈이 없어도 행복해요. (Even without money, I am happy.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-어야/-아야",
+    "related": "-여야, -어야만, -아야만, -여야만",
+    "conjugation_rule": "아야 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여야 after 하다 stems (contracted to 해야); 어야 after all other stems",
+    "meaning": "only if; must (strong necessary condition)",
+    "examples": [
+      "열심히 공부해야 해요. (You have to study hard.)",
+      "밥을 먹어야 힘이 나요. (You have to eat to have energy.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-어야지1/-아야지1",
+    "related": "-여야지1",
+    "conjugation_rule": "아야지1 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여야지1 after 하다 stems (contracted to 해야지1); 어야지1 after all other stems",
+    "meaning": "necessary condition",
+    "examples": [
+      "일찍 자야지. (I should sleep early.)",
+      "빨리 가야지. (I should go quickly.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-었더니",
+    "related": "-았더니, -였더니",
+    "conjugation_rule": "",
+    "meaning": "and then found; because in the past (past retrospective)",
+    "examples": [
+      "약을 먹었더니 나았어요. (I took medicine and got better.)",
+      "음식을 먹었더니 배가 불러요. (I ate food and now I'm full.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-자마자",
+    "related": "-자2",
+    "conjugation_rule": "",
+    "meaning": "as soon as (immediacy)",
+    "examples": [
+      "집에 도착하자마자 전화했어요. (I called as soon as I arrived home.)",
+      "밥을 먹자마자 나갔어요. (I went out as soon as I finished eating.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-다가1(2)",
+    "related": "-다5, 다가도",
+    "conjugation_rule": "",
+    "meaning": "interruption / transition",
+    "examples": [
+      "가다가 친구를 만났어요. (I met a friend while going somewhere.)",
+      "공부하다가 쉬었어요. (I rested while studying.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-으니2",
+    "related": "-니4",
+    "conjugation_rule": "",
+    "meaning": "reason / cause",
+    "examples": [
+      "날씨가 좋으니 산책하러 가요. (The weather is nice so let's go for a walk.)",
+      "피곤하니 쉬세요. (You're tired so please rest.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "connective ending",
+    "form": "-으려면/-려면",
+    "related": "",
+    "conjugation_rule": "-으려면 after consonant-ending stems; -려면 after vowel-ending stems",
+    "meaning": "if one intends to; in order to (conditional intention)",
+    "examples": [
+      "한국어를 잘 하려면 매일 연습해야 해요. (If you want to speak Korean well, you have to practice every day.)",
+      "건강해지려면 운동을 해야 해요. (If you want to be healthy, you have to exercise.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "adnominal/nominalizing ending",
+    "form": "-던-",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "관형사형",
+    "examples": [
+      "예전에 살던 집이 그리워요. (I miss the house I used to live in.)",
+      "자주 가던 카페가 문을 닫았어요. (The cafe I used to frequent has closed.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-거든2",
+    "related": "거든요",
+    "conjugation_rule": "",
+    "meaning": "reason / cause",
+    "examples": [
+      "제가 바쁘거든요. 나중에 할게요. (I'm busy, you see. I'll do it later.)",
+      "그 사람이 착하거든요. 그래서 좋아해요. (He's kind, you know. That's why I like him.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-는구나",
+    "related": "-구나",
+    "conjugation_rule": "",
+    "meaning": "oh! (exclamation of fresh discovery — informal)",
+    "examples": [
+      "드디어 봄이 오는구나! (Spring is finally coming!)",
+      "그 친구가 열심히 공부하는구나! (That friend really studies hard!)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-는다",
+    "related": "-ㄴ다, -다2",
+    "conjugation_rule": "",
+    "meaning": "plain style declarative (neutral / literary declarative)",
+    "examples": [
+      "매일 운동을 한다. (I exercise every day.)",
+      "학생들이 열심히 공부한다. (Students study hard.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-던데2",
+    "related": "-던데요",
+    "conjugation_rule": "",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "그 책이 재미있던데요! (That book was really interesting!)",
+      "생각보다 맛있던데요! (It was more delicious than I thought!)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-잖아",
+    "related": "-잖아요",
+    "conjugation_rule": "-잖아 is the plain/informal form; -잖아요 adds -요 for polite speech",
+    "meaning": "you know; isn't it (seeking agreement — informal)",
+    "examples": [
+      "우리 약속이 있잖아요. (We have an appointment, you know.)",
+      "그 사람 착하잖아요. (That person is kind, isn't he?)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-자3",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "suggestion / let's",
+    "examples": [
+      "우리 같이 먹자. (Let's eat together.)",
+      "빨리 가자. (Let's go quickly.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "sentence-final ending",
+    "form": "-니2",
+    "related": "-으니5",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "벌써 다 먹었니? (Did you already eat everything?)",
+      "숙제 다 했니? (Did you finish your homework?)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-게 하다",
+    "related": "<유의> -게 만들다, -도록 하다",
+    "conjugation_rule": "",
+    "meaning": "make; let; have (someone do something) (causative)",
+    "examples": [
+      "아이를 웃게 했어요. (I made the child smile.)",
+      "학생들이 열심히 공부하게 해요. (I make the students study hard.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-고 나다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "after doing (completion, then moves to next action)",
+    "examples": [
+      "밥을 먹고 나서 설거지를 해요. (I do the dishes after eating.)",
+      "숙제를 끝내고 나서 놀아요. (I play after finishing homework.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-고 말다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "end up doing; finally (regret or inevitability)",
+    "examples": [
+      "비밀을 말하고 말았어요. (I ended up telling the secret.)",
+      "늦게 일어나고 말았어요. (I ended up waking up late.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-고 싶어 하다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "want to (third-person desire expression)",
+    "examples": [
+      "동생이 아이스크림을 먹고 싶어 해요. (My younger sibling wants to eat ice cream.)",
+      "친구가 한국에 가고 싶어 해요. (My friend wants to go to Korea.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-은 결과",
+    "related": "-ㄴ 결과",
+    "conjugation_rule": "",
+    "meaning": "as a result of (result / outcome)",
+    "examples": [
+      "열심히 공부한 결과 시험에 합격했어요. (As a result of studying hard, I passed the exam.)",
+      "꾸준히 노력한 결과 성공했어요. (As a result of steady effort, I succeeded.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-은 다음에",
+    "related": "-ㄴ 다음에",
+    "conjugation_rule": "",
+    "meaning": "after (doing something)",
+    "examples": [
+      "밥을 먹은 다음에 산책해요. (I take a walk after eating.)",
+      "숙제를 한 다음에 놀아요. (I play after doing homework.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 대신에",
+    "related": "-ㄴ 대신에, -은, 대신에",
+    "conjugation_rule": "",
+    "meaning": "instead of; in exchange for",
+    "examples": [
+      "밥을 먹는 대신에 과일을 먹었어요. (Instead of eating rice, I ate fruit.)",
+      "공부하는 대신에 운동을 했어요. (Instead of studying, I exercised.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 만큼",
+    "related": "-ㄴ 만큼, -은 만큼, -ㄹ 만큼, -을 만큼",
+    "conjugation_rule": "",
+    "meaning": "as much as; proportionally; because (degree / reason)",
+    "examples": [
+      "열심히 하는 만큼 결과가 좋아요. (The results are good as much as you work hard.)",
+      "노력하는 만큼 실력이 늘어요. (Your skills improve as much as you practice.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 반면",
+    "related": "-ㄴ 반면에, -은, 반면에",
+    "conjugation_rule": "",
+    "meaning": "on the other hand; whereas (contrast)",
+    "examples": [
+      "오빠는 외향적인 반면 저는 내성적이에요. (My brother is extroverted whereas I am introverted.)",
+      "영어는 쉬운 반면 한국어는 어려워요. (English is easy whereas Korean is difficult.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-나 보다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "seems that; I guess (conjecture from evidence)",
+    "examples": [
+      "오늘 피곤한가 봐요. (You seem tired today.)",
+      "밖에 비가 오나 봐요. (It seems like it's raining outside.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-을 텐데",
+    "related": "-ㄹ 텐데, -을, 텐데요, -ㄹ 텐데요",
+    "conjugation_rule": "",
+    "meaning": "I expect it would be; I think so but (supposition with concern)",
+    "examples": [
+      "지금쯤 도착했을 텐데 왜 연락이 없죠? (They should have arrived by now, but why no contact?)",
+      "배가 고플 텐데 뭐 먹을래요? (You must be hungry; would you like something to eat?)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-기 위해",
+    "related": "-기 위해서, -기 위한, 을 위해, 를 위해",
+    "conjugation_rule": "하여 form contracts to 해 in colloquial speech",
+    "meaning": "in order to; for the purpose of",
+    "examples": [
+      "건강을 위해 운동해요. (I exercise for my health.)",
+      "시험에 합격하기 위해 공부해요. (I study in order to pass the exam.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "만 아니면",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "if it weren't for; as long as it's not",
+    "examples": [
+      "너만 아니면 다 괜찮아. (Everything is fine as long as it's not you.)",
+      "비만 아니면 가겠어요. (I would go if it weren't for the rain.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-으면 안 되다",
+    "related": "-면 안 되다, <반의>, -으면 되다, -면, 되다",
+    "conjugation_rule": "",
+    "meaning": "must not; should not (prohibition)",
+    "examples": [
+      "여기서 사진 찍으면 안 돼요. (You must not take pictures here.)",
+      "수업 중에 전화하면 안 돼요. (You must not make calls during class.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-으면 좋겠다",
+    "related": "-면 좋겠다",
+    "conjugation_rule": "",
+    "meaning": "I wish; I hope (wish / desire)",
+    "examples": [
+      "내일 비가 오지 않으면 좋겠어요. (I hope it doesn't rain tomorrow.)",
+      "빨리 나으면 좋겠어요. (I hope you recover quickly.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 가다/-아 가다",
+    "related": "-여 가다",
+    "conjugation_rule": "아가다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여가다 after 하다 stems (contracted to 해가다); 어가다 after all other stems",
+    "meaning": "do gradually; go doing (progressive movement away from speaker)",
+    "examples": [
+      "한국어 실력이 점점 늘어 가요. (My Korean skills are gradually improving.)",
+      "날이 밝아 가요. (The day is gradually getting brighter.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 가지고/-아 가지고",
+    "related": "-여, 가지고",
+    "conjugation_rule": "아가지고 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여가지고 after 하다 stems (contracted to 해가지고); 어가지고 after all other stems",
+    "meaning": "by doing; having done (colloquial sequential reason)",
+    "examples": [
+      "늦어서 택시를 타 가지고 왔어요. (I was late so I took a taxi and came.)",
+      "물을 사 가지고 왔어요. (I bought water and brought it.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 놓다/-아 놓다",
+    "related": "-여 놓다",
+    "conjugation_rule": "아놓다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여놓다 after 하다 stems (contracted to 해놓다); 어놓다 after all other stems",
+    "meaning": "do in advance and leave (completed preparatory action)",
+    "examples": [
+      "음식을 만들어 놓았어요. (I made food in advance.)",
+      "메모를 적어 놓았어요. (I wrote down a memo in advance.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 두다/-아 두다",
+    "related": "-여 두다",
+    "conjugation_rule": "아두다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여두다 after 하다 stems (contracted to 해두다); 어두다 after all other stems",
+    "meaning": "keep in a state; do for future use (preparatory state)",
+    "examples": [
+      "나중을 위해 돈을 아껴 두었어요. (I saved money for later.)",
+      "음식을 냉장고에 넣어 두었어요. (I kept the food in the refrigerator.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 드리다/-아 드리다",
+    "related": "-여",
+    "conjugation_rule": "아드리다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여드리다 after 하다 stems (contracted to 해드리다); 어드리다 after all other stems",
+    "meaning": "do for someone (honorific benefactive)",
+    "examples": [
+      "짐을 들어 드릴게요. (I will carry your luggage for you.)",
+      "할머니께 문을 열어 드렸어요. (I opened the door for my grandmother.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어야겠-/-아야겠-",
+    "related": "-여야겠-",
+    "conjugation_rule": "아야겠- when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여야겠- after 하다 stems (contracted to 해야겠-); 어야겠- after all other stems",
+    "meaning": "should; I really must (strong personal resolution)",
+    "examples": [
+      "운동을 더 열심히 해야겠어요. (I really must exercise harder.)",
+      "일찍 자야겠어요. (I really must sleep early.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어지다/-아지다",
+    "related": "-여지다",
+    "conjugation_rule": "아지다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여지다 after 하다 stems (contracted to 해지다); 어지다 after all other stems",
+    "meaning": "become; get (passive change of state)",
+    "examples": [
+      "날씨가 따뜻해졌어요. (The weather has gotten warmer.)",
+      "방이 밝아졌어요. (The room has gotten brighter.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "에 대하여",
+    "related": "에 대해, 에 대해서, 에 대한",
+    "conjugation_rule": "하여 form contracts to 해 in colloquial speech",
+    "meaning": "about; regarding; concerning",
+    "examples": [
+      "환경에 대하여 이야기했어요. (We talked about the environment.)",
+      "그 사건에 대하여 설명해 주세요. (Please explain about that incident.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-을 테니",
+    "related": "-ㄹ 테니, -을, 테니까, -ㄹ 테니까",
+    "conjugation_rule": "",
+    "meaning": "I expect / plan to, so (supposition + consequence)",
+    "examples": [
+      "내가 할 테니 기다려요. (I'll do it, so wait.)",
+      "비가 올 테니 우산을 가져가요. (It will rain, so take an umbrella.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 오다/-아 오다",
+    "related": "-여 오다",
+    "conjugation_rule": "아오다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여오다 after 하다 stems (contracted to 해오다); 어오다 after all other stems",
+    "meaning": "have been doing; come doing (progressive toward speaker)",
+    "examples": [
+      "10년 전부터 이 일을 해 왔어요. (I have been doing this work for 10 years.)",
+      "꾸준히 노력해 왔어요. (I have been making steady efforts.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-기는",
+    "related": "-긴, -기는요, -긴요",
+    "conjugation_rule": "",
+    "meaning": "indeed; though I grant that (concessive acknowledgment)",
+    "examples": [
+      "가기는 가는데 별로 안 좋아요. (I do go, but I don't really like it.)",
+      "먹기는 먹었는데 배가 안 불러요. (I did eat, but I'm not full.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 모양이다",
+    "related": "-ㄴ 모양이다, -은, 모양이다",
+    "conjugation_rule": "",
+    "meaning": "seems like; appears to (inference from observation)",
+    "examples": [
+      "아직 안 온 걸 보니 바쁜 모양이에요. (Since he hasn't come yet, he seems busy.)",
+      "큰 소리가 나는 모양이에요. (It seems like there's a loud sound.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 편이다",
+    "related": "-는 편이다",
+    "conjugation_rule": "",
+    "meaning": "tends to be; rather; on the side of (general tendency)",
+    "examples": [
+      "저는 매운 걸 잘 먹는 편이에요. (I tend to eat spicy food well.)",
+      "저는 조용한 편이에요. (I tend to be quiet.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는가 보다",
+    "related": "-는가 보다",
+    "conjugation_rule": "",
+    "meaning": "seems that (conjecture — slightly surprised)",
+    "examples": [
+      "저 사람이 사장인가 봐요. (That person seems to be the manager.)",
+      "그 학생이 공부를 잘하는가 봐요. (That student seems to be good at studying.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는 중이다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "in the middle of; currently doing (progressive state)",
+    "examples": [
+      "지금 밥을 먹는 중이에요. (I am in the middle of eating.)",
+      "회의를 하는 중이에요. (We are in the middle of a meeting.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-으려다가",
+    "related": "-려다가, -으려다, 려다",
+    "conjugation_rule": "",
+    "meaning": "was about to but (interrupted intention)",
+    "examples": [
+      "나가려다가 비가 와서 못 나갔어요. (I was about to go out but couldn't because it rained.)",
+      "전화하려다가 바빠서 못 했어요. (I was about to call but was too busy.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-어 보이다/-아보이다",
+    "related": "-여, 보이다",
+    "conjugation_rule": "아보이다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여보이다 after 하다 stems (contracted to 해보이다); 어보이다 after all other stems",
+    "meaning": "looks; appears; seems (visual impression)",
+    "examples": [
+      "피곤해 보여요. (You look tired.)",
+      "행복해 보여요. (You look happy.)"
+    ]
+  },
+  {
+    "level": 3,
+    "category": "expression",
+    "form": "-는다고3",
+    "related": "-ㄴ다고3, -다고3, -라고5, -느냐고2, -냐고2, -으냐고2, -자고3, -으라고3, -라고8",
+    "conjugation_rule": "",
+    "meaning": "인용",
+    "examples": [
+      "그가 결혼한다고 했어요. (He said he was getting married.)",
+      "선생님이 숙제를 하라고 했어요. (The teacher said to do the homework.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "커녕",
+    "related": "ㄴ커녕, 는커녕, 은커녕",
+    "conjugation_rule": "",
+    "meaning": "let alone; far from (emphasizes impossibility of even lesser thing)",
+    "examples": [
+      "밥은커녕 물도 못 마셨어요. (I couldn't even drink water, let alone eat rice.)",
+      "친구는커녕 가족도 없어요. (There's no family, let alone friends.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이나마",
+    "related": "나마",
+    "conjugation_rule": "",
+    "meaning": "even though it is only; at least (make do with less)",
+    "examples": [
+      "이것이나마 드세요. (Please at least have this.)",
+      "돈이 없지만 이것이나마 드릴게요. (I have no money, but let me at least give you this.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이며/며",
+    "related": "이니, 니1, 하며, 하고, 이다2",
+    "conjugation_rule": "이며 after consonant-ending nouns; 며 after vowel-ending nouns",
+    "meaning": "enumeration / listing",
+    "examples": [
+      "책이며 공책이며 다 샀어요. (I bought books, notebooks, and everything.)",
+      "사과며 배며 과일을 많이 먹어요. (I eat lots of fruit including apples and pears.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이든",
+    "related": "든1, 이든지, 든지1, 이든가, 든가1",
+    "conjugation_rule": "",
+    "meaning": "선택",
+    "examples": [
+      "뭐가 좋든 다 괜찮아요. (Whatever is good, it's all fine.)",
+      "가든 오든 상관없어요. (Whether you go or come, it doesn't matter.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이란/란1",
+    "related": "",
+    "conjugation_rule": "이란 after consonant-ending nouns; 란 after vowel-ending nouns",
+    "meaning": "definition",
+    "examples": [
+      "사랑이란 상대를 배려하는 것이에요. (Love is caring for the other person.)",
+      "행복이란 무엇일까요? (What is happiness?)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이면/면1",
+    "related": "",
+    "conjugation_rule": "이면 after consonant-ending nouns; 면 after vowel-ending nouns",
+    "meaning": "designation",
+    "examples": [
+      "이것이면 충분해요. (If it's this, it's enough.)",
+      "다음이면 당신 차례예요. (If it's next, it's your turn.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이야/야2",
+    "related": "",
+    "conjugation_rule": "이야 after consonant-ending nouns; 야 after vowel-ending nouns",
+    "meaning": "emphasis",
+    "examples": [
+      "이 일이야말로 제가 하고 싶은 일이에요. (This work is truly what I want to do.)",
+      "지금이야말로 시작할 때예요. (Now is truly the time to start.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "치고",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "for; considering; as (comparison within category, often concessive)",
+    "examples": [
+      "학생치고 공부 안 하는 사람이 있나요? (Is there a student who doesn't study?)",
+      "이 나이치고 젊어 보여요. (For this age, they look young.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "까지2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "마저",
+    "examples": [
+      "친구마저 떠나 버렸어요. (Even my friend left.)",
+      "마지막 희망마저 사라졌어요. (Even the last hope has disappeared.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "이라도/라도1",
+    "related": "",
+    "conjugation_rule": "이라도 after consonant-ending nouns; 라도 after vowel-ending nouns",
+    "meaning": "차선",
+    "examples": [
+      "잠이라도 자야겠어요. (I should at least sleep.)",
+      "물이라도 마셔요. (At least drink some water.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "으로서/로서",
+    "related": "",
+    "conjugation_rule": "으로서 after consonant-ending stems (except ㄹ); 로서 otherwise",
+    "meaning": "as (in one's role or capacity as)",
+    "examples": [
+      "학생으로서 열심히 공부해야 해요. (As a student, I must study hard.)",
+      "선생님으로서 책임이 있어요. (As a teacher, I have responsibility.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "으로써/로써",
+    "related": "",
+    "conjugation_rule": "으로써 after consonant-ending stems (except ㄹ); 로써 otherwise",
+    "meaning": "by means of; with (instrument / means)",
+    "examples": [
+      "연필로써 글씨를 썼어요. (I wrote with a pencil.)",
+      "대화로써 문제를 해결했어요. (I solved the problem through dialogue.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "particle",
+    "form": "마저",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "even; too; as well (final addition, often negative)",
+    "examples": [
+      "친구마저 나를 모른 척했어요. (Even my friend ignored me.)",
+      "돈마저 없어졌어요. (Even the money is gone.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-거니와",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "of course; and also (acknowledgment + addition — literary)",
+    "examples": [
+      "그 사람은 착하거니와 능력도 있어요. (He is kind and also capable.)",
+      "경치가 아름답거니와 공기도 맑아요. (The scenery is beautiful, and the air is also clean.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-고도",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "even after doing; despite having done (contrast after action)",
+    "examples": [
+      "거짓말을 하고도 뻔뻔하게 있어요. (He told a lie and still acts shamelessly.)",
+      "밥을 먹고도 배가 고파요. (Even after eating, I'm still hungry.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-고자",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "in order to; wanting to (formal intention / purpose)",
+    "examples": [
+      "환경을 보호하고자 노력해요. (I make efforts to protect the environment.)",
+      "더 나은 삶을 살고자 일을 해요. (I work in order to live a better life.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-기에",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because; since; to (reason prompting speaker's reaction)",
+    "examples": [
+      "날씨가 좋기에 산책을 나갔어요. (The weather was nice so I went for a walk.)",
+      "늦었기에 서둘렀어요. (I hurried because I was late.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-는지",
+    "related": "-ㄴ지1, -은지1, -을지",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "어디 사는지 몰라요. (I don't know where they live.)",
+      "뭘 먹는지 궁금해요. (I'm curious about what they're eating.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-다시피",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as you know; just as (shared knowledge reference)",
+    "examples": [
+      "아시다시피 그 문제는 복잡해요. (As you know, that problem is complicated.)",
+      "말씀하셨다시피 노력이 필요해요. (As you said, effort is needed.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-더라도",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "even if (strong concession — regardless of condition)",
+    "examples": [
+      "비가 오더라도 갈 거예요. (Even if it rains, I will go.)",
+      "힘들더라도 포기하지 마세요. (Even if it's difficult, don't give up.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-든지2",
+    "related": "-든2, <유의> -든가2",
+    "conjugation_rule": "",
+    "meaning": "선택",
+    "examples": [
+      "커피든지 차든지 마셔요. (Drink coffee or tea, whichever you like.)",
+      "가든지 오든지 연락해요. (Whether you go or come, contact me.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-으므로/-므로",
+    "related": "",
+    "conjugation_rule": "-으므로 after consonant-ending stems; -므로 after vowel-ending stems",
+    "meaning": "because; since (formal written reason / cause)",
+    "examples": [
+      "열심히 노력하므로 성공할 거예요. (Since I work hard, I will succeed.)",
+      "비가 오므로 외출을 안 했어요. (Since it rained, I didn't go out.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-을래야/-ㄹ래야",
+    "related": "",
+    "conjugation_rule": "을래야 after consonant-ending stems; ㄹ래야 after vowel-ending stems",
+    "meaning": "no matter how much one tries (impossibility despite effort)",
+    "examples": [
+      "울래야 눈물도 안 나요. (I can't even cry no matter how much I try.)",
+      "자려야 잠이 안 와요. (I can't sleep no matter how much I try.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-고서",
+    "related": "-고서는, -고서야",
+    "conjugation_rule": "",
+    "meaning": "only after doing; having done as prerequisite (sequential)",
+    "examples": [
+      "다 끝내고서 쉬었어요. (I rested only after finishing everything.)",
+      "밥을 먹고서 나갔어요. (I went out only after eating.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-는다면1",
+    "related": "-ㄴ다면1, -다면1, -라면1",
+    "conjugation_rule": "",
+    "meaning": "condition",
+    "examples": [
+      "내일 날씨가 좋다면 소풍 갈 거예요. (If the weather is nice tomorrow, I'll go on a picnic.)",
+      "시간이 있다면 같이 가요. (If you have time, let's go together.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-더니",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "and then; but (change from past state or action)",
+    "examples": [
+      "어제는 맑더니 오늘은 비가 와요. (Yesterday it was clear but today it's raining.)",
+      "밥을 잘 먹더니 갑자기 나갔어요. (That person was eating well but suddenly left.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-던데1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "contrast / opposition",
+    "examples": [
+      "비가 오던데 우산 가져왔어요? (It was raining; did you bring an umbrella?)",
+      "음식이 맛있던데 또 오고 싶어요. (The food was delicious; I want to come again.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-듯이",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as if; just as (similarity / analogy)",
+    "examples": [
+      "새처럼 날고 싶어요. (I want to fly like a bird.)",
+      "알듯이 모르는 것도 있어요. (There are things I half-know as well.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-을수록/-ㄹ수록",
+    "related": "",
+    "conjugation_rule": "을수록 after consonant-ending stems; ㄹ수록 after vowel-ending stems",
+    "meaning": "the more ... the more (proportional increase)",
+    "examples": [
+      "공부할수록 모르는 게 많아요. (The more I study, the more I don't know.)",
+      "먹을수록 맛있어요. (The more I eat, the more delicious it is.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "connective ending",
+    "form": "-으며/-며2",
+    "related": "",
+    "conjugation_rule": "-으며 after consonant-ending stems; -며 after vowel-ending stems",
+    "meaning": "enumeration / listing",
+    "examples": [
+      "노래하며 춤을 춰요. (I sing and dance.)",
+      "웃으며 인사했어요. (I greeted while smiling.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-는다니2",
+    "related": "-ㄴ다니2, -다니3, -라니3",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "뭐라는 거니? 밥이라니? (What are you saying? Rice, you say?)",
+      "그게 사실이라니 믿을 수가 없어요. (That it's true, I can't believe it.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-더군",
+    "related": "-더군요",
+    "conjugation_rule": "-더군 is the plain/informal form; -더군요 adds -요 for polite speech",
+    "meaning": "turns out; I saw that (retrospective personal discovery)",
+    "examples": [
+      "그 영화가 재미있더군요! (That movie was really interesting, it turns out!)",
+      "날씨가 좋더군. (The weather was good, I see.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-더라",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "I found that; I recall that (retrospective statement — first person)",
+    "examples": [
+      "어제 거기 갔더라. (I went there yesterday, I recall.)",
+      "그 음식이 생각보다 맛있더라. (That food was more delicious than I thought.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-어라1/-아라1",
+    "related": "-여라1",
+    "conjugation_rule": "아라1 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여라1 after 하다 stems (contracted to 해라1); 어라1 after all other stems",
+    "meaning": "command",
+    "examples": [
+      "빨리 먹어라. (Eat quickly!)",
+      "이리 와라. (Come here!)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-게5",
+    "related": "-게요1",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "그건 내가 모르게? (As if I wouldn't know that?)",
+      "나 없이 갔을 게 뭐야? (Why would they have gone without me?)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-는다면서1",
+    "related": "-ㄴ다면서1, -다면서1, -라면서1, -는다면서요, -다면서요, -라면서요",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "너 결혼한다면서? (I heard you're getting married?)",
+      "오늘 학교 안 간다면서요? (I heard you're not going to school today?)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-나3",
+    "related": "-나요",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "벌써 다 먹었나? (Did you already eat everything?)",
+      "집에 갔나? (Did they go home?)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-을걸",
+    "related": "-ㄹ걸, -을걸요, -ㄹ걸요",
+    "conjugation_rule": "",
+    "meaning": "I think it might be; I should have (conjecture or mild regret)",
+    "examples": [
+      "그 사람이 올걸요. (I think that person will probably come.)",
+      "이게 더 좋을걸. (I think this might be better.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-어야지2/-아야지2",
+    "related": "-여야지2, -어야지요, -아야지요, -여야지요",
+    "conjugation_rule": "아야지2 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여야지2 after 하다 stems (contracted to 해야지2); 어야지2 after all other stems",
+    "meaning": "I really should; I must (self-directed resolution)",
+    "examples": [
+      "이제 더 열심히 해야지. (Now I really should work harder.)",
+      "내일은 일찍 일어나야지. (I really must wake up early tomorrow.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-고4",
+    "related": "-고요",
+    "conjugation_rule": "",
+    "meaning": "follow-up question",
+    "examples": [
+      "무슨 일 있어요? 그리고요? (Is something going on? And what else?)",
+      "저도 갔어요. 친구도 갔고요. (I went too. And my friend went too.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "sentence-final ending",
+    "form": "-다니1",
+    "related": "-다니요, -라니1, -라니요1",
+    "conjugation_rule": "",
+    "meaning": "how could; I can't believe (disbelief exclamation)",
+    "examples": [
+      "그게 사실이라니 믿을 수가 없어요! (I can't believe that's true!)",
+      "그 사람이 그런 말을 하다니 놀랍네요! (I can't believe that person said that!)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-을 따름이다",
+    "related": "-ㄹ 따름이다, <유의> -을 뿐이다, ㄹ 뿐이다",
+    "conjugation_rule": "",
+    "meaning": "merely; nothing but; all one does is (limitation / sole action)",
+    "examples": [
+      "말을 들을 따름이에요. (All I do is follow orders.)",
+      "기다릴 따름이에요. (All I can do is wait.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-고 들다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "insist on doing (persistent/stubborn action)",
+    "examples": [
+      "아이가 자꾸 밖에 나가고 들어요. (The child keeps insisting on going outside.)",
+      "그 사람이 도와주겠다고 고집스럽게 들어요. (That person insists on saying they'll help.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-고 보다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "upon doing; after doing, one finds (retrospective discovery)",
+    "examples": [
+      "직접 해 보고 보니 쉽지 않네요. (After doing it myself, I found it's not easy.)",
+      "먹고 보니 맛있었어요. (After eating it, it turned out to be delicious.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-고 해서",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because; the reason being (colloquial reason)",
+    "examples": [
+      "바쁘고 해서 못 갔어요. (I couldn't go, partly because I was busy.)",
+      "비도 오고 해서 집에 있었어요. (I stayed home partly because it was also raining.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 김에",
+    "related": "-ㄴ 김에, -은 김에",
+    "conjugation_rule": "",
+    "meaning": "while one is at it; on the occasion of (opportunistic action)",
+    "examples": [
+      "마트에 가는 김에 우유도 사왔어요. (While going to the market, I also bought milk.)",
+      "청소하는 김에 빨래도 했어요. (While cleaning, I also did the laundry.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 대로",
+    "related": "-ㄴ 대로1, -ㄴ, 대로2, -은 대로1, -은 대로2",
+    "conjugation_rule": "",
+    "meaning": "as soon as; following; as directed (immediacy / conformity)",
+    "examples": [
+      "오는 대로 바로 연락해요. (Contact me as soon as you arrive.)",
+      "시키는 대로 하면 돼요. (Just do as you're told.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 사이에",
+    "related": "-는 사이",
+    "conjugation_rule": "",
+    "meaning": "during; while; in the interval between (time gap)",
+    "examples": [
+      "제가 자리를 비운 사이에 전화가 왔어요. (A call came while I was away.)",
+      "밥 먹는 사이에 비가 왔어요. (It rained while I was eating.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 듯",
+    "related": "-ㄴ 듯, 은 듯 -ㄹ, 듯, -을 듯",
+    "conjugation_rule": "",
+    "meaning": "as if; as though (appearance / conjecture)",
+    "examples": [
+      "그 사람이 화난 듯 말했어요. (That person spoke as if angry.)",
+      "모르는 듯 행동했어요. (They acted as if they didn't know.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 줄",
+    "related": "-ㄴ 줄, -은 줄, ㄹ, 줄, -을 줄",
+    "conjugation_rule": "",
+    "meaning": "that; whether; how to (knowing or not knowing something)",
+    "examples": [
+      "수영하는 줄 알았어요. (I thought they were swimming.)",
+      "거기 가는 줄 몰랐어요. (I didn't know they were going there.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 탓에",
+    "related": "-ㄴ 탓에, -은 탓에, <반의 관계> -는, 덕분에",
+    "conjugation_rule": "",
+    "meaning": "because of; owing to (negative cause / blame)",
+    "examples": [
+      "늦잠을 잔 탓에 지각했어요. (I was late because I overslept.)",
+      "비가 오는 탓에 소풍을 못 갔어요. (We couldn't go on the picnic because of the rain.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는다거나2",
+    "related": "-ㄴ다거나2, -다거나2, -라거나2",
+    "conjugation_rule": "",
+    "meaning": "선택",
+    "examples": [
+      "사과를 살까 배를 살까 고민해요. (I'm debating whether to buy apples or pears.)",
+      "갈까 말까 고민해요. (I'm debating whether to go or not.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-나 싶다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "I think perhaps; wonder if (tentative conjecture)",
+    "examples": [
+      "그 사람이 올 것인가 싶어요. (I wonder if that person will come.)",
+      "이게 맞는 건가 싶어요. (I wonder if this is correct.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 바람에",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because of; due to (unexpected negative cause)",
+    "examples": [
+      "갑자기 비가 오는 바람에 옷이 다 젖었어요. (My clothes got all wet because it suddenly rained.)",
+      "버스가 갑자기 서는 바람에 넘어졌어요. (I fell because the bus suddenly stopped.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 한",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as long as; so long as (limiting condition)",
+    "examples": [
+      "네가 건강한 한 걱정 없어요. (As long as you are healthy, there's nothing to worry about.)",
+      "열심히 하는 한 실패하지 않아요. (As long as you work hard, you won't fail.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "으로 인하여",
+    "related": "로 인하여, 으로, 인해, 로 인해",
+    "conjugation_rule": "하여 form contracts to 해 in colloquial speech",
+    "meaning": "due to; because of (formal reason / cause)",
+    "examples": [
+      "폭설로 인하여 항공편이 취소됐어요. (The flight was cancelled due to heavy snow.)",
+      "전쟁으로 인하여 많은 사람이 고통받았어요. (Many people suffered due to war.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "만 같아도",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "if only it were like (unfulfilled wish)",
+    "examples": [
+      "젊을 때만 같아도 좋겠어요. (If only I were as young as before.)",
+      "예전만 같아도 더 잘 할 수 있었을 거예요. (If only it were like before, I could have done better.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-어 대다/-아 대다",
+    "related": "-여 대다",
+    "conjugation_rule": "아대다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여대다 after 하다 stems (contracted to 해대다); 어대다 after all other stems",
+    "meaning": "keep doing excessively; do repeatedly (repetitive / excessive action)",
+    "examples": [
+      "아이가 계속 울어 대요. (The child keeps crying.)",
+      "그 사람이 큰 소리로 떠들어 대요. (That person keeps talking loudly.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-어서인지/-아서인지",
+    "related": "-여서인지",
+    "conjugation_rule": "아서인지 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여서인지 after 하다 stems (contracted to 해서인지); 어서인지 after all other stems",
+    "meaning": "perhaps because; might be because of",
+    "examples": [
+      "날씨가 추워서인지 사람이 별로 없어요. (Perhaps because it's cold, there aren't many people.)",
+      "피곤해서인지 집중이 안 돼요. (Perhaps because I'm tired, I can't concentrate.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "에 따라",
+    "related": "에 따르면",
+    "conjugation_rule": "",
+    "meaning": "according to; depending on; in accordance with",
+    "examples": [
+      "상황에 따라 다르게 행동해요. (I act differently depending on the situation.)",
+      "날씨에 따라 옷을 입어요. (I dress according to the weather.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "에 비하여",
+    "related": "에 비하면",
+    "conjugation_rule": "",
+    "meaning": "compared to; in comparison with",
+    "examples": [
+      "작년에 비하여 많이 성장했어요. (Compared to last year, I have grown a lot.)",
+      "기대에 비하여 결과가 좋지 않아요. (Compared to expectations, the results aren't good.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "에 의하여",
+    "related": "에 의하면",
+    "conjugation_rule": "",
+    "meaning": "by; due to (passive agent / formal cause)",
+    "examples": [
+      "그 작품은 유명한 작가에 의하여 쓰였어요. (That work was written by a famous author.)",
+      "회의는 의장에 의하여 진행됐어요. (The meeting was conducted by the chairperson.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-어 버리다/-아 버리다",
+    "related": "-여, 버리다",
+    "conjugation_rule": "아버리다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여버리다 after 하다 stems (contracted to 해버리다); 어버리다 after all other stems",
+    "meaning": "go ahead and do; get it over with (completion — relief or regret)",
+    "examples": [
+      "음식을 다 먹어 버렸어요. (I finished all the food.)",
+      "지갑을 잃어버렸어요. (I lost my wallet.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-을 모양이다",
+    "related": "-ㄹ 모양이다",
+    "conjugation_rule": "",
+    "meaning": "looks like; seems (conjecture from appearance or hearsay)",
+    "examples": [
+      "비가 올 모양이에요. (It looks like it will rain.)",
+      "그 사람이 화난 모양이에요. (It looks like that person is angry.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-을 뻔하다",
+    "related": "-ㄹ 뻔하다",
+    "conjugation_rule": "",
+    "meaning": "almost; narrowly; was on the verge of (near-miss)",
+    "examples": [
+      "넘어질 뻔했어요. (I almost fell.)",
+      "늦을 뻔했어요. (I almost was late.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는대2",
+    "related": "-ㄴ대2, -는대요2, -대2, -대요2, -래2, -래요2, -으래2, -으래요2, -래4, -재, -재요",
+    "conjugation_rule": "",
+    "meaning": "인용",
+    "examples": [
+      "오늘 일찍 온대요. (They say they're coming early today.)",
+      "그 사람이 간대요. (They say that person is leaving.)"
+    ]
+  },
+  {
+    "level": 4,
+    "category": "expression",
+    "form": "-는 통에",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because of the commotion of; due to the chaos of (chaotic cause)",
+    "examples": [
+      "아이들이 뛰는 통에 잠을 못 잤어요. (I couldn't sleep because of the children running around.)",
+      "공사 소음이 나는 통에 집중을 못 했어요. (I couldn't concentrate because of construction noise.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "particle",
+    "form": "이라든가",
+    "related": "라든가1, 이라든지, 라든지1",
+    "conjugation_rule": "",
+    "meaning": "선택",
+    "examples": [
+      "사과라든가 배라든가 과일을 가져오세요. (Bring some fruit, like apples or pears.)",
+      "커피라든가 차라든가 마실 것을 준비해요. (Prepare something to drink, like coffee or tea.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "particle",
+    "form": "따라",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "along; following (direction / accompanying particle — formal)",
+    "examples": [
+      "강을 따라 걸었어요. (I walked along the river.)",
+      "선생님을 따라 읽으세요. (Read along with the teacher.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "particle",
+    "form": "조차",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "even; not even (extreme addition, usually negative)",
+    "examples": [
+      "이름조차 몰라요. (I don't even know the name.)",
+      "인사조차 안 해요. (They don't even say hello.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-지1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "contrast",
+    "examples": [
+      "갔지 오지는 않았어요. (They went but didn't come back.)",
+      "먹지 않고 갔어요. (They left without eating.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-을뿐더러",
+    "related": "-ㄹ뿐더러",
+    "conjugation_rule": "",
+    "meaning": "not only ... but also (additive emphasis)",
+    "examples": [
+      "착할뿐더러 능력도 있어요. (Not only is he kind, but he's also capable.)",
+      "돈이 많을뿐더러 마음도 좋아요. (Not only does he have money, but he's also kind-hearted.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-고는",
+    "related": "-곤, -고는 하다, -곤 하다",
+    "conjugation_rule": "",
+    "meaning": "after doing; and then (sequential with contrast or emphasis)",
+    "examples": [
+      "학교에 갔다가는 빨리 돌아왔어요. (After going to school, I came back quickly.)",
+      "밥을 먹고는 바로 나갔어요. (After eating, I went out right away.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-길래",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because; that's why (colloquial reason from observation)",
+    "examples": [
+      "비가 오길래 우산을 가져왔어요. (I brought an umbrella because it was raining.)",
+      "그 사람이 오길래 인사했어요. (I greeted that person because they came.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-다가는",
+    "related": "-다간, -단1",
+    "conjugation_rule": "",
+    "meaning": "if one keeps doing; if this continues (warning of bad outcome)",
+    "examples": [
+      "그렇게 놀다가는 시험에 떨어져요. (If you keep playing like that, you'll fail the exam.)",
+      "이렇게 먹다가는 살이 찌겠어요. (If you keep eating like this, you'll gain weight.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-을지라도",
+    "related": "-ㄹ지라도",
+    "conjugation_rule": "",
+    "meaning": "even if (strong concession — literary / formal)",
+    "examples": [
+      "어려울지라도 포기하지 않아요. (Even if it's difficult, I won't give up.)",
+      "비가 올지라도 갈 거예요. (Even if it rains, I'll go.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "connective ending",
+    "form": "-느니1",
+    "related": "-느니보다, -느니보다는",
+    "conjugation_rule": "",
+    "meaning": "comparison",
+    "examples": [
+      "집에 있느니 나가는 게 나아요. (Going out is better than staying home.)",
+      "혼자 하느니 같이 하는 게 나아요. (Doing it together is better than doing it alone.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-네2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "오늘 날씨 정말 좋네! (The weather today is really nice!)",
+      "그 사람이 벌써 왔네! (That person is already here!)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-다4",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "서술 (신문)",
+    "examples": [
+      "경찰이 범인을 잡았다. (The police caught the criminal.)",
+      "대통령이 순방을 마쳤다. (The president completed an overseas tour.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-다니1",
+    "related": "-다니요, -라니1, -라니요1, 으라니1, -으라니요",
+    "conjugation_rule": "",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "그게 사실이라니! (The fact that it's true!)",
+      "그런 말을 하다니! (To think that person said such a thing!)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "­으려고2",
+    "related": "­려고2, ­려고요, ­으려고요",
+    "conjugation_rule": "",
+    "meaning": "의심",
+    "examples": [
+      "지금 나가려고요? (Are you trying to go out now?)",
+      "혼자 하려고요? (Are you trying to do it alone?)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-거라",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "do (imperative — informal, used to address juniors)",
+    "examples": [
+      "빨리 가거라. (Go quickly.)",
+      "조용히 하거라. (Be quiet.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-고말고",
+    "related": "-고말고요",
+    "conjugation_rule": "-고말고 is the plain/informal form; -고말고요 adds -요 for polite speech",
+    "meaning": "of course; absolutely (emphatic agreement)",
+    "examples": [
+      "당연하고말고요. (Of course!)",
+      "맞고말고. (Absolutely right.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-는가1",
+    "related": "-ㄴ가1, -은가1",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "지금 뭐 하는가? (What are you doing right now?)",
+      "거기 가는가? (Are you going there?)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-는걸",
+    "related": "-ㄴ걸, -은걸, -ㄴ걸요, -는걸요, -은걸요",
+    "conjugation_rule": "",
+    "meaning": "you know; it seems (soft assertion / mild protest)",
+    "examples": [
+      "지금 집에 가는걸요. (I'm going home right now, you know.)",
+      "배가 부른걸요. (I'm full, you know.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-데",
+    "related": "-데요",
+    "conjugation_rule": "-데 is the plain/informal form; -데요 adds -요 for polite speech",
+    "meaning": "it seems; you know (mild statement or exclamation of surprise)",
+    "examples": [
+      "그 음식이 맛있데요. (They say that food is delicious.)",
+      "그 사람이 착하데요. (They say that person is kind.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "sentence-final ending",
+    "form": "-더라고",
+    "related": "-더라고요",
+    "conjugation_rule": "-더라고 is the plain/informal form; -더라고요 adds -요 for polite speech",
+    "meaning": "it turned out that; I found that (retrospective report to listener)",
+    "examples": [
+      "그 음식이 맛있더라고요. (I found that food was delicious.)",
+      "생각보다 어렵더라고요. (It turned out harder than I thought.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는다니1",
+    "related": "-다니2, -라니5, -으라니2, -자니2",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "빨리 오라는 거야? (Are you telling me to come quickly?)",
+      "조용히 하라는 거야? (Are you telling me to be quiet?)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-었던",
+    "related": "-았던, -였던",
+    "conjugation_rule": "",
+    "meaning": "was; used to be (past-attributive — discontinued past state)",
+    "examples": [
+      "예전에 다니던 학교가 없어졌어요. (The school I used to attend is gone.)",
+      "살았던 동네가 많이 변했어요. (The neighborhood I used to live in has changed a lot.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "에 관하여",
+    "related": "에 관한",
+    "conjugation_rule": "",
+    "meaning": "about; concerning; regarding (formal written)",
+    "examples": [
+      "환경 문제에 관하여 토론했어요. (We debated about environmental issues.)",
+      "그 사건에 관하여 보고서를 썼어요. (I wrote a report about that incident.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-자기에",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "because; as (literary reason linked to the action itself)",
+    "examples": [
+      "그 사람이 일찍 오자기에 서둘렀어요. (I hurried because that person said to come early.)",
+      "맛있다고 하자기에 먹어 봤어요. (I tried it because they said it was delicious.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-게 마련이다",
+    "related": "-기 마련이다",
+    "conjugation_rule": "",
+    "meaning": "naturally; inevitably; is bound to (inherent truth)",
+    "examples": [
+      "사람은 실수를 하게 마련이에요. (People are bound to make mistakes.)",
+      "좋은 일이 있으면 나쁜 일도 있게 마련이에요. (If there are good things, there are bound to be bad things too.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-게 생겼다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "looks like it will; is bound to (unavoidable outcome by appearance)",
+    "examples": [
+      "이제 큰일이 생기게 생겼어요. (It looks like a big problem is going to happen.)",
+      "이대로 가다가는 실패하게 생겼어요. (The way things are going, we're bound to fail.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기 나름이다",
+    "related": "-을 나름이다",
+    "conjugation_rule": "",
+    "meaning": "it depends on; it's up to (outcome depends on how one does it)",
+    "examples": [
+      "결과는 네가 하기 나름이야. (The result depends on how you do it.)",
+      "성공은 노력하기 나름이에요. (Success depends on how much effort you put in.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기가 바쁘게",
+    "related": "<유의> -기가 무섭게",
+    "conjugation_rule": "",
+    "meaning": "as soon as; no sooner than (immediately after)",
+    "examples": [
+      "집에 들어오기가 바쁘게 밥을 먹었어요. (As soon as I came home, I ate.)",
+      "학교에서 돌아오기가 바쁘게 잠이 들었어요. (No sooner had I returned from school than I fell asleep.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기가 쉽다",
+    "related": "<유의> -기 십상이다",
+    "conjugation_rule": "",
+    "meaning": "tend to; easily (tendency or likelihood)",
+    "examples": [
+      "이 길은 미끄러지기가 쉬워요. (This road tends to be slippery.)",
+      "이 문제는 틀리기가 쉬워요. (This problem is easy to get wrong.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기만 하다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "just do; do nothing but; only do",
+    "examples": [
+      "그 아이는 울기만 해요. (That child just cries.)",
+      "공부하기만 했어요. (I did nothing but study.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기에 따라",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "depending on how; according to how",
+    "examples": [
+      "노력하기에 따라 결과가 달라요. (The results vary depending on how you put in effort.)",
+      "먹기에 따라 건강이 달라져요. (Your health changes depending on how you eat.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-기에 앞서(서)",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "before; prior to (formal / written)",
+    "examples": [
+      "시작하기에 앞서 간단히 소개하겠습니다. (Before we begin, I will briefly introduce myself.)",
+      "회의를 시작하기에 앞서 출석을 확인하겠습니다. (Before starting the meeting, let's check attendance.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-은 나머지",
+    "related": "-ㄴ 나머지",
+    "conjugation_rule": "",
+    "meaning": "as a result of (excessive state leading to outcome)",
+    "examples": [
+      "너무 웃은 나머지 눈물이 났어요. (I laughed so much that tears came out.)",
+      "너무 놀란 나머지 말을 못 했어요. (I was so surprised that I couldn't speak.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 데다가",
+    "related": "-ㄴ데다가1, -은, 데다가2, -ㄴ",
+    "conjugation_rule": "",
+    "meaning": "in addition to; on top of (additive)",
+    "examples": [
+      "날씨가 춥는 데다가 바람까지 불어요. (In addition to it being cold, the wind is blowing too.)",
+      "음식이 맛있는 데다가 가격도 싸요. (In addition to the food being delicious, the price is also low.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 동시에",
+    "related": "-ㄴ 동시에",
+    "conjugation_rule": "",
+    "meaning": "at the same time as; simultaneously",
+    "examples": [
+      "요리하는 동시에 전화로 이야기해요. (I talk on the phone at the same time as I cook.)",
+      "공부하는 동시에 음악을 들어요. (I listen to music at the same time as I study.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 듯하다",
+    "related": "-ㄴ듯하다, -은, 듯하다, -ㄹ 듯하다, -을 듯하다",
+    "conjugation_rule": "",
+    "meaning": "seems like; appears to (conjecture)",
+    "examples": [
+      "그 사람이 슬픈 듯해요. (That person seems sad.)",
+      "비가 올 듯해요. (It seems like it will rain.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 법이다",
+    "related": "-ㄴ 법이다, -은, 법이다",
+    "conjugation_rule": "",
+    "meaning": "naturally; by nature; is the way things are (inevitable truth)",
+    "examples": [
+      "시간이 지나면 해결되는 법이에요. (With time, things naturally get resolved.)",
+      "노력하면 잘되는 법이에요. (If you try hard, things naturally work out.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 이상",
+    "related": "-ㄴ 이상, -은 이상",
+    "conjugation_rule": "",
+    "meaning": "as long as; given that (premise-based obligation)",
+    "examples": [
+      "약속한 이상 지켜야 해요. (As long as you've made a promise, you must keep it.)",
+      "살아있는 이상 희망이 있어요. (As long as you're alive, there is hope.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-은 채로",
+    "related": "-ㄴ 채로",
+    "conjugation_rule": "",
+    "meaning": "remaining in the state of (unchanged state)",
+    "examples": [
+      "신발을 신은 채로 들어오지 마세요. (Please don't come in with your shoes on.)",
+      "눈을 감은 채로 이야기했어요. (I talked with my eyes closed.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 척하다",
+    "related": "-ㄴ 척하다, -은, 척하다, <유의> -는, 체하다, -은 체하다",
+    "conjugation_rule": "",
+    "meaning": "pretend to; act as if (feigning)",
+    "examples": [
+      "그 사람은 모르는 척해요. (That person pretends not to know.)",
+      "자는 척하고 있어요. (They are pretending to sleep.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는 가운데",
+    "related": "-은 가운데",
+    "conjugation_rule": "",
+    "meaning": "in the midst of; while (ongoing context)",
+    "examples": [
+      "어려운 상황인 가운데 최선을 다했어요. (In the midst of difficult circumstances, I did my best.)",
+      "모든 사람이 보는 가운데 발표했어요. (I presented in front of everyone.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "는 말할 것도 없고",
+    "related": "은 말할 것도 없고, <유의> 는 고사하고, 은 고사하고",
+    "conjugation_rule": "",
+    "meaning": "needless to say; not to mention (obvious addition)",
+    "examples": [
+      "건강은 말할 것도 없고 행복도 중요해요. (Needless to say health, happiness is also important.)",
+      "일은 말할 것도 없고 휴식도 필요해요. (Needless to say work, rest is also necessary.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-을 만하다",
+    "related": "-ㄹ 만하다",
+    "conjugation_rule": "",
+    "meaning": "worth doing; can reasonably do (worthiness / ability)",
+    "examples": [
+      "이 영화는 볼 만해요. (This movie is worth watching.)",
+      "그 식당은 가 볼 만해요. (That restaurant is worth visiting.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-을 법하다",
+    "related": "-ㄹ 법하다",
+    "conjugation_rule": "",
+    "meaning": "likely to; seems probable (reasoned conjecture)",
+    "examples": [
+      "비가 올 법해요. (It seems probable that it will rain.)",
+      "그 사람이 올 법한데요. (It seems likely that person will come.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-을 테다",
+    "related": "-ㄹ 테다",
+    "conjugation_rule": "",
+    "meaning": "intend to; will certainly (strong intention / prediction)",
+    "examples": [
+      "이번에는 꼭 합격할 테다. (This time, I will certainly pass.)",
+      "내가 직접 할 테다. (I intend to do it myself.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-을 테면",
+    "related": "-ㄹ 테면",
+    "conjugation_rule": "",
+    "meaning": "if you are going to; since you insist (conditional challenge)",
+    "examples": [
+      "갈 테면 혼자 가세요. (If you're going to go, go alone.)",
+      "할 테면 해 보세요. (If you're going to do it, go ahead.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-을 테지만",
+    "related": "-ㄹ 테지만",
+    "conjugation_rule": "",
+    "meaning": "although I think/expect it will (concessive supposition)",
+    "examples": [
+      "어렵겠을 테지만 노력해 봐요. (Although it may be difficult, let's try.)",
+      "힘들 테지만 포기하지 마세요. (Although it'll be hard, don't give up.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-으려나 보다",
+    "related": "-려나 보다",
+    "conjugation_rule": "",
+    "meaning": "seems like (someone) intends to; I wonder if (intention conjecture)",
+    "examples": [
+      "그 사람이 떠나려나 봐요. (It looks like that person is about to leave.)",
+      "비가 오려나 봐요. (It seems like it might rain.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "를 가지고",
+    "related": "을 가지고",
+    "conjugation_rule": "",
+    "meaning": "with; using; about (means or topic — colloquial)",
+    "examples": [
+      "그 문제를 가지고 고민했어요. (I thought hard about that problem.)",
+      "이걸 가지고 뭘 할 수 있어요? (What can be done with this?)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-으면 몰라도",
+    "related": "-면 몰라도",
+    "conjugation_rule": "",
+    "meaning": "unless; if not for (exception condition)",
+    "examples": [
+      "비가 오면 몰라도 눈이 오지는 않아요. (It might rain, but it won't snow.)",
+      "그 사람이면 몰라도 나는 못 해요. (If it were that person maybe, but I can't do it.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "에도 불구하고",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "despite; in spite of; notwithstanding",
+    "examples": [
+      "비가 오는 데도 불구하고 나갔어요. (Despite the rain, I went out.)",
+      "어려운 데도 불구하고 포기하지 않았어요. (Despite the difficulty, I didn't give up.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는데도",
+    "related": "-ㄴ데도, -은데도",
+    "conjugation_rule": "",
+    "meaning": "even though; despite (contrast against expectation)",
+    "examples": [
+      "공부를 열심히 하는데도 성적이 안 올라요. (Even though I study hard, my grades don't improve.)",
+      "잠을 잤는데도 피곤해요. (Even though I slept, I'm still tired.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-어 내다/-아 내다",
+    "related": "-여 내다",
+    "conjugation_rule": "아내다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여내다 after 하다 stems (contracted to 해내다); 어내다 after all other stems",
+    "meaning": "manage to do; accomplish (achieving against difficulty)",
+    "examples": [
+      "어렵게 문제를 풀어 냈어요. (I managed to solve the difficult problem.)",
+      "힘들게 일을 해 냈어요. (I managed to accomplish the difficult work.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는다기에",
+    "related": "-ㄴ다기에, -다기에, -라기에1",
+    "conjugation_rule": "",
+    "meaning": "reason / cause",
+    "examples": [
+      "맛있다기에 먹어 봤어요. (I tried it because they said it was delicious.)",
+      "싸다기에 많이 샀어요. (I bought a lot because they said it was cheap.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는다는 것이",
+    "related": "-ㄴ다는 것이",
+    "conjugation_rule": "",
+    "meaning": "meaning to do but (unintended divergence from plan)",
+    "examples": [
+      "칭찬한다는 것이 그만 나쁘게 말했어요. (Meaning to praise, I inadvertently said something bad.)",
+      "도와준다는 것이 오히려 방해가 됐어요. (Meaning to help, I instead got in the way.)"
+    ]
+  },
+  {
+    "level": 5,
+    "category": "expression",
+    "form": "-는데도 불구하고",
+    "related": "-ㄴ데도 불구하고, -은데도 불구하고",
+    "conjugation_rule": "",
+    "meaning": "despite; regardless of (emphatic concession)",
+    "examples": [
+      "늦었는데도 불구하고 기다려 줬어요. (Despite being late, they waited for me.)",
+      "아픈데도 불구하고 출근했어요. (Despite being sick, I went to work.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "particle",
+    "form": "마는",
+    "related": "만2",
+    "conjugation_rule": "",
+    "meaning": "contrast / opposition",
+    "examples": [
+      "반대하마는 어쩔 수 없어요. (I oppose it, but there's nothing I can do.)",
+      "가기 싫마는 가야 해요. (I don't want to go, but I have to.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "particle",
+    "form": "깨나",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "quite a lot; fairly (sizable quantity or ability)",
+    "examples": [
+      "그 사람 돈 깨나 있나 봐요. (That person seems to have quite a bit of money.)",
+      "한국어 공부 깨나 했겠네요. (You must have studied Korean quite a lot.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "particle",
+    "form": "이라고2",
+    "related": "라고2",
+    "conjugation_rule": "",
+    "meaning": "보잘것없 음",
+    "examples": [
+      "이것이라고 별거 없어요. (Even this is nothing special.)",
+      "그게 집이라고 할 수 있겠어요? (Can that even be called a house?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "particle",
+    "form": "을랑",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as for; regarding (emphatic topic particle — colloquial)",
+    "examples": [
+      "이 일을랑 내가 할게요. (As for this matter, I'll handle it.)",
+      "돈을랑 걱정하지 마세요. (As for money, don't worry.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "particle",
+    "form": "이라면",
+    "related": "라면1",
+    "conjugation_rule": "",
+    "meaning": "emphasis",
+    "examples": [
+      "고양이라면 알레르기가 있어요. (When it comes to cats, I'm allergic.)",
+      "한국 음식이라면 뭐든 좋아요. (When it comes to Korean food, I like anything.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-거들랑1",
+    "related": "-걸랑1",
+    "conjugation_rule": "",
+    "meaning": "if; in case (conditional — dialect / archaic)",
+    "examples": [
+      "비가 오거들랑 전화해요. (If it rains, call me.)",
+      "시간이 나거들랑 놀러 와요. (If you have free time, come visit.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-노라면",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "as one keeps doing; if one continues to (progressive condition)",
+    "examples": [
+      "연습하노라면 언젠가 잘하게 돼요. (If you keep practicing, someday you'll get good at it.)",
+      "살다 보면 좋은 일도 생기는 법이에요. (If you keep on living, good things will also happen.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-건대",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "in my opinion; I believe (speaker's opinion — literary)",
+    "examples": [
+      "생각건대 그 방법이 최선이에요. (In my opinion, that method is best.)",
+      "바라건대 모두 건강하길 바랍니다. (I hope everyone will be healthy.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-건만",
+    "related": "-건마는",
+    "conjugation_rule": "",
+    "meaning": "but; however (concession with disappointment — literary)",
+    "examples": [
+      "열심히 하건만 결과가 안 나와요. (I work hard, but the results don't come.)",
+      "노력은 했건만 실패했어요. (I made effort, but I failed.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-기로서니",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "even so; even granting that (concession — literary / archaic)",
+    "examples": [
+      "이미 결정했기로서니 바꿀 수 없어요. (Even so, since it's already decided, we can't change it.)",
+      "늦었기로서니 지금이라도 시작해요. (Even so that it's late, let's start now at least.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-느니만큼",
+    "related": "-니만큼, -으니만큼, <유의> -느니만치, 니만치, -으니만치",
+    "conjugation_rule": "",
+    "meaning": "inasmuch as; since (proportional reason — literary)",
+    "examples": [
+      "노력하느니만큼 결과를 기대할 수 있어요. (Inasmuch as you put in effort, you can expect results.)",
+      "공부하느니만큼 실력이 쌓여요. (Inasmuch as you study, skills accumulate.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-되",
+    "related": "-으되, -로되",
+    "conjugation_rule": "",
+    "meaning": "but; however (contrast — formal / written)",
+    "examples": [
+      "성실하되 유연하게 일하세요. (Work diligently but flexibly.)",
+      "규칙은 지키되 상황을 봐 가며 해요. (Follow the rules, but do so with an eye on the situation.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-디1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "emphasis",
+    "examples": [
+      "잘 보이디 어디 봐라. (Let me see if you can really do it.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-이라야",
+    "related": "-라야, -이라야만, -라야만",
+    "conjugation_rule": "",
+    "meaning": "only if it is; must be (exclusive necessary condition)",
+    "examples": [
+      "진심이라야 마음이 통해요. (Only if it's sincere will hearts connect.)",
+      "노력이라야 성공할 수 있어요. (Only through effort can one succeed.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-으련마는",
+    "related": "-련마는, -으련만, -련만",
+    "conjugation_rule": "",
+    "meaning": "I would but; I could but (unfulfilled wish — literary)",
+    "examples": [
+      "갈 수 있으련마는 시간이 없어요. (I could go, but I have no time.)",
+      "말하고 싶으련마는 참아요. (I want to say it, but I'll hold back.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-자니3",
+    "related": "-자2, -자니까3",
+    "conjugation_rule": "",
+    "meaning": "의도",
+    "examples": [
+      "먹자니 배가 부르고 안 먹자니 아깝다. (If I eat, I'm full; if I don't eat, it's a waste.)",
+      "가자니 멀고 안 가자니 보고 싶다. (Going is far, but not going means I'll miss them.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-는다고1",
+    "related": "-다고1, -라고3, 으라고1, -자고1",
+    "conjugation_rule": "",
+    "meaning": "의도",
+    "examples": [
+      "빨리 오라고 전화했어요. (I called to tell them to come quickly.)",
+      "조용히 하라고 말했어요. (I told them to be quiet.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-자면1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "의도",
+    "examples": [
+      "빨리 가자면 택시를 타야 해요. (If we want to go quickly, we should take a taxi.)",
+      "많이 먹자면 돈이 많아야 해요. (To eat a lot, you need a lot of money.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-은들",
+    "related": "-ㄴ들2, 인들",
+    "conjugation_rule": "",
+    "meaning": "concession",
+    "examples": [
+      "가든들 뭐가 달라지겠어요. (Even if I go, what would change?)",
+      "말한들 소용없어요. (Even if I say it, it's no use.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-을망정,",
+    "related": "-ㄹ망정 <유의>, -ㄹ지언정, -을지언정",
+    "conjugation_rule": "",
+    "meaning": "even though; even if (strong concession — literary)",
+    "examples": [
+      "힘들망정 포기는 하지 않겠어요. (Even though it's difficult, I won't give up.)",
+      "가난할망정 행복하게 살아요. (Even though I'm poor, I live happily.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "connective ending",
+    "form": "-을라치면",
+    "related": "-ㄹ라치면",
+    "conjugation_rule": "",
+    "meaning": "whenever; each time (conditional circumstance)",
+    "examples": [
+      "생각을 정리할라치면 전화가 와요. (Whenever I try to organize my thoughts, a call comes.)",
+      "자리에 앉을라치면 누가 불러요. (Whenever I try to sit down, someone calls me.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-는구려",
+    "related": "-구려1",
+    "conjugation_rule": "",
+    "meaning": "exclamation / surprise",
+    "examples": [
+      "날씨가 참 좋은구려! (The weather is really nice!)",
+      "그 사람이 벌써 왔구려! (That person is already here!)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-는구먼",
+    "related": "-구먼, -구먼요, -는구먼요",
+    "conjugation_rule": "",
+    "meaning": "well, it is! (exclamation of realization — informal / elderly speech)",
+    "examples": [
+      "어, 비가 오는구먼. (Oh, it's raining.)",
+      "그 사람이 또 늦는구먼. (That person is late again.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-그려",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "I see; is that so (soft agreement / realization — archaic)",
+    "examples": [
+      "그러시그려, 그렇게 하지요. (I see, let's do it that way.)",
+      "참 좋은 생각이그려. (What a good idea.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-으리라",
+    "related": "-리라",
+    "conjugation_rule": "",
+    "meaning": "will; must be (strong conjecture or literary will)",
+    "examples": [
+      "내년에는 꼭 합격하리라. (I will certainly pass next year.)",
+      "언젠가는 돌아오리라. (I will surely return someday.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-으오",
+    "related": "-오",
+    "conjugation_rule": "",
+    "meaning": "(formal polite ending — 하오체, old-style formal register)",
+    "examples": [
+      "잠시 기다리시오. (Please wait a moment.)",
+      "이리로 오시오. (Please come this way.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-으니4",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "blame / rebuke",
+    "examples": [
+      "왜 이제 왔으니? (Why did you come only now?)",
+      "그때 왜 말 안 했으니? (Why didn't you say something then?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-거들랑2",
+    "related": "-걸랑2",
+    "conjugation_rule": "",
+    "meaning": "reason / cause",
+    "examples": [
+      "바쁘거들랑 나중에 해요. (If you're busy, do it later.)",
+      "필요하거들랑 가져가요. (If you need it, take it.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-게3",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "어서 오게. (Come on in.)",
+      "빨리 먹게. (Go ahead and eat.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-게4",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "reminder / attention-calling",
+    "examples": [
+      "이제 가게. 기다리고 있을게. (Go now. I'll be waiting.)",
+      "잊지 말게. 약속한 거야. (Don't forget. You promised.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-구려2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "자리에 앉으구려. (Please take a seat.)",
+      "빨리 오구려. (Please come quickly.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-네1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "서술",
+    "examples": [
+      "날씨가 참 좋네. (The weather is really nice.)",
+      "그 음식이 맛있네. (That food is delicious.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-는구만",
+    "related": "-구만",
+    "conjugation_rule": "",
+    "meaning": "oh really! (exclamation — informal / elderly speech)",
+    "examples": [
+      "오늘 날씨가 춥구만. (The weather is cold today.)",
+      "그 사람이 많이 변했구만. (That person has changed a lot.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-는가2",
+    "related": "-ㄴ가2, -은가2",
+    "conjugation_rule": "",
+    "meaning": "문제 제기",
+    "examples": [
+      "이게 과연 옳은 건가? (Is this truly the right thing?)",
+      "사랑이란 무엇인가? (What is love?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-나3",
+    "related": "-나요",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "벌써 밥을 먹었나? (Did you already eat?)",
+      "숙제를 다 했나? (Did you finish your homework?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-던2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "그때 거기서 무슨 일이 있었던? (What happened there at that time?)",
+      "예전에 그 사람이 왔던? (Did that person come before?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-던가1",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "어제 어디 갔던가? (Where did you go yesterday?)",
+      "그 영화 재미있었던가? (Was that movie interesting?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-던가2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "question / wonder",
+    "examples": [
+      "작년에 거기 가셨던가요? (Did you go there last year?)",
+      "그분이 누구셨던가요? (Who was that person?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-라2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "서술",
+    "examples": [
+      "해가 밝아 오는 아침이라. (It is a morning with the bright sun rising.)",
+      "꽃이 피는 봄이라. (It is a spring when flowers bloom.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-으리오",
+    "related": "-리오",
+    "conjugation_rule": "",
+    "meaning": "will it? (rhetorical question — classical / literary)",
+    "examples": [
+      "그게 사실이리오? (Could that be true?)",
+      "나 없이 어찌 살리오? (How could you live without me?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "sentence-final ending",
+    "form": "-소",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "it is; please do (formal polite ending — 하오체)",
+    "examples": [
+      "거기 있으시오. (Please stay there.)",
+      "잠시 기다리소. (Please wait a moment.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-기 일쑤이다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "often does; habitually (frequent or characteristic negative behavior)",
+    "examples": [
+      "그 사람은 지각하기 일쑤예요. (That person habitually comes late.)",
+      "그 아이는 울기 일쑤예요. (That child cries all the time.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-기 짝이 없다",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "extremely; incomparably (superlative emphasis, often negative)",
+    "examples": [
+      "그 사람은 귀찮기 짝이 없어요. (That person is incomparably annoying.)",
+      "이 상황은 어이없기 짝이 없어요. (This situation is unbelievably absurd.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "는 마당에",
+    "related": "-ㄴ 마당에, -은 마당에",
+    "conjugation_rule": "",
+    "meaning": "at the point when; given the situation (critical juncture)",
+    "examples": [
+      "이미 결혼한 마당에 이제 어쩔 수가 없어요. (Given that they're already married, there's nothing to be done now.)",
+      "이렇게 된 마당에 최선을 다해야 해요. (Given the situation, we have to do our best.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-는 한이 있어도",
+    "related": "-는 한이 있더라도",
+    "conjugation_rule": "",
+    "meaning": "even if it means; no matter what (willingness to accept extreme)",
+    "examples": [
+      "죽는 한이 있어도 포기 못 해요. (Even if it means death, I can't give up.)",
+      "힘든 한이 있어도 해 내겠어요. (Even if it means hardship, I will accomplish it.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-을 바에",
+    "related": "-ㄹ 바에",
+    "conjugation_rule": "",
+    "meaning": "if one is going to do anyway; might as well (choosing lesser evil)",
+    "examples": [
+      "이렇게 살 바에 차라리 포기하는 게 나아요. (If I'm going to live like this, it would be better to give up.)",
+      "거짓말을 할 바에 차라리 말을 안 하는 게 낫죠. (If I'm going to lie, it's better to say nothing.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-으려도",
+    "related": "-려도",
+    "conjugation_rule": "",
+    "meaning": "even if one tries to (attempt against an obstacle)",
+    "examples": [
+      "가려도 갈 수가 없어요. (Even if I try to go, I can't.)",
+      "자려도 잠이 안 와요. (Even if I try to sleep, I can't.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-으리라는",
+    "related": "-리라는",
+    "conjugation_rule": "",
+    "meaning": "that (someone) will; predicted to (quoted conjecture)",
+    "examples": [
+      "이번 시험을 잘 볼 것이라는 생각이 들어요. (I have a feeling I'll do well on this exam.)",
+      "그가 올 것이라는 게 믿어져요. (I believe that he will come.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "를 막론하고",
+    "related": "을 막론하고, 를 불문하고, 을 불문하고",
+    "conjugation_rule": "",
+    "meaning": "regardless of; whether or not (ignoring distinction)",
+    "examples": [
+      "남녀를 막론하고 모두 참여했어요. (Everyone participated regardless of gender.)",
+      "나이를 막론하고 누구나 올 수 있어요. (Anyone can come regardless of age.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-어 치우다/-아 치우다",
+    "related": "-여 치우다",
+    "conjugation_rule": "아치우다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여치우다 after 하다 stems (contracted to 해치우다); 어치우다 after all other stems",
+    "meaning": "get it over with; do away with decisively (decisive completion)",
+    "examples": [
+      "남은 음식을 먹어 치웠어요. (I finished off the remaining food.)",
+      "오래된 문제를 해결해 치웠어요. (I got the old problem over with.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-는다는",
+    "related": "-ㄴ다는, -는단, -다는, -단2, -라는1, -란2",
+    "conjugation_rule": "",
+    "meaning": "the claim or plan that (quoted statement / intention)",
+    "examples": [
+      "그가 온다는 소식을 들었어요. (I heard the news that he is coming.)",
+      "공부를 열심히 한다는 말은 믿기 어려워요. (It's hard to believe the claim that they study hard.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "이라고는",
+    "related": "라고는, 이라곤, 라곤",
+    "conjugation_rule": "",
+    "meaning": "not even one; not even as (extreme limiting statement)",
+    "examples": [
+      "친구라고는 한 명도 없어요. (There isn't even a single friend.)",
+      "쓸 만한 것이라고는 없어요. (There's nothing worth using.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-는다던가1",
+    "related": "-다던가1, -라던가1",
+    "conjugation_rule": "",
+    "meaning": "command",
+    "examples": [
+      "빨리 오라던가, 어쨌거나 왔어요. (Was it 'come quickly' or something? Anyway, I came.)",
+      "조용히 하라던가 선생님이 말씀하셨어요. (The teacher said something like 'be quiet'.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-으래서야",
+    "related": "-래서야2",
+    "conjugation_rule": "",
+    "meaning": "raising a question",
+    "examples": [
+      "그렇게 하래서야 어떻게 따르겠어요? (How can I follow if you tell me to do it like that?)",
+      "매일 오래서야 힘들지 않겠어요? (Wouldn't it be hard if they tell you to come every day?)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-으리라고",
+    "related": "-리라고",
+    "conjugation_rule": "",
+    "meaning": "that (someone) will; reported conjecture (quoted conjecture)",
+    "examples": [
+      "꼭 성공하리라고 믿어요. (I believe I will certainly succeed.)",
+      "그가 돌아오리라고 생각해요. (I think he will return.)"
+    ]
+  },
+  {
+    "level": 6,
+    "category": "expression",
+    "form": "-자면2",
+    "related": "",
+    "conjugation_rule": "",
+    "meaning": "recommendation",
+    "examples": [
+      "먹자면 배가 고프다는 뜻이에요. (If I say let's eat, it means I'm hungry.)",
+      "자자면 피곤하거나 늦은 거죠. (If I say let's sleep, it means I'm tired or it's late.)"
+    ]
+  }
+]
