@@ -21,3 +21,25 @@ export interface VocabItem {
 }
 
 export type StudyLevel = 1 | 2 | 3 | 4 | 5 | 6
+
+export interface UserProgressRow {
+  item_type: 'vocab' | 'grammar'
+  item_id: number
+  status: 'known' | 'learning'
+  reviewed_at: string
+}
+
+export type MemoryGameMode = 'all' | 'review'
+
+export interface MemoryScoreRow {
+  id: number
+  user_id: string
+  display_name: string
+  level: number
+  pair_count: number
+  game_mode: MemoryGameMode
+  moves: number
+  duration_ms: number
+  is_public: boolean
+  completed_at: string
+}

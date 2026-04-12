@@ -12,6 +12,20 @@ create table if not exists profiles (
 
 alter table profiles enable row level security;
 
+create or replace function public.is_teacher()
+returns boolean
+language sql
+security definer
+set search_path = public
+stable
+as $$
+  select exists (
+    select 1
+    from public.profiles
+    where id = auth.uid() and role = 'teacher'
+  );
+$$;
+
 -- Users can read/update their own profile
 create policy "users manage own profile"
   on profiles for all
@@ -21,22 +35,12 @@ create policy "users manage own profile"
 -- Teachers can read all profiles
 create policy "teachers read all profiles"
   on profiles for select
-  using (
-    exists (
-      select 1 from profiles p
-      where p.id = auth.uid() and p.role = 'teacher'
-    )
-  );
+  using (public.is_teacher());
 
 -- Teachers can also read all user_progress
 create policy "teachers read all progress"
   on user_progress for select
-  using (
-    exists (
-      select 1 from profiles p
-      where p.id = auth.uid() and p.role = 'teacher'
-    )
-  );
+  using (public.is_teacher());
 
 -- ─── Auto-create profile on signup ───────────────────────────────────────────
 -- Teacher email is fixed; matches NEXT_PUBLIC_TEACHER_EMAIL in .env.local

@@ -11,6 +11,7 @@ const links = [
   { href: '/vocabulary', label: 'Vocabulary' },
   { href: '/grammar', label: 'Grammar' },
   { href: '/quiz', label: 'Quiz' },
+  { href: '/memory', label: 'Memory' },
 ]
 
 export default function NavBar() {
@@ -50,7 +51,7 @@ export default function NavBar() {
             <ThemeToggle />
             {user ? (
               <>
-                {role === 'teacher' && (
+                {role && (
                   <Link
                     href="/dashboard"
                     className={`px-3 py-1.5 rounded-xl text-sm font-medium transition-colors ${navLinkClass('/dashboard')}`}
@@ -142,7 +143,7 @@ export default function NavBar() {
 
               {user ? (
                 <>
-                  {role === 'teacher' && (
+                  {role && (
                     <Link
                       href="/dashboard"
                       onClick={closeMobileMenu}

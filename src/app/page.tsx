@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { getVocabByLevel, getGrammarByLevel } from '@/lib/data'
+import HomeStudyPanel from '@/components/HomeStudyPanel'
+import { getGrammarByLevel, getVocabByLevel } from '@/lib/data'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 
@@ -13,11 +14,11 @@ const LEVEL_INFO: Record<number, { label: string; accent: string; border: string
 }
 
 export default function HomePage() {
-  const stats = LEVELS.map((l) => ({
-    level: l,
-    vocab: getVocabByLevel(l).length,
-    grammar: getGrammarByLevel(l).length,
-    ...LEVEL_INFO[l],
+  const stats = LEVELS.map((level) => ({
+    level,
+    vocab: getVocabByLevel(level).length,
+    grammar: getGrammarByLevel(level).length,
+    ...LEVEL_INFO[level],
   }))
 
   return (
@@ -70,11 +71,13 @@ export default function HomePage() {
         </div>
       </div>
 
+      <HomeStudyPanel />
+
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-3 gap-4 mb-14 max-w-lg mx-auto">
           {[
-            { label: 'Total Words', value: stats.reduce((s, x) => s + x.vocab, 0).toLocaleString() },
-            { label: 'Grammar Points', value: stats.reduce((s, x) => s + x.grammar, 0).toLocaleString() },
+            { label: 'Total Words', value: stats.reduce((sum, item) => sum + item.vocab, 0).toLocaleString() },
+            { label: 'Grammar Points', value: stats.reduce((sum, item) => sum + item.grammar, 0).toLocaleString() },
             { label: 'TOPIK Levels', value: '6' },
           ].map(({ label, value }) => (
             <div

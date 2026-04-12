@@ -1,0 +1,368 @@
+'use client'
+
+import Link from 'next/link'
+import { useEffect, useMemo, useState } from 'react'
+import { useAuth } from '@/contexts/AuthContext'
+import { grammarData, vocabData } from '@/lib/data'
+import { getUserMemoryBest, getUserRecentMemoryScores } from '@/lib/memory'
+import { getUserProgress } from '@/lib/progress'
+import type { GrammarItem, MemoryScoreRow, UserProgressRow, VocabItem } from '@/types'
+
+type ReviewItem =
+  | { kind: 'vocab'; item: VocabItem; reviewed_at: string }
+  | { kind: 'grammar'; item: GrammarItem; reviewed_at: string }
+
+const LEVELS = [1, 2, 3, 4, 5, 6]
+
+function formatDuration(durationMs: number) {
+  const totalSeconds = Math.max(1, Math.round(durationMs / 1000))
+  const minutes = Math.floor(totalSeconds / 60)
+  const seconds = totalSeconds % 60
+  return `${minutes}:${String(seconds).padStart(2, '0')}`
+}
+
+function formatTimestamp(value: string) {
+  return new Date(value).toLocaleString([], {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  })
+}
+
+function getLevelProgress(progress: UserProgressRow[]) {
+  const knownVocab = new Set(
+    progress
+      .filter((item) => item.item_type === 'vocab' && item.status === 'known')
+      .map((item) => item.item_id)
+  )
+  const knownGrammar = new Set(
+    progress
+      .filter((item) => item.item_type === 'grammar' && item.status === 'known')
+      .map((item) => item.item_id)
+  )
+
+  return LEVELS.map((level) => {
+    const vocabItems = vocabData.filter((item) => item.level === level)
+    const grammarItems = grammarData.filter((item) => item.level === level)
+    const total = vocabItems.length + grammarItems.length
+    const completed =
+      vocabItems.filter((item) => item.id && knownVocab.has(item.id)).length +
+      grammarItems.filter((item) => item.id && knownGrammar.has(item.id)).length
+
+    return {
+      level,
+      completed,
+      total,
+      pct: total === 0 ? 0 : Math.round((completed / total) * 100),
+    }
+  })
+}
+
+function buildReviewItems(progress: UserProgressRow[]) {
+  return progress
+    .filter((item) => item.status === 'learning')
+    .slice(0, 8)
+    .flatMap((entry): ReviewItem[] => {
+      if (entry.item_type === 'vocab') {
+        const item = vocabData.find((v) => v.id === entry.item_id)
+        return item ? [{ kind: 'vocab', item, reviewed_at: entry.reviewed_at }] : []
+      }
+
+      const item = grammarData.find((g) => g.id === entry.item_id)
+      return item ? [{ kind: 'grammar', item, reviewed_at: entry.reviewed_at }] : []
+    })
+}
+
+function getTodayCount(progress: UserProgressRow[]) {
+  const today = new Date().toDateString()
+  return progress.filter((item) => new Date(item.reviewed_at).toDateString() === today).length
+}
+
+export default function StudentDashboard() {
+  const { user } = useAuth()
+  const [progress, setProgress] = useState<UserProgressRow[]>([])
+  const [memoryBest, setMemoryBest] = useState<MemoryScoreRow | null>(null)
+  const [recentMemoryScores, setRecentMemoryScores] = useState<MemoryScoreRow[]>([])
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    if (!user) return
+
+    let cancelled = false
+
+    const load = async () => {
+      setLoading(true)
+      const [progressResult, bestResult, recentResult] = await Promise.all([
+        getUserProgress(user.id),
+        getUserMemoryBest(user.id, {
+          level: 1,
+          pairCount: 6,
+          gameMode: 'all',
+        }),
+        getUserRecentMemoryScores(user.id, 4),
+      ])
+
+      if (cancelled) return
+
+      if (progressResult.error || bestResult.error || recentResult.error) {
+        setError(progressResult.error ?? bestResult.error ?? recentResult.error ?? '')
+      } else {
+        setProgress(progressResult.data)
+        setMemoryBest(bestResult.data)
+        setRecentMemoryScores(recentResult.data)
+      }
+      setLoading(false)
+    }
+
+    void load()
+
+    return () => {
+      cancelled = true
+    }
+  }, [user])
+
+  const stats = useMemo(() => {
+    const levelProgress = getLevelProgress(progress)
+    const reviewItems = buildReviewItems(progress)
+    const known = progress.filter((item) => item.status === 'known').length
+    const learning = progress.filter((item) => item.status === 'learning').length
+    const reviewedToday = getTodayCount(progress)
+
+    return { levelProgress, reviewItems, known, learning, reviewedToday }
+  }, [progress])
+
+  if (!user) return null
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-black text-text mb-1">Study Dashboard</h1>
+        <p className="text-text-subtle text-sm">Track your progress and jump back into review fast.</p>
+      </div>
+
+      {error && (
+        <p
+          className="text-coral text-sm rounded-xl px-3 py-2 border mb-6"
+          style={{ background: 'var(--t-error-box-bg)', borderColor: 'var(--t-error-box-border)' }}
+        >
+          {error}
+        </p>
+      )}
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div className="bg-card border border-border rounded-2xl p-5">
+          <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Known</p>
+          <p className="text-3xl font-black text-emerald-400">{loading ? '...' : stats.known}</p>
+          <p className="text-sm text-text-muted mt-1">Items you&apos;ve marked as learned</p>
+        </div>
+        <div className="bg-card border border-border rounded-2xl p-5">
+          <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Review Queue</p>
+          <p className="text-3xl font-black text-amber-400">{loading ? '...' : stats.learning}</p>
+          <p className="text-sm text-text-muted mt-1">Items to revisit soon</p>
+        </div>
+        <div className="bg-card border border-border rounded-2xl p-5">
+          <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Reviewed Today</p>
+          <p className="text-3xl font-black text-text">{loading ? '...' : stats.reviewedToday}</p>
+          <p className="text-sm text-text-muted mt-1">Study actions recorded today</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 mb-6">
+        <section className="bg-card border border-border rounded-3xl p-6">
+          <div className="flex items-end justify-between gap-4 mb-5">
+            <div>
+              <h2 className="text-xl font-black text-text">Memory Record</h2>
+              <p className="text-sm text-text-subtle">Your saved matching results and competitive runs.</p>
+            </div>
+            <Link href="/memory" className="text-sm text-coral hover:text-coral-light transition-colors">
+              Play
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+            <div className="bg-card-surface border border-border rounded-2xl p-4">
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Best Saved Run</p>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading...</p>
+              ) : memoryBest ? (
+                <>
+                  <p className="text-2xl font-black text-text">{memoryBest.moves} moves</p>
+                  <p className="text-sm text-text-muted mt-1">
+                    L{memoryBest.level} • {memoryBest.pair_count} pairs • {formatDuration(memoryBest.duration_ms)}
+                  </p>
+                </>
+              ) : (
+                <p className="text-sm text-text-faint">Save a memory result to set your first record.</p>
+              )}
+            </div>
+
+            <div className="bg-card-surface border border-border rounded-2xl p-4">
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Competition</p>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading...</p>
+              ) : recentMemoryScores.some((entry) => entry.is_public) ? (
+                <>
+                  <p className="text-2xl font-black text-text">Public</p>
+                  <p className="text-sm text-text-muted mt-1">You already have a shared run on the leaderboard.</p>
+                </>
+              ) : (
+                <>
+                  <p className="text-2xl font-black text-text">Private</p>
+                  <p className="text-sm text-text-muted mt-1">Turn on sharing after a game to compete with others.</p>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-text">Recent Memory Runs</h3>
+              <Link href="/memory" className="text-xs text-text-subtle hover:text-text transition-colors">
+                Open leaderboard
+              </Link>
+            </div>
+
+            {loading ? (
+              <p className="text-sm text-text-faint">Loading memory history...</p>
+            ) : recentMemoryScores.length === 0 ? (
+              <p className="text-sm text-text-faint">Your saved memory games will show up here.</p>
+            ) : (
+              recentMemoryScores.map((entry) => (
+                <div key={entry.id} className="bg-card-surface border border-border rounded-2xl p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">
+                        TOPIK {entry.level} • {entry.pair_count} pairs • {entry.game_mode === 'review' ? 'Review' : 'All cards'}
+                      </p>
+                      <p className="font-bold text-text">
+                        {entry.moves} moves • {formatDuration(entry.duration_ms)}
+                      </p>
+                      <p className="text-sm text-text-muted mt-1">{formatTimestamp(entry.completed_at)}</p>
+                    </div>
+                    <span className="text-xs shrink-0 rounded-full border border-border px-3 py-1 text-text-subtle">
+                      {entry.is_public ? 'Public' : 'Private'}
+                    </span>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </section>
+
+        <section className="bg-card border border-border rounded-3xl p-6">
+          <div className="flex items-end justify-between gap-4 mb-5">
+            <div>
+              <h2 className="text-xl font-black text-text">Level Progress</h2>
+              <p className="text-sm text-text-subtle">Completion based on items marked known.</p>
+            </div>
+            <Link href="/vocabulary" className="text-sm text-coral hover:text-coral-light transition-colors">
+              Study more
+            </Link>
+          </div>
+
+          <div className="space-y-4">
+            {stats.levelProgress.map((level) => (
+              <div key={level.level}>
+                <div className="flex items-center justify-between text-sm mb-2">
+                  <span className="font-semibold text-text">TOPIK {level.level}</span>
+                  <span className="text-text-subtle">
+                    {loading ? '...' : `${level.completed} / ${level.total} (${level.pct}%)`}
+                  </span>
+                </div>
+                <div className="h-2 rounded-full bg-card-surface overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all"
+                    style={{
+                      width: `${level.pct}%`,
+                      background: 'linear-gradient(90deg, #FF6B6B, #FF8E9E)',
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6">
+        <section className="bg-card border border-border rounded-3xl p-6">
+          <div className="mb-5">
+            <h2 className="text-xl font-black text-text">Review Next</h2>
+            <p className="text-sm text-text-subtle">Recent items still marked as learning.</p>
+          </div>
+
+          {loading ? (
+            <p className="text-sm text-text-faint">Loading review list...</p>
+          ) : stats.reviewItems.length === 0 ? (
+            <div>
+              <p className="text-sm text-text-faint mb-4">Your review queue is empty. Nice work.</p>
+              <Link href="/quiz" className="btn-ghost px-4 py-2 rounded-xl text-sm inline-block">
+                Start a fresh quiz
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {stats.reviewItems.map((entry, index) => (
+                <div
+                  key={`${entry.kind}-${entry.item.id ?? index}`}
+                  className="bg-card-surface border border-border rounded-2xl p-4"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">
+                        {entry.kind === 'vocab' ? 'Vocabulary' : 'Grammar'} • TOPIK {entry.item.level}
+                      </p>
+                      <p className="font-bold text-text">
+                        {entry.kind === 'vocab' ? entry.item.word : entry.item.form}
+                      </p>
+                      <p className="text-sm text-text-muted mt-1">
+                        {entry.kind === 'vocab' ? entry.item.meaning : entry.item.meaning || entry.item.category}
+                      </p>
+                    </div>
+                    <Link
+                      href={
+                        entry.kind === 'vocab'
+                          ? `/vocabulary?level=${entry.item.level}&mode=flashcard`
+                          : `/grammar?level=${entry.item.level}`
+                      }
+                      className="btn-ghost px-3 py-2 rounded-xl text-xs shrink-0"
+                    >
+                      Review
+                    </Link>
+                  </div>
+                </div>
+              ))}
+              <Link href="/memory" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+                Warm up with memory game
+              </Link>
+            </div>
+          )}
+        </section>
+
+        <section className="bg-card border border-border rounded-3xl p-6">
+          <div className="mb-5">
+            <h2 className="text-xl font-black text-text">Quick Actions</h2>
+            <p className="text-sm text-text-subtle">Jump into the next study block.</p>
+          </div>
+
+          <div className="space-y-3">
+            <Link href="/memory" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Play memory game
+            </Link>
+            <Link href="/quiz" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Take a quiz
+            </Link>
+            <Link href="/vocabulary" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Review vocabulary
+            </Link>
+            <Link href="/grammar" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Study grammar
+            </Link>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}
