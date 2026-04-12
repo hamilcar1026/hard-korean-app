@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect, Suspense } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { vocabData } from '@/lib/data'
 import FlashCard from '@/components/FlashCard'
@@ -50,13 +50,10 @@ function VocabContent() {
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
 
-  useEffect(() => {
-    setPage(0)
-    setCardIndex(0)
-  }, [selectedLevel, search])
-
   const handleLevelChange = (lvl: number | null) => {
     setSelectedLevel(lvl)
+    setPage(0)
+    setCardIndex(0)
     const params = new URLSearchParams()
     if (lvl) params.set('level', String(lvl))
     if (mode === 'flashcard') params.set('mode', 'flashcard')
@@ -78,13 +75,11 @@ function VocabContent() {
         <h1 className="text-3xl font-black text-text mb-2">Vocabulary</h1>
         <p className="text-text-subtle">
           {filtered.length.toLocaleString()} words
-          {selectedLevel ? ` · TOPIK Level ${selectedLevel}` : ' · All levels'}
+          {selectedLevel ? ` • TOPIK Level ${selectedLevel}` : ' • All levels'}
         </p>
       </div>
 
-      {/* Controls */}
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
-        {/* Level selector */}
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => handleLevelChange(null)}
@@ -113,7 +108,6 @@ function VocabContent() {
           ))}
         </div>
 
-        {/* Mode toggle */}
         <div className="flex gap-2 ml-auto">
           <button
             onClick={() => handleModeChange('list')}
@@ -140,18 +134,20 @@ function VocabContent() {
         </div>
       </div>
 
-      {/* Search (list mode only) */}
       {mode === 'list' && (
         <input
           type="text"
           placeholder="Search words, meanings..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value)
+            setPage(0)
+            setCardIndex(0)
+          }}
           className="w-full mb-6 px-4 py-2.5 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
         />
       )}
 
-      {/* Flashcard mode */}
       {mode === 'flashcard' && filtered.length > 0 && (
         <div className="flex justify-center py-8">
           <FlashCard
@@ -174,7 +170,6 @@ function VocabContent() {
         </div>
       )}
 
-      {/* List mode */}
       {mode === 'list' && (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
@@ -208,7 +203,6 @@ function VocabContent() {
             ))}
           </div>
 
-          {/* Pagination */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-3 mt-8">
               <button
@@ -216,7 +210,7 @@ function VocabContent() {
                 disabled={page === 0}
                 className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
               >
-                ← Prev
+                Prev
               </button>
               <div className="flex items-center gap-1.5 text-sm text-text-subtle">
                 {pageInputActive ? (
@@ -254,7 +248,7 @@ function VocabContent() {
                 disabled={page === totalPages - 1}
                 className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
               >
-                Next →
+                Next
               </button>
             </div>
           )}

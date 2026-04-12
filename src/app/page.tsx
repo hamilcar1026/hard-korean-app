@@ -4,12 +4,12 @@ import { getVocabByLevel, getGrammarByLevel } from '@/lib/data'
 const LEVELS = [1, 2, 3, 4, 5, 6]
 
 const LEVEL_INFO: Record<number, { label: string; accent: string; border: string; desc: string }> = {
-  1: { label: 'Beginner 1',      accent: 'from-emerald-500 to-teal-400',     border: 'border-emerald-800 hover:border-emerald-500', desc: 'Survival Korean' },
-  2: { label: 'Beginner 2',      accent: 'from-sky-500 to-blue-400',         border: 'border-sky-800 hover:border-sky-500',         desc: 'Daily life basics' },
-  3: { label: 'Intermediate 1',  accent: 'from-amber-500 to-yellow-400',     border: 'border-amber-800 hover:border-amber-500',     desc: 'Social topics' },
-  4: { label: 'Intermediate 2',  accent: 'from-orange-500 to-amber-400',     border: 'border-orange-800 hover:border-orange-500',   desc: 'Abstract ideas' },
-  5: { label: 'Advanced 1',      accent: 'from-coral to-coral-light',        border: 'border-[#6B3040] hover:border-coral',         desc: 'Professional Korean' },
-  6: { label: 'Advanced 2',      accent: 'from-purple-500 to-pink-soft',     border: 'border-purple-900 hover:border-purple-500',   desc: 'Native-level mastery' },
+  1: { label: 'Beginner 1', accent: 'from-emerald-500 to-teal-400', border: 'border-emerald-800 hover:border-emerald-500', desc: 'Survival Korean' },
+  2: { label: 'Beginner 2', accent: 'from-sky-500 to-blue-400', border: 'border-sky-800 hover:border-sky-500', desc: 'Daily life basics' },
+  3: { label: 'Intermediate 1', accent: 'from-amber-500 to-yellow-400', border: 'border-amber-800 hover:border-amber-500', desc: 'Social topics' },
+  4: { label: 'Intermediate 2', accent: 'from-orange-500 to-amber-400', border: 'border-orange-800 hover:border-orange-500', desc: 'Abstract ideas' },
+  5: { label: 'Advanced 1', accent: 'from-coral to-coral-light', border: 'border-[#6B3040] hover:border-coral', desc: 'Professional Korean' },
+  6: { label: 'Advanced 2', accent: 'from-purple-500 to-pink-soft', border: 'border-purple-900 hover:border-purple-500', desc: 'Native-level mastery' },
 }
 
 export default function HomePage() {
@@ -22,12 +22,10 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* Hero */}
       <div
         className="relative overflow-hidden"
         style={{ background: 'var(--t-hero-bg)' }}
       >
-        {/* Decorative blobs */}
         <div
           className="absolute -top-20 -left-20 w-80 h-80 rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: '#FF6B6B' }}
@@ -52,7 +50,7 @@ export default function HomePage() {
             Hard Korean
           </h1>
           <p className="text-lg text-text-muted max-w-xl mx-auto mb-8 leading-relaxed">
-            TOPIK vocabulary &amp; grammar — straight from the official word list.
+            TOPIK vocabulary &amp; grammar, straight from the official word list.
             No shortcuts. Study hard.
           </p>
           <div className="flex justify-center gap-3 flex-wrap">
@@ -73,12 +71,11 @@ export default function HomePage() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Stats banner */}
         <div className="grid grid-cols-3 gap-4 mb-14 max-w-lg mx-auto">
           {[
-            { label: 'Total Words',     value: stats.reduce((s, x) => s + x.vocab, 0).toLocaleString() },
-            { label: 'Grammar Points',  value: stats.reduce((s, x) => s + x.grammar, 0).toLocaleString() },
-            { label: 'TOPIK Levels',    value: '6' },
+            { label: 'Total Words', value: stats.reduce((s, x) => s + x.vocab, 0).toLocaleString() },
+            { label: 'Grammar Points', value: stats.reduce((s, x) => s + x.grammar, 0).toLocaleString() },
+            { label: 'TOPIK Levels', value: '6' },
           ].map(({ label, value }) => (
             <div
               key={label}
@@ -95,7 +92,6 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Level grid */}
         <h2 className="text-sm font-bold text-text-subtle uppercase tracking-widest mb-5">Choose a Level</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {stats.map(({ level, label, accent, border, desc, vocab, grammar }) => (
@@ -104,9 +100,7 @@ export default function HomePage() {
               className={`bg-card border-2 ${border} rounded-2xl p-6 transition-all hover:shadow-lg hover:-translate-y-0.5 hover:shadow-[#FF6B6B22]`}
             >
               <div className="flex items-baseline gap-2 mb-1">
-                <span
-                  className={`text-3xl font-black bg-gradient-to-r ${accent} bg-clip-text text-transparent`}
-                >
+                <span className={`text-3xl font-black bg-gradient-to-r ${accent} bg-clip-text text-transparent`}>
                   TOPIK {level}
                 </span>
               </div>
@@ -114,7 +108,7 @@ export default function HomePage() {
               <p className="text-xs text-text-faint mb-5">{desc}</p>
               <div className="flex gap-2 text-xs text-text-subtle mb-4">
                 <span>{vocab} words</span>
-                <span>·</span>
+                <span>•</span>
                 <span>{grammar} grammar</span>
               </div>
               <div className="flex gap-2">

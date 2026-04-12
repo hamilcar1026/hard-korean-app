@@ -9,24 +9,24 @@ type Mode = 'login' | 'register'
 
 export default function AuthPage() {
   const router = useRouter()
-  const [mode, setMode]       = useState<Mode>('login')
-  const [email, setEmail]     = useState('')
+  const [mode, setMode] = useState<Mode>('login')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError]     = useState('')
+  const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const [done, setDone]       = useState(false)
+  const [done, setDone] = useState(false)
 
   if (!supabaseConfigured) {
     return (
-      <div className="max-w-md mx-auto px-4 py-20 text-center">
+      <div className="max-w-md mx-auto px-4 py-16 sm:py-20 text-center">
         <h1 className="text-2xl font-bold text-text mb-4">Auth not configured</h1>
-        <p className="text-text-subtle text-sm">
+        <p className="text-text-subtle text-sm leading-relaxed">
           Set <code className="text-coral-light">NEXT_PUBLIC_SUPABASE_URL</code> and{' '}
           <code className="text-coral-light">NEXT_PUBLIC_SUPABASE_ANON_KEY</code> in{' '}
           <code className="text-text-muted">.env.local</code> to enable authentication.
         </p>
         <Link href="/" className="mt-6 inline-block text-coral hover:text-coral-light transition-colors">
-          ← Back to home
+          Back to home
         </Link>
       </div>
     )
@@ -59,22 +59,21 @@ export default function AuthPage() {
 
   if (done) {
     return (
-      <div className="max-w-md mx-auto px-4 py-20 text-center">
-        <div className="text-4xl mb-4">📬</div>
+      <div className="max-w-md mx-auto px-4 py-16 sm:py-20 text-center">
+        <div className="text-4xl mb-4">Email sent</div>
         <h2 className="text-xl font-bold text-text mb-2">Check your email</h2>
-        <p className="text-text-subtle text-sm">
+        <p className="text-text-subtle text-sm leading-relaxed">
           We sent a confirmation link to <span className="text-text-muted">{email}</span>.
         </p>
         <Link href="/" className="mt-6 inline-block text-coral hover:text-coral-light transition-colors">
-          ← Back to home
+          Back to home
         </Link>
       </div>
     )
   }
 
   return (
-    <div className="max-w-md mx-auto px-4 py-16">
-      {/* Tab toggle */}
+    <div className="max-w-md mx-auto w-full px-4 py-10 sm:py-16">
       <div className="flex bg-card border border-border rounded-xl p-1 mb-8">
         {(['login', 'register'] as Mode[]).map((m) => (
           <button
@@ -103,7 +102,7 @@ export default function AuthPage() {
             onChange={(e) => setEmail(e.target.value)}
             required
             placeholder="you@example.com"
-            className="w-full px-4 py-3 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
+            className="w-full min-w-0 px-4 py-3 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
           />
         </div>
 
@@ -118,7 +117,7 @@ export default function AuthPage() {
             required
             minLength={6}
             placeholder="••••••••"
-            className="w-full px-4 py-3 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
+            className="w-full min-w-0 px-4 py-3 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
           />
         </div>
 

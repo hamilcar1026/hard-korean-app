@@ -20,26 +20,17 @@ export default function DashboardPage() {
   const [fetching, setFetching] = useState(false)
   const [error, setError] = useState('')
 
-  useEffect(() => {
-    if (loading) return
-    if (!user) { router.replace('/auth'); return }
-    if (role && role !== 'teacher') { router.replace('/'); return }
-    if (role === 'teacher') loadStats()
-  }, [user, role, loading])
-
   const loadStats = async () => {
     setFetching(true)
     setError('')
     const supabase = createClient()
 
-    // Fetch all progress records (teacher RLS policy allows this)
     const { data: progress, error: pErr } = await supabase
       .from('user_progress')
       .select('user_id, status')
 
     if (pErr) { setError(pErr.message); setFetching(false); return }
 
-    // Fetch all profiles for email lookup
     const { data: profiles, error: prErr } = await supabase
       .from('profiles')
       .select('id, email')
@@ -49,7 +40,6 @@ export default function DashboardPage() {
     const emailMap: Record<string, string> = {}
     for (const p of profiles ?? []) emailMap[p.id] = p.email
 
-    // Aggregate per user
     const agg: Record<string, { known: number; learning: number }> = {}
     for (const row of progress ?? []) {
       if (!agg[row.user_id]) agg[row.user_id] = { known: 0, learning: 0 }
@@ -69,24 +59,32 @@ export default function DashboardPage() {
     setFetching(false)
   }
 
-  // Still loading auth state
+  useEffect(() => {
+    if (loading) return
+    if (!user) { router.replace('/auth'); return }
+    if (role && role !== 'teacher') { router.replace('/'); return }
+    if (role === 'teacher') {
+      queueMicrotask(() => {
+        void loadStats()
+      })
+    }
+  }, [loading, role, router, user])
+
   if (loading) {
     return (
       <div className="text-center py-20 text-text-faint">Loading...</div>
     )
   }
 
-  // Not logged in (redirect happens via useEffect, but render null to avoid flash)
   if (!user) return null
 
-  // Not a teacher – redirect happens in useEffect, render nothing to avoid flash
   if (!role || role !== 'teacher') return null
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-black text-text mb-1">선생님 대시보드</h1>
-        <p className="text-text-subtle text-sm">학생별 학습 진도 현황</p>
+        <h1 className="text-3xl font-black text-text mb-1">Teacher Dashboard</h1>
+        <p className="text-text-subtle text-sm">Track student study progress</p>
       </div>
 
       {error && (
@@ -99,20 +97,20 @@ export default function DashboardPage() {
       )}
 
       {fetching ? (
-        <div className="text-center py-20 text-text-faint">불러오는 중...</div>
+        <div className="text-center py-20 text-text-faint">Loading student progress...</div>
       ) : stats.length === 0 ? (
         <div className="text-center py-20 text-text-faint">
-          아직 학습 기록이 없습니다.
+          No study records yet.
         </div>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border text-left text-text-subtle">
-                <th className="pb-3 pr-6 font-semibold">학생 이메일</th>
-                <th className="pb-3 pr-6 font-semibold text-emerald-400">알았다 ✓</th>
-                <th className="pb-3 pr-6 font-semibold text-amber-400">몰랐다 😅</th>
-                <th className="pb-3 font-semibold">전체</th>
+                <th className="pb-3 pr-6 font-semibold">Student Email</th>
+                <th className="pb-3 pr-6 font-semibold text-emerald-400">Known</th>
+                <th className="pb-3 pr-6 font-semibold text-amber-400">Learning</th>
+                <th className="pb-3 font-semibold">Total</th>
               </tr>
             </thead>
             <tbody>
@@ -130,7 +128,7 @@ export default function DashboardPage() {
                     {s.total}
                     {s.total > 0 && (
                       <span className="ml-2 text-xs text-text-faint">
-                        ({Math.round((s.known / s.total) * 100)}% 알았다)
+                        ({Math.round((s.known / s.total) * 100)}% known)
                       </span>
                     )}
                   </td>
@@ -139,7 +137,7 @@ export default function DashboardPage() {
             </tbody>
           </table>
           <p className="mt-4 text-xs text-text-faint text-right">
-            총 {stats.length}명의 학생
+            Total students: {stats.length}
           </p>
         </div>
       )}

@@ -13,11 +13,8 @@ interface Props {
   onGoTo: (index: number) => void
   current: number
   total: number
-  /** Called when user marks the card as known. Omit if not logged in. */
   onKnown?: () => void
-  /** Called when user marks the card as unknown. Omit if not logged in. */
   onUnknown?: () => void
-  /** Show a login nudge instead of progress buttons when not logged in. */
   loginHint?: boolean
 }
 
@@ -36,6 +33,7 @@ export default function FlashCard({
     setSavedStatus(null)
     setTimeout(onNext, 50)
   }
+
   const handlePrev = () => {
     setFlipped(false)
     setSavedStatus(null)
@@ -65,13 +63,11 @@ export default function FlashCard({
 
   return (
     <div className="flex flex-col items-center gap-6 w-full max-w-lg">
-      {/* Progress indicator */}
       <div className="w-full flex items-center justify-between text-sm text-text-subtle">
         <span>{current + 1} / {total}</span>
         <LevelBadge level={item.level} />
       </div>
 
-      {/* Progress bar */}
       <div className="w-full h-1 bg-card-surface rounded-full">
         <div
           className="h-1 rounded-full transition-all"
@@ -82,7 +78,6 @@ export default function FlashCard({
         />
       </div>
 
-      {/* Card */}
       <div
         className="w-full cursor-pointer"
         style={{ perspective: '1000px' }}
@@ -96,7 +91,6 @@ export default function FlashCard({
             minHeight: '16rem',
           }}
         >
-          {/* Front */}
           <div
             className="absolute inset-0 rounded-2xl bg-card border border-border flex flex-col items-center justify-center gap-3 p-6"
             style={{ backfaceVisibility: 'hidden' }}
@@ -110,7 +104,6 @@ export default function FlashCard({
             <p className="text-text-faint text-xs mt-3">tap to flip</p>
           </div>
 
-          {/* Back */}
           <div
             className="absolute inset-0 rounded-2xl border flex flex-col items-center justify-center gap-3 p-6"
             style={{
@@ -136,7 +129,6 @@ export default function FlashCard({
         </div>
       </div>
 
-      {/* 알았다 / 몰랐다 */}
       {showProgressButtons && (
         <div className="flex gap-3 w-full">
           <button
@@ -148,7 +140,7 @@ export default function FlashCard({
                 : 'bg-card border-border hover:border-amber-400 hover:text-amber-400 text-text-subtle'
             }`}
           >
-            몰랐다 😅
+            Still learning
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); handleKnown() }}
@@ -159,29 +151,27 @@ export default function FlashCard({
                 : 'bg-card border-border hover:border-emerald-400 hover:text-emerald-400 text-text-subtle'
             }`}
           >
-            알았다 ✓
+            I know this
           </button>
         </div>
       )}
 
-      {/* Login hint when not logged in */}
       {showLoginHint && (
         <p className="text-xs text-text-faint text-center">
           <Link href="/auth" className="text-coral hover:text-coral-light underline underline-offset-2">
-            로그인
+            Log in
           </Link>
-          하면 학습 진도를 저장할 수 있어요.
+          {' '}to save your study progress.
         </p>
       )}
 
-      {/* Prev / Next controls */}
       <div className="flex items-center gap-4">
         <button
           onClick={handlePrev}
           disabled={current === 0}
           className="btn-ghost px-6 py-2 rounded-xl text-sm"
         >
-          ← Prev
+          Prev
         </button>
 
         <div className="flex items-center gap-1.5 text-sm text-text-subtle">
@@ -225,7 +215,7 @@ export default function FlashCard({
           disabled={current === total - 1}
           className="btn-coral px-6 py-2 rounded-xl text-sm"
         >
-          Next →
+          Next
         </button>
       </div>
     </div>

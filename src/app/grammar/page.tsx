@@ -64,11 +64,10 @@ function GrammarContent() {
         <h1 className="text-3xl font-black text-text mb-2">Grammar</h1>
         <p className="text-text-subtle">
           {filtered.length} grammar points
-          {selectedLevel ? ` · TOPIK Level ${selectedLevel}` : ' · All levels'}
+          {selectedLevel ? ` • TOPIK Level ${selectedLevel}` : ' • All levels'}
         </p>
       </div>
 
-      {/* Level selector */}
       <div className="flex flex-wrap gap-2 mb-4">
         <button
           onClick={() => handleLevelChange(null)}
@@ -97,7 +96,6 @@ function GrammarContent() {
         ))}
       </div>
 
-      {/* Category selector */}
       <div className="flex flex-wrap gap-2 mb-5">
         {CATEGORIES.map((cat) => (
           <button
@@ -115,7 +113,6 @@ function GrammarContent() {
         ))}
       </div>
 
-      {/* Search */}
       <input
         type="text"
         placeholder="Search grammar forms, meanings..."
@@ -124,14 +121,12 @@ function GrammarContent() {
         className="w-full mb-6 px-4 py-2.5 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
       />
 
-      {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {pageItems.map((item, idx) => (
           <GrammarCard key={`${item.form}-${idx}`} item={item} />
         ))}
       </div>
 
-      {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex items-center justify-center gap-3 mt-8">
           <button
@@ -139,7 +134,7 @@ function GrammarContent() {
             disabled={page === 0}
             className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
           >
-            ← Prev
+            Prev
           </button>
           <span className="text-text-subtle text-sm">
             {page + 1} / {totalPages}
@@ -149,7 +144,7 @@ function GrammarContent() {
             disabled={page === totalPages - 1}
             className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
           >
-            Next →
+            Next
           </button>
         </div>
       )}

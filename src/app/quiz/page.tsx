@@ -1,12 +1,12 @@
 'use client'
 
-import React, { useState, useMemo, useCallback, useRef, Suspense } from 'react'
+import React, { useState, useMemo, useRef, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { vocabData } from '@/lib/data'
 import LevelBadge from '@/components/LevelBadge'
 import TTSButton from '@/components/TTSButton'
 
-const LEVELS    = [1, 2, 3, 4, 5, 6]
+const LEVELS = [1, 2, 3, 4, 5, 6]
 const QUIZ_SIZE = 10
 
 type QuizMode = 'multiple' | 'typing'
@@ -20,7 +20,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-// ── Multiple-choice question ─────────────────────────────────────────────────
+// Multiple-choice question
 interface MCQuestion {
   type: 'multiple'
   word: string
@@ -30,55 +30,55 @@ interface MCQuestion {
   choices: string[]
 }
 
-// ── Typing question ──────────────────────────────────────────────────────────
+// Typing question
 interface TypeQuestion {
   type: 'typing'
   meaning: string
   pos: string
   level: number
   example_kr: string
-  correct: string   // Korean word
+  correct: string
 }
 
 type Question = MCQuestion | TypeQuestion
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// Helpers
 function normalize(s: string) {
   return s.trim().toLowerCase().replace(/\s+/g, ' ')
 }
 
 function isCorrectTyping(input: string, correct: string) {
   const userNorm = normalize(input)
-  const answers  = correct.split('/').map((p) => normalize(p.trim()))
+  const answers = correct.split('/').map((p) => normalize(p.trim()))
   return answers.some((a) => a === userNorm)
 }
 
-// ── Quiz Content ─────────────────────────────────────────────────────────────
+// Quiz content
 function QuizContent() {
-  const searchParams  = useSearchParams()
-  const router        = useRouter()
-  const levelParam    = searchParams.get('level')
-  const inputRef      = useRef<HTMLInputElement>(null)
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const levelParam = searchParams.get('level')
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const [selectedLevel, setSelectedLevel] = useState<number | null>(
     levelParam ? Number(levelParam) : 1
   )
-  const [quizMode, setQuizMode]   = useState<QuizMode>('multiple')
+  const [quizMode, setQuizMode] = useState<QuizMode>('multiple')
   const [questions, setQuestions] = useState<Question[] | null>(null)
-  const [qIndex, setQIndex]       = useState(0)
-  const [selected, setSelected]   = useState<string | null>(null)   // MC
-  const [typed, setTyped]         = useState('')                     // typing
-  const [submitted, setSubmitted] = useState(false)                  // typing
-  const [score, setScore]         = useState(0)
-  const [finished, setFinished]   = useState(false)
-  const [answers, setAnswers]     = useState<{ display: string; chosen: string; correct: string; ok: boolean }[]>([])
+  const [qIndex, setQIndex] = useState(0)
+  const [selected, setSelected] = useState<string | null>(null)
+  const [typed, setTyped] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [score, setScore] = useState(0)
+  const [finished, setFinished] = useState(false)
+  const [answers, setAnswers] = useState<{ display: string; chosen: string; correct: string; ok: boolean }[]>([])
 
   const pool = useMemo(
     () => (selectedLevel ? vocabData.filter((v) => v.level === selectedLevel) : vocabData),
     [selectedLevel]
   )
 
-  const generateQuiz = useCallback(() => {
+  const generateQuiz = () => {
     if (pool.length < 4) return
     const picked = shuffle(pool).slice(0, QUIZ_SIZE)
 
@@ -88,22 +88,22 @@ function QuizContent() {
         const distractors = shuffle(pool.filter((v) => v.word !== item.word)).slice(0, 3)
         const choices = shuffle([item.meaning, ...distractors.map((d) => d.meaning)])
         return {
-          type:         'multiple',
-          word:         item.word,
+          type: 'multiple',
+          word: item.word,
           romanization: item.romanization,
-          level:        item.level,
-          correct:      item.meaning,
+          level: item.level,
+          correct: item.meaning,
           choices,
         } satisfies MCQuestion
       })
     } else {
       qs = picked.map((item) => ({
-        type:       'typing',
-        meaning:    item.meaning,
-        pos:        item.pos,
-        level:      item.level,
+        type: 'typing',
+        meaning: item.meaning,
+        pos: item.pos,
+        level: item.level,
         example_kr: item.example_kr,
-        correct:    item.word,
+        correct: item.word,
       } satisfies TypeQuestion))
     }
 
@@ -115,7 +115,7 @@ function QuizContent() {
     setScore(0)
     setFinished(false)
     setAnswers([])
-  }, [pool, quizMode])
+  }
 
   const handleLevelChange = (lvl: number | null) => {
     setSelectedLevel(lvl)
@@ -141,7 +141,6 @@ function QuizContent() {
     }, 1000)
   }
 
-  // MC answer handler
   const handleMCAnswer = (choice: string) => {
     if (selected) return
     const q = questions![qIndex] as MCQuestion
@@ -149,7 +148,6 @@ function QuizContent() {
     advance(choice === q.correct, choice, q.correct, q.word)
   }
 
-  // Typing submit handler
   const handleTypingSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (submitted) return
@@ -159,14 +157,13 @@ function QuizContent() {
     advance(ok, typed, q.correct, q.meaning)
   }
 
-  // ── Setup screen ─────────────────────────────────────────────────────────
+  // Setup screen
   if (!questions) {
     return (
       <div className="max-w-lg mx-auto px-4 py-12 text-center">
         <h1 className="text-3xl font-black text-text mb-2">Quiz</h1>
         <p className="text-text-subtle mb-8">Test your vocabulary knowledge</p>
 
-        {/* Level selector */}
         <div className="flex flex-wrap justify-center gap-2 mb-6">
           {LEVELS.map((l) => (
             <button
@@ -184,7 +181,6 @@ function QuizContent() {
           ))}
         </div>
 
-        {/* Mode selector */}
         <div className="flex bg-card rounded-xl p-1 mb-6 max-w-xs mx-auto border border-border">
           {([['multiple', 'Multiple Choice'], ['typing', 'Type the Word']] as [QuizMode, string][]).map(([m, label]) => (
             <button
@@ -204,8 +200,8 @@ function QuizContent() {
 
         <div className="bg-card border border-border rounded-2xl p-6 mb-8 text-left">
           <p className="text-text-muted text-sm">
-            <span className="font-bold text-text">{QUIZ_SIZE} questions</span> ·{' '}
-            {quizMode === 'multiple' ? 'Multiple choice' : 'Type the Korean word'} ·{' '}
+            <span className="font-bold text-text">{QUIZ_SIZE} questions</span> •{' '}
+            {quizMode === 'multiple' ? 'Multiple choice' : 'Type the Korean word'} •{' '}
             {selectedLevel ? `TOPIK Level ${selectedLevel}` : 'All levels'}
           </p>
           <p className="text-text-faint text-xs mt-2">Pool: {pool.length.toLocaleString()} words</p>
@@ -216,13 +212,13 @@ function QuizContent() {
           disabled={pool.length < 4}
           className="btn-coral px-8 py-3 rounded-2xl disabled:opacity-30 disabled:cursor-not-allowed"
         >
-          Start Quiz →
+          Start Quiz
         </button>
       </div>
     )
   }
 
-  // ── Results screen ────────────────────────────────────────────────────────
+  // Results screen
   if (finished) {
     const pct = Math.round((score / QUIZ_SIZE) * 100)
     return (
@@ -251,7 +247,7 @@ function QuizContent() {
               }
             >
               <div className="flex items-center gap-3">
-                <span className={ok ? 'text-emerald-500' : 'text-coral'}>{ok ? '✓' : '✗'}</span>
+                <span className={ok ? 'text-emerald-500' : 'text-coral'}>{ok ? 'O' : 'X'}</span>
                 <span className="font-bold text-text">{display}</span>
                 {!ok && (
                   <span className="text-text-subtle text-xs ml-auto">
@@ -277,7 +273,7 @@ function QuizContent() {
 
   const q = questions[qIndex]
 
-  // ── Multiple-choice screen ────────────────────────────────────────────────
+  // Multiple-choice screen
   if (q.type === 'multiple') {
     return (
       <div className="max-w-lg mx-auto px-4 py-12">
@@ -324,7 +320,7 @@ function QuizContent() {
     )
   }
 
-  // ── Typing screen ─────────────────────────────────────────────────────────
+  // Typing screen
   const isOk = submitted ? isCorrectTyping(typed, q.correct) : null
 
   return (
@@ -377,7 +373,7 @@ function QuizContent() {
             disabled={!typed.trim()}
             className="btn-coral w-full py-3 rounded-xl disabled:opacity-30 disabled:cursor-not-allowed"
           >
-            Check →
+            Check
           </button>
         )}
       </form>
@@ -385,7 +381,7 @@ function QuizContent() {
   )
 }
 
-// ── Shared progress header ────────────────────────────────────────────────────
+// Shared progress header
 function QuizHeader({ qIndex, score, level }: { qIndex: number; score: number; level: number }) {
   return (
     <>
@@ -409,7 +405,7 @@ function QuizHeader({ qIndex, score, level }: { qIndex: number; score: number; l
   )
 }
 
-// ── Page wrapper ──────────────────────────────────────────────────────────────
+// Page wrapper
 export default function QuizPage() {
   return (
     <Suspense fallback={<div className="text-center py-20 text-text-faint">Loading...</div>}>
