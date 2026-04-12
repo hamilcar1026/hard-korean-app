@@ -44,7 +44,7 @@
     "meaning": "subject marker (honorific, for respected persons)",
     "examples": [
       "선생님께서 교실에 들어오셨어요. (The teacher entered the classroom.)",
-      "할머니께서 밥을 드세요. (Grandmother is eating.)"
+      "할머니께서 밥을 드세요. (Grandmother is having a meal.)"
     ]
   },
   {
@@ -185,7 +185,7 @@
     "form": "만",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "단독",
+    "meaning": "only; just; exclusively",
     "examples": [
       "저만 한국어를 공부해요. (Only I study Korean.)",
       "물만 마셔요. (I only drink water.)"
@@ -197,7 +197,7 @@
     "form": "이다",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "designation",
+    "meaning": "copula (지정사); links subject to predicate noun or adjective",
     "examples": [
       "저는 학생이에요. (I am a student.)",
       "이것은 책이에요. (This is a book.)"
@@ -212,7 +212,7 @@
     "meaning": "to; for (indirect object — colloquial, person)",
     "examples": [
       "친구한테 전화했어요. (I called a friend.)",
-      "선생님한테 물어봤어요. (I asked the teacher.)"
+      "언니한테 물어봤어요. (I asked my older sister.)"
     ]
   },
   {
@@ -259,8 +259,8 @@
     "conjugation_rule": "-으시- after consonant-ending stems; -시- after vowel-ending stems (honorific marker)",
     "meaning": "subject honorific marker",
     "examples": [
-      "선생님께서 앉으셨어요. (The teacher sat down.)",
-      "어머니께서 오셨어요. (Mother came.)"
+      "선생님께서 앉으세요. (The teacher sits down.)",
+      "어머니께서 오세요. (Mother comes.)"
     ]
   },
   {
@@ -271,7 +271,8 @@
     "conjugation_rule": "",
     "meaning": "enumeration / listing",
     "examples": [
-      "음악을 듣고 책을 읽어요. (I listen to music and read books.)"
+      "음악을 듣고 책을 읽어요. (I listen to music and read books.)",
+      "사과를 먹고 물을 마셔요. (I eat an apple and drink water.)"
     ]
   },
   {
@@ -328,7 +329,7 @@
     "form": "-으려고1",
     "related": "-려고1, 으려, 려",
     "conjugation_rule": "",
-    "meaning": "의도",
+    "meaning": "intention; in order to; with the aim of",
     "examples": [
       "건강해지려고 운동을 해요. (I exercise in order to get healthy.)",
       "한국어를 배우려고 학원에 다녀요. (I attend a language school to learn Korean.)"
@@ -342,8 +343,8 @@
     "conjugation_rule": "습니까 after consonant-ending stems; ㅂ니까 after vowel-ending stems",
     "meaning": "polite formal question ending (합쇼체)",
     "examples": [
-      "지금 어디에 가십니까? (Where are you going now?)",
-      "밥을 먹습니까? (Are you eating?)"
+      "밥을 먹습니까? (Are you eating?)",
+      "어디에 갑니까? (Where are you going?)"
     ]
   },
   {
@@ -397,12 +398,13 @@
   {
     "level": 1,
     "category": "sentence-final ending",
-    "form": "-고433)",
+    "form": "-고4",
     "related": "-고요",
     "conjugation_rule": "",
-    "meaning": "덧붙여 서술",
+    "meaning": "adding a supplementary statement",
     "examples": [
-      "저도 학생이에요. 언니도 학생이고요. (I'm a student too. And my sister is also a student.)"
+      "저도 학생이에요. 언니도 학생이고요. (I'm a student too. And my sister is also a student.)",
+      "오늘 바빠요. 내일도 바쁘고요. (I'm busy today. And tomorrow too.)"
     ]
   },
   {
@@ -449,7 +451,8 @@
     "conjugation_rule": "",
     "meaning": "want to (expressing desire)",
     "examples": [
-      "한국에 가고 싶어요. (I want to go to Korea.)"
+      "한국에 가고 싶어요. (I want to go to Korea.)",
+      "맛있는 음식을 먹고 싶어요. (I want to eat delicious food.)"
     ]
   },
   {
@@ -460,7 +463,8 @@
     "conjugation_rule": "",
     "meaning": "be doing; be in a state of (progressive / continuative)",
     "examples": [
-      "지금 공부하고 있어요. (I am studying now.)"
+      "지금 공부하고 있어요. (I am studying now.)",
+      "친구가 음악을 듣고 있어요. (My friend is listening to music.)"
     ]
   },
   {
@@ -495,7 +499,8 @@
     "conjugation_rule": "",
     "meaning": "can; be able to (possibility / ability)",
     "examples": [
-      "한국어를 할 수 있어요. (I can speak Korean.)"
+      "한국어를 할 수 있어요. (I can speak Korean.)",
+      "피아노를 칠 수 있어요. (I can play the piano.)"
     ]
   },
   {
@@ -554,7 +559,7 @@
     "conjugation_rule": "",
     "meaning": "every; each (distributive particle)",
     "examples": [
-      "매일 운동을 해요. (I exercise every day.)",
+      "날마다 운동해요. (I exercise every day.)",
       "주마다 한 번씩 청소해요. (I clean once every week.)"
     ]
   },
@@ -591,7 +596,7 @@
     "meaning": "starting from (location / time starting point)",
     "examples": [
       "서울에서부터 걸어왔어요. (I walked all the way from Seoul.)",
-      "아침부터 공부했어요. (I studied from morning.)"
+      "집에서부터 여기까지 걸어왔어요. (I walked all the way from home to here.)"
     ]
   },
   {
@@ -674,7 +679,7 @@
     "conjugation_rule": "",
     "meaning": "contrast / opposition",
     "examples": [
-      "날씨가 좋은데 밖에 안 나가요. (The weather is nice but I'm not going out.)",
+      "학교에 가는데 비가 와요. (I'm going to school but it's raining.)",
       "배가 고픈데 음식이 없어요. (I'm hungry but there's no food.)"
     ]
   },
@@ -684,7 +689,7 @@
     "form": "-으면/-면",
     "related": "",
     "conjugation_rule": "-으면 after consonant-ending stems; -면 after vowel-ending stems",
-    "meaning": "가정",
+    "meaning": "conditional; if; supposing that",
     "examples": [
       "시간이 있으면 와요. (If you have time, come.)",
       "돈이 많으면 여행을 가겠어요. (If I had a lot of money, I would travel.)"
@@ -717,10 +722,10 @@
   {
     "level": 2,
     "category": "connective ending",
-    "form": "-다가1(1)34)",
+    "form": "-다가1(1)",
     "related": "-다5, 다가도",
     "conjugation_rule": "",
-    "meaning": "interruption / transition",
+    "meaning": "interruption and transition (action stops midway and changes to another action)",
     "examples": [
       "TV를 보다가 잠이 들었어요. (I fell asleep while watching TV.)",
       "밥을 먹다가 전화가 왔어요. (A call came while I was eating.)"
@@ -732,7 +737,7 @@
     "form": "-기",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "명사형",
+    "meaning": "nominalization; turning a verb into a noun",
     "examples": [
       "수영하기가 좋아요. (I like swimming.)",
       "한국어 공부하기가 어려워요. (Studying Korean is difficult.)"
@@ -744,7 +749,7 @@
     "form": "-는2",
     "related": "-은3, -ㄴ3",
     "conjugation_rule": "",
-    "meaning": "관형사형 (현재)",
+    "meaning": "adnominal modifier (present tense)",
     "examples": [
       "지금 먹는 음식이 뭐예요? (What food are you eating now?)",
       "한국어를 가르치는 선생님이에요. (He is a teacher who teaches Korean.)"
@@ -756,7 +761,7 @@
     "form": "-은2/-ㄴ4",
     "related": "",
     "conjugation_rule": "-은 after consonant-ending stems; -ㄴ after vowel-ending stems (adnominal past/descriptive)",
-    "meaning": "관형사형 (과거)",
+    "meaning": "adnominal modifier (past tense)",
     "examples": [
       "어제 먹은 음식이 맛있었어요. (The food I ate yesterday was delicious.)",
       "읽은 책을 반납했어요. (I returned the book I read.)"
@@ -768,7 +773,7 @@
     "form": "-을2/-ㄹ2",
     "related": "",
     "conjugation_rule": "-을 after consonant-ending stems; -ㄹ after vowel-ending stems (adnominal future/presumptive)",
-    "meaning": "관형사형",
+    "meaning": "adnominal modifier (future/prospective)",
     "examples": [
       "내일 먹을 음식을 준비했어요. (I prepared food to eat tomorrow.)",
       "갈 곳이 있어요. (I have a place to go.)"
@@ -792,7 +797,7 @@
     "form": "-음/-ㅁ",
     "related": "",
     "conjugation_rule": "-음 after consonant-ending stems; -ㅁ after vowel-ending stems (nominalizer)",
-    "meaning": "명사형",
+    "meaning": "nominalization; forming a noun from a verb",
     "examples": [
       "그의 웃음이 보기 좋았어요. (His smile was nice to see.)",
       "성공함이 목표예요. (Succeeding is the goal.)"
@@ -806,8 +811,8 @@
     "conjugation_rule": "",
     "meaning": "oh! (exclamation of discovery — informal)",
     "examples": [
-      "날씨가 정말 좋은군! (The weather is really nice!)",
-      "그 사람이 벌써 왔군! (That person already came!)"
+      "오늘도 열심히 공부하는군요! (You are studying hard again today!)",
+      "그 사람이 벌써 오는군! (Oh, that person is already coming!)"
     ]
   },
   {
@@ -818,8 +823,8 @@
     "conjugation_rule": "",
     "meaning": "I will (first-person promise or intention)",
     "examples": [
-      "내가 할게요. (I will do it.)",
-      "제가 도와줄게요. (I will help you.)"
+      "내가 먹을게요. (I will eat it.)",
+      "제가 먼저 갈게요. (I will go first.)"
     ]
   },
   {
@@ -842,7 +847,7 @@
     "conjugation_rule": "",
     "meaning": "exclamation / surprise",
     "examples": [
-      "오늘 날씨가 정말 좋은데요! (The weather is really nice today!)",
+      "벌써 다 먹었는데요! (You already finished it all!)",
       "이 음식이 맛있는데요! (This food is really delicious!)"
     ]
   },
@@ -878,7 +883,8 @@
     "conjugation_rule": "",
     "meaning": "come to; end up; result in (unplanned change)",
     "examples": [
-      "한국어를 배우게 됐어요. (I came to learn Korean.)"
+      "한국어를 배우게 됐어요. (I came to learn Korean.)",
+      "한국에 살게 됐어요. (I ended up living in Korea.)"
     ]
   },
   {
@@ -913,7 +919,8 @@
     "conjugation_rule": "",
     "meaning": "seems like; looks like (conjecture)",
     "examples": [
-      "비가 올 것 같아요. (It seems like it will rain.)"
+      "비가 올 것 같아요. (It seems like it will rain.)",
+      "그 사람이 피곤한 것 같아요. (That person seems tired.)"
     ]
   },
   {
@@ -994,10 +1001,10 @@
     "form": "-을까 보다",
     "related": "-ㄹ까 보다",
     "conjugation_rule": "",
-    "meaning": "(was) going to but; contemplating (near-intention)",
+    "meaning": "thinking of doing; considering (intention) / afraid that; in case (concern about negative outcome)",
     "examples": [
       "비가 올까 봐 우산을 가져왔어요. (I brought an umbrella in case it rains.)",
-      "늦을까 봐 일찍 출발했어요. (I left early in case I would be late.)"
+      "오늘 쉴까 봐요. (I'm thinking of resting today.)"
     ]
   },
   {
@@ -1009,7 +1016,7 @@
     "meaning": "try doing (attempt)",
     "examples": [
       "한번 먹어 봐요. (Try eating it once.)",
-      "한번 입어 봐요. (Try wearing it once.)"
+      "이 신발 신어 봐도 돼요? (Can I try on these shoes?)"
     ]
   },
   {
@@ -1056,8 +1063,9 @@
     "conjugation_rule": "",
     "meaning": "don't do (negative command / request)",
     "examples": [
-      "여기서 담배를 피우지 마세요. (Please don't smoke here.)",
-      "큰 소리로 말하지 마세요. (Please don't speak loudly.)"
+      "걱정하지 마. (Don't worry.)",
+      "텔레비전 보지 말고 공부해요. (Don't watch TV; study instead.)",
+      "늦게까지 자지 마세요. (Please don't stay up late.)"
     ]
   },
   {
@@ -1164,7 +1172,7 @@
     "conjugation_rule": "아 after consonant-ending names; 야 after vowel-ending names (vocative)",
     "meaning": "vocative / address",
     "examples": [
-      "철수야, 밥 먹어! (Cheolsu, eat!)",
+      "영철아, 이리 와! (Yeongcheol, come here!)",
       "민수야, 여기 와! (Minsu, come here!)"
     ]
   },
@@ -1234,7 +1242,7 @@
     "form": "-는다고1",
     "related": "-다고1, -라고3, -으라고1, -자고1",
     "conjugation_rule": "",
-    "meaning": "reason / cause",
+    "meaning": "reason; because (quoting a reason or justification)",
     "examples": [
       "바쁘다고 못 간대요. (They say they can't go because they're busy.)",
       "맛있다고 많이 먹었어요. (I ate a lot saying it was delicious.)"
@@ -1354,10 +1362,10 @@
     "form": "-다가1(2)",
     "related": "-다5, 다가도",
     "conjugation_rule": "",
-    "meaning": "interruption / transition",
+    "meaning": "continuation leading to negative consequence (warning against continuing)",
     "examples": [
-      "가다가 친구를 만났어요. (I met a friend while going somewhere.)",
-      "공부하다가 쉬었어요. (I rested while studying.)"
+      "그렇게 놀다가 시험에 떨어져요. (If you keep playing like that, you will fail.)",
+      "늦게 자다가 지각해요. (If you keep sleeping late, you will be late.)"
     ]
   },
   {
@@ -1380,8 +1388,8 @@
     "conjugation_rule": "-으려면 after consonant-ending stems; -려면 after vowel-ending stems",
     "meaning": "if one intends to; in order to (conditional intention)",
     "examples": [
-      "한국어를 잘 하려면 매일 연습해야 해요. (If you want to speak Korean well, you have to practice every day.)",
-      "건강해지려면 운동을 해야 해요. (If you want to be healthy, you have to exercise.)"
+      "책을 읽으려면 시간이 필요해요. (If you want to read a book, you need time.)",
+      "한국어를 잘 하려면 매일 연습해야 해요. (If you want to speak Korean well, you have to practice every day.)"
     ]
   },
   {
@@ -1390,7 +1398,7 @@
     "form": "-던-",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "관형사형",
+    "meaning": "adnominal modifier (retrospective; past habit or incomplete action)",
     "examples": [
       "예전에 살던 집이 그리워요. (I miss the house I used to live in.)",
       "자주 가던 카페가 문을 닫았어요. (The cafe I used to frequent has closed.)"
@@ -1416,8 +1424,8 @@
     "conjugation_rule": "",
     "meaning": "oh! (exclamation of fresh discovery — informal)",
     "examples": [
-      "드디어 봄이 오는구나! (Spring is finally coming!)",
-      "그 친구가 열심히 공부하는구나! (That friend really studies hard!)"
+      "비가 이렇게 많이 오는구나! (Oh, it is raining this much!)",
+      "그 친구가 벌써 졸업하는구나! (Oh, that friend is already graduating!)"
     ]
   },
   {
@@ -1870,7 +1878,7 @@
     "form": "-는다고3",
     "related": "-ㄴ다고3, -다고3, -라고5, -느냐고2, -냐고2, -으냐고2, -자고3, -으라고3, -라고8",
     "conjugation_rule": "",
-    "meaning": "인용",
+    "meaning": "indirect quotation; reporting what someone said or commanded",
     "examples": [
       "그가 결혼한다고 했어요. (He said he was getting married.)",
       "선생님이 숙제를 하라고 했어요. (The teacher said to do the homework.)"
@@ -1918,10 +1926,10 @@
     "form": "이든",
     "related": "든1, 이든지, 든지1, 이든가, 든가1",
     "conjugation_rule": "",
-    "meaning": "선택",
+    "meaning": "choice; whether ... or; no matter which",
     "examples": [
-      "뭐가 좋든 다 괜찮아요. (Whatever is good, it's all fine.)",
-      "가든 오든 상관없어요. (Whether you go or come, it doesn't matter.)"
+      "남자이든 여자이든 다 환영해요. (Whether man or woman, everyone is welcome.)",
+      "커피이든 차이든 좋아요. (Whether coffee or tea, it is fine.)"
     ]
   },
   {
@@ -1933,7 +1941,7 @@
     "meaning": "definition",
     "examples": [
       "사랑이란 상대를 배려하는 것이에요. (Love is caring for the other person.)",
-      "행복이란 무엇일까요? (What is happiness?)"
+      "자유란 소중한 거예요. (Freedom is precious.)"
     ]
   },
   {
@@ -1945,7 +1953,7 @@
     "meaning": "designation",
     "examples": [
       "이것이면 충분해요. (If it's this, it's enough.)",
-      "다음이면 당신 차례예요. (If it's next, it's your turn.)"
+      "바다면 좋겠어요. (It would be nice if it were the sea.)"
     ]
   },
   {
@@ -1978,10 +1986,10 @@
     "form": "까지2",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "마저",
+    "meaning": "even; as well (exhaustive addition, similar to 마저)",
     "examples": [
-      "친구마저 떠나 버렸어요. (Even my friend left.)",
-      "마지막 희망마저 사라졌어요. (Even the last hope has disappeared.)"
+      "친구까지 떠나 버렸어요. (Even my friend left.)",
+      "마지막 희망까지 사라졌어요. (Even the last hope has disappeared.)"
     ]
   },
   {
@@ -1990,10 +1998,10 @@
     "form": "이라도/라도1",
     "related": "",
     "conjugation_rule": "이라도 after consonant-ending nouns; 라도 after vowel-ending nouns",
-    "meaning": "차선",
+    "meaning": "second-best option; at least; settling for less",
     "examples": [
       "잠이라도 자야겠어요. (I should at least sleep.)",
-      "물이라도 마셔요. (At least drink some water.)"
+      "커피라도 마셔요. (At least drink some coffee.)"
     ]
   },
   {
@@ -2005,7 +2013,7 @@
     "meaning": "as (in one's role or capacity as)",
     "examples": [
       "학생으로서 열심히 공부해야 해요. (As a student, I must study hard.)",
-      "선생님으로서 책임이 있어요. (As a teacher, I have responsibility.)"
+      "의사로서 환자를 돌봐야 해요. (As a doctor, I must take care of patients.)"
     ]
   },
   {
@@ -2016,7 +2024,7 @@
     "conjugation_rule": "으로써 after consonant-ending stems (except ㄹ); 로써 otherwise",
     "meaning": "by means of; with (instrument / means)",
     "examples": [
-      "연필로써 글씨를 썼어요. (I wrote with a pencil.)",
+      "노력으로써 성공했어요. (I succeeded through effort.)",
       "대화로써 문제를 해결했어요. (I solved the problem through dialogue.)"
     ]
   },
@@ -2122,7 +2130,7 @@
     "form": "-든지2",
     "related": "-든2, <유의> -든가2",
     "conjugation_rule": "",
-    "meaning": "선택",
+    "meaning": "choice; either ... or; whichever",
     "examples": [
       "커피든지 차든지 마셔요. (Drink coffee or tea, whichever you like.)",
       "가든지 오든지 연락해요. (Whether you go or come, contact me.)"
@@ -2136,7 +2144,7 @@
     "conjugation_rule": "-으므로 after consonant-ending stems; -므로 after vowel-ending stems",
     "meaning": "because; since (formal written reason / cause)",
     "examples": [
-      "열심히 노력하므로 성공할 거예요. (Since I work hard, I will succeed.)",
+      "시간이 없으므로 서두릅시다. (Since there is no time, let's hurry.)",
       "비가 오므로 외출을 안 했어요. (Since it rained, I didn't go out.)"
     ]
   },
@@ -2149,7 +2157,7 @@
     "meaning": "no matter how much one tries (impossibility despite effort)",
     "examples": [
       "울래야 눈물도 안 나요. (I can't even cry no matter how much I try.)",
-      "자려야 잠이 안 와요. (I can't sleep no matter how much I try.)"
+      "잘래야 잠이 안 와요. (I cannot sleep no matter how much I try.)"
     ]
   },
   {
@@ -2170,10 +2178,10 @@
     "form": "-는다면1",
     "related": "-ㄴ다면1, -다면1, -라면1",
     "conjugation_rule": "",
-    "meaning": "condition",
+    "meaning": "hypothetical condition for a verb action; if (someone does or says)",
     "examples": [
-      "내일 날씨가 좋다면 소풍 갈 거예요. (If the weather is nice tomorrow, I'll go on a picnic.)",
-      "시간이 있다면 같이 가요. (If you have time, let's go together.)"
+      "내일 온다면 같이 가요. (If they say they are coming tomorrow, let us go together.)",
+      "열심히 한다면 꼭 성공할 거예요. (If one works hard, they will surely succeed.)"
     ]
   },
   {
@@ -2221,7 +2229,7 @@
     "meaning": "the more ... the more (proportional increase)",
     "examples": [
       "공부할수록 모르는 게 많아요. (The more I study, the more I don't know.)",
-      "먹을수록 맛있어요. (The more I eat, the more delicious it is.)"
+      "갈수록 어려워져요. (It gets harder as time goes on.)"
     ]
   },
   {
@@ -2244,8 +2252,8 @@
     "conjugation_rule": "",
     "meaning": "question / wonder",
     "examples": [
-      "뭐라는 거니? 밥이라니? (What are you saying? Rice, you say?)",
-      "그게 사실이라니 믿을 수가 없어요. (That it's true, I can't believe it.)"
+      "그 사람이 온다니 정말 반가워요. (The news that that person is coming makes me so glad.)",
+      "이제 끝난다니 믿기 어려워요. (It is hard to believe that it is finally over.)"
     ]
   },
   {
@@ -2314,7 +2322,7 @@
     "form": "-나3",
     "related": "-나요",
     "conjugation_rule": "",
-    "meaning": "question / wonder",
+    "meaning": "informal question directed at addressee (retrospective check)",
     "examples": [
       "벌써 다 먹었나? (Did you already eat everything?)",
       "집에 갔나? (Did they go home?)"
@@ -2362,7 +2370,7 @@
     "form": "-다니1",
     "related": "-다니요, -라니1, -라니요1",
     "conjugation_rule": "",
-    "meaning": "how could; I can't believe (disbelief exclamation)",
+    "meaning": "disbelief exclamation with reaction clause; how could (it be)",
     "examples": [
       "그게 사실이라니 믿을 수가 없어요! (I can't believe that's true!)",
       "그 사람이 그런 말을 하다니 놀랍네요! (I can't believe that person said that!)"
@@ -2400,7 +2408,7 @@
     "conjugation_rule": "",
     "meaning": "upon doing; after doing, one finds (retrospective discovery)",
     "examples": [
-      "직접 해 보고 보니 쉽지 않네요. (After doing it myself, I found it's not easy.)",
+      "직접 해 보고 나니 쉽지 않네요. (After doing it myself, I found it's not easy.)",
       "먹고 보니 맛있었어요. (After eating it, it turned out to be delicious.)"
     ]
   },
@@ -2494,10 +2502,10 @@
     "form": "-는다거나2",
     "related": "-ㄴ다거나2, -다거나2, -라거나2",
     "conjugation_rule": "",
-    "meaning": "선택",
+    "meaning": "listing alternatives; either ... or",
     "examples": [
-      "사과를 살까 배를 살까 고민해요. (I'm debating whether to buy apples or pears.)",
-      "갈까 말까 고민해요. (I'm debating whether to go or not.)"
+      "온다거나 간다거나 연락은 해줘요. (Whether you are coming or going, please let me know.)",
+      "먹는다거나 안 먹는다거나 말은 해야지요. (Whether you will eat or not, you should say something.)"
     ]
   },
   {
@@ -2508,8 +2516,8 @@
     "conjugation_rule": "",
     "meaning": "I think perhaps; wonder if (tentative conjecture)",
     "examples": [
-      "그 사람이 올 것인가 싶어요. (I wonder if that person will come.)",
-      "이게 맞는 건가 싶어요. (I wonder if this is correct.)"
+      "이게 맞나 싶어요. (I wonder if this is right.)",
+      "그 사람이 오나 싶었는데 안 왔어요. (I wondered if they would come, but they didn't.)"
     ]
   },
   {
@@ -2662,7 +2670,7 @@
     "form": "-는대2",
     "related": "-ㄴ대2, -는대요2, -대2, -대요2, -래2, -래요2, -으래2, -으래요2, -래4, -재, -재요",
     "conjugation_rule": "",
-    "meaning": "인용",
+    "meaning": "indirect quotation (hearsay); reportedly; they say",
     "examples": [
       "오늘 일찍 온대요. (They say they're coming early today.)",
       "그 사람이 간대요. (They say that person is leaving.)"
@@ -2686,7 +2694,7 @@
     "form": "이라든가",
     "related": "라든가1, 이라든지, 라든지1",
     "conjugation_rule": "",
-    "meaning": "선택",
+    "meaning": "or; such as (selection from examples)",
     "examples": [
       "사과라든가 배라든가 과일을 가져오세요. (Bring some fruit, like apples or pears.)",
       "커피라든가 차라든가 마실 것을 준비해요. (Prepare something to drink, like coffee or tea.)"
@@ -2748,8 +2756,8 @@
     "conjugation_rule": "",
     "meaning": "after doing; and then (sequential with contrast or emphasis)",
     "examples": [
-      "학교에 갔다가는 빨리 돌아왔어요. (After going to school, I came back quickly.)",
-      "밥을 먹고는 바로 나갔어요. (After eating, I went out right away.)"
+      "밥을 먹고는 바로 잠이 들었어요. (After eating, I fell asleep right away.)",
+      "숙제를 끝내고는 바로 나갔어요. (After finishing homework, I went out right away.)"
     ]
   },
   {
@@ -2784,8 +2792,8 @@
     "conjugation_rule": "",
     "meaning": "even if (strong concession — literary / formal)",
     "examples": [
-      "어려울지라도 포기하지 않아요. (Even if it's difficult, I won't give up.)",
-      "비가 올지라도 갈 거예요. (Even if it rains, I'll go.)"
+      "아무리 참을지라도 한계가 있어요. (Even if I endure it, there is a limit.)",
+      "비가 올지라도 경기는 계속돼요. (Even if it rains, the game continues.)"
     ]
   },
   {
@@ -2818,7 +2826,7 @@
     "form": "-다4",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "서술 (신문)",
+    "meaning": "declarative statement (formal; newspaper style)",
     "examples": [
       "경찰이 범인을 잡았다. (The police caught the criminal.)",
       "대통령이 순방을 마쳤다. (The president completed an overseas tour.)"
@@ -2830,7 +2838,7 @@
     "form": "-다니1",
     "related": "-다니요, -라니1, -라니요1, 으라니1, -으라니요",
     "conjugation_rule": "",
-    "meaning": "exclamation / surprise",
+    "meaning": "standalone exclamation of disbelief or surprise (sentence-final)",
     "examples": [
       "그게 사실이라니! (The fact that it's true!)",
       "그런 말을 하다니! (To think that person said such a thing!)"
@@ -2839,10 +2847,10 @@
   {
     "level": 5,
     "category": "sentence-final ending",
-    "form": "­으려고2",
+    "form": "-으려고2",
     "related": "­려고2, ­려고요, ­으려고요",
     "conjugation_rule": "",
-    "meaning": "의심",
+    "meaning": "suspicion; doubt (questioning someone's intention)",
     "examples": [
       "지금 나가려고요? (Are you trying to go out now?)",
       "혼자 하려고요? (Are you trying to do it alone?)"
@@ -2905,7 +2913,7 @@
     "meaning": "it seems; you know (mild statement or exclamation of surprise)",
     "examples": [
       "그 음식이 맛있데요. (They say that food is delicious.)",
-      "그 사람이 착하데요. (They say that person is kind.)"
+      "그 영화 재미있데요. (They say that movie is fun.)"
     ]
   },
   {
@@ -2928,8 +2936,8 @@
     "conjugation_rule": "",
     "meaning": "command",
     "examples": [
-      "빨리 오라는 거야? (Are you telling me to come quickly?)",
-      "조용히 하라는 거야? (Are you telling me to be quiet?)"
+      "지금 온다니요? (They're saying they're coming now?)",
+      "혼자 한다니 믿기 어려워요. (It's hard to believe they're doing it alone.)"
     ]
   },
   {
@@ -2940,7 +2948,7 @@
     "conjugation_rule": "",
     "meaning": "was; used to be (past-attributive — discontinued past state)",
     "examples": [
-      "예전에 다니던 학교가 없어졌어요. (The school I used to attend is gone.)",
+      "예전에 살았던 동네가 많이 변했어요. (The neighborhood I used to live in has changed a lot.)",
       "살았던 동네가 많이 변했어요. (The neighborhood I used to live in has changed a lot.)"
     ]
   },
@@ -3073,7 +3081,7 @@
     "meaning": "as a result of (excessive state leading to outcome)",
     "examples": [
       "너무 웃은 나머지 눈물이 났어요. (I laughed so much that tears came out.)",
-      "너무 놀란 나머지 말을 못 했어요. (I was so surprised that I couldn't speak.)"
+      "너무 기쁜 나머지 눈물이 났어요. (I was so happy that tears came out.)"
     ]
   },
   {
@@ -3108,7 +3116,7 @@
     "conjugation_rule": "",
     "meaning": "seems like; appears to (conjecture)",
     "examples": [
-      "그 사람이 슬픈 듯해요. (That person seems sad.)",
+      "열심히 공부하는 듯해요. (It seems like they're studying hard.)",
       "비가 올 듯해요. (It seems like it will rain.)"
     ]
   },
@@ -3288,8 +3296,8 @@
     "conjugation_rule": "",
     "meaning": "despite; in spite of; notwithstanding",
     "examples": [
-      "비가 오는 데도 불구하고 나갔어요. (Despite the rain, I went out.)",
-      "어려운 데도 불구하고 포기하지 않았어요. (Despite the difficulty, I didn't give up.)"
+      "비에도 불구하고 경기를 계속했어요. (Despite the rain, the game continued.)",
+      "어려움에도 불구하고 포기하지 않았어요. (Despite the difficulties, I did not give up.)"
     ]
   },
   {
@@ -3322,10 +3330,10 @@
     "form": "-는다기에",
     "related": "-ㄴ다기에, -다기에, -라기에1",
     "conjugation_rule": "",
-    "meaning": "reason / cause",
+    "meaning": "hearsay reason; because someone said (reported reason for action)",
     "examples": [
-      "맛있다기에 먹어 봤어요. (I tried it because they said it was delicious.)",
-      "싸다기에 많이 샀어요. (I bought a lot because they said it was cheap.)"
+      "온다기에 기다렸어요. (I waited because they said they were coming.)",
+      "한다기에 믿었어요. (I trusted them because they said they would do it.)"
     ]
   },
   {
@@ -3382,7 +3390,7 @@
     "form": "이라고2",
     "related": "라고2",
     "conjugation_rule": "",
-    "meaning": "보잘것없 음",
+    "meaning": "dismissing as trivial; nothing but; merely",
     "examples": [
       "이것이라고 별거 없어요. (Even this is nothing special.)",
       "그게 집이라고 할 수 있겠어요? (Can that even be called a house?)"
@@ -3504,7 +3512,8 @@
     "conjugation_rule": "",
     "meaning": "emphasis",
     "examples": [
-      "잘 보이디 어디 봐라. (Let me see if you can really do it.)"
+      "잘 보이디 어디 봐라. (Let me see if you can really do it.)",
+      "네가 그렇게 잘하디 한번 해 봐라. (If you're so good at it, go ahead and try.)"
     ]
   },
   {
@@ -3537,7 +3546,7 @@
     "form": "-자니3",
     "related": "-자2, -자니까3",
     "conjugation_rule": "",
-    "meaning": "의도",
+    "meaning": "intention (expressing what one intends to do)",
     "examples": [
       "먹자니 배가 부르고 안 먹자니 아깝다. (If I eat, I'm full; if I don't eat, it's a waste.)",
       "가자니 멀고 안 가자니 보고 싶다. (Going is far, but not going means I'll miss them.)"
@@ -3549,10 +3558,10 @@
     "form": "-는다고1",
     "related": "-다고1, -라고3, 으라고1, -자고1",
     "conjugation_rule": "",
-    "meaning": "의도",
+    "meaning": "intention (expressing a directive or intention to do something)",
     "examples": [
-      "빨리 오라고 전화했어요. (I called to tell them to come quickly.)",
-      "조용히 하라고 말했어요. (I told them to be quiet.)"
+      "빨리 온다고! (Come quickly, I said!)",
+      "조용히 한다고 했잖아요! (I told you to be quiet!)"
     ]
   },
   {
@@ -3561,7 +3570,7 @@
     "form": "-자면1",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "의도",
+    "meaning": "if one intends to; in order to; if one wants to",
     "examples": [
       "빨리 가자면 택시를 타야 해요. (If we want to go quickly, we should take a taxi.)",
       "많이 먹자면 돈이 많아야 해요. (To eat a lot, you need a lot of money.)"
@@ -3573,16 +3582,16 @@
     "form": "-은들",
     "related": "-ㄴ들2, 인들",
     "conjugation_rule": "",
-    "meaning": "concession",
+    "meaning": "even if; even though (literary concession implying futility)",
     "examples": [
-      "가든들 뭐가 달라지겠어요. (Even if I go, what would change?)",
+      "돈이 있은들 행복하지 않아요. (Even if there is money, I'm not happy.)",
       "말한들 소용없어요. (Even if I say it, it's no use.)"
     ]
   },
   {
     "level": 6,
     "category": "connective ending",
-    "form": "-을망정,",
+    "form": "-을망정",
     "related": "-ㄹ망정 <유의>, -ㄹ지언정, -을지언정",
     "conjugation_rule": "",
     "meaning": "even though; even if (strong concession — literary)",
@@ -3611,8 +3620,8 @@
     "conjugation_rule": "",
     "meaning": "exclamation / surprise",
     "examples": [
-      "날씨가 참 좋은구려! (The weather is really nice!)",
-      "그 사람이 벌써 왔구려! (That person is already here!)"
+      "오늘도 열심히 일하는구려. (You are working hard again today.)",
+      "그 친구가 이미 가는구려. (That friend is already leaving.)"
     ]
   },
   {
@@ -3729,10 +3738,10 @@
     "form": "-네1",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "서술",
+    "meaning": "exclamatory declaration; expressing surprise or realization",
     "examples": [
-      "날씨가 참 좋네. (The weather is really nice.)",
-      "그 음식이 맛있네. (That food is delicious.)"
+      "벌써 10시가 됐네! (Oh, it is already 10 o'clock!)",
+      "여기서 만나네! (Oh, we are meeting here!)"
     ]
   },
   {
@@ -3743,8 +3752,8 @@
     "conjugation_rule": "",
     "meaning": "oh really! (exclamation — informal / elderly speech)",
     "examples": [
-      "오늘 날씨가 춥구만. (The weather is cold today.)",
-      "그 사람이 많이 변했구만. (That person has changed a lot.)"
+      "오늘도 열심히 일하는구만. (Working hard again today, I see.)",
+      "그 사람이 또 오는구만. (That person is coming again, I see.)"
     ]
   },
   {
@@ -3753,10 +3762,10 @@
     "form": "-는가2",
     "related": "-ㄴ가2, -은가2",
     "conjugation_rule": "",
-    "meaning": "문제 제기",
+    "meaning": "raising a question or issue; rhetorical question",
     "examples": [
-      "이게 과연 옳은 건가? (Is this truly the right thing?)",
-      "사랑이란 무엇인가? (What is love?)"
+      "이게 과연 맞는가 생각해 봤어요. (I thought about whether this was truly correct.)",
+      "지금 무엇을 하는가 물어봤어요. (I asked what they were doing now.)"
     ]
   },
   {
@@ -3765,10 +3774,10 @@
     "form": "-나3",
     "related": "-나요",
     "conjugation_rule": "",
-    "meaning": "question / wonder",
+    "meaning": "self-directed wonder or rhetorical question (literary)",
     "examples": [
-      "벌써 밥을 먹었나? (Did you already eat?)",
-      "숙제를 다 했나? (Did you finish your homework?)"
+      "어디서 그가 살고 있나 궁금해요. (I wonder where he is living.)",
+      "과연 이게 옳은 길인가 생각해 봤어요. (I thought about whether this was truly the right path.)"
     ]
   },
   {
@@ -3813,7 +3822,7 @@
     "form": "-라2",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "서술",
+    "meaning": "declarative statement (literary; poetic register)",
     "examples": [
       "해가 밝아 오는 아침이라. (It is a morning with the bright sun rising.)",
       "꽃이 피는 봄이라. (It is a spring when flowers bloom.)"
@@ -3923,8 +3932,8 @@
     "conjugation_rule": "",
     "meaning": "that (someone) will; predicted to (quoted conjecture)",
     "examples": [
-      "이번 시험을 잘 볼 것이라는 생각이 들어요. (I have a feeling I'll do well on this exam.)",
-      "그가 올 것이라는 게 믿어져요. (I believe that he will come.)"
+      "꼭 합격하리라는 믿음이 있어요. (I have the belief that I will certainly pass.)",
+      "그가 돌아오리라는 희망을 버리지 않았어요. (I did not give up the hope that he would return.)"
     ]
   },
   {
@@ -3981,10 +3990,10 @@
     "form": "-는다던가1",
     "related": "-다던가1, -라던가1",
     "conjugation_rule": "",
-    "meaning": "command",
+    "meaning": "vague or uncertain quotation; something like (imprecise recalled speech)",
     "examples": [
-      "빨리 오라던가, 어쨌거나 왔어요. (Was it 'come quickly' or something? Anyway, I came.)",
-      "조용히 하라던가 선생님이 말씀하셨어요. (The teacher said something like 'be quiet'.)"
+      "온다던가 뭐라던가 했어요. (They said something like they are coming or something.)",
+      "내일 간다던가 했는데 잘 모르겠어요. (They said something like going tomorrow, but I am not sure.)"
     ]
   },
   {
