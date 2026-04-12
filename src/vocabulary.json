@@ -50,7 +50,7 @@
     "pos": "verb",
     "romanization": "galeuchida",
     "meaning": "to teach",
-    "example_kr": "한국어를 가르치 다",
+    "example_kr": "한국어를 가르치다",
     "example_en": "teach Korean"
   },
   {
@@ -128,7 +128,7 @@
   {
     "level": 1,
     "word": "가지",
-    "pos": "noun",
+    "pos": "dependent noun",
     "romanization": "gaji",
     "meaning": "kind, type",
     "example_kr": "여러 가지",
@@ -167,7 +167,7 @@
     "pos": "verb",
     "romanization": "gal-atada",
     "meaning": "to transfer, change lines",
-    "example_kr": "지하철을 갈아타 다",
+    "example_kr": "지하철을 갈아타다",
     "example_en": "change subway lines"
   },
   {
@@ -236,7 +236,7 @@
   {
     "level": 1,
     "word": "개",
-    "pos": "noun",
+    "pos": "dependent noun",
     "romanization": "gae",
     "meaning": "counter for items",
     "example_kr": "사과 한 개",
@@ -317,7 +317,7 @@
   {
     "level": 1,
     "word": "것",
-    "pos": "noun",
+    "pos": "dependent noun",
     "romanization": "geos",
     "meaning": "thing, something",
     "example_kr": "먹을 것",
@@ -500,7 +500,7 @@
     "pos": "noun",
     "romanization": "gyosil",
     "meaning": "classroom",
-    "example_kr": "교실에서 수업하 다",
+    "example_kr": "교실에서 수업하다",
     "example_en": "have class in classroom"
   },
   {
@@ -752,7 +752,7 @@
     "pos": "noun",
     "romanization": "geugjang",
     "meaning": "theater, cinema",
-    "example_kr": "극장에서 상영하 다",
+    "example_kr": "극장에서 상영하다",
     "example_en": "screen at a theater"
   },
   {
@@ -887,7 +887,7 @@
     "pos": "noun",
     "romanization": "gimchi-jjigae",
     "meaning": "kimchi stew",
-    "example_kr": "김치찌개를 끓이 다",
+    "example_kr": "김치찌개를 끓이다",
     "example_en": "cook kimchi stew"
   },
   {
@@ -1310,7 +1310,7 @@
     "pos": "adjective / verb",
     "romanization": "neujda",
     "meaning": "late",
-    "example_kr": "약속 시간에 늦 다",
+    "example_kr": "약속 시간에 늦다",
     "example_en": "late for appointment time"
   },
   {
@@ -1472,7 +1472,7 @@
     "pos": "noun",
     "romanization": "daehaggyo",
     "meaning": "university, college",
-    "example_kr": "대학교에 입학하 다",
+    "example_kr": "대학교에 입학하다",
     "example_en": "to enroll in university"
   },
   {
@@ -1571,7 +1571,7 @@
     "pos": "verb",
     "romanization": "dol-a-oda",
     "meaning": "to return, to come back",
-    "example_kr": "학교에서 돌아오 다",
+    "example_kr": "학교에서 돌아오다",
     "example_en": "to return from school"
   },
   {
@@ -1625,7 +1625,7 @@
     "pos": "noun",
     "romanization": "doenjangjjigae",
     "meaning": "soybean paste stew",
-    "example_kr": "된장찌개를 끓이 다",
+    "example_kr": "된장찌개를 끓이다",
     "example_en": "to boil doenjang-jjigae"
   },
   {
@@ -2345,7 +2345,7 @@
     "pos": "noun",
     "romanization": "bagmulgwan",
     "meaning": "museum",
-    "example_kr": "박물관을 관람하 다",
+    "example_kr": "박물관을 관람하다",
     "example_en": "visit a museum"
   },
   {
@@ -2651,7 +2651,7 @@
     "pos": "noun",
     "romanization": "bumonim",
     "meaning": "parents",
-    "example_kr": "부모님께 효도하 다",
+    "example_kr": "부모님께 효도하다",
     "example_en": "be filial to parents"
   },
   {
@@ -2858,7 +2858,7 @@
     "pos": "noun",
     "romanization": "samusil",
     "meaning": "office",
-    "example_kr": "사무실에 출근하 다",
+    "example_kr": "사무실에 출근하다",
     "example_en": "go to the office"
   },
   {
@@ -3650,7 +3650,7 @@
     "pos": "noun",
     "romanization": "a-iseukeulim",
     "meaning": "ice cream",
-    "example_kr": "아이스크림을 먹 다",
+    "example_kr": "아이스크림을 먹다",
     "example_en": "eat ice cream"
   },
   {
@@ -4784,7 +4784,7 @@
     "pos": "noun",
     "romanization": "i-yagi",
     "meaning": "story",
-    "example_kr": "이야기를 들려주 다",
+    "example_kr": "이야기를 들려주다",
     "example_en": "tell a story"
   },
   {
@@ -5009,7 +5009,7 @@
     "pos": "noun",
     "romanization": "jadongcha",
     "meaning": "car, automobile",
-    "example_kr": "자동차를 운전하 다",
+    "example_kr": "자동차를 운전하다",
     "example_en": "drive a car"
   },
   {
@@ -5999,7 +5999,7 @@
     "pos": "noun",
     "romanization": "keopisyob",
     "meaning": "coffee shop",
-    "example_kr": "커피숍에서 만나 다",
+    "example_kr": "커피숍에서 만나다",
     "example_en": "meet at a coffee shop"
   },
   {
@@ -6431,7 +6431,7 @@
     "pos": "noun",
     "romanization": "hagsaengjeung",
     "meaning": "student ID",
-    "example_kr": "학생증을 발급하 다",
+    "example_kr": "학생증을 발급하다",
     "example_en": "issue a student ID"
   },
   {
@@ -6719,7 +6719,7 @@
     "pos": "adverb",
     "romanization": "gandanhi",
     "meaning": "simply, briefly",
-    "example_kr": "간단히 이야기하 다",
+    "example_kr": "간단히 이야기하다",
     "example_en": "tell simply"
   },
   {
@@ -7106,7 +7106,7 @@
     "pos": "noun",
     "romanization": "gyeongchalseo",
     "meaning": "police station",
-    "example_kr": "경찰서에 신고하 다",
+    "example_kr": "경찰서에 신고하다",
     "example_en": "to report to the police station"
   },
   {
@@ -7259,7 +7259,7 @@
     "pos": "noun",
     "romanization": "gongmu-won",
     "meaning": "civil servant",
-    "example_kr": "공무원으로 일하 다",
+    "example_kr": "공무원으로 일하다",
     "example_en": "to work as a civil servant"
   },
   {
@@ -7376,7 +7376,7 @@
     "pos": "noun",
     "romanization": "gyogwaseo",
     "meaning": "textbook",
-    "example_kr": "교과서에서 배우 다",
+    "example_kr": "교과서에서 배우다",
     "example_en": "to learn from a textbook"
   },
   {
@@ -7835,7 +7835,7 @@
     "pos": "noun",
     "romanization": "gicha-yeog",
     "meaning": "train station",
-    "example_kr": "기차역에 도착하 다",
+    "example_kr": "기차역에 도착하다",
     "example_en": "arrive at the train station"
   },
   {
@@ -7997,7 +7997,7 @@
     "pos": "noun",
     "romanization": "kkochdabal",
     "meaning": "bouquet, flower arrangement",
-    "example_kr": "꽃다발을 선물하 다",
+    "example_kr": "꽃다발을 선물하다",
     "example_en": "give a bouquet as a gift"
   },
   {
@@ -8897,7 +8897,7 @@
     "pos": "noun",
     "romanization": "de-iteu",
     "meaning": "date",
-    "example_kr": "데이트를 신청하 다",
+    "example_kr": "데이트를 신청하다",
     "example_en": "ask someone out"
   },
   {
@@ -10004,7 +10004,7 @@
     "pos": "noun",
     "romanization": "ba-kkatjjog",
     "meaning": "outer side",
-    "example_kr": "바깥쪽으로 나가 다",
+    "example_kr": "바깥쪽으로 나가다",
     "example_en": "go outward"
   },
   {
@@ -10544,7 +10544,7 @@
     "pos": "noun",
     "romanization": "bujang",
     "meaning": "department head",
-    "example_kr": "부장으로 승진하 다",
+    "example_kr": "부장으로 승진하다",
     "example_en": "promoted to department head"
   },
   {
@@ -10832,7 +10832,7 @@
     "pos": "noun",
     "romanization": "sagyejeol",
     "meaning": "four seasons",
-    "example_kr": "사계절이 뚜렷하 다",
+    "example_kr": "사계절이 뚜렷하다",
     "example_en": "four distinct seasons"
   },
   {
@@ -11903,7 +11903,7 @@
     "pos": "noun",
     "romanization": "si-eomeoni",
     "meaning": "mother-in-law",
-    "example_kr": "시어머니를 모시 다",
+    "example_kr": "시어머니를 모시다",
     "example_en": "to serve one's mother-in-law"
   },
   {
@@ -12020,7 +12020,7 @@
     "pos": "noun",
     "romanization": "sinhodeung",
     "meaning": "traffic light",
-    "example_kr": "신호등을 기다리 다",
+    "example_kr": "신호등을 기다리다",
     "example_en": "to wait for the traffic light"
   },
   {
@@ -12029,7 +12029,7 @@
     "pos": "noun",
     "romanization": "sinhon-yeohaeng",
     "meaning": "honeymoon",
-    "example_kr": "신혼여행을 떠나 다",
+    "example_kr": "신혼여행을 떠나다",
     "example_en": "to go on a honeymoon"
   },
   {
@@ -12164,7 +12164,7 @@
     "pos": "noun",
     "romanization": "sseulegitong",
     "meaning": "trash can",
-    "example_kr": "쓰레기통에 버리 다",
+    "example_kr": "쓰레기통에 버리다",
     "example_en": "to throw away in the trash can"
   },
   {
@@ -12254,7 +12254,7 @@
     "pos": "noun",
     "romanization": "amugeos",
     "meaning": "anything",
-    "example_kr": "아무것이나 괜찮 다",
+    "example_kr": "아무것이나 괜찮다",
     "example_en": "anything is fine"
   },
   {
@@ -12605,7 +12605,7 @@
     "pos": "verb",
     "romanization": "eo-ullida",
     "meaning": "suit, go well with",
-    "example_kr": "사람들과 어울리 다",
+    "example_kr": "사람들과 어울리다",
     "example_en": "fit in with people"
   },
   {
@@ -12677,7 +12677,7 @@
     "pos": "noun",
     "romanization": "eongdeong-i",
     "meaning": "buttocks",
-    "example_kr": "엉덩이를 두드리 다",
+    "example_kr": "엉덩이를 두드리다",
     "example_en": "tap the buttocks"
   },
   {
@@ -12686,7 +12686,7 @@
     "pos": "noun",
     "romanization": "ellibe-iteo",
     "meaning": "elevator",
-    "example_kr": "엘리베이터를 타 다",
+    "example_kr": "엘리베이터를 타다",
     "example_en": "take the elevator"
   },
   {
@@ -12965,7 +12965,7 @@
     "pos": "noun",
     "romanization": "olaeganman",
     "meaning": "after a long time",
-    "example_kr": "오래간만에 만나 다",
+    "example_kr": "오래간만에 만나다",
     "example_en": "meet after a long time"
   },
   {
@@ -13334,7 +13334,7 @@
     "pos": "noun",
     "romanization": "yuchi-won",
     "meaning": "kindergarten",
-    "example_kr": "유치원에 입학하 다",
+    "example_kr": "유치원에 입학하다",
     "example_en": "enroll in kindergarten"
   },
   {
@@ -13406,7 +13406,7 @@
     "pos": "noun",
     "romanization": "eum-agga",
     "meaning": "musician",
-    "example_kr": "음악가가 연주하 다",
+    "example_kr": "음악가가 연주하다",
     "example_en": "musician performs"
   },
   {
@@ -13739,7 +13739,7 @@
     "pos": "verb",
     "romanization": "il-eoseoda",
     "meaning": "to stand up",
-    "example_kr": "자리에서 일어서 다",
+    "example_kr": "자리에서 일어서다",
     "example_en": "to stand up from a seat"
   },
   {
@@ -13757,7 +13757,7 @@
     "pos": "verb",
     "romanization": "ilh-eobeolida",
     "meaning": "to lose, misplace",
-    "example_kr": "물건을 잃어버리 다",
+    "example_kr": "물건을 잃어버리다",
     "example_en": "to lose something"
   },
   {
@@ -13928,7 +13928,7 @@
     "pos": "noun",
     "romanization": "ja-yeon",
     "meaning": "nature",
-    "example_kr": "자연으로 돌아가 다",
+    "example_kr": "자연으로 돌아가다",
     "example_en": "to return to nature"
   },
   {
@@ -14612,7 +14612,7 @@
     "pos": "noun",
     "romanization": "junggugjib",
     "meaning": "Chinese restaurant",
-    "example_kr": "중국집에 주문하 다",
+    "example_kr": "중국집에 주문하다",
     "example_en": "order from a Chinese restaurant"
   },
   {
@@ -14648,7 +14648,7 @@
     "pos": "noun",
     "romanization": "junghaggyo",
     "meaning": "middle school",
-    "example_kr": "중학교에 들어가 다",
+    "example_kr": "중학교에 들어가다",
     "example_en": "enter middle school"
   },
   {
@@ -14846,7 +14846,7 @@
     "pos": "noun",
     "romanization": "jibdeul-i",
     "meaning": "housewarming party",
-    "example_kr": "집들이에 초대하 다",
+    "example_kr": "집들이에 초대하다",
     "example_en": "invite to a housewarming"
   },
   {
@@ -16079,7 +16079,7 @@
     "pos": "noun",
     "romanization": "hanggonggwon",
     "meaning": "airline ticket",
-    "example_kr": "항공권을 예약하 다",
+    "example_kr": "항공권을 예약하다",
     "example_en": "reserve an airline ticket"
   },
   {
@@ -16214,7 +16214,7 @@
     "pos": "noun",
     "romanization": "hyeongeum",
     "meaning": "cash",
-    "example_kr": "현금으로 결제하 다",
+    "example_kr": "현금으로 결제하다",
     "example_en": "pay in cash"
   },
   {
@@ -16385,7 +16385,7 @@
     "pos": "noun",
     "romanization": "hoengdanbodo",
     "meaning": "crosswalk",
-    "example_kr": "횡단보도를 건너 다",
+    "example_kr": "횡단보도를 건너다",
     "example_en": "cross the crosswalk"
   },
   {
@@ -16916,7 +16916,7 @@
     "pos": "noun",
     "romanization": "gaseule-inji",
     "meaning": "gas stove",
-    "example_kr": "가스레인지를 켜 다",
+    "example_kr": "가스레인지를 켜다",
     "example_en": "turn on a gas stove"
   },
   {
@@ -17195,7 +17195,7 @@
     "pos": "noun",
     "romanization": "gochusgalu",
     "meaning": "red pepper powder",
-    "example_kr": "고춧가루를 뿌리 다",
+    "example_kr": "고춧가루를 뿌리다",
     "example_en": "sprinkle red pepper powder"
   },
   {
@@ -17393,7 +17393,7 @@
     "pos": "noun",
     "romanization": "gong-yeonjang",
     "meaning": "theater, venue",
-    "example_kr": "공연장에 몰려들 다",
+    "example_kr": "공연장에 몰려들다",
     "example_en": "crowd into the theater"
   },
   {
@@ -17492,7 +17492,7 @@
     "pos": "noun",
     "romanization": "gwajang",
     "meaning": "section chief, manager",
-    "example_kr": "과장으로 승진하 다",
+    "example_kr": "과장으로 승진하다",
     "example_en": "promoted to manager"
   },
   {
@@ -17555,7 +17555,7 @@
     "pos": "adjective",
     "romanization": "gwangye-issda",
     "meaning": "related, relevant",
-    "example_kr": "주제와 관련 있 다",
+    "example_kr": "주제와 관련 있다",
     "example_en": "related to the topic"
   },
   {
@@ -17654,7 +17654,7 @@
     "pos": "noun",
     "romanization": "gyotongpyeon",
     "meaning": "transportation arrangement",
-    "example_kr": "교통편을 예약하 다",
+    "example_kr": "교통편을 예약하다",
     "example_en": "reserve transportation"
   },
   {
@@ -18158,7 +18158,7 @@
     "pos": "noun",
     "romanization": "gisulja",
     "meaning": "technician, engineer",
-    "example_kr": "기술자를 양성하 다",
+    "example_kr": "기술자를 양성하다",
     "example_en": "train technicians"
   },
   {
@@ -18653,7 +18653,7 @@
     "pos": "verb",
     "romanization": "naejuda",
     "meaning": "to give out, pay",
-    "example_kr": "거스름돈을 내주 다",
+    "example_kr": "거스름돈을 내주다",
     "example_en": "give change"
   },
   {
@@ -18788,7 +18788,7 @@
     "pos": "noun",
     "romanization": "no-yagja",
     "meaning": "elderly and infirm",
-    "example_kr": "노약자를 보호하 다",
+    "example_kr": "노약자를 보호하다",
     "example_en": "protect the elderly"
   },
   {
@@ -18824,7 +18824,7 @@
     "pos": "noun",
     "romanization": "nog-eumgi",
     "meaning": "recorder",
-    "example_kr": "녹음기로 녹음하 다",
+    "example_kr": "녹음기로 녹음하다",
     "example_en": "record with a recorder"
   },
   {
@@ -18851,7 +18851,7 @@
     "pos": "noun",
     "romanization": "nongbu",
     "meaning": "farmer",
-    "example_kr": "농부가 씨를 뿌리 다",
+    "example_kr": "농부가 씨를 뿌리다",
     "example_en": "a farmer sows seeds"
   },
   {
@@ -19004,7 +19004,7 @@
     "pos": "noun",
     "romanization": "dalimjil",
     "meaning": "ironing",
-    "example_kr": "바지를 다림질하 다",
+    "example_kr": "바지를 다림질하다",
     "example_en": "iron pants"
   },
   {
@@ -19049,7 +19049,7 @@
     "pos": "noun",
     "romanization": "dahaeng",
     "meaning": "fortune, luck",
-    "example_kr": "다행으로 생각하 다",
+    "example_kr": "다행으로 생각하다",
     "example_en": "consider fortunately"
   },
   {
@@ -19085,7 +19085,7 @@
     "pos": "noun",
     "romanization": "danbalmeoli",
     "meaning": "short hair",
-    "example_kr": "단발머리로 자르 다",
+    "example_kr": "단발머리로 자르다",
     "example_en": "cut into short hair"
   },
   {
@@ -19112,7 +19112,7 @@
     "pos": "adjective",
     "romanization": "danjeonghada",
     "meaning": "neat, tidy",
-    "example_kr": "옷차림이 단정하 다",
+    "example_kr": "옷차림이 단정하다",
     "example_en": "appearance is neat"
   },
   {
@@ -19382,7 +19382,7 @@
     "pos": "noun",
     "romanization": "daejungga-yo",
     "meaning": "popular song",
-    "example_kr": "대중가요를 부르 다",
+    "example_kr": "대중가요를 부르다",
     "example_en": "sing popular songs"
   },
   {
@@ -19418,7 +19418,7 @@
     "pos": "noun",
     "romanization": "daetonglyeong",
     "meaning": "president",
-    "example_kr": "대통령을 선출하 다",
+    "example_kr": "대통령을 선출하다",
     "example_en": "elect a president"
   },
   {
@@ -19652,7 +19652,7 @@
     "pos": "noun",
     "romanization": "dog-il-eo",
     "meaning": "German language",
-    "example_kr": "독일어를 가르치 다",
+    "example_kr": "독일어를 가르치다",
     "example_en": "teach German"
   },
   {
@@ -19688,7 +19688,7 @@
     "pos": "verb",
     "romanization": "dol-adanida",
     "meaning": "to roam, wander around",
-    "example_kr": "거리를 돌아다니 다",
+    "example_kr": "거리를 돌아다니다",
     "example_en": "wander the streets"
   },
   {
@@ -19715,7 +19715,7 @@
     "pos": "noun",
     "romanization": "donggeulami",
     "meaning": "circle, round shape",
-    "example_kr": "동그라미를 그리 다",
+    "example_kr": "동그라미를 그리다",
     "example_en": "draw a circle"
   },
   {
@@ -19751,7 +19751,7 @@
     "pos": "noun",
     "romanization": "dong-ali",
     "meaning": "club, circle",
-    "example_kr": "동아리에 가입하 다",
+    "example_kr": "동아리에 가입하다",
     "example_en": "join a club"
   },
   {
@@ -19796,7 +19796,7 @@
     "pos": "noun",
     "romanization": "donghohoe",
     "meaning": "hobby club, society",
-    "example_kr": "동호회에 가입하 다",
+    "example_kr": "동호회에 가입하다",
     "example_en": "join a hobby club"
   },
   {
@@ -19805,7 +19805,7 @@
     "pos": "verb",
     "romanization": "doedol-a-oda",
     "meaning": "to return, come back",
-    "example_kr": "편지가 되돌아오 다",
+    "example_kr": "편지가 되돌아오다",
     "example_en": "letter returns"
   },
   {
@@ -19832,7 +19832,7 @@
     "pos": "noun",
     "romanization": "dutong-yag",
     "meaning": "headache medicine",
-    "example_kr": "두통약을 복용하 다",
+    "example_kr": "두통약을 복용하다",
     "example_en": "take headache medicine"
   },
   {
@@ -19859,7 +19859,7 @@
     "pos": "noun",
     "romanization": "deula-ibeu",
     "meaning": "drive, driving trip",
-    "example_kr": "드라이브를 나가 다",
+    "example_kr": "드라이브를 나가다",
     "example_en": "go for a drive"
   },
   {
@@ -19868,7 +19868,7 @@
     "pos": "noun",
     "romanization": "deula-i-eo",
     "meaning": "hair dryer",
-    "example_kr": "드라이어로 말리 다",
+    "example_kr": "드라이어로 말리다",
     "example_en": "dry with a hair dryer"
   },
   {
@@ -19958,7 +19958,7 @@
     "pos": "noun",
     "romanization": "deunglogjeung",
     "meaning": "registration certificate",
-    "example_kr": "등록증을 발급받 다",
+    "example_kr": "등록증을 발급받다",
     "example_en": "receive a registration certificate"
   },
   {
@@ -19994,7 +19994,7 @@
     "pos": "verb",
     "romanization": "ttalagada",
     "meaning": "follow",
-    "example_kr": "앞사람을 따라가 다",
+    "example_kr": "앞사람을 따라가다",
     "example_en": "follow the person ahead"
   },
   {
@@ -20129,7 +20129,7 @@
     "pos": "verb",
     "romanization": "tteol-eo-tteulida",
     "meaning": "drop, fall",
-    "example_kr": "바닥에 떨어뜨리 다",
+    "example_kr": "바닥에 떨어뜨리다",
     "example_en": "drop to the floor"
   },
   {
@@ -20183,7 +20183,7 @@
     "pos": "verb",
     "romanization": "ttwi-eonaelida",
     "meaning": "jump down",
-    "example_kr": "아래로 뛰어내리 다",
+    "example_kr": "아래로 뛰어내리다",
     "example_en": "jump down below"
   },
   {
@@ -20291,7 +20291,7 @@
     "pos": "noun",
     "romanization": "malaton",
     "meaning": "marathon",
-    "example_kr": "마라톤을 완주하 다",
+    "example_kr": "마라톤을 완주하다",
     "example_en": "complete a marathon"
   },
   {
@@ -20678,7 +20678,7 @@
     "pos": "noun",
     "romanization": "myeon",
     "meaning": "surface, side",
-    "example_kr": "벽의 면",
+    "example_kr": "벽의면",
     "example_en": "surface of a wall"
   },
   {
@@ -20822,7 +20822,7 @@
     "pos": "noun",
     "romanization": "mogjeogji",
     "meaning": "destination",
-    "example_kr": "목적지에 도착하 다",
+    "example_kr": "목적지에 도착하다",
     "example_en": "arrive at destination"
   },
   {
@@ -21047,7 +21047,7 @@
     "pos": "noun",
     "romanization": "munhwajae",
     "meaning": "cultural heritage",
-    "example_kr": "문화재를 보호하 다",
+    "example_kr": "문화재를 보호하다",
     "example_en": "protect cultural heritage"
   },
   {
@@ -21335,7 +21335,7 @@
     "pos": "noun",
     "romanization": "badasmul",
     "meaning": "seawater",
-    "example_kr": "바닷물이 출렁이 다",
+    "example_kr": "바닷물이 출렁이다",
     "example_en": "seawater ripples"
   },
   {
@@ -21686,7 +21686,7 @@
     "pos": "adjective",
     "romanization": "baegopeuda",
     "meaning": "hungry",
-    "example_kr": "배고프고 목마르 다",
+    "example_kr": "배고프고 목마르다",
     "example_en": "hungry and thirsty"
   },
   {
@@ -21713,7 +21713,7 @@
     "pos": "noun",
     "romanization": "baenang-yeohaeng",
     "meaning": "backpacking",
-    "example_kr": "배낭여행을 떠나 다",
+    "example_kr": "배낭여행을 떠나다",
     "example_en": "go backpacking"
   },
   {
@@ -21992,7 +21992,7 @@
     "pos": "noun",
     "romanization": "byeolmal-sseum",
     "meaning": "compliments, kind words",
-    "example_kr": "별말씀이 없으시 다",
+    "example_kr": "별말씀이 없으시다",
     "example_en": "no compliments needed"
   },
   {
@@ -22037,7 +22037,7 @@
     "pos": "noun",
     "romanization": "bogoseo",
     "meaning": "report document",
-    "example_kr": "보고서를 작성하 다",
+    "example_kr": "보고서를 작성하다",
     "example_en": "write a report"
   },
   {
@@ -22118,7 +22118,7 @@
     "pos": "noun",
     "romanization": "bohaengja",
     "meaning": "pedestrian",
-    "example_kr": "보행자를 배려하 다",
+    "example_kr": "보행자를 배려하다",
     "example_en": "be considerate of pedestrians"
   },
   {
@@ -22298,7 +22298,7 @@
     "pos": "verb",
     "romanization": "buleo-wohada",
     "meaning": "to envy",
-    "example_kr": "성공을 부러워하 다",
+    "example_kr": "성공을 부러워하다",
     "example_en": "envy success"
   },
   {
@@ -22568,7 +22568,7 @@
     "pos": "noun",
     "romanization": "bwipe",
     "meaning": "buffet",
-    "example_kr": "뷔페에서 식사하 다",
+    "example_kr": "뷔페에서 식사하다",
     "example_en": "dine at a buffet"
   },
   {
@@ -22586,7 +22586,7 @@
     "pos": "noun",
     "romanization": "bimilbeonho",
     "meaning": "password",
-    "example_kr": "비밀번호를 누르 다",
+    "example_kr": "비밀번호를 누르다",
     "example_en": "enter a password"
   },
   {
@@ -22604,7 +22604,7 @@
     "pos": "noun",
     "romanization": "bisanggu",
     "meaning": "emergency exit",
-    "example_kr": "비상구로 대피하 다",
+    "example_kr": "비상구로 대피하다",
     "example_en": "evacuate via emergency exit"
   },
   {
@@ -22640,7 +22640,7 @@
     "pos": "noun",
     "romanization": "bitamin",
     "meaning": "vitamin",
-    "example_kr": "비타민을 섭취하 다",
+    "example_kr": "비타민을 섭취하다",
     "example_en": "take vitamins"
   },
   {
@@ -22667,7 +22667,7 @@
     "pos": "noun",
     "romanization": "bihaengjang",
     "meaning": "airport",
-    "example_kr": "비행장에 도착하 다",
+    "example_kr": "비행장에 도착하다",
     "example_en": "arrive at airport"
   },
   {
@@ -22847,7 +22847,7 @@
     "pos": "verb",
     "romanization": "salajida",
     "meaning": "to disappear, vanish",
-    "example_kr": "사람들이 사라지 다",
+    "example_kr": "사람들이 사라지다",
     "example_en": "people disappear"
   },
   {
@@ -22901,7 +22901,7 @@
     "pos": "noun",
     "romanization": "sa-yongbeob",
     "meaning": "instructions for use",
-    "example_kr": "사용법을 설명하 다",
+    "example_kr": "사용법을 설명하다",
     "example_en": "explain usage"
   },
   {
@@ -22910,7 +22910,7 @@
     "pos": "noun",
     "romanization": "sa-una",
     "meaning": "sauna",
-    "example_kr": "사우나로 땀을 내 다",
+    "example_kr": "사우나로 땀을 내다",
     "example_en": "sweat in sauna"
   },
   {
@@ -22919,7 +22919,7 @@
     "pos": "noun",
     "romanization": "sa-iteu",
     "meaning": "website",
-    "example_kr": "사이트에 접속하 다",
+    "example_kr": "사이트에 접속하다",
     "example_en": "access website"
   },
   {
@@ -22928,7 +22928,7 @@
     "pos": "verb",
     "romanization": "sa-in",
     "meaning": "to sign",
-    "example_kr": "계약서에 사인하 다",
+    "example_kr": "계약서에 사인하다",
     "example_en": "sign contract"
   },
   {
@@ -22973,7 +22973,7 @@
     "pos": "noun",
     "romanization": "sajingwan",
     "meaning": "photo studio",
-    "example_kr": "사진관을 운영하 다",
+    "example_kr": "사진관을 운영하다",
     "example_en": "run photo studio"
   },
   {
@@ -23009,7 +23009,7 @@
     "pos": "noun",
     "romanization": "sahoeja",
     "meaning": "host, emcee",
-    "example_kr": "사회자가 질문하 다",
+    "example_kr": "사회자가 질문하다",
     "example_en": "host asks question"
   },
   {
@@ -23036,7 +23036,7 @@
     "pos": "noun",
     "romanization": "sankkogdaegi",
     "meaning": "mountain peak, summit",
-    "example_kr": "산꼭대기에 오르 다",
+    "example_kr": "산꼭대기에 오르다",
     "example_en": "climb mountain peak"
   },
   {
@@ -23234,7 +23234,7 @@
     "pos": "noun",
     "romanization": "sae-eomma",
     "meaning": "stepmother",
-    "example_kr": "새엄마를 맞이하 다",
+    "example_kr": "새엄마를 맞이하다",
     "example_en": "welcome a stepmother"
   },
   {
@@ -23252,7 +23252,7 @@
     "pos": "noun",
     "romanization": "saejib",
     "meaning": "new house",
-    "example_kr": "새집으로 이사하 다",
+    "example_kr": "새집으로 이사하다",
     "example_en": "move to a new house"
   },
   {
@@ -23315,7 +23315,7 @@
     "pos": "noun",
     "romanization": "syampu",
     "meaning": "shampoo",
-    "example_kr": "샴푸로 머리를 감 다",
+    "example_kr": "샴푸로 머리를 감다",
     "example_en": "wash hair with shampoo"
   },
   {
@@ -23513,7 +23513,7 @@
     "pos": "adjective",
     "romanization": "selyeondoeda",
     "meaning": "refined, sophisticated",
-    "example_kr": "옷차림이 세련되 다",
+    "example_kr": "옷차림이 세련되다",
     "example_en": "refined appearance"
   },
   {
@@ -23702,7 +23702,7 @@
     "pos": "noun",
     "romanization": "sobanggwan",
     "meaning": "firefighter",
-    "example_kr": "소방관이 출동하 다",
+    "example_kr": "소방관이 출동하다",
     "example_en": "firefighter dispatched"
   },
   {
@@ -23711,7 +23711,7 @@
     "pos": "noun",
     "romanization": "sobangseo",
     "meaning": "fire station",
-    "example_kr": "소방서에 신고하 다",
+    "example_kr": "소방서에 신고하다",
     "example_en": "report to fire station"
   },
   {
@@ -23819,7 +23819,7 @@
     "pos": "noun",
     "romanization": "sondeung",
     "meaning": "back of hand",
-    "example_kr": "손등으로 문지르 다",
+    "example_kr": "손등으로 문지르다",
     "example_en": "rub with the back of hand"
   },
   {
@@ -23918,7 +23918,7 @@
     "pos": "noun",
     "romanization": "syopingmol",
     "meaning": "shopping mall",
-    "example_kr": "쇼핑몰을 운영하 다",
+    "example_kr": "쇼핑몰을 운영하다",
     "example_en": "operate a shopping mall"
   },
   {
@@ -23927,7 +23927,7 @@
     "pos": "noun",
     "romanization": "syopingsenteo",
     "meaning": "shopping center",
-    "example_kr": "쇼핑센터에서 사 다",
+    "example_kr": "쇼핑센터에서 사다",
     "example_en": "shop at a shopping center"
   },
   {
@@ -24008,7 +24008,7 @@
     "pos": "noun",
     "romanization": "sumyeonje",
     "meaning": "sleeping pill",
-    "example_kr": "수면제를 복용하 다",
+    "example_kr": "수면제를 복용하다",
     "example_en": "take a sleeping pill"
   },
   {
@@ -24179,7 +24179,7 @@
     "pos": "noun",
     "romanization": "syupeo",
     "meaning": "supermarket",
-    "example_kr": "슈퍼에서 구입하 다",
+    "example_kr": "슈퍼에서 구입하다",
     "example_en": "buy at supermarket"
   },
   {
@@ -24368,7 +24368,7 @@
     "pos": "noun",
     "romanization": "si-abeoji",
     "meaning": "father-in-law",
-    "example_kr": "시아버지를 모시 다",
+    "example_kr": "시아버지를 모시다",
     "example_en": "serve one's father-in-law"
   },
   {
@@ -24422,7 +24422,7 @@
     "pos": "noun",
     "romanization": "siheomji",
     "meaning": "test paper",
-    "example_kr": "시험지를 채점하 다",
+    "example_kr": "시험지를 채점하다",
     "example_en": "grade test papers"
   },
   {
@@ -24467,7 +24467,7 @@
     "pos": "noun",
     "romanization": "sigsalyang",
     "meaning": "meal quantity",
-    "example_kr": "식사량을 조절하 다",
+    "example_kr": "식사량을 조절하다",
     "example_en": "regulate meal amount"
   },
   {
@@ -24620,7 +24620,7 @@
     "pos": "noun",
     "romanization": "sin-ibsaeng",
     "meaning": "new student",
-    "example_kr": "신입생을 모집하 다",
+    "example_kr": "신입생을 모집하다",
     "example_en": "recruit new students"
   },
   {
@@ -24629,7 +24629,7 @@
     "pos": "noun",
     "romanization": "sincheongseo",
     "meaning": "application form",
-    "example_kr": "신청서를 접수하 다",
+    "example_kr": "신청서를 접수하다",
     "example_en": "submit application form"
   },
   {
@@ -24944,7 +24944,7 @@
     "pos": "noun",
     "romanization": "alaesjib",
     "meaning": "downstairs neighbor",
-    "example_kr": "아랫집에 내려가 다",
+    "example_kr": "아랫집에 내려가다",
     "example_en": "go down to downstairs"
   },
   {
@@ -25070,7 +25070,7 @@
     "pos": "noun",
     "romanization": "annae-won",
     "meaning": "tour guide",
-    "example_kr": "안내원을 따라가 다",
+    "example_kr": "안내원을 따라가다",
     "example_en": "follow the tour guide"
   },
   {
@@ -25268,7 +25268,7 @@
     "pos": "noun",
     "romanization": "ae-wandongmul",
     "meaning": "pet",
-    "example_kr": "애완동물을 기르 다",
+    "example_kr": "애완동물을 기르다",
     "example_en": "raise a pet"
   },
   {
@@ -25277,7 +25277,7 @@
     "pos": "noun",
     "romanization": "aegseseoli",
     "meaning": "accessory",
-    "example_kr": "액세서리를 걸치 다",
+    "example_kr": "액세서리를 걸치다",
     "example_en": "wear accessories"
   },
   {
@@ -25718,7 +25718,7 @@
     "pos": "noun",
     "romanization": "yeoleumhyuga",
     "meaning": "summer vacation",
-    "example_kr": "여름휴가를 떠나 다",
+    "example_kr": "여름휴가를 떠나다",
     "example_en": "take summer vacation"
   },
   {
@@ -25781,7 +25781,7 @@
     "pos": "noun",
     "romanization": "yeogsaga",
     "meaning": "historian",
-    "example_kr": "역사가가 연구하 다",
+    "example_kr": "역사가가 연구하다",
     "example_en": "historian does research"
   },
   {
@@ -25916,7 +25916,7 @@
     "pos": "noun",
     "romanization": "yeolsoegoli",
     "meaning": "key ring",
-    "example_kr": "열쇠고리를 사오 다",
+    "example_kr": "열쇠고리를 사오다",
     "example_en": "buy a key ring"
   },
   {
@@ -26069,7 +26069,7 @@
     "pos": "noun",
     "romanization": "yesigjang",
     "meaning": "wedding hall, venue",
-    "example_kr": "예식장을 예약하 다",
+    "example_kr": "예식장을 예약하다",
     "example_en": "reserve a wedding venue"
   },
   {
@@ -26123,7 +26123,7 @@
     "pos": "noun",
     "romanization": "yesnal-i-yagi",
     "meaning": "folktale, fairy tale",
-    "example_kr": "옛날이야기를 듣 다",
+    "example_kr": "옛날이야기를 듣다",
     "example_en": "listen to a folktale"
   },
   {
@@ -26204,7 +26204,7 @@
     "pos": "noun",
     "romanization": "opela",
     "meaning": "opera",
-    "example_kr": "오페라를 감상하 다",
+    "example_kr": "오페라를 감상하다",
     "example_en": "appreciate an opera"
   },
   {
@@ -26375,7 +26375,7 @@
     "pos": "noun",
     "romanization": "oegyogwan",
     "meaning": "diplomat",
-    "example_kr": "외교관을 임명하 다",
+    "example_kr": "외교관을 임명하다",
     "example_en": "appoint a diplomat"
   },
   {
@@ -26492,7 +26492,7 @@
     "pos": "noun",
     "romanization": "yoguleuteu",
     "meaning": "yogurt",
-    "example_kr": "요구르트를 마시 다",
+    "example_kr": "요구르트를 마시다",
     "example_en": "drink yogurt"
   },
   {
@@ -26501,7 +26501,7 @@
     "pos": "noun",
     "romanization": "yolibeob",
     "meaning": "cooking method",
-    "example_kr": "요리법을 개발하 다",
+    "example_kr": "요리법을 개발하다",
     "example_en": "develop a cooking method"
   },
   {
@@ -26672,7 +26672,7 @@
     "pos": "noun",
     "romanization": "uhoejeon",
     "meaning": "right turn",
-    "example_kr": "우회전을 허용하 다",
+    "example_kr": "우회전을 허용하다",
     "example_en": "allow right turn"
   },
   {
@@ -26744,7 +26744,7 @@
     "pos": "noun",
     "romanization": "us-eoleun",
     "meaning": "elder, superior",
-    "example_kr": "웃어른을 공경하 다",
+    "example_kr": "웃어른을 공경하다",
     "example_en": "respect an elder"
   },
   {
@@ -26933,7 +26933,7 @@
     "pos": "noun",
     "romanization": "yujeogji",
     "meaning": "historic site, ruins",
-    "example_kr": "유적지를 조사하 다",
+    "example_kr": "유적지를 조사하다",
     "example_en": "investigate a historic site"
   },
   {
@@ -27050,7 +27050,7 @@
     "pos": "noun",
     "romanization": "igosjeogos",
     "meaning": "here and there",
-    "example_kr": "이곳저곳을 살피 다",
+    "example_kr": "이곳저곳을 살피다",
     "example_en": "check here and there"
   },
   {
@@ -27140,7 +27140,7 @@
     "pos": "verb",
     "romanization": "ilu-eojida",
     "meaning": "to be achieved, come true",
-    "example_kr": "소원이 이루어지 다",
+    "example_kr": "소원이 이루어지다",
     "example_en": "wish comes true"
   },
   {
@@ -27212,7 +27212,7 @@
     "pos": "noun",
     "romanization": "i-usjib",
     "meaning": "neighbor's house",
-    "example_kr": "이웃집을 방문하 다",
+    "example_kr": "이웃집을 방문하다",
     "example_en": "visit the neighbor's house"
   },
   {
@@ -27599,7 +27599,7 @@
     "pos": "noun",
     "romanization": "jadong",
     "meaning": "automatic, automatic operation",
-    "example_kr": "자동으로 움직이 다",
+    "example_kr": "자동으로 움직이다",
     "example_en": "move automatically"
   },
   {
@@ -27806,7 +27806,7 @@
     "pos": "noun",
     "romanization": "jangmacheol",
     "meaning": "rainy season",
-    "example_kr": "장마철이 다가오 다",
+    "example_kr": "장마철이 다가오다",
     "example_en": "rainy season is coming"
   },
   {
@@ -28076,7 +28076,7 @@
     "pos": "noun",
     "romanization": "jeonmunga",
     "meaning": "expert, specialist",
-    "example_kr": "전문가를 초빙하 다",
+    "example_kr": "전문가를 초빙하다",
     "example_en": "invite an expert"
   },
   {
@@ -28121,7 +28121,7 @@
     "pos": "noun",
     "romanization": "jeonsihoe",
     "meaning": "exhibition",
-    "example_kr": "전시회를 관람하 다",
+    "example_kr": "전시회를 관람하다",
     "example_en": "view an exhibition"
   },
   {
@@ -28373,7 +28373,7 @@
     "pos": "noun",
     "romanization": "jeongsugi",
     "meaning": "water purifier",
-    "example_kr": "정수기를 설치하 다",
+    "example_kr": "정수기를 설치하다",
     "example_en": "install a water purifier"
   },
   {
@@ -28517,7 +28517,7 @@
     "pos": "noun",
     "romanization": "jesigan",
     "meaning": "on time, right on schedule",
-    "example_kr": "제시간에 도착하 다",
+    "example_kr": "제시간에 도착하다",
     "example_en": "arrive on time"
   },
   {
@@ -28643,7 +28643,7 @@
     "pos": "noun",
     "romanization": "jol-eobsaeng",
     "meaning": "graduate",
-    "example_kr": "졸업생을 배출하 다",
+    "example_kr": "졸업생을 배출하다",
     "example_en": "to produce graduates"
   },
   {
@@ -28751,7 +28751,7 @@
     "pos": "noun",
     "romanization": "jubang",
     "meaning": "kitchen",
-    "example_kr": "주방에서 요리하 다",
+    "example_kr": "주방에서 요리하다",
     "example_en": "to cook in the kitchen"
   },
   {
@@ -28769,7 +28769,7 @@
     "pos": "noun",
     "romanization": "ju-yuso",
     "meaning": "gas station",
-    "example_kr": "주유소에서 일하 다",
+    "example_kr": "주유소에서 일하다",
     "example_en": "to work at a gas station"
   },
   {
@@ -28976,7 +28976,7 @@
     "pos": "noun",
     "romanization": "junghyeongcha",
     "meaning": "mid-size car",
-    "example_kr": "중형차를 운전하 다",
+    "example_kr": "중형차를 운전하다",
     "example_en": "to drive a mid-size car"
   },
   {
@@ -29030,7 +29030,7 @@
     "pos": "noun",
     "romanization": "jeungmyeongseo",
     "meaning": "certificate",
-    "example_kr": "증명서를 발급하 다",
+    "example_kr": "증명서를 발급하다",
     "example_en": "to issue a certificate"
   },
   {
@@ -29075,7 +29075,7 @@
     "pos": "noun",
     "romanization": "jinannal",
     "meaning": "the past",
-    "example_kr": "지난날을 기억하 다",
+    "example_kr": "지난날을 기억하다",
     "example_en": "to remember the past"
   },
   {
@@ -29732,7 +29732,7 @@
     "pos": "adjective",
     "romanization": "chonseuleobda",
     "meaning": "unfashionable, rustic",
-    "example_kr": "옷차림이 촌스럽 다",
+    "example_kr": "옷차림이 촌스럽다",
     "example_en": "unfashionable outfit"
   },
   {
@@ -30353,7 +30353,7 @@
     "pos": "noun",
     "romanization": "pachulso",
     "meaning": "police box, substation",
-    "example_kr": "파출소에 신고하 다",
+    "example_kr": "파출소에 신고하다",
     "example_en": "report to police box"
   },
   {
@@ -30569,7 +30569,7 @@
     "pos": "noun",
     "romanization": "peulinteo",
     "meaning": "printer",
-    "example_kr": "프린터로 출력하 다",
+    "example_kr": "프린터로 출력하다",
     "example_en": "print with printer"
   },
   {
@@ -30875,7 +30875,7 @@
     "pos": "noun",
     "romanization": "haedod-i",
     "meaning": "sunrise",
-    "example_kr": "해돋이를 감상하 다",
+    "example_kr": "해돋이를 감상하다",
     "example_en": "to appreciate the sunrise"
   },
   {
@@ -31352,7 +31352,7 @@
     "pos": "noun",
     "romanization": "hyugacheol",
     "meaning": "vacation season",
-    "example_kr": "휴가철이 시작되 다",
+    "example_kr": "휴가철이 시작되다",
     "example_en": "vacation season begins"
   },
   {
@@ -31388,7 +31388,7 @@
     "pos": "verb",
     "romanization": "heulleogada",
     "meaning": "to flow",
-    "example_kr": "시냇물이 흘러가 다",
+    "example_kr": "시냇물이 흘러가다",
     "example_en": "stream flows"
   },
   {
@@ -31451,7 +31451,7 @@
     "pos": "verb",
     "romanization": "gajyeodajuda",
     "meaning": "to bring",
-    "example_kr": "물건을 가져다주 다",
+    "example_kr": "물건을 가져다주다",
     "example_en": "bring something"
   },
   {
@@ -32081,7 +32081,7 @@
     "pos": "noun",
     "romanization": "geolae",
     "meaning": "transaction, trade",
-    "example_kr": "거래가 이루어지 다",
+    "example_kr": "거래가 이루어지다",
     "example_en": "transaction takes place"
   },
   {
@@ -32153,7 +32153,7 @@
     "pos": "adjective",
     "romanization": "geogjeongseuleobda",
     "meaning": "worrisome, concerning",
-    "example_kr": "자식이 걱정스럽 다",
+    "example_kr": "자식이 걱정스럽다",
     "example_en": "one's child is concerning"
   },
   {
@@ -32522,7 +32522,7 @@
     "pos": "noun",
     "romanization": "gyesangi",
     "meaning": "calculator",
-    "example_kr": "계산기로 계산하 다",
+    "example_kr": "계산기로 계산하다",
     "example_en": "calculate with a calculator"
   },
   {
@@ -32549,7 +32549,7 @@
     "pos": "noun",
     "romanization": "gogug",
     "meaning": "homeland, native country",
-    "example_kr": "고국으로 돌아가 다",
+    "example_kr": "고국으로 돌아가다",
     "example_en": "return to one's homeland"
   },
   {
@@ -33098,7 +33098,7 @@
     "pos": "noun",
     "romanization": "gyo-yugbi",
     "meaning": "education expense",
-    "example_kr": "교육비로 지출하 다",
+    "example_kr": "교육비로 지출하다",
     "example_en": "spend on education expenses"
   },
   {
@@ -33107,7 +33107,7 @@
     "pos": "noun",
     "romanization": "gyo-yugja",
     "meaning": "educator",
-    "example_kr": "교육자를 배출하 다",
+    "example_kr": "교육자를 배출하다",
     "example_en": "produce educators"
   },
   {
@@ -33557,7 +33557,7 @@
     "pos": "noun",
     "romanization": "geulaepeu",
     "meaning": "graph, chart",
-    "example_kr": "그래프로 나타내 다",
+    "example_kr": "그래프로 나타내다",
     "example_en": "express as a graph"
   },
   {
@@ -33728,7 +33728,7 @@
     "pos": "noun",
     "romanization": "geunloja",
     "meaning": "worker, laborer",
-    "example_kr": "근로자를 해고하 다",
+    "example_kr": "근로자를 해고하다",
     "example_en": "dismiss a worker"
   },
   {
@@ -33836,7 +33836,7 @@
     "pos": "noun",
     "romanization": "ginyeom-il",
     "meaning": "commemorative day",
-    "example_kr": "기념일을 축하하 다",
+    "example_kr": "기념일을 축하하다",
     "example_en": "celebrate an anniversary"
   },
   {
@@ -34367,7 +34367,7 @@
     "pos": "adverb",
     "romanization": "kkeunh-im-eobs-i",
     "meaning": "ceaselessly, constantly",
-    "example_kr": "끊임없이 이어지 다",
+    "example_kr": "끊임없이 이어지다",
     "example_en": "continue ceaselessly"
   },
   {
@@ -34385,7 +34385,7 @@
     "pos": "verb",
     "romanization": "kkeul-eodanggida",
     "meaning": "pull, drag",
-    "example_kr": "의자를 끌어당기 다",
+    "example_kr": "의자를 끌어당기다",
     "example_en": "pull a chair"
   },
   {
@@ -34592,7 +34592,7 @@
     "pos": "verb",
     "romanization": "nal-adanida",
     "meaning": "fly around",
-    "example_kr": "나비가 날아다니 다",
+    "example_kr": "나비가 날아다니다",
     "example_en": "butterflies fly around"
   },
   {
@@ -34700,7 +34700,7 @@
     "pos": "verb",
     "romanization": "naebeolida",
     "meaning": "discard, abandon",
-    "example_kr": "쓰레기를 내버리 다",
+    "example_kr": "쓰레기를 내버리다",
     "example_en": "throw away trash"
   },
   {
@@ -34826,7 +34826,7 @@
     "pos": "verb",
     "romanization": "neom-eo-tteulida",
     "meaning": "knock down, topple",
-    "example_kr": "나무를 넘어뜨리 다",
+    "example_kr": "나무를 넘어뜨리다",
     "example_en": "knock down a tree"
   },
   {
@@ -35015,7 +35015,7 @@
     "pos": "noun",
     "romanization": "nongsanmul",
     "meaning": "agricultural product",
-    "example_kr": "농산물을 판매하 다",
+    "example_kr": "농산물을 판매하다",
     "example_en": "sell agricultural products"
   },
   {
@@ -35267,7 +35267,7 @@
     "pos": "verb",
     "romanization": "dagagada",
     "meaning": "approach, draw near to",
-    "example_kr": "문 쪽으로 다가가 다",
+    "example_kr": "문 쪽으로 다가가다",
     "example_en": "approach the door"
   },
   {
@@ -35276,7 +35276,7 @@
     "pos": "verb",
     "romanization": "dagaseoda",
     "meaning": "approach, come closer",
-    "example_kr": "가까이에 다가서 다",
+    "example_kr": "가까이에 다가서다",
     "example_en": "come closer nearby"
   },
   {
@@ -35708,7 +35708,7 @@
     "pos": "verb",
     "romanization": "danghada",
     "meaning": "to suffer, undergo",
-    "example_kr": "사기꾼에게 당하 다",
+    "example_kr": "사기꾼에게 당하다",
     "example_en": "be scammed by a con artist"
   },
   {
@@ -35780,7 +35780,7 @@
     "pos": "noun",
     "romanization": "daegi-eob",
     "meaning": "large corporation",
-    "example_kr": "대기업에 취직하 다",
+    "example_kr": "대기업에 취직하다",
     "example_en": "get a job at a big company"
   },
   {
@@ -35798,7 +35798,7 @@
     "pos": "noun",
     "romanization": "daedasu",
     "meaning": "great majority",
-    "example_kr": "대다수가 찬성하 다",
+    "example_kr": "대다수가 찬성하다",
     "example_en": "most people agree"
   },
   {
@@ -36158,7 +36158,7 @@
     "pos": "verb",
     "romanization": "domangchida",
     "meaning": "to escape, flee",
-    "example_kr": "감옥에서 도망치 다",
+    "example_kr": "감옥에서 도망치다",
     "example_en": "escape from prison"
   },
   {
@@ -36248,7 +36248,7 @@
     "pos": "verb",
     "romanization": "dollyeobonaeda",
     "meaning": "send back",
-    "example_kr": "물건을 돌려보내 다",
+    "example_kr": "물건을 돌려보내다",
     "example_en": "send back items"
   },
   {
@@ -36311,7 +36311,7 @@
     "pos": "noun",
     "romanization": "dongseonambug",
     "meaning": "four directions",
-    "example_kr": "동서남북으로 찾 다",
+    "example_kr": "동서남북으로 찾다",
     "example_en": "search in all directions"
   },
   {
@@ -36419,7 +36419,7 @@
     "pos": "verb",
     "romanization": "doedol-agada",
     "meaning": "go back",
-    "example_kr": "집으로 되돌아가 다",
+    "example_kr": "집으로 되돌아가다",
     "example_en": "go back home"
   },
   {
@@ -36437,7 +36437,7 @@
     "pos": "verb",
     "romanization": "doesal-anada",
     "meaning": "come alive again",
-    "example_kr": "입맛이 되살아나 다",
+    "example_kr": "입맛이 되살아나다",
     "example_en": "appetite comes back"
   },
   {
@@ -36446,7 +36446,7 @@
     "pos": "noun",
     "romanization": "doepul-i",
     "meaning": "repetition",
-    "example_kr": "되풀이가 계속되 다",
+    "example_kr": "되풀이가 계속되다",
     "example_en": "repetition continues"
   },
   {
@@ -36464,7 +36464,7 @@
     "pos": "verb",
     "romanization": "dudeuleojida",
     "meaning": "protrude, stand out",
-    "example_kr": "이마가 두드러지 다",
+    "example_kr": "이마가 두드러지다",
     "example_en": "forehead protrudes"
   },
   {
@@ -36482,7 +36482,7 @@
     "pos": "noun",
     "romanization": "dulyeo-um",
     "meaning": "fear, dread",
-    "example_kr": "두려움을 극복하 다",
+    "example_kr": "두려움을 극복하다",
     "example_en": "overcome fear"
   },
   {
@@ -36491,7 +36491,7 @@
     "pos": "verb",
     "romanization": "dulyeo-wohada",
     "meaning": "fear, be afraid",
-    "example_kr": "변화를 두려워하 다",
+    "example_kr": "변화를 두려워하다",
     "example_en": "fear change"
   },
   {
@@ -36554,7 +36554,7 @@
     "pos": "verb",
     "romanization": "dulleo-ssa-ida",
     "meaning": "be surrounded",
-    "example_kr": "겹겹이 둘러싸이 다",
+    "example_kr": "겹겹이 둘러싸이다",
     "example_en": "be surrounded densely"
   },
   {
@@ -36590,7 +36590,7 @@
     "pos": "verb",
     "romanization": "dwi-ttaleuda",
     "meaning": "follow, come after",
-    "example_kr": "앞사람을 뒤따르 다",
+    "example_kr": "앞사람을 뒤따르다",
     "example_en": "follow the person ahead"
   },
   {
@@ -36599,7 +36599,7 @@
     "pos": "verb",
     "romanization": "dwi-tteol-eojida",
     "meaning": "fall behind",
-    "example_kr": "열 걸음 뒤떨어지 다",
+    "example_kr": "열 걸음 뒤떨어지다",
     "example_en": "fall ten steps behind"
   },
   {
@@ -36860,7 +36860,7 @@
     "pos": "noun",
     "romanization": "ttangbadag",
     "meaning": "ground, floor",
-    "example_kr": "땅바닥에 내려놓 다",
+    "example_kr": "땅바닥에 내려놓다",
     "example_en": "to put down on the ground"
   },
   {
@@ -36977,7 +36977,7 @@
     "pos": "verb",
     "romanization": "ttwi-eona-oda",
     "meaning": "to rush out",
-    "example_kr": "거리로 뛰어나오 다",
+    "example_kr": "거리로 뛰어나오다",
     "example_en": "to rush out to the street"
   },
   {
@@ -36995,7 +36995,7 @@
     "pos": "verb",
     "romanization": "ttwi-eodanida",
     "meaning": "to run around",
-    "example_kr": "집안을 뛰어다니 다",
+    "example_kr": "집안을 뛰어다니다",
     "example_en": "to run around the house"
   },
   {
@@ -37229,7 +37229,7 @@
     "pos": "noun",
     "romanization": "ma-eumgajim",
     "meaning": "attitude, mindset",
-    "example_kr": "마음가짐을 가지 다",
+    "example_kr": "마음가짐을 가지다",
     "example_en": "to have an attitude"
   },
   {
@@ -37274,7 +37274,7 @@
     "pos": "verb",
     "romanization": "majuchida",
     "meaning": "meet, collide",
-    "example_kr": "손바닥을 마주치 다",
+    "example_kr": "손바닥을 마주치다",
     "example_en": "clap hands together"
   },
   {
@@ -37391,7 +37391,7 @@
     "pos": "noun",
     "romanization": "maldatum",
     "meaning": "quarrel, argument",
-    "example_kr": "말다툼이 벌어지 다",
+    "example_kr": "말다툼이 벌어지다",
     "example_en": "a quarrel breaks out"
   },
   {
@@ -37454,7 +37454,7 @@
     "pos": "verb",
     "romanization": "manggajida",
     "meaning": "break, be damaged",
-    "example_kr": "컴퓨터가 망가지 다",
+    "example_kr": "컴퓨터가 망가지다",
     "example_en": "computer breaks down"
   },
   {
@@ -37526,7 +37526,7 @@
     "pos": "verb",
     "romanization": "maedallida",
     "meaning": "hang, dangle",
-    "example_kr": "주렁주렁 매달리 다",
+    "example_kr": "주렁주렁 매달리다",
     "example_en": "hang in bunches"
   },
   {
@@ -37589,7 +37589,7 @@
     "pos": "noun",
     "romanization": "meolis-sog",
     "meaning": "mind, inside of head",
-    "example_kr": "머릿속에 떠오르 다",
+    "example_kr": "머릿속에 떠오르다",
     "example_en": "come to mind"
   },
   {
@@ -37670,7 +37670,7 @@
     "pos": "adjective",
     "romanization": "meoljjeonghada",
     "meaning": "intact, unharmed",
-    "example_kr": "팔다리가 멀쩡하 다",
+    "example_kr": "팔다리가 멀쩡하다",
     "example_en": "limbs are intact"
   },
   {
@@ -37823,7 +37823,7 @@
     "pos": "verb",
     "romanization": "mo-yeodeulda",
     "meaning": "to gather, flock",
-    "example_kr": "구름처럼 모여들 다",
+    "example_kr": "구름처럼 모여들다",
     "example_en": "gather like clouds"
   },
   {
@@ -37913,7 +37913,7 @@
     "pos": "verb",
     "romanization": "mollyeodeulda",
     "meaning": "to rush in, crowd",
-    "example_kr": "사람들이 몰려들 다",
+    "example_kr": "사람들이 몰려들다",
     "example_en": "people rush in"
   },
   {
@@ -38030,7 +38030,7 @@
     "pos": "noun",
     "romanization": "mugwansim",
     "meaning": "indifference",
-    "example_kr": "무관심이 지나치 다",
+    "example_kr": "무관심이 지나치다",
     "example_en": "excessive indifference"
   },
   {
@@ -38048,7 +38048,7 @@
     "pos": "noun",
     "romanization": "mugi",
     "meaning": "weapon, arms",
-    "example_kr": "무기를 들고 싸우 다",
+    "example_kr": "무기를 들고 싸우다",
     "example_en": "fight with weapons"
   },
   {
@@ -38201,7 +38201,7 @@
     "pos": "noun",
     "romanization": "munjejeom",
     "meaning": "problem, issue",
-    "example_kr": "문제점을 해결하 다",
+    "example_kr": "문제점을 해결하다",
     "example_en": "solve the problem"
   },
   {
@@ -38282,7 +38282,7 @@
     "pos": "noun",
     "romanization": "mulsog",
     "meaning": "in water, underwater",
-    "example_kr": "물속에서 헤엄치 다",
+    "example_kr": "물속에서 헤엄치다",
     "example_en": "swim in water"
   },
   {
@@ -38363,7 +38363,7 @@
     "pos": "adjective",
     "romanization": "mijigeunhada",
     "meaning": "lukewarm, tepid",
-    "example_kr": "국물이 미지근하 다",
+    "example_kr": "국물이 미지근하다",
     "example_en": "the broth is lukewarm"
   },
   {
@@ -38435,7 +38435,7 @@
     "pos": "verb",
     "romanization": "millida",
     "meaning": "pushed, shoved",
-    "example_kr": "사람들에게 밀리 다",
+    "example_kr": "사람들에게 밀리다",
     "example_en": "pushed by people"
   },
   {
@@ -38660,7 +38660,7 @@
     "pos": "verb",
     "romanization": "bad-adeul-ida",
     "meaning": "accept, adopt",
-    "example_kr": "기술을 받아들이 다",
+    "example_kr": "기술을 받아들이다",
     "example_en": "adopt technology"
   },
   {
@@ -39128,7 +39128,7 @@
     "pos": "adjective",
     "romanization": "byeondeogseuleobda",
     "meaning": "moody, capricious",
-    "example_kr": "성격이 변덕스럽 다",
+    "example_kr": "성격이 변덕스럽다",
     "example_en": "temperament is capricious"
   },
   {
@@ -39218,7 +39218,7 @@
     "pos": "verb",
     "romanization": "bosalpida",
     "meaning": "to care for, look after",
-    "example_kr": "아이들을 보살피 다",
+    "example_kr": "아이들을 보살피다",
     "example_en": "look after children"
   },
   {
@@ -39398,7 +39398,7 @@
     "pos": "noun",
     "romanization": "bu-kkeuleo-um",
     "meaning": "shame, embarrassment",
-    "example_kr": "부끄러움을 느끼 다",
+    "example_kr": "부끄러움을 느끼다",
     "example_en": "feel ashamed"
   },
   {
@@ -39434,7 +39434,7 @@
     "pos": "verb",
     "romanization": "budijchida",
     "meaning": "to clap, strike together",
-    "example_kr": "손바닥을 부딪치 다",
+    "example_kr": "손바닥을 부딪치다",
     "example_en": "clap hands"
   },
   {
@@ -39740,7 +39740,7 @@
     "pos": "verb",
     "romanization": "bulguhada",
     "meaning": "despite, in spite of",
-    "example_kr": "그럼에도 불구하 고",
+    "example_kr": "그럼에도 불구하고",
     "example_en": "nevertheless"
   },
   {
@@ -39893,7 +39893,7 @@
     "pos": "verb",
     "romanization": "butjabda",
     "meaning": "to seize, catch",
-    "example_kr": "치맛자락을 붙잡 다",
+    "example_kr": "치맛자락을 붙잡다",
     "example_en": "grab skirt hem"
   },
   {
@@ -39992,7 +39992,7 @@
     "pos": "verb",
     "romanization": "bilosdoeda",
     "meaning": "originate from, stem from",
-    "example_kr": "경험에서 비롯되 다",
+    "example_kr": "경험에서 비롯되다",
     "example_en": "stem from experience"
   },
   {
@@ -40028,7 +40028,7 @@
     "pos": "noun",
     "romanization": "bibalam",
     "meaning": "rain and wind",
-    "example_kr": "비바람이 몰아치 다",
+    "example_kr": "비바람이 몰아치다",
     "example_en": "rain and wind sweep through"
   },
   {
@@ -40172,7 +40172,7 @@
     "pos": "noun",
     "romanization": "bisbang-ul",
     "meaning": "raindrop",
-    "example_kr": "빗방울이 떨어지 다",
+    "example_kr": "빗방울이 떨어지다",
     "example_en": "raindrops fall"
   },
   {
@@ -40298,7 +40298,7 @@
     "pos": "verb",
     "romanization": "ppobhida",
     "meaning": "be pulled out, fall out",
-    "example_kr": "머리카락이 뽑히 다",
+    "example_kr": "머리카락이 뽑히다",
     "example_en": "hair falls out"
   },
   {
@@ -40334,7 +40334,7 @@
     "pos": "noun",
     "romanization": "sagobangsig",
     "meaning": "way of thinking, mindset",
-    "example_kr": "사고방식이 다르 다",
+    "example_kr": "사고방식이 다르다",
     "example_en": "different mindsets"
   },
   {
@@ -40433,7 +40433,7 @@
     "pos": "noun",
     "romanization": "samujig",
     "meaning": "office work, clerical",
-    "example_kr": "사무직에 종사하 다",
+    "example_kr": "사무직에 종사하다",
     "example_en": "work in office"
   },
   {
@@ -40541,7 +40541,7 @@
     "pos": "noun",
     "romanization": "sajincheob",
     "meaning": "photo album",
-    "example_kr": "사진첩에 보관하 다",
+    "example_kr": "사진첩에 보관하다",
     "example_en": "store in a photo album"
   },
   {
@@ -40640,7 +40640,7 @@
     "pos": "verb",
     "romanization": "sal-agada",
     "meaning": "live, get by",
-    "example_kr": "하루하루 살아가 다",
+    "example_kr": "하루하루 살아가다",
     "example_en": "live day by day"
   },
   {
@@ -40649,7 +40649,7 @@
     "pos": "verb",
     "romanization": "sal-anamda",
     "meaning": "survive",
-    "example_kr": "전쟁에서 살아남 다",
+    "example_kr": "전쟁에서 살아남다",
     "example_en": "survive the war"
   },
   {
@@ -40820,7 +40820,7 @@
     "pos": "noun",
     "romanization": "sangsanglyeog",
     "meaning": "imagination, creativity",
-    "example_kr": "상상력이 풍부하 다",
+    "example_kr": "상상력이 풍부하다",
     "example_en": "rich imagination"
   },
   {
@@ -41072,7 +41072,7 @@
     "pos": "adjective",
     "romanization": "seo-unhada",
     "meaning": "sad, reluctant",
-    "example_kr": "헤어지기 서운하 다",
+    "example_kr": "헤어지기 서운하다",
     "example_en": "sad to part"
   },
   {
@@ -41387,7 +41387,7 @@
     "pos": "noun",
     "romanization": "sonamu",
     "meaning": "pine tree",
-    "example_kr": "소나무가 무성하 다",
+    "example_kr": "소나무가 무성하다",
     "example_en": "pine trees flourish"
   },
   {
@@ -41432,7 +41432,7 @@
     "pos": "verb",
     "romanization": "somunnada",
     "meaning": "to become known",
-    "example_kr": "사업가로 소문나 다",
+    "example_kr": "사업가로 소문나다",
     "example_en": "become known as businessman"
   },
   {
@@ -41441,7 +41441,7 @@
     "pos": "noun",
     "romanization": "sobangcha",
     "meaning": "fire truck",
-    "example_kr": "소방차가 출동하 다",
+    "example_kr": "소방차가 출동하다",
     "example_en": "fire truck dispatches"
   },
   {
@@ -41540,7 +41540,7 @@
     "pos": "noun",
     "romanization": "sojipum",
     "meaning": "personal belongings",
-    "example_kr": "소지품을 보관하 다",
+    "example_kr": "소지품을 보관하다",
     "example_en": "store personal items"
   },
   {
@@ -41585,7 +41585,7 @@
     "pos": "noun",
     "romanization": "sogma-eum",
     "meaning": "true feelings, inner thoughts",
-    "example_kr": "속마음을 털어 놓 다",
+    "example_kr": "속마음을 털어 놓다",
     "example_en": "reveal one's true feelings"
   },
   {
@@ -41738,7 +41738,7 @@
     "pos": "noun",
     "romanization": "sudogwon",
     "meaning": "capital area, Seoul metropolitan",
-    "example_kr": "수도권에 거주하 다",
+    "example_kr": "수도권에 거주하다",
     "example_en": "reside in capital area"
   },
   {
@@ -41747,7 +41747,7 @@
     "pos": "noun",
     "romanization": "sudo-kkogji",
     "meaning": "water tap, faucet",
-    "example_kr": "수도꼭지를 잠그 다",
+    "example_kr": "수도꼭지를 잠그다",
     "example_en": "turn off the faucet"
   },
   {
@@ -42215,7 +42215,7 @@
     "pos": "noun",
     "romanization": "silijeu",
     "meaning": "series",
-    "example_kr": "시리즈로 방영되 다",
+    "example_kr": "시리즈로 방영되다",
     "example_en": "to be broadcast as a series"
   },
   {
@@ -42575,7 +42575,7 @@
     "pos": "noun",
     "romanization": "siljang",
     "meaning": "department head",
-    "example_kr": "실장으로 승진하 다",
+    "example_kr": "실장으로 승진하다",
     "example_en": "to be promoted to department head"
   },
   {
@@ -42827,7 +42827,7 @@
     "pos": "adverb",
     "romanization": "sseulde-eobs-i",
     "meaning": "uselessly, pointlessly",
-    "example_kr": "쓸데없이 돈을 쓰 다",
+    "example_kr": "쓸데없이 돈을 쓰다",
     "example_en": "spend money pointlessly"
   },
   {
@@ -42944,7 +42944,7 @@
     "pos": "adverb",
     "romanization": "amulaedo",
     "meaning": "somehow, for some reason",
-    "example_kr": "아무래도 이상하 다",
+    "example_kr": "아무래도 이상하다",
     "example_en": "seems odd somehow"
   },
   {
@@ -42962,7 +42962,7 @@
     "pos": "adjective",
     "romanization": "amuleohda",
     "meaning": "any, whatever",
-    "example_kr": "아무렇건 상관없 다",
+    "example_kr": "아무렇건 상관없다",
     "example_en": "doesn't matter either way"
   },
   {
@@ -43412,7 +43412,7 @@
     "pos": "verb",
     "romanization": "eolyeo-wohada",
     "meaning": "feel shy of, be intimidated by",
-    "example_kr": "선배를 어려워하 다",
+    "example_kr": "선배를 어려워하다",
     "example_en": "feel intimidated by seniors"
   },
   {
@@ -43799,7 +43799,7 @@
     "pos": "noun",
     "romanization": "yeonguso",
     "meaning": "research institute",
-    "example_kr": "연구소를 설립하 다",
+    "example_kr": "연구소를 설립하다",
     "example_en": "establish a research institute"
   },
   {
@@ -44078,7 +44078,7 @@
     "pos": "noun",
     "romanization": "ye",
     "meaning": "example, precedent",
-    "example_kr": "예로부터 내려오 다",
+    "example_kr": "예로부터 내려오다",
     "example_en": "passed down since ancient times"
   },
   {
@@ -44186,7 +44186,7 @@
     "pos": "adverb",
     "romanization": "olaedolog",
     "meaning": "for a long time",
-    "example_kr": "오래도록 간직하 다",
+    "example_kr": "오래도록 간직하다",
     "example_en": "keep for a long time"
   },
   {
@@ -44195,7 +44195,7 @@
     "pos": "adverb",
     "romanization": "oloji",
     "meaning": "only, solely",
-    "example_kr": "오로지 공부만 하 다",
+    "example_kr": "오로지 공부만 하다",
     "example_en": "study only"
   },
   {
@@ -44204,7 +44204,7 @@
     "pos": "verb",
     "romanization": "oleunaelida",
     "meaning": "to go up and down",
-    "example_kr": "계단을 오르내리 다",
+    "example_kr": "계단을 오르내리다",
     "example_en": "go up and down stairs"
   },
   {
@@ -44285,7 +44285,7 @@
     "pos": "adverb / noun",
     "romanization": "ontong",
     "meaning": "entirely, nothing but",
-    "example_kr": "온통 그 생각뿐이 다",
+    "example_kr": "온통 그 생각뿐이다",
     "example_en": "nothing but that thought"
   },
   {
@@ -44294,7 +44294,7 @@
     "pos": "verb",
     "romanization": "ollatada",
     "meaning": "to board, get on",
-    "example_kr": "비행기에 올라타 다",
+    "example_kr": "비행기에 올라타다",
     "example_en": "board an airplane"
   },
   {
@@ -44303,7 +44303,7 @@
     "pos": "verb",
     "romanization": "ollyeodaboda",
     "meaning": "to look up at",
-    "example_kr": "하늘을 올려다보 다",
+    "example_kr": "하늘을 올려다보다",
     "example_en": "look up at the sky"
   },
   {
@@ -44582,7 +44582,7 @@
     "pos": "adjective",
     "romanization": "u-ahada",
     "meaning": "elegant, graceful",
-    "example_kr": "분위기가 우아하 다",
+    "example_kr": "분위기가 우아하다",
     "example_en": "elegant atmosphere"
   },
   {
@@ -44636,7 +44636,7 @@
     "pos": "noun",
     "romanization": "ul-eumsoli",
     "meaning": "animal cry, sound",
-    "example_kr": "울음소리가 들리 다",
+    "example_kr": "울음소리가 들리다",
     "example_en": "hear an animal cry"
   },
   {
@@ -44645,7 +44645,7 @@
     "pos": "noun",
     "romanization": "umjig-im",
     "meaning": "movement, motion",
-    "example_kr": "움직임을 따라가 다",
+    "example_kr": "움직임을 따라가다",
     "example_en": "follow the movement"
   },
   {
@@ -44663,7 +44663,7 @@
     "pos": "noun",
     "romanization": "us-eumsoli",
     "meaning": "laughter, sound of laughing",
-    "example_kr": "웃음소리가 들리 다",
+    "example_kr": "웃음소리가 들리다",
     "example_en": "hear laughter"
   },
   {
@@ -44798,7 +44798,7 @@
     "pos": "noun",
     "romanization": "wi-alae",
     "meaning": "top and bottom",
-    "example_kr": "위아래로 정렬하 다",
+    "example_kr": "위아래로 정렬하다",
     "example_en": "align top and bottom"
   },
   {
@@ -45455,7 +45455,7 @@
     "pos": "noun",
     "romanization": "ihaegwangye",
     "meaning": "conflict of interest",
-    "example_kr": "이해관계를 따지 다",
+    "example_kr": "이해관계를 따지다",
     "example_en": "consider conflicts of interest"
   },
   {
@@ -46067,7 +46067,7 @@
     "pos": "adverb",
     "romanization": "ja-kkuman",
     "meaning": "repeatedly, constantly",
-    "example_kr": "자꾸만 칭얼거리 다",
+    "example_kr": "자꾸만 칭얼거리다",
     "example_en": "keep whining"
   },
   {
@@ -46085,7 +46085,7 @@
     "pos": "adjective",
     "romanization": "jalangseuleobda",
     "meaning": "proud",
-    "example_kr": "아들이 자랑스럽 다",
+    "example_kr": "아들이 자랑스럽다",
     "example_en": "proud of one's son"
   },
   {
@@ -46598,7 +46598,7 @@
     "pos": "noun",
     "romanization": "jaehwal-yongpum",
     "meaning": "recyclables",
-    "example_kr": "재활용품을 모으 다",
+    "example_kr": "재활용품을 모으다",
     "example_en": "collect recyclables"
   },
   {
@@ -46778,7 +46778,7 @@
     "pos": "noun",
     "romanization": "jeonmunjig",
     "meaning": "profession, professional work",
-    "example_kr": "전문직에 종사하 다",
+    "example_kr": "전문직에 종사하다",
     "example_en": "engage in profession"
   },
   {
@@ -46976,7 +46976,7 @@
     "pos": "noun",
     "romanization": "jeongbandae",
     "meaning": "exact opposite",
-    "example_kr": "정반대로 행동하 다",
+    "example_kr": "정반대로 행동하다",
     "example_en": "act the opposite way"
   },
   {
@@ -47327,7 +47327,7 @@
     "pos": "adjective",
     "romanization": "josimseuleobda",
     "meaning": "cautious, careful",
-    "example_kr": "행동이 조심스럽 다",
+    "example_kr": "행동이 조심스럽다",
     "example_en": "cautious behavior"
   },
   {
@@ -47525,7 +47525,7 @@
     "pos": "verb",
     "romanization": "jujeo-anjda",
     "meaning": "collapse, sit down heavily",
-    "example_kr": "땅바닥에 주저앉 다",
+    "example_kr": "땅바닥에 주저앉다",
     "example_en": "collapse on the ground"
   },
   {
@@ -47615,7 +47615,7 @@
     "pos": "verb",
     "romanization": "jung-eolgeolida",
     "meaning": "mutter, mumble",
-    "example_kr": "속으로 중얼거리 다",
+    "example_kr": "속으로 중얼거리다",
     "example_en": "mutter to oneself"
   },
   {
@@ -48137,7 +48137,7 @@
     "pos": "adjective",
     "romanization": "jjajeungseuleobda",
     "meaning": "annoying, irritating",
-    "example_kr": "말투가 짜증스럽 다",
+    "example_kr": "말투가 짜증스럽다",
     "example_en": "irritating tone"
   },
   {
@@ -48218,7 +48218,7 @@
     "pos": "verb",
     "romanization": "jjoch-anaeda",
     "meaning": "drive out, expel",
-    "example_kr": "마을에서 쫓아내 다",
+    "example_kr": "마을에서 쫓아내다",
     "example_en": "expel from the village"
   },
   {
@@ -48443,7 +48443,7 @@
     "pos": "verb",
     "romanization": "chaj-adanida",
     "meaning": "search around, go looking for",
-    "example_kr": "명소를 찾아다니 다",
+    "example_kr": "명소를 찾아다니다",
     "example_en": "visit scenic spots"
   },
   {
@@ -48506,7 +48506,7 @@
     "pos": "noun",
     "romanization": "chaeg-imja",
     "meaning": "person in charge, official",
-    "example_kr": "책임자를 처벌하 다",
+    "example_kr": "책임자를 처벌하다",
     "example_en": "punish the responsible official"
   },
   {
@@ -48524,7 +48524,7 @@
     "pos": "noun",
     "romanization": "chaempi-eon",
     "meaning": "champion",
-    "example_kr": "챔피언에 등극하 다",
+    "example_kr": "챔피언에 등극하다",
     "example_en": "become champion"
   },
   {
@@ -48605,7 +48605,7 @@
     "pos": "noun",
     "romanization": "cheos-salang",
     "meaning": "first love",
-    "example_kr": "첫사랑과 재회하 다",
+    "example_kr": "첫사랑과 재회하다",
     "example_en": "reunite with first love"
   },
   {
@@ -49073,7 +49073,7 @@
     "pos": "noun",
     "romanization": "chin-adeul",
     "meaning": "biological son",
-    "example_kr": "친아들처럼 대하 다",
+    "example_kr": "친아들처럼 대하다",
     "example_en": "treat like own son"
   },
   {
@@ -49766,7 +49766,7 @@
     "pos": "adjective",
     "romanization": "pogeunhada",
     "meaning": "cozy, warm",
-    "example_kr": "잠자리가 포근하 다",
+    "example_kr": "잠자리가 포근하다",
     "example_en": "bed is cozy"
   },
   {
@@ -49847,7 +49847,7 @@
     "pos": "noun",
     "romanization": "pyojun-eo",
     "meaning": "standard language",
-    "example_kr": "표준어를 사용하 다",
+    "example_kr": "표준어를 사용하다",
     "example_en": "use standard language"
   },
   {
@@ -50090,7 +50090,7 @@
     "pos": "noun",
     "romanization": "hag-yongpum",
     "meaning": "school supplies",
-    "example_kr": "학용품을 준비하 다",
+    "example_kr": "학용품을 준비하다",
     "example_en": "prepare school supplies"
   },
   {
@@ -50207,7 +50207,7 @@
     "pos": "noun",
     "romanization": "hanbamjung",
     "meaning": "middle of the night",
-    "example_kr": "한밤중에 일어나 다",
+    "example_kr": "한밤중에 일어나다",
     "example_en": "wake up in the middle of the night"
   },
   {
@@ -50216,7 +50216,7 @@
     "pos": "noun",
     "romanization": "hansungan",
     "meaning": "instant, moment",
-    "example_kr": "한순간에 사라지 다",
+    "example_kr": "한순간에 사라지다",
     "example_en": "disappear in an instant"
   },
   {
@@ -50279,7 +50279,7 @@
     "pos": "noun",
     "romanization": "habgyeogja",
     "meaning": "successful candidate",
-    "example_kr": "합격자를 발표하 다",
+    "example_kr": "합격자를 발표하다",
     "example_en": "announce successful candidates"
   },
   {
@@ -50333,7 +50333,7 @@
     "pos": "noun",
     "romanization": "haegyeolchaeg",
     "meaning": "solution",
-    "example_kr": "해결책을 마련하 다",
+    "example_kr": "해결책을 마련하다",
     "example_en": "prepare a solution"
   },
   {
@@ -50585,7 +50585,7 @@
     "pos": "determiner / noun",
     "romanization": "hyeondaejeog",
     "meaning": "modern, contemporary",
-    "example_kr": "현대적으로 바꾸 다",
+    "example_kr": "현대적으로 바꾸다",
     "example_en": "change modernly"
   },
   {
@@ -51071,7 +51071,7 @@
     "pos": "verb",
     "romanization": "heundeullida",
     "meaning": "shake, sway",
-    "example_kr": "비행기가 흔들리 다",
+    "example_kr": "비행기가 흔들리다",
     "example_en": "the plane shakes"
   },
   {
@@ -51107,7 +51107,7 @@
     "pos": "verb",
     "romanization": "heulleona-oda",
     "meaning": "flow out, pour out",
-    "example_kr": "폐수가 흘러나오 다",
+    "example_kr": "폐수가 흘러나오다",
     "example_en": "wastewater flows out"
   },
   {
@@ -51116,7 +51116,7 @@
     "pos": "verb",
     "romanization": "heulleonaelida",
     "meaning": "flow down, drip",
-    "example_kr": "빗물이 흘러내리 다",
+    "example_kr": "빗물이 흘러내리다",
     "example_en": "rainwater flows down"
   },
   {
@@ -51152,7 +51152,7 @@
     "pos": "adjective",
     "romanization": "heungmilobda",
     "meaning": "interesting, fascinating",
-    "example_kr": "이야기가 흥미롭 다",
+    "example_kr": "이야기가 흥미롭다",
     "example_en": "the story is interesting"
   },
   {
@@ -51161,7 +51161,7 @@
     "pos": "noun",
     "romanization": "heungbun",
     "meaning": "excitement, thrill",
-    "example_kr": "흥분을 가라앉히 다",
+    "example_kr": "흥분을 가라앉히다",
     "example_en": "calm down excitement"
   },
   {
@@ -51170,7 +51170,7 @@
     "pos": "verb",
     "romanization": "heut-eojida",
     "meaning": "scatter, disperse",
-    "example_kr": "사방으로 흩어지 다",
+    "example_kr": "사방으로 흩어지다",
     "example_en": "scatter in all directions"
   },
   {
@@ -51377,7 +51377,7 @@
     "pos": "noun",
     "romanization": "ga-yageum",
     "meaning": "gayageum (Korean instrument)",
-    "example_kr": "가야금을 연주하 다",
+    "example_kr": "가야금을 연주하다",
     "example_en": "play gayageum"
   },
   {
@@ -51395,7 +51395,7 @@
     "pos": "noun",
     "romanization": "ga-yogye",
     "meaning": "music industry",
-    "example_kr": "가요계에 종사하 다",
+    "example_kr": "가요계에 종사하다",
     "example_en": "work in music industry"
   },
   {
@@ -51431,7 +51431,7 @@
     "pos": "noun",
     "romanization": "gachanglyeog",
     "meaning": "vocal ability",
-    "example_kr": "가창력이 뛰어나 다",
+    "example_kr": "가창력이 뛰어나다",
     "example_en": "excellent vocal ability"
   },
   {
@@ -51449,7 +51449,7 @@
     "pos": "noun",
     "romanization": "gahaeja",
     "meaning": "perpetrator, offender",
-    "example_kr": "가해자를 처벌하 다",
+    "example_kr": "가해자를 처벌하다",
     "example_en": "punish the offender"
   },
   {
@@ -51485,7 +51485,7 @@
     "pos": "adjective",
     "romanization": "gangyeolhada",
     "meaning": "concise, simple",
-    "example_kr": "디자인이 간결하 다",
+    "example_kr": "디자인이 간결하다",
     "example_en": "concise design"
   },
   {
@@ -51539,7 +51539,7 @@
     "pos": "noun",
     "romanization": "galdae",
     "meaning": "reed",
-    "example_kr": "갈대처럼 흔들리 다",
+    "example_kr": "갈대처럼 흔들리다",
     "example_en": "sway like reeds"
   },
   {
@@ -52106,7 +52106,7 @@
     "pos": "noun",
     "romanization": "geonseol-eob",
     "meaning": "construction industry",
-    "example_kr": "건설업에 종사하 다",
+    "example_kr": "건설업에 종사하다",
     "example_en": "working in construction"
   },
   {
@@ -52160,7 +52160,7 @@
     "pos": "noun",
     "romanization": "geol-eumgeol-i",
     "meaning": "gait, way of walking",
-    "example_kr": "걸음걸이가 느리 다",
+    "example_kr": "걸음걸이가 느리다",
     "example_en": "slow gait"
   },
   {
@@ -52376,7 +52376,7 @@
     "pos": "noun",
     "romanization": "gyeong-yeonghag",
     "meaning": "business administration",
-    "example_kr": "경영학을 전공하 다",
+    "example_kr": "경영학을 전공하다",
     "example_en": "majoring in business administration"
   },
   {
@@ -52412,7 +52412,7 @@
     "pos": "noun",
     "romanization": "gyeongjehag",
     "meaning": "economics",
-    "example_kr": "경제학을 전공하 다",
+    "example_kr": "경제학을 전공하다",
     "example_en": "major in economics"
   },
   {
@@ -52421,7 +52421,7 @@
     "pos": "noun",
     "romanization": "gyeongjosa",
     "meaning": "happy and sad occasions",
-    "example_kr": "경조사에 참여하 다",
+    "example_kr": "경조사에 참여하다",
     "example_en": "attend celebrations and condolences"
   },
   {
@@ -52565,7 +52565,7 @@
     "pos": "noun",
     "romanization": "gogapum",
     "meaning": "expensive item",
-    "example_kr": "고가품을 수집하 다",
+    "example_kr": "고가품을 수집하다",
     "example_en": "collect expensive items"
   },
   {
@@ -52700,7 +52700,7 @@
     "pos": "noun",
     "romanization": "go-a-won",
     "meaning": "orphanage",
-    "example_kr": "고아원에서 자라 다",
+    "example_kr": "고아원에서 자라다",
     "example_en": "grow up in an orphanage"
   },
   {
@@ -52853,7 +52853,7 @@
     "pos": "noun",
     "romanization": "gonggamdae",
     "meaning": "consensus, shared understanding",
-    "example_kr": "공감대를 형성하 다",
+    "example_kr": "공감대를 형성하다",
     "example_en": "form consensus"
   },
   {
@@ -52934,7 +52934,7 @@
     "pos": "noun",
     "romanization": "gongsajang",
     "meaning": "construction site",
-    "example_kr": "공사장에서 일하 다",
+    "example_kr": "공사장에서 일하다",
     "example_en": "work at a construction site"
   },
   {
@@ -53285,7 +53285,7 @@
     "pos": "noun",
     "romanization": "gyomusil",
     "meaning": "staff room",
-    "example_kr": "교무실에 들어가 다",
+    "example_kr": "교무실에 들어가다",
     "example_en": "enter the staff room"
   },
   {
@@ -53375,7 +53375,7 @@
     "pos": "noun",
     "romanization": "gugyeongkkun",
     "meaning": "onlooker, spectator",
-    "example_kr": "구경꾼이 모여들 다",
+    "example_kr": "구경꾼이 모여들다",
     "example_en": "onlookers gather"
   },
   {
@@ -53645,7 +53645,7 @@
     "pos": "noun / adverb",
     "romanization": "gundegunde",
     "meaning": "here and there, scattered places",
-    "example_kr": "군데군데 둘러보 다",
+    "example_kr": "군데군데 둘러보다",
     "example_en": "look around scattered places"
   },
   {
@@ -53699,7 +53699,7 @@
     "pos": "noun",
     "romanization": "gunggeumjeung",
     "meaning": "curiosity, curiosity",
-    "example_kr": "궁금증을 해결하 다",
+    "example_kr": "궁금증을 해결하다",
     "example_en": "resolve curiosity"
   },
   {
@@ -53735,7 +53735,7 @@
     "pos": "noun / adverb",
     "romanization": "geu-ttaegeu-ttae",
     "meaning": "each time, whenever",
-    "example_kr": "그때그때 메모하 다",
+    "example_kr": "그때그때 메모하다",
     "example_en": "make notes each time"
   },
   {
@@ -53834,7 +53834,7 @@
     "pos": "adjective",
     "romanization": "geunsahada",
     "meaning": "neat, smart",
-    "example_kr": "옷차림이 근사하 다",
+    "example_kr": "옷차림이 근사하다",
     "example_en": "neat appearance"
   },
   {
@@ -54050,7 +54050,7 @@
     "pos": "noun",
     "romanization": "gidaegam",
     "meaning": "sense of anticipation",
-    "example_kr": "기대감을 드러내 다",
+    "example_kr": "기대감을 드러내다",
     "example_en": "show anticipation"
   },
   {
@@ -54140,7 +54140,7 @@
     "pos": "noun",
     "romanization": "giseongsedae",
     "meaning": "established generation",
-    "example_kr": "기성세대를 따르 다",
+    "example_kr": "기성세대를 따르다",
     "example_en": "follow the established generation"
   },
   {
@@ -54356,7 +54356,7 @@
     "pos": "verb",
     "romanization": "kkeokk-ida",
     "meaning": "to break, to snap",
-    "example_kr": "나뭇가지가 꺾이 다",
+    "example_kr": "나뭇가지가 꺾이다",
     "example_en": "the branch breaks"
   },
   {
@@ -54392,7 +54392,7 @@
     "pos": "adverb",
     "romanization": "kkoleuleug",
     "meaning": "gurgling sound",
-    "example_kr": "꼬르륵 소리가 나 다",
+    "example_kr": "꼬르륵 소리가 나다",
     "example_en": "make a gurgling sound"
   },
   {
@@ -54419,7 +54419,7 @@
     "pos": "adverb",
     "romanization": "kkobagkkobag",
     "meaning": "regularly, consistently",
-    "example_kr": "돈을 꼬박꼬박 내 다",
+    "example_kr": "돈을 꼬박꼬박 내다",
     "example_en": "pay regularly"
   },
   {
@@ -54545,7 +54545,7 @@
     "pos": "verb",
     "romanization": "kkeunh-ida",
     "meaning": "to be cut off",
-    "example_kr": "손님이 끈이지 않 다",
+    "example_kr": "손님이 끈이지 않다",
     "example_en": "customers don't come"
   },
   {
@@ -54563,7 +54563,7 @@
     "pos": "verb",
     "romanization": "kkeul-eodeul-ida",
     "meaning": "to draw in",
-    "example_kr": "안으로 끌어들이 다",
+    "example_kr": "안으로 끌어들이다",
     "example_en": "draw in inside"
   },
   {
@@ -54572,7 +54572,7 @@
     "pos": "verb",
     "romanization": "kkeul-eo-ollida",
     "meaning": "to raise up",
-    "example_kr": "수준을 끌어올리 다",
+    "example_kr": "수준을 끌어올리다",
     "example_en": "raise the standard"
   },
   {
@@ -54644,7 +54644,7 @@
     "pos": "noun",
     "romanization": "nadeul-i",
     "meaning": "outing, excursion",
-    "example_kr": "나들이를 다녀오 다",
+    "example_kr": "나들이를 다녀오다",
     "example_en": "go on an outing"
   },
   {
@@ -54662,7 +54662,7 @@
     "pos": "noun",
     "romanization": "nachimban",
     "meaning": "compass",
-    "example_kr": "나침반이 가리키 다",
+    "example_kr": "나침반이 가리키다",
     "example_en": "compass points"
   },
   {
@@ -55013,7 +55013,7 @@
     "pos": "verb",
     "romanization": "naelichida",
     "meaning": "to strike down",
-    "example_kr": "뒤통수를 내리치 다",
+    "example_kr": "뒤통수를 내리치다",
     "example_en": "strike the back of the head"
   },
   {
@@ -55040,7 +55040,7 @@
     "pos": "verb",
     "romanization": "naebo-ida",
     "meaning": "to show, to display",
-    "example_kr": "신분증을 내보이 다",
+    "example_kr": "신분증을 내보이다",
     "example_en": "show ID"
   },
   {
@@ -55103,7 +55103,7 @@
     "pos": "noun",
     "romanization": "nae-yongmul",
     "meaning": "contents",
-    "example_kr": "내용물을 확인하 다",
+    "example_kr": "내용물을 확인하다",
     "example_en": "to check the contents"
   },
   {
@@ -55229,7 +55229,7 @@
     "pos": "noun",
     "romanization": "nodonglyeog",
     "meaning": "labor force",
-    "example_kr": "노동력이 부족하 다",
+    "example_kr": "노동력이 부족하다",
     "example_en": "labor shortage"
   },
   {
@@ -55400,7 +55400,7 @@
     "pos": "noun",
     "romanization": "nongjagmul",
     "meaning": "crops",
-    "example_kr": "농작물을 수확하 다",
+    "example_kr": "농작물을 수확하다",
     "example_en": "to harvest crops"
   },
   {
@@ -55427,7 +55427,7 @@
     "pos": "verb",
     "romanization": "noh-ajuda",
     "meaning": "to release, let go",
-    "example_kr": "물고기를 놓아주 다",
+    "example_kr": "물고기를 놓아주다",
     "example_en": "to release fish"
   },
   {
@@ -55679,7 +55679,7 @@
     "pos": "noun",
     "romanization": "da-yanghwa",
     "meaning": "diversification",
-    "example_kr": "다양화를 추구하 다",
+    "example_kr": "다양화를 추구하다",
     "example_en": "to pursue diversification"
   },
   {
@@ -55769,7 +55769,7 @@
     "pos": "noun",
     "romanization": "danmalgi",
     "meaning": "terminal",
-    "example_kr": "단말기를 구입하 다",
+    "example_kr": "단말기를 구입하다",
     "example_en": "to purchase a terminal"
   },
   {
@@ -55778,7 +55778,7 @@
     "pos": "noun",
     "romanization": "danbaegjil",
     "meaning": "protein",
-    "example_kr": "단백질이 부족하 다",
+    "example_kr": "단백질이 부족하다",
     "example_en": "lack of protein"
   },
   {
@@ -56417,7 +56417,7 @@
     "pos": "verb",
     "romanization": "dol-ikida",
     "meaning": "to turn back, retrace",
-    "example_kr": "발걸음을 돌이키 다",
+    "example_kr": "발걸음을 돌이키다",
     "example_en": "turn back one's steps"
   },
   {
@@ -56588,7 +56588,7 @@
     "pos": "verb",
     "romanization": "dugeungeolida",
     "meaning": "to pound, throb",
-    "example_kr": "가슴이 두근거리 다",
+    "example_kr": "가슴이 두근거리다",
     "example_en": "heart pounding"
   },
   {
@@ -56651,7 +56651,7 @@
     "pos": "verb",
     "romanization": "dwijib-eo-sseuda",
     "meaning": "to put on backwards",
-    "example_kr": "모자를 뒤집어쓰 다",
+    "example_kr": "모자를 뒤집어쓰다",
     "example_en": "put on a hat backwards"
   },
   {
@@ -56858,7 +56858,7 @@
     "pos": "verb",
     "romanization": "ttalajabda",
     "meaning": "to catch up with",
-    "example_kr": "앞 사람을 따라잡 다",
+    "example_kr": "앞 사람을 따라잡다",
     "example_en": "to catch up with the person ahead"
   },
   {
@@ -56912,7 +56912,7 @@
     "pos": "verb",
     "romanization": "tteonaelyeogada",
     "meaning": "to float away",
-    "example_kr": "물 위에 떠내려가 다",
+    "example_kr": "물 위에 떠내려가다",
     "example_en": "to float away on water"
   },
   {
@@ -56930,7 +56930,7 @@
     "pos": "verb / adjective",
     "romanization": "tteodeul-sseoghada",
     "meaning": "noisy, bustling",
-    "example_kr": "동네가 떠들썩하 다",
+    "example_kr": "동네가 떠들썩하다",
     "example_en": "the neighborhood is bustling"
   },
   {
@@ -57047,7 +57047,7 @@
     "pos": "verb",
     "romanization": "ttwichyeonagada",
     "meaning": "to rush out",
-    "example_kr": "밖으로 뛰쳐나가 다",
+    "example_kr": "밖으로 뛰쳐나가다",
     "example_en": "to rush out outside"
   },
   {
@@ -57056,7 +57056,7 @@
     "pos": "verb",
     "romanization": "ttwichyeona-oda",
     "meaning": "to rush out",
-    "example_kr": "복도로 뛰쳐나오 다",
+    "example_kr": "복도로 뛰쳐나오다",
     "example_en": "to rush out to the hallway"
   },
   {
@@ -57173,7 +57173,7 @@
     "pos": "noun",
     "romanization": "lideosib",
     "meaning": "leadership",
-    "example_kr": "리더십을 발휘하 다",
+    "example_kr": "리더십을 발휘하다",
     "example_en": "to exercise leadership"
   },
   {
@@ -57182,7 +57182,7 @@
     "pos": "noun",
     "romanization": "lipoteo",
     "meaning": "reporter",
-    "example_kr": "리포터로 활동하 다",
+    "example_kr": "리포터로 활동하다",
     "example_en": "to work as a reporter"
   },
   {
@@ -57443,7 +57443,7 @@
     "pos": "noun",
     "romanization": "meoligisa",
     "meaning": "headline, front-page story",
-    "example_kr": "머리기사로 다루 다",
+    "example_kr": "머리기사로 다루다",
     "example_en": "featured as headline"
   },
   {
@@ -57866,7 +57866,7 @@
     "pos": "verb",
     "romanization": "muneo-tteulida",
     "meaning": "to knock down, to collapse",
-    "example_kr": "성벽을 무너뜨리 다",
+    "example_kr": "성벽을 무너뜨리다",
     "example_en": "knock down a wall"
   },
   {
@@ -58046,7 +58046,7 @@
     "pos": "noun",
     "romanization": "munhwasaenghwal",
     "meaning": "cultural activities, culture",
-    "example_kr": "문화생활을 즐기 다",
+    "example_kr": "문화생활을 즐기다",
     "example_en": "enjoy cultural activities"
   },
   {
@@ -58163,7 +58163,7 @@
     "pos": "noun",
     "romanization": "misaengmul",
     "meaning": "microorganism",
-    "example_kr": "미생물이 번식하 다",
+    "example_kr": "미생물이 번식하다",
     "example_en": "microorganisms multiply"
   },
   {
@@ -58271,7 +58271,7 @@
     "pos": "verb",
     "romanization": "baladaboda",
     "meaning": "to gaze at, to look at",
-    "example_kr": "서로를 바라다보 다",
+    "example_kr": "서로를 바라다보다",
     "example_en": "look at each other"
   },
   {
@@ -58406,7 +58406,7 @@
     "pos": "noun",
     "romanization": "balmyeongpum",
     "meaning": "invention",
-    "example_kr": "발명품을 연구하 다",
+    "example_kr": "발명품을 연구하다",
     "example_en": "research inventions"
   },
   {
@@ -58505,7 +58505,7 @@
     "pos": "noun",
     "romanization": "bangmang-i",
     "meaning": "bat, club",
-    "example_kr": "방망이를 휘두르 다",
+    "example_kr": "방망이를 휘두르다",
     "example_en": "swing a bat"
   },
   {
@@ -58694,7 +58694,7 @@
     "pos": "noun",
     "romanization": "beomjoeja",
     "meaning": "criminal",
-    "example_kr": "범죄자를 처벌하 다",
+    "example_kr": "범죄자를 처벌하다",
     "example_en": "punish a criminal"
   },
   {
@@ -59090,7 +59090,7 @@
     "pos": "noun",
     "romanization": "bongug",
     "meaning": "home country",
-    "example_kr": "본국으로 돌아가 다",
+    "example_kr": "본국으로 돌아가다",
     "example_en": "return to home country"
   },
   {
@@ -59144,7 +59144,7 @@
     "pos": "noun",
     "romanization": "bonsa",
     "meaning": "headquarters",
-    "example_kr": "본사로 발령이 나 다",
+    "example_kr": "본사로 발령이 나다",
     "example_en": "be transferred to headquarters"
   },
   {
@@ -59414,7 +59414,7 @@
     "pos": "noun",
     "romanization": "bulgyeonggi",
     "meaning": "economic downturn",
-    "example_kr": "불경기를 극복하 다",
+    "example_kr": "불경기를 극복하다",
     "example_en": "overcome economic downturn"
   },
   {
@@ -59468,7 +59468,7 @@
     "pos": "noun",
     "romanization": "bullyangpum",
     "meaning": "defective product",
-    "example_kr": "불량품을 교환하 다",
+    "example_kr": "불량품을 교환하다",
     "example_en": "exchange defective product"
   },
   {
@@ -59486,7 +59486,7 @@
     "pos": "verb",
     "romanization": "bulleodeul-ida",
     "meaning": "to invite in, bring in",
-    "example_kr": "집으로 불러들이 다",
+    "example_kr": "집으로 불러들이다",
     "example_en": "invite someone home"
   },
   {
@@ -59522,7 +59522,7 @@
     "pos": "noun",
     "romanization": "bulseongsil",
     "meaning": "insincerity, dishonesty",
-    "example_kr": "태도가 불성실하 다",
+    "example_kr": "태도가 불성실하다",
     "example_en": "dishonest attitude"
   },
   {
@@ -59711,7 +59711,7 @@
     "pos": "verb",
     "romanization": "bi-ttul-eojida",
     "meaning": "to be crooked, slant",
-    "example_kr": "글씨가 비뚤어지 다",
+    "example_kr": "글씨가 비뚤어지다",
     "example_en": "writing is crooked"
   },
   {
@@ -59756,7 +59756,7 @@
     "pos": "noun",
     "romanization": "bisang-yag",
     "meaning": "emergency medicine",
-    "example_kr": "비상약을 준비하 다",
+    "example_kr": "비상약을 준비하다",
     "example_en": "prepare emergency medicine"
   },
   {
@@ -59810,7 +59810,7 @@
     "pos": "verb",
     "romanization": "bindunggeolida",
     "meaning": "to laze around, idle",
-    "example_kr": "집에서 빈둥거리 다",
+    "example_kr": "집에서 빈둥거리다",
     "example_en": "laze around at home"
   },
   {
@@ -59900,7 +59900,7 @@
     "pos": "verb",
     "romanization": "ppaenaeda",
     "meaning": "to pull out, remove",
-    "example_kr": "벽에서 못을 빼내 다",
+    "example_kr": "벽에서 못을 빼내다",
     "example_en": "remove nail from wall"
   },
   {
@@ -60125,7 +60125,7 @@
     "pos": "noun",
     "romanization": "sajaseong-eo",
     "meaning": "Chinese four-character idiom",
-    "example_kr": "사자성어를 외우 다",
+    "example_kr": "사자성어를 외우다",
     "example_en": "memorize four-character idioms"
   },
   {
@@ -60197,7 +60197,7 @@
     "pos": "noun",
     "romanization": "sandeomi",
     "meaning": "huge pile, mountain",
-    "example_kr": "산더미처럼 쌓이 다",
+    "example_kr": "산더미처럼 쌓이다",
     "example_en": "piled up like mountains"
   },
   {
@@ -60251,7 +60251,7 @@
     "pos": "adverb",
     "romanization": "salgeumsalgeum",
     "meaning": "stealthily, quietly",
-    "example_kr": "살금살금 다가가 다",
+    "example_kr": "살금살금 다가가다",
     "example_en": "approach stealthily"
   },
   {
@@ -60323,7 +60323,7 @@
     "pos": "noun",
     "romanization": "sangdangsu",
     "meaning": "considerable number",
-    "example_kr": "상당수가 참석하 다",
+    "example_kr": "상당수가 참석하다",
     "example_en": "a considerable number attended"
   },
   {
@@ -60395,7 +60395,7 @@
     "pos": "noun",
     "romanization": "sang-ui",
     "meaning": "consultation, discussion",
-    "example_kr": "가족들과 상의하 다",
+    "example_kr": "가족들과 상의하다",
     "example_en": "discuss with family"
   },
   {
@@ -60611,7 +60611,7 @@
     "pos": "noun",
     "romanization": "saengtaegye",
     "meaning": "ecosystem",
-    "example_kr": "생태계를 보호하 다",
+    "example_kr": "생태계를 보호하다",
     "example_en": "protect the ecosystem"
   },
   {
@@ -60665,7 +60665,7 @@
     "pos": "noun",
     "romanization": "seomyeon",
     "meaning": "written form, in writing",
-    "example_kr": "서면으로 제출하 다",
+    "example_kr": "서면으로 제출하다",
     "example_en": "submit in writing"
   },
   {
@@ -61124,7 +61124,7 @@
     "pos": "noun",
     "romanization": "seongsilseong",
     "meaning": "sincerity, integrity",
-    "example_kr": "성실성이 부족하 다",
+    "example_kr": "성실성이 부족하다",
     "example_en": "lack of sincerity"
   },
   {
@@ -61160,7 +61160,7 @@
     "pos": "noun",
     "romanization": "seong-inbyeong",
     "meaning": "adult disease",
-    "example_kr": "성인병을 치료하 다",
+    "example_kr": "성인병을 치료하다",
     "example_en": "treat adult disease"
   },
   {
@@ -61223,7 +61223,7 @@
     "pos": "noun",
     "romanization": "segyegwan",
     "meaning": "worldview",
-    "example_kr": "세계관이 뚜렷하 다",
+    "example_kr": "세계관이 뚜렷하다",
     "example_en": "clear worldview"
   },
   {
@@ -61250,7 +61250,7 @@
     "pos": "noun",
     "romanization": "semyeondogu",
     "meaning": "toiletries",
-    "example_kr": "세면도구를 챙기 다",
+    "example_kr": "세면도구를 챙기다",
     "example_en": "pack toiletries"
   },
   {
@@ -61367,7 +61367,7 @@
     "pos": "noun",
     "romanization": "sosig",
     "meaning": "news, information",
-    "example_kr": "소식으로 장수하 다",
+    "example_kr": "소식으로 장수하다",
     "example_en": "longevity through news"
   },
   {
@@ -61529,7 +61529,7 @@
     "pos": "verb",
     "romanization": "sonkkobhida",
     "meaning": "rank among, be counted",
-    "example_kr": "세계에서 손꼽히 다",
+    "example_kr": "세계에서 손꼽히다",
     "example_en": "rank among world's"
   },
   {
@@ -61592,7 +61592,7 @@
     "pos": "verb",
     "romanization": "sos-a-oleuda",
     "meaning": "to rise, soar",
-    "example_kr": "연기가 솟아오르 다",
+    "example_kr": "연기가 솟아오르다",
     "example_en": "smoke rises up"
   },
   {
@@ -61646,7 +61646,7 @@
     "pos": "noun",
     "romanization": "sudong",
     "meaning": "manual operation",
-    "example_kr": "수동으로 움직이 다",
+    "example_kr": "수동으로 움직이다",
     "example_en": "operate manually"
   },
   {
@@ -61727,7 +61727,7 @@
     "pos": "adjective",
     "romanization": "susuhada",
     "meaning": "simple, modest",
-    "example_kr": "옷차림이 수수하 다",
+    "example_kr": "옷차림이 수수하다",
     "example_en": "modest clothing"
   },
   {
@@ -61763,7 +61763,7 @@
     "pos": "noun",
     "romanization": "su-iggeum",
     "meaning": "revenue, proceeds",
-    "example_kr": "수익금을 창출하 다",
+    "example_kr": "수익금을 창출하다",
     "example_en": "generate revenue"
   },
   {
@@ -61790,7 +61790,7 @@
     "pos": "noun",
     "romanization": "sujig",
     "meaning": "vertical, perpendicular",
-    "example_kr": "수직으로 추락하 다",
+    "example_kr": "수직으로 추락하다",
     "example_en": "plummet vertically"
   },
   {
@@ -61853,7 +61853,7 @@
     "pos": "noun",
     "romanization": "suhag-yeohaeng",
     "meaning": "school trip, field trip",
-    "example_kr": "수학여행을 떠나 다",
+    "example_kr": "수학여행을 떠나다",
     "example_en": "go on a school trip"
   },
   {
@@ -61880,7 +61880,7 @@
     "pos": "noun",
     "romanization": "suheomsaeng",
     "meaning": "test taker, examinee",
-    "example_kr": "수험생이 합격하 다",
+    "example_kr": "수험생이 합격하다",
     "example_en": "examinee passes"
   },
   {
@@ -62033,7 +62033,7 @@
     "pos": "noun",
     "romanization": "seungganggi",
     "meaning": "elevator, lift",
-    "example_kr": "승강기가 고장 나 다",
+    "example_kr": "승강기가 고장 나다",
     "example_en": "elevator breaks down"
   },
   {
@@ -62060,7 +62060,7 @@
     "pos": "noun",
     "romanization": "seunghabcha",
     "meaning": "minibus, van",
-    "example_kr": "승합차를 운전하 다",
+    "example_kr": "승합차를 운전하다",
     "example_en": "drive a minibus"
   },
   {
@@ -62177,7 +62177,7 @@
     "pos": "noun",
     "romanization": "sisahoe",
     "meaning": "preview screening",
-    "example_kr": "시사회를 개최하 다",
+    "example_kr": "시사회를 개최하다",
     "example_en": "hold a preview"
   },
   {
@@ -62501,7 +62501,7 @@
     "pos": "adjective",
     "romanization": "silmangseuleobda",
     "meaning": "disappointing, disheartening",
-    "example_kr": "결과가 실망스럽 다",
+    "example_kr": "결과가 실망스럽다",
     "example_en": "results are disappointing"
   },
   {
@@ -62564,7 +62564,7 @@
     "pos": "noun",
     "romanization": "sil-eoblyul",
     "meaning": "unemployment rate",
-    "example_kr": "실업률이 감소하 다",
+    "example_kr": "실업률이 감소하다",
     "example_en": "unemployment rate decreases"
   },
   {
@@ -62789,7 +62789,7 @@
     "pos": "adverb",
     "romanization": "ssonsalgat-i",
     "meaning": "like an arrow",
-    "example_kr": "쏜살같이 달려가 다",
+    "example_kr": "쏜살같이 달려가다",
     "example_en": "run away like an arrow"
   },
   {
@@ -62915,7 +62915,7 @@
     "pos": "noun",
     "romanization": "agsunhwan",
     "meaning": "vicious cycle",
-    "example_kr": "악순환이 계속되 다",
+    "example_kr": "악순환이 계속되다",
     "example_en": "the vicious cycle continues"
   },
   {
@@ -63023,7 +63023,7 @@
     "pos": "verb",
     "romanization": "al-achalida",
     "meaning": "notice, realize",
-    "example_kr": "사실을 알아차리 다",
+    "example_kr": "사실을 알아차리다",
     "example_en": "notice the fact"
   },
   {
@@ -63077,7 +63077,7 @@
     "pos": "noun",
     "romanization": "aenime-isyeon",
     "meaning": "animation",
-    "example_kr": "애니메이션을 보 다",
+    "example_kr": "애니메이션을 보다",
     "example_en": "watch animation"
   },
   {
@@ -63257,7 +63257,7 @@
     "pos": "noun",
     "romanization": "yanglo-won",
     "meaning": "nursing home",
-    "example_kr": "양로원을 방문하 다",
+    "example_kr": "양로원을 방문하다",
     "example_en": "visit a nursing home"
   },
   {
@@ -63374,7 +63374,7 @@
     "pos": "noun",
     "romanization": "eomi",
     "meaning": "ending, suffix",
-    "example_kr": "어미가 불규칙하 다",
+    "example_kr": "어미가 불규칙하다",
     "example_en": "irregular ending"
   },
   {
@@ -63545,7 +63545,7 @@
     "pos": "noun",
     "romanization": "eomjisongalag",
     "meaning": "thumb",
-    "example_kr": "엄지손가락을 들 다",
+    "example_kr": "엄지손가락을 들다",
     "example_en": "give a thumbs up"
   },
   {
@@ -63707,7 +63707,7 @@
     "pos": "noun",
     "romanization": "yeonnalligi",
     "meaning": "kite flying",
-    "example_kr": "연날리기를 즐기 다",
+    "example_kr": "연날리기를 즐기다",
     "example_en": "enjoy kite flying"
   },
   {
@@ -63914,7 +63914,7 @@
     "pos": "noun",
     "romanization": "yeong-yangga",
     "meaning": "nutritional value",
-    "example_kr": "영양가가 풍부하 다",
+    "example_kr": "영양가가 풍부하다",
     "example_en": "rich in nutrition"
   },
   {
@@ -63923,7 +63923,7 @@
     "pos": "noun",
     "romanization": "yeong-yangso",
     "meaning": "nutrient",
-    "example_kr": "영양소를 보존하 다",
+    "example_kr": "영양소를 보존하다",
     "example_en": "preserve nutrients"
   },
   {
@@ -63932,7 +63932,7 @@
     "pos": "noun",
     "romanization": "yeonghwaje",
     "meaning": "film festival",
-    "example_kr": "영화제가 개막되 다",
+    "example_kr": "영화제가 개막되다",
     "example_en": "film festival opens"
   },
   {
@@ -63995,7 +63995,7 @@
     "pos": "noun",
     "romanization": "yesulpum",
     "meaning": "artwork, art piece",
-    "example_kr": "예술품을 감상하 다",
+    "example_kr": "예술품을 감상하다",
     "example_en": "appreciate artwork"
   },
   {
@@ -64040,7 +64040,7 @@
     "pos": "noun",
     "romanization": "yejeong-il",
     "meaning": "scheduled date",
-    "example_kr": "예정일이 임박하 다",
+    "example_kr": "예정일이 임박하다",
     "example_en": "scheduled date approaches"
   },
   {
@@ -64094,7 +64094,7 @@
     "pos": "noun",
     "romanization": "oleumse",
     "meaning": "upward trend, rise",
-    "example_kr": "오름세가 지속되 다",
+    "example_kr": "오름세가 지속되다",
     "example_en": "upward trend continues"
   },
   {
@@ -64292,7 +64292,7 @@
     "pos": "noun",
     "romanization": "oedong-adeul",
     "meaning": "only son",
-    "example_kr": "외동아들을 기르 다",
+    "example_kr": "외동아들을 기르다",
     "example_en": "raising an only son"
   },
   {
@@ -64472,7 +64472,7 @@
     "pos": "noun",
     "romanization": "useonsi",
     "meaning": "prioritization",
-    "example_kr": "능력을 우선시하 다",
+    "example_kr": "능력을 우선시하다",
     "example_en": "prioritize ability"
   },
   {
@@ -64481,7 +64481,7 @@
     "pos": "noun",
     "romanization": "ususeong",
     "meaning": "excellence",
-    "example_kr": "우수성이 돋보이 다",
+    "example_kr": "우수성이 돋보이다",
     "example_en": "excellence stands out"
   },
   {
@@ -64526,7 +64526,7 @@
     "pos": "noun",
     "romanization": "unsu-eob",
     "meaning": "transportation industry",
-    "example_kr": "운수업이 발달하 다",
+    "example_kr": "운수업이 발달하다",
     "example_en": "transportation industry develops"
   },
   {
@@ -64787,7 +64787,7 @@
     "pos": "noun",
     "romanization": "yujeonja",
     "meaning": "gene",
-    "example_kr": "유전자를 조작하 다",
+    "example_kr": "유전자를 조작하다",
     "example_en": "manipulate genes"
   },
   {
@@ -64949,7 +64949,7 @@
     "pos": "noun",
     "romanization": "eunggeubjochi",
     "meaning": "first aid",
-    "example_kr": "응급조치를 취하 다",
+    "example_kr": "응급조치를 취하다",
     "example_en": "administer first aid"
   },
   {
@@ -65048,7 +65048,7 @@
     "pos": "noun",
     "romanization": "ui-yagpum",
     "meaning": "medicine, drug",
-    "example_kr": "의약품을 판매하 다",
+    "example_kr": "의약품을 판매하다",
     "example_en": "sell medicine"
   },
   {
@@ -65174,7 +65174,7 @@
     "pos": "adverb",
     "romanization": "ilu",
     "meaning": "unspeakably, indescribably",
-    "example_kr": "이루 말할 수 없 다",
+    "example_kr": "이루 말할 수 없다",
     "example_en": "indescribably"
   },
   {
@@ -65201,7 +65201,7 @@
     "pos": "noun",
     "romanization": "imyeonji",
     "meaning": "blank paper, reverse side",
-    "example_kr": "이면지로 활용하 다",
+    "example_kr": "이면지로 활용하다",
     "example_en": "use as scrap paper"
   },
   {
@@ -65264,7 +65264,7 @@
     "pos": "noun",
     "romanization": "ijung",
     "meaning": "duplicate, dual",
-    "example_kr": "이중으로 등록하 다",
+    "example_kr": "이중으로 등록하다",
     "example_en": "register dually"
   },
   {
@@ -65291,7 +65291,7 @@
     "pos": "noun",
     "romanization": "ihon-yul",
     "meaning": "divorce rate",
-    "example_kr": "이혼율이 증가하 다",
+    "example_kr": "이혼율이 증가하다",
     "example_en": "divorce rate increases"
   },
   {
@@ -65480,7 +65480,7 @@
     "pos": "verb",
     "romanization": "ilgeuleojida",
     "meaning": "to distort, contort",
-    "example_kr": "표정이 일그러지 다",
+    "example_kr": "표정이 일그러지다",
     "example_en": "expression twists"
   },
   {
@@ -65633,7 +65633,7 @@
     "pos": "noun",
     "romanization": "jagug",
     "meaning": "one's own country",
-    "example_kr": "자국으로 돌아가 다",
+    "example_kr": "자국으로 돌아가다",
     "example_en": "return to one's country"
   },
   {
@@ -65723,7 +65723,7 @@
     "pos": "noun",
     "romanization": "ja-yeong-eob",
     "meaning": "self-employment",
-    "example_kr": "자영업에 종사하 다",
+    "example_kr": "자영업에 종사하다",
     "example_en": "engaged in self-employment"
   },
   {
@@ -65750,7 +65750,7 @@
     "pos": "noun",
     "romanization": "ja-won",
     "meaning": "volunteer",
-    "example_kr": "자원으로 입대하 다",
+    "example_kr": "자원으로 입대하다",
     "example_en": "volunteer enlistment"
   },
   {
@@ -65777,7 +65777,7 @@
     "pos": "noun",
     "romanization": "ja-yulseong",
     "meaning": "autonomy, independence",
-    "example_kr": "자율성이 보장되 다",
+    "example_kr": "자율성이 보장되다",
     "example_en": "autonomy is guaranteed"
   },
   {
@@ -66155,7 +66155,7 @@
     "pos": "noun",
     "romanization": "jangbaguni",
     "meaning": "shopping basket",
-    "example_kr": "장바구니가 무겁 다",
+    "example_kr": "장바구니가 무겁다",
     "example_en": "shopping basket is heavy"
   },
   {
@@ -66605,7 +66605,7 @@
     "pos": "noun",
     "romanization": "jeonsigwan",
     "meaning": "exhibition hall",
-    "example_kr": "전시관을 구경하 다",
+    "example_kr": "전시관을 구경하다",
     "example_en": "visit an exhibition hall"
   },
   {
@@ -67451,7 +67451,7 @@
     "pos": "noun",
     "romanization": "jubangjang",
     "meaning": "head chef",
-    "example_kr": "주방장이 요리하 다",
+    "example_kr": "주방장이 요리하다",
     "example_en": "head chef cooks"
   },
   {
@@ -67847,7 +67847,7 @@
     "pos": "noun",
     "romanization": "ji-wonseo",
     "meaning": "application form",
-    "example_kr": "지원서를 제출하 다",
+    "example_kr": "지원서를 제출하다",
     "example_en": "submit an application form"
   },
   {
@@ -68027,7 +68027,7 @@
     "pos": "noun",
     "romanization": "jinjeong",
     "meaning": "genuinely, truly",
-    "example_kr": "진정으로 사랑하 다",
+    "example_kr": "진정으로 사랑하다",
     "example_en": "truly love"
   },
   {
@@ -68117,7 +68117,7 @@
     "pos": "noun",
     "romanization": "jibjunglyeog",
     "meaning": "concentration, focus",
-    "example_kr": "집중력이 떨어지 다",
+    "example_kr": "집중력이 떨어지다",
     "example_en": "concentration drops"
   },
   {
@@ -68351,7 +68351,7 @@
     "pos": "noun",
     "romanization": "chajang",
     "meaning": "assistant conductor",
-    "example_kr": "차장으로 승진하 다",
+    "example_kr": "차장으로 승진하다",
     "example_en": "promoted to conductor"
   },
   {
@@ -68396,7 +68396,7 @@
     "pos": "noun",
     "romanization": "chamgaja",
     "meaning": "participant",
-    "example_kr": "참가자를 모집하 다",
+    "example_kr": "참가자를 모집하다",
     "example_en": "recruit participants"
   },
   {
@@ -69089,7 +69089,7 @@
     "pos": "noun",
     "romanization": "chugsan-eob",
     "meaning": "livestock farming",
-    "example_kr": "축산업에 종사하 다",
+    "example_kr": "축산업에 종사하다",
     "example_en": "to engage in livestock farming"
   },
   {
@@ -69188,7 +69188,7 @@
     "pos": "noun",
     "romanization": "chulpansa",
     "meaning": "publishing company",
-    "example_kr": "출판사와 계약하 다",
+    "example_kr": "출판사와 계약하다",
     "example_en": "contract with a publisher"
   },
   {
@@ -69593,7 +69593,7 @@
     "pos": "noun",
     "romanization": "tansan-eumlyo",
     "meaning": "carbonated drink",
-    "example_kr": "탄산음료를 마시 다",
+    "example_kr": "탄산음료를 마시다",
     "example_en": "drink a carbonated beverage"
   },
   {
@@ -69944,7 +69944,7 @@
     "pos": "verb",
     "romanization": "tudeolgeolida",
     "meaning": "grumble, complain",
-    "example_kr": "불평을 투덜거리 다",
+    "example_kr": "불평을 투덜거리다",
     "example_en": "grumble complaints"
   },
   {
@@ -70124,7 +70124,7 @@
     "pos": "noun",
     "romanization": "timjang",
     "meaning": "team leader",
-    "example_kr": "팀장으로 승진하 다",
+    "example_kr": "팀장으로 승진하다",
     "example_en": "promoted to team leader"
   },
   {
@@ -70394,7 +70394,7 @@
     "pos": "noun",
     "romanization": "pyeongsaengjigjang",
     "meaning": "lifetime employment",
-    "example_kr": "평생직장을 구하 다",
+    "example_kr": "평생직장을 구하다",
     "example_en": "seek lifetime employment"
   },
   {
@@ -70619,7 +70619,7 @@
     "pos": "verb",
     "romanization": "pullyeonada",
     "meaning": "be released, be freed",
-    "example_kr": "감옥에서 풀려나 다",
+    "example_kr": "감옥에서 풀려나다",
     "example_en": "be released from prison"
   },
   {
@@ -70745,7 +70745,7 @@
     "pos": "verb",
     "romanization": "pi-eo-oleuda",
     "meaning": "to blaze, burst forth",
-    "example_kr": "불길이 피어오르 다",
+    "example_kr": "불길이 피어오르다",
     "example_en": "flames burst forth"
   },
   {
@@ -70808,7 +70808,7 @@
     "pos": "noun / adverb",
     "romanization": "haluhalu",
     "meaning": "day by day, daily",
-    "example_kr": "하루하루를 보내 다",
+    "example_kr": "하루하루를 보내다",
     "example_en": "spending day by day"
   },
   {
@@ -71321,7 +71321,7 @@
     "pos": "noun",
     "romanization": "haesgogsig",
     "meaning": "new grain harvest",
-    "example_kr": "햇곡식을 수확하 다",
+    "example_kr": "햇곡식을 수확하다",
     "example_en": "harvest new grain"
   },
   {
@@ -71483,7 +71483,7 @@
     "pos": "noun",
     "romanization": "heos-somun",
     "meaning": "false rumor, unfounded gossip",
-    "example_kr": "헛소문을 퍼뜨리 다",
+    "example_kr": "헛소문을 퍼뜨리다",
     "example_en": "spread false rumors"
   },
   {
@@ -71726,7 +71726,7 @@
     "pos": "noun",
     "romanization": "hopeu",
     "meaning": "beer hall, pub",
-    "example_kr": "호프에서 한잔하 다",
+    "example_kr": "호프에서 한잔하다",
     "example_en": "have a drink at a pub"
   },
   {
@@ -71771,7 +71771,7 @@
     "pos": "adjective",
     "romanization": "honlanseuleobda",
     "meaning": "confused, chaotic, turbulent",
-    "example_kr": "사회가 혼란스럽 다",
+    "example_kr": "사회가 혼란스럽다",
     "example_en": "society is confused"
   },
   {
@@ -71987,7 +71987,7 @@
     "pos": "adjective",
     "romanization": "hwalgichada",
     "meaning": "lively, energetic",
-    "example_kr": "분위기가 활기차 다",
+    "example_kr": "분위기가 활기차다",
     "example_en": "the atmosphere is lively"
   },
   {
@@ -72176,7 +72176,7 @@
     "pos": "noun",
     "romanization": "huson",
     "meaning": "descendant, posterity",
-    "example_kr": "후손에게 물려주 다",
+    "example_kr": "후손에게 물려주다",
     "example_en": "to pass down to descendants"
   },
   {
@@ -72356,7 +72356,7 @@
     "pos": "verb",
     "romanization": "heuteuleojida",
     "meaning": "to become disheveled",
-    "example_kr": "자세가 흐트러지 다",
+    "example_kr": "자세가 흐트러지다",
     "example_en": "posture becomes disheveled"
   },
   {
@@ -72428,7 +72428,7 @@
     "pos": "verb",
     "romanization": "heung-eolgeolida",
     "meaning": "hum, croon",
-    "example_kr": "노래를 흥얼거리 다",
+    "example_kr": "노래를 흥얼거리다",
     "example_en": "humming a song"
   },
   {
@@ -72500,7 +72500,7 @@
     "pos": "verb",
     "romanization": "galojileuda",
     "meaning": "cross, traverse",
-    "example_kr": "도로를 가로지르 다",
+    "example_kr": "도로를 가로지르다",
     "example_en": "crossing the road"
   },
   {
@@ -72770,7 +72770,7 @@
     "pos": "noun",
     "romanization": "gandamhoe",
     "meaning": "informal meeting",
-    "example_kr": "간담회에 참여하 다",
+    "example_kr": "간담회에 참여하다",
     "example_en": "attending an informal meeting"
   },
   {
@@ -72806,7 +72806,7 @@
     "pos": "adverb",
     "romanization": "ga-kkaseulo",
     "meaning": "barely, narrowly",
-    "example_kr": "가까스로 살아남 다",
+    "example_kr": "가까스로 살아남다",
     "example_en": "barely surviving"
   },
   {
@@ -72887,7 +72887,7 @@
     "pos": "verb",
     "romanization": "galyeonaeda",
     "meaning": "sort out, select",
-    "example_kr": "불량품을 가려내 다",
+    "example_kr": "불량품을 가려내다",
     "example_en": "sorting out defects"
   },
   {
@@ -72914,7 +72914,7 @@
     "pos": "noun",
     "romanization": "ganju",
     "meaning": "to regard, consider",
-    "example_kr": "범죄자로 간주하 다",
+    "example_kr": "범죄자로 간주하다",
     "example_en": "regard as a criminal"
   },
   {
@@ -73049,7 +73049,7 @@
     "pos": "noun",
     "romanization": "gamsuseong",
     "meaning": "sensitivity, sensibility",
-    "example_kr": "감수성이 풍부하 다",
+    "example_kr": "감수성이 풍부하다",
     "example_en": "rich sensitivity"
   },
   {
@@ -73094,7 +73094,7 @@
     "pos": "adverb",
     "romanization": "gamjjoggat-i",
     "meaning": "completely, utterly",
-    "example_kr": "감쪽같이 사라지 다",
+    "example_kr": "감쪽같이 사라지다",
     "example_en": "disappear utterly"
   },
   {
@@ -73139,7 +73139,7 @@
     "pos": "noun",
     "romanization": "gabs-eochi",
     "meaning": "value, worth",
-    "example_kr": "값어치가 떨어지 다",
+    "example_kr": "값어치가 떨어지다",
     "example_en": "value decreases"
   },
   {
@@ -73562,7 +73562,7 @@
     "pos": "noun",
     "romanization": "geonseong",
     "meaning": "halfheartedly, casually",
-    "example_kr": "건성으로 대답하 다",
+    "example_kr": "건성으로 대답하다",
     "example_en": "answer casually"
   },
   {
@@ -73607,7 +73607,7 @@
     "pos": "noun",
     "romanization": "geollimdol",
     "meaning": "obstacle, stumbling block",
-    "example_kr": "걸림돌을 제거하 다",
+    "example_kr": "걸림돌을 제거하다",
     "example_en": "remove an obstacle"
   },
   {
@@ -73850,7 +73850,7 @@
     "pos": "noun",
     "romanization": "gyeoldanlyeog",
     "meaning": "decisiveness",
-    "example_kr": "결단력이 부족하 다",
+    "example_kr": "결단력이 부족하다",
     "example_en": "lack of decisiveness"
   },
   {
@@ -73985,7 +73985,7 @@
     "pos": "noun",
     "romanization": "gyeonggagsim",
     "meaning": "sense of vigilance",
-    "example_kr": "경각심을 일깨우 다",
+    "example_kr": "경각심을 일깨우다",
     "example_en": "awaken vigilance"
   },
   {
@@ -74102,7 +74102,7 @@
     "pos": "noun",
     "romanization": "gyeong-ag",
     "meaning": "shock, astonishment",
-    "example_kr": "경악을 금치 못하 다",
+    "example_kr": "경악을 금치 못하다",
     "example_en": "cannot hide shock"
   },
   {
@@ -74165,7 +74165,7 @@
     "pos": "noun",
     "romanization": "gyeongjeseong",
     "meaning": "economic feasibility",
-    "example_kr": "경제성이 떨어지 다",
+    "example_kr": "경제성이 떨어지다",
     "example_en": "poor economic feasibility"
   },
   {
@@ -74552,7 +74552,7 @@
     "pos": "verb",
     "romanization": "gonduse-uda",
     "meaning": "perk up, bristle",
-    "example_kr": "신경을 곤두세우 다",
+    "example_kr": "신경을 곤두세우다",
     "example_en": "put nerves on edge"
   },
   {
@@ -74597,7 +74597,7 @@
     "pos": "noun",
     "romanization": "golchisgeoli",
     "meaning": "problem, nuisance",
-    "example_kr": "골칫거리가 생기 다",
+    "example_kr": "골칫거리가 생기다",
     "example_en": "a problem arises"
   },
   {
@@ -74660,7 +74660,7 @@
     "pos": "noun",
     "romanization": "gonggwonlyeog",
     "meaning": "public authority, state power",
-    "example_kr": "공권력을 강화하 다",
+    "example_kr": "공권력을 강화하다",
     "example_en": "strengthen public authority"
   },
   {
@@ -74732,7 +74732,7 @@
     "pos": "noun",
     "romanization": "gongsanpum",
     "meaning": "manufactured goods",
-    "example_kr": "공산품을 제조하 다",
+    "example_kr": "공산품을 제조하다",
     "example_en": "manufacture goods"
   },
   {
@@ -74975,7 +74975,7 @@
     "pos": "noun",
     "romanization": "gwanlyeonja",
     "meaning": "person involved, party",
-    "example_kr": "관련자를 조사하 다",
+    "example_kr": "관련자를 조사하다",
     "example_en": "investigate persons involved"
   },
   {
@@ -75083,7 +75083,7 @@
     "pos": "adjective",
     "romanization": "gwangbeom-wihada",
     "meaning": "wide-ranging, extensive",
-    "example_kr": "지역이 광범위하 다",
+    "example_kr": "지역이 광범위하다",
     "example_en": "the area is extensive"
   },
   {
@@ -75155,7 +75155,7 @@
     "pos": "noun",
     "romanization": "gyoseob",
     "meaning": "negotiation, talks",
-    "example_kr": "교섭이 이루어지 다",
+    "example_kr": "교섭이 이루어지다",
     "example_en": "negotiations take place"
   },
   {
@@ -75218,7 +75218,7 @@
     "pos": "verb / adjective",
     "romanization": "gubulgubulhada",
     "meaning": "winding, twisting",
-    "example_kr": "길이 구불구불하 다",
+    "example_kr": "길이 구불구불하다",
     "example_en": "the road is winding"
   },
   {
@@ -75335,7 +75335,7 @@
     "pos": "adverb",
     "romanization": "gutae-yeo",
     "meaning": "unnecessarily, deliberately",
-    "example_kr": "구태여 말리지 않 다",
+    "example_kr": "구태여 말리지 않다",
     "example_en": "not deliberately discourage"
   },
   {
@@ -75497,7 +75497,7 @@
     "pos": "noun",
     "romanization": "gugjang",
     "meaning": "national rank, position",
-    "example_kr": "국장으로 승진하 다",
+    "example_kr": "국장으로 승진하다",
     "example_en": "be promoted to national rank"
   },
   {
@@ -75578,7 +75578,7 @@
     "pos": "noun",
     "romanization": "gulle",
     "meaning": "shackle, constraint",
-    "example_kr": "굴레에서 벗어나 다",
+    "example_kr": "굴레에서 벗어나다",
     "example_en": "escape from constraints"
   },
   {
@@ -75668,7 +75668,7 @@
     "pos": "noun",
     "romanization": "gwon-ig",
     "meaning": "rights, interests",
-    "example_kr": "권익을 향상시키 다",
+    "example_kr": "권익을 향상시키다",
     "example_en": "improve rights"
   },
   {
@@ -75821,7 +75821,7 @@
     "pos": "adverb",
     "romanization": "geunajeona",
     "meaning": "anyway, anyhow",
-    "example_kr": "그나저나 다행이 다",
+    "example_kr": "그나저나 다행이다",
     "example_en": "anyway, fortunately"
   },
   {
@@ -75857,7 +75857,7 @@
     "pos": "adjective",
     "romanization": "geuji-eobsda",
     "meaning": "extremely, immensely",
-    "example_kr": "기쁘기가 그지없 다",
+    "example_kr": "기쁘기가 그지없다",
     "example_en": "immensely happy"
   },
   {
@@ -75983,7 +75983,7 @@
     "pos": "noun",
     "romanization": "geum-yung-eob",
     "meaning": "finance, financial business",
-    "example_kr": "금융업에 종사하 다",
+    "example_kr": "금융업에 종사하다",
     "example_en": "work in finance"
   },
   {
@@ -76046,7 +76046,7 @@
     "pos": "noun",
     "romanization": "geublyu",
     "meaning": "rapids, fast current",
-    "example_kr": "급류에 떠내려가 다",
+    "example_kr": "급류에 떠내려가다",
     "example_en": "swept away by rapids"
   },
   {
@@ -76352,7 +76352,7 @@
     "pos": "verb",
     "romanization": "gi-eo-oleuda",
     "meaning": "climb up",
-    "example_kr": "나무에 기어오르 다",
+    "example_kr": "나무에 기어오르다",
     "example_en": "climb up the tree"
   },
   {
@@ -76379,7 +76379,7 @@
     "pos": "noun",
     "romanization": "gi-eobche",
     "meaning": "business, company",
-    "example_kr": "기업체를 운영하 다",
+    "example_kr": "기업체를 운영하다",
     "example_en": "run a business"
   },
   {
@@ -76388,7 +76388,7 @@
     "pos": "verb",
     "romanization": "gi-usgeolida",
     "meaning": "peep, peek around",
-    "example_kr": "방 안을 기웃거리 다",
+    "example_kr": "방 안을 기웃거리다",
     "example_en": "peek around the room"
   },
   {
@@ -76397,7 +76397,7 @@
     "pos": "adjective",
     "romanization": "gi-ihada",
     "meaning": "strange, odd",
-    "example_kr": "생김새가 기이하 다",
+    "example_kr": "생김새가 기이하다",
     "example_en": "odd appearance"
   },
   {
@@ -76406,7 +76406,7 @@
     "pos": "verb",
     "romanization": "gi-inhada",
     "meaning": "result from, be caused by",
-    "example_kr": "부주의에 기인하 다",
+    "example_kr": "부주의에 기인하다",
     "example_en": "result from carelessness"
   },
   {
@@ -76514,7 +76514,7 @@
     "pos": "verb",
     "romanization": "gildeul-ida",
     "meaning": "tame, train",
-    "example_kr": "강아지를 길들이 다",
+    "example_kr": "강아지를 길들이다",
     "example_en": "tame a puppy"
   },
   {
@@ -76568,7 +76568,7 @@
     "pos": "adjective",
     "romanization": "kkamadeughada",
     "meaning": "very distant, far",
-    "example_kr": "앞길이 까마득하 다",
+    "example_kr": "앞길이 까마득하다",
     "example_en": "road stretches far ahead"
   },
   {
@@ -76577,7 +76577,7 @@
     "pos": "verb",
     "romanization": "kkamuleochida",
     "meaning": "faint, pass out",
-    "example_kr": "놀라서 까무러치 다",
+    "example_kr": "놀라서 까무러치다",
     "example_en": "faint from shock"
   },
   {
@@ -76757,7 +76757,7 @@
     "pos": "verb",
     "romanization": "kkeullyeogada",
     "meaning": "to be dragged away",
-    "example_kr": "경찰서에 끌려가 다",
+    "example_kr": "경찰서에 끌려가다",
     "example_en": "to be dragged to the police station"
   },
   {
@@ -76892,7 +76892,7 @@
     "pos": "adverb",
     "romanization": "nande-eobs-i",
     "meaning": "suddenly, unexpectedly",
-    "example_kr": "난데없이 나타나 다",
+    "example_kr": "난데없이 나타나다",
     "example_en": "to appear suddenly"
   },
   {
@@ -77333,7 +77333,7 @@
     "pos": "verb",
     "romanization": "nohada",
     "meaning": "become angry",
-    "example_kr": "할아버지가 노하 다",
+    "example_kr": "할아버지가 노하다",
     "example_en": "grandfather becomes angry"
   },
   {
@@ -77351,7 +77351,7 @@
     "pos": "verb",
     "romanization": "nog-anaelida",
     "meaning": "melt away",
-    "example_kr": "얼음이 녹아내리 다",
+    "example_kr": "얼음이 녹아내리다",
     "example_en": "ice melts away"
   },
   {
@@ -77513,7 +77513,7 @@
     "pos": "verb",
     "romanization": "nun-yeogyeoboda",
     "meaning": "watch closely, observe",
-    "example_kr": "행동을 눈여겨보 다",
+    "example_kr": "행동을 눈여겨보다",
     "example_en": "watch behavior closely"
   },
   {
@@ -77540,7 +77540,7 @@
     "pos": "adverb",
     "romanization": "neudas-eobs-i",
     "meaning": "suddenly, abruptly",
-    "example_kr": "느닷없이 나타나 다",
+    "example_kr": "느닷없이 나타나다",
     "example_en": "appear suddenly"
   },
   {
@@ -77558,7 +77558,7 @@
     "pos": "verb",
     "romanization": "neul-eo-tteulida",
     "meaning": "let hang down",
-    "example_kr": "머리를 늘어뜨리 다",
+    "example_kr": "머리를 늘어뜨리다",
     "example_en": "let hair hang down"
   },
   {
@@ -77585,7 +77585,7 @@
     "pos": "adjective",
     "romanization": "neungtonghada",
     "meaning": "fluent, skilled",
-    "example_kr": "외국어에 능통하 다",
+    "example_kr": "외국어에 능통하다",
     "example_en": "fluent in foreign languages"
   },
   {
@@ -77594,7 +77594,7 @@
     "pos": "adjective",
     "romanization": "neunghada",
     "meaning": "capable, able",
-    "example_kr": "임기응변에 능하 다",
+    "example_kr": "임기응변에 능하다",
     "example_en": "able at improvisation"
   },
   {
@@ -77621,7 +77621,7 @@
     "pos": "noun",
     "romanization": "dalyang",
     "meaning": "large quantity",
-    "example_kr": "다량으로 구입하 다",
+    "example_kr": "다량으로 구입하다",
     "example_en": "purchase in large quantities"
   },
   {
@@ -77630,7 +77630,7 @@
     "pos": "adverb",
     "romanization": "dabunhi",
     "meaning": "quite, rather",
-    "example_kr": "다분히 고의적이 다",
+    "example_kr": "다분히 고의적이다",
     "example_en": "quite deliberate"
   },
   {
@@ -77819,7 +77819,7 @@
     "pos": "verb",
     "romanization": "dalguda",
     "meaning": "heat up, warm",
-    "example_kr": "프라이팬을 달구 다",
+    "example_kr": "프라이팬을 달구다",
     "example_en": "heat up a frying pan"
   },
   {
@@ -77828,7 +77828,7 @@
     "pos": "verb",
     "romanization": "dallabutda",
     "meaning": "stick to, adhere",
-    "example_kr": "스티커가 달라붙 다",
+    "example_kr": "스티커가 달라붙다",
     "example_en": "a sticker sticks"
   },
   {
@@ -77837,7 +77837,7 @@
     "pos": "verb",
     "romanization": "dal-a-oleuda",
     "meaning": "heat up, get hot",
-    "example_kr": "냄비가 달아오르 다",
+    "example_kr": "냄비가 달아오르다",
     "example_en": "a pot heats up"
   },
   {
@@ -77927,7 +77927,7 @@
     "pos": "noun",
     "romanization": "danghog",
     "meaning": "embarrassment, confusion",
-    "example_kr": "당혹을 금치 못하 다",
+    "example_kr": "당혹을 금치 못하다",
     "example_en": "unable to hide embarrassment"
   },
   {
@@ -78161,7 +78161,7 @@
     "pos": "noun",
     "romanization": "daehagga",
     "meaning": "university district",
-    "example_kr": "대학가가 번화하 다",
+    "example_kr": "대학가가 번화하다",
     "example_en": "university district is bustling"
   },
   {
@@ -78296,7 +78296,7 @@
     "pos": "verb",
     "romanization": "deombida",
     "meaning": "rush at, attack",
-    "example_kr": "상대방에게 덤비 다",
+    "example_kr": "상대방에게 덤비다",
     "example_en": "attack the opponent"
   },
   {
@@ -78719,7 +78719,7 @@
     "pos": "verb",
     "romanization": "doenoeda",
     "meaning": "to repeat, harp on",
-    "example_kr": "입버릇처럼 되뇌 다",
+    "example_kr": "입버릇처럼 되뇌다",
     "example_en": "repeat habitually"
   },
   {
@@ -78791,7 +78791,7 @@
     "pos": "adjective",
     "romanization": "dunggeuleohda",
     "meaning": "round, circular",
-    "example_kr": "보름달이 둥그렇 다",
+    "example_kr": "보름달이 둥그렇다",
     "example_en": "full moon is round"
   },
   {
@@ -78854,7 +78854,7 @@
     "pos": "verb",
     "romanization": "dwijeog-ida",
     "meaning": "rummage, search through",
-    "example_kr": "주머니를 뒤적이 다",
+    "example_kr": "주머니를 뒤적이다",
     "example_en": "rummage through pockets"
   },
   {
@@ -79169,7 +79169,7 @@
     "pos": "verb",
     "romanization": "ttalanaseoda",
     "meaning": "follow after, go along",
-    "example_kr": "친구를 따라나서 다",
+    "example_kr": "친구를 따라나서다",
     "example_en": "follow after friend"
   },
   {
@@ -79187,7 +79187,7 @@
     "pos": "adverb",
     "romanization": "ttaghi",
     "meaning": "particularly, especially",
-    "example_kr": "딱히 갈 곳이 없 다",
+    "example_kr": "딱히 갈 곳이 없다",
     "example_en": "nowhere particularly to go"
   },
   {
@@ -79403,7 +79403,7 @@
     "pos": "noun",
     "romanization": "magbaji",
     "meaning": "final stage",
-    "example_kr": "막바지로 접어들 다",
+    "example_kr": "막바지로 접어들다",
     "example_en": "enter the final stage"
   },
   {
@@ -79520,7 +79520,7 @@
     "pos": "verb",
     "romanization": "malmi-amda",
     "meaning": "result from, stem from",
-    "example_kr": "부주의로 말미암 다",
+    "example_kr": "부주의로 말미암다",
     "example_en": "result from carelessness"
   },
   {
@@ -79691,7 +79691,7 @@
     "pos": "noun",
     "romanization": "maejin",
     "meaning": "devotion, commitment",
-    "example_kr": "학업에 매진을 하 다",
+    "example_kr": "학업에 매진을 하다",
     "example_en": "devote oneself to studies"
   },
   {
@@ -79799,7 +79799,7 @@
     "pos": "adjective",
     "romanization": "meos-seuleobda",
     "meaning": "stylish, elegant",
-    "example_kr": "옷차림이 멋스럽 다",
+    "example_kr": "옷차림이 멋스럽다",
     "example_en": "stylish clothing"
   },
   {
@@ -79907,7 +79907,7 @@
     "pos": "noun",
     "romanization": "myeongseungji",
     "meaning": "scenic spot",
-    "example_kr": "명승지를 방문하 다",
+    "example_kr": "명승지를 방문하다",
     "example_en": "visit a scenic spot"
   },
   {
@@ -80096,7 +80096,7 @@
     "pos": "verb",
     "romanization": "mol-achida",
     "meaning": "sweep, strike fiercely",
-    "example_kr": "눈보라가 몰아치 다",
+    "example_kr": "눈보라가 몰아치다",
     "example_en": "snowstorm sweeps"
   },
   {
@@ -80474,7 +80474,7 @@
     "pos": "adverb",
     "romanization": "mulkkeuleomi",
     "meaning": "intently, fixedly",
-    "example_kr": "물끄러미 바라보 다",
+    "example_kr": "물끄러미 바라보다",
     "example_en": "gaze intently"
   },
   {
@@ -80492,7 +80492,7 @@
     "pos": "verb",
     "romanization": "mulleogada",
     "meaning": "to retreat, step back",
-    "example_kr": "제자리로 물러가 다",
+    "example_kr": "제자리로 물러가다",
     "example_en": "step back to original place"
   },
   {
@@ -80501,7 +80501,7 @@
     "pos": "verb",
     "romanization": "mullida",
     "meaning": "to return, give back",
-    "example_kr": "물건을 도로 물리 다",
+    "example_kr": "물건을 도로 물리다",
     "example_en": "return an object"
   },
   {
@@ -81014,7 +81014,7 @@
     "pos": "noun",
     "romanization": "baldod-um",
     "meaning": "leap, stepping out",
-    "example_kr": "세계로 발돋움하 다",
+    "example_kr": "세계로 발돋움하다",
     "example_en": "stepping out to the world"
   },
   {
@@ -81329,7 +81329,7 @@
     "pos": "noun",
     "romanization": "beomju",
     "meaning": "category, class",
-    "example_kr": "같은 범주에 속하 다",
+    "example_kr": "같은 범주에 속하다",
     "example_en": "to belong to the same category"
   },
   {
@@ -81635,7 +81635,7 @@
     "pos": "noun",
     "romanization": "bo-yug-won",
     "meaning": "childcare center",
-    "example_kr": "보육원에서 자라 다",
+    "example_kr": "보육원에서 자라다",
     "example_en": "grow up in a childcare center"
   },
   {
@@ -81815,7 +81815,7 @@
     "pos": "noun",
     "romanization": "bugo",
     "meaning": "death notice, obituary",
-    "example_kr": "신문에 부고를 내 다",
+    "example_kr": "신문에 부고를 내다",
     "example_en": "publish obituary in newspaper"
   },
   {
@@ -81968,7 +81968,7 @@
     "pos": "verb",
     "romanization": "buchugida",
     "meaning": "incite, provoke",
-    "example_kr": "경쟁심을 부추기 다",
+    "example_kr": "경쟁심을 부추기다",
     "example_en": "incite competitiveness"
   },
   {
@@ -82049,7 +82049,7 @@
     "pos": "verb",
     "romanization": "bugjeoggeolida",
     "meaning": "crowd, throng",
-    "example_kr": "거리가 북적거리 다",
+    "example_kr": "거리가 북적거리다",
     "example_en": "streets are crowded"
   },
   {
@@ -82211,7 +82211,7 @@
     "pos": "noun",
     "romanization": "bulmoji",
     "meaning": "barren wasteland",
-    "example_kr": "불모지를 개척하 다",
+    "example_kr": "불모지를 개척하다",
     "example_en": "develop wasteland"
   },
   {
@@ -82580,7 +82580,7 @@
     "pos": "noun",
     "romanization": "bisjulgi",
     "meaning": "streaks of rain",
-    "example_kr": "빗줄기가 떨어지 다",
+    "example_kr": "빗줄기가 떨어지다",
     "example_en": "rain streaks fall"
   },
   {
@@ -82616,7 +82616,7 @@
     "pos": "adverb",
     "romanization": "ppanhi",
     "meaning": "plainly, clearly",
-    "example_kr": "빤히 들여다보이 다",
+    "example_kr": "빤히 들여다보이다",
     "example_en": "shine clearly"
   },
   {
@@ -82760,7 +82760,7 @@
     "pos": "verb",
     "romanization": "salojabhida",
     "meaning": "to be captured",
-    "example_kr": "적에게 사로잡히 다",
+    "example_kr": "적에게 사로잡히다",
     "example_en": "be captured by enemy"
   },
   {
@@ -82814,7 +82814,7 @@
     "pos": "noun / adverb",
     "romanization": "sasageongeon",
     "meaning": "repeatedly, constantly",
-    "example_kr": "사사건건 간섭하 다",
+    "example_kr": "사사건건 간섭하다",
     "example_en": "constantly interfere"
   },
   {
@@ -82859,7 +82859,7 @@
     "pos": "noun",
     "romanization": "sasisacheol",
     "meaning": "all year round",
-    "example_kr": "사시사철 아름답 다",
+    "example_kr": "사시사철 아름답다",
     "example_en": "beautiful all year round"
   },
   {
@@ -83363,7 +83363,7 @@
     "pos": "noun",
     "romanization": "saengpilpum",
     "meaning": "daily necessities",
-    "example_kr": "생필품을 구입하 다",
+    "example_kr": "생필품을 구입하다",
     "example_en": "purchase daily necessities"
   },
   {
@@ -83381,7 +83381,7 @@
     "pos": "noun",
     "romanization": "saenghwalgwon",
     "meaning": "living area, neighborhood",
-    "example_kr": "생활권이 넓어지 다",
+    "example_kr": "생활권이 넓어지다",
     "example_en": "living area expands"
   },
   {
@@ -83417,7 +83417,7 @@
     "pos": "verb",
     "romanization": "seoseonggeolida",
     "meaning": "loiter, wander",
-    "example_kr": "주변을 서성거리 다",
+    "example_kr": "주변을 서성거리다",
     "example_en": "loiter around"
   },
   {
@@ -83651,7 +83651,7 @@
     "pos": "noun",
     "romanization": "seom-yujil",
     "meaning": "fiber, dietary fiber",
-    "example_kr": "섬유질이 풍부하 다",
+    "example_kr": "섬유질이 풍부하다",
     "example_en": "rich in fiber"
   },
   {
@@ -83849,7 +83849,7 @@
     "pos": "adjective",
     "romanization": "solanseuleobda",
     "meaning": "noisy, clamorous",
-    "example_kr": "교실이 소란스럽 다",
+    "example_kr": "교실이 소란스럽다",
     "example_en": "classroom is noisy"
   },
   {
@@ -83858,7 +83858,7 @@
     "pos": "noun",
     "romanization": "solyang",
     "meaning": "small amount",
-    "example_kr": "소량으로 복용하 다",
+    "example_kr": "소량으로 복용하다",
     "example_en": "take in small amounts"
   },
   {
@@ -83957,7 +83957,7 @@
     "pos": "noun",
     "romanization": "sohwagi",
     "meaning": "fire extinguisher",
-    "example_kr": "소화기를 구비하 다",
+    "example_kr": "소화기를 구비하다",
     "example_en": "equip fire extinguishers"
   },
   {
@@ -84002,7 +84002,7 @@
     "pos": "adverb",
     "romanization": "sogsogdeul-i",
     "meaning": "in detail, thoroughly",
-    "example_kr": "속속들이 조사하 다",
+    "example_kr": "속속들이 조사하다",
     "example_en": "investigate thoroughly"
   },
   {
@@ -84029,7 +84029,7 @@
     "pos": "noun",
     "romanization": "songalagjil",
     "meaning": "pointing and laughing",
-    "example_kr": "손가락질을 당하 다",
+    "example_kr": "손가락질을 당하다",
     "example_en": "be pointed at"
   },
   {
@@ -84155,7 +84155,7 @@
     "pos": "adjective",
     "romanization": "sudaseuleobda",
     "meaning": "talkative, chatty",
-    "example_kr": "친구가 수다스럽 다",
+    "example_kr": "친구가 수다스럽다",
     "example_en": "friend is talkative"
   },
   {
@@ -84173,7 +84173,7 @@
     "pos": "adjective",
     "romanization": "sudulughada",
     "meaning": "full, abundant",
-    "example_kr": "문제가 수두룩하 다",
+    "example_kr": "문제가 수두룩하다",
     "example_en": "problems abound"
   },
   {
@@ -84245,7 +84245,7 @@
     "pos": "noun",
     "romanization": "susagwan",
     "meaning": "investigator",
-    "example_kr": "수사관이 조사하 다",
+    "example_kr": "수사관이 조사하다",
     "example_en": "investigator investigates"
   },
   {
@@ -84254,7 +84254,7 @@
     "pos": "noun",
     "romanization": "susan-eob",
     "meaning": "fisheries, fishing industry",
-    "example_kr": "수산업에 종사하 다",
+    "example_kr": "수산업에 종사하다",
     "example_en": "engage in fisheries"
   },
   {
@@ -84407,7 +84407,7 @@
     "pos": "noun",
     "romanization": "supyeongseon",
     "meaning": "horizon",
-    "example_kr": "수평선을 바라보 다",
+    "example_kr": "수평선을 바라보다",
     "example_en": "gaze at horizon"
   },
   {
@@ -84452,7 +84452,7 @@
     "pos": "noun",
     "romanization": "sunballyeog",
     "meaning": "quick reflexes",
-    "example_kr": "순발력이 뛰어나 다",
+    "example_kr": "순발력이 뛰어나다",
     "example_en": "quick reflexes"
   },
   {
@@ -84578,7 +84578,7 @@
     "pos": "adverb",
     "romanization": "seulgeumeoni",
     "meaning": "stealthily, quietly",
-    "example_kr": "슬그머니 달아나 다",
+    "example_kr": "슬그머니 달아나다",
     "example_en": "sneak away"
   },
   {
@@ -84722,7 +84722,7 @@
     "pos": "adjective",
     "romanization": "simulughada",
     "meaning": "gloomy, downcast",
-    "example_kr": "표정이 시무룩하 다",
+    "example_kr": "표정이 시무룩하다",
     "example_en": "gloomy expression"
   },
   {
@@ -85280,7 +85280,7 @@
     "pos": "adverb",
     "romanization": "alanggos-eobs-i",
     "meaning": "regardless, heedlessly",
-    "example_kr": "아랑곳없이 떠들 다",
+    "example_kr": "아랑곳없이 떠들다",
     "example_en": "chatter heedlessly"
   },
   {
@@ -85415,7 +85415,7 @@
     "pos": "noun",
     "romanization": "anlagsa",
     "meaning": "euthanasia",
-    "example_kr": "안락사를 요구하 다",
+    "example_kr": "안락사를 요구하다",
     "example_en": "request euthanasia"
   },
   {
@@ -85496,7 +85496,7 @@
     "pos": "noun",
     "romanization": "amgilyeog",
     "meaning": "memory, memorization ability",
-    "example_kr": "암기력이 뛰어나 다",
+    "example_kr": "암기력이 뛰어나다",
     "example_en": "excellent memory"
   },
   {
@@ -85667,7 +85667,7 @@
     "pos": "verb",
     "romanization": "yadanmajda",
     "meaning": "to be scolded, get told off",
-    "example_kr": "선생님께 야단맞 다",
+    "example_kr": "선생님께 야단맞다",
     "example_en": "get scolded by teacher"
   },
   {
@@ -85820,7 +85820,7 @@
     "pos": "adverb",
     "romanization": "eodug-eodug",
     "meaning": "dimly, duskily",
-    "example_kr": "어둑어둑 해가 지 다",
+    "example_kr": "어둑어둑 해가 지다",
     "example_en": "the sun sets dimly"
   },
   {
@@ -85829,7 +85829,7 @@
     "pos": "adverb",
     "romanization": "eolyeompus-i",
     "meaning": "vaguely, dimly",
-    "example_kr": "어렴풋이 생각나 다",
+    "example_kr": "어렴풋이 생각나다",
     "example_en": "vaguely remember"
   },
   {
@@ -85910,7 +85910,7 @@
     "pos": "verb",
     "romanization": "eojileobhida",
     "meaning": "to dazzle, to confuse",
-    "example_kr": "눈앞을 어지럽히 다",
+    "example_kr": "눈앞을 어지럽히다",
     "example_en": "dazzle one's eyes"
   },
   {
@@ -86027,7 +86027,7 @@
     "pos": "verb",
     "romanization": "eolbeomulida",
     "meaning": "to evade, to dodge, to mumble",
-    "example_kr": "대답을 얼버무리 다",
+    "example_kr": "대답을 얼버무리다",
     "example_en": "evade an answer"
   },
   {
@@ -86117,7 +86117,7 @@
     "pos": "adverb",
     "romanization": "eonggeum-eonggeum",
     "meaning": "crawling slowly",
-    "example_kr": "엉금엉금 기어가 다",
+    "example_kr": "엉금엉금 기어가다",
     "example_en": "crawl along slowly"
   },
   {
@@ -86135,7 +86135,7 @@
     "pos": "adjective",
     "romanization": "eongseonghada",
     "meaning": "slovenly, sloppy, shabby",
-    "example_kr": "차림새가 엉성하 다",
+    "example_kr": "차림새가 엉성하다",
     "example_en": "appearance is sloppy"
   },
   {
@@ -86162,7 +86162,7 @@
     "pos": "verb",
     "romanization": "e-wo-ssada",
     "meaning": "to surround, to encircle",
-    "example_kr": "경호원이 에워싸 다",
+    "example_kr": "경호원이 에워싸다",
     "example_en": "bodyguards surround"
   },
   {
@@ -86405,7 +86405,7 @@
     "pos": "noun",
     "romanization": "yeonjangja",
     "meaning": "elder, senior",
-    "example_kr": "연장자를 우대하 다",
+    "example_kr": "연장자를 우대하다",
     "example_en": "show respect to elders"
   },
   {
@@ -86594,7 +86594,7 @@
     "pos": "noun",
     "romanization": "yeongsemin",
     "meaning": "low-income earner",
-    "example_kr": "영세민을 착취하 다",
+    "example_kr": "영세민을 착취하다",
     "example_en": "exploit low-income earners"
   },
   {
@@ -86702,7 +86702,7 @@
     "pos": "noun",
     "romanization": "ye-uibeomjeol",
     "meaning": "etiquette, propriety",
-    "example_kr": "예의범절을 지키 다",
+    "example_kr": "예의범절을 지키다",
     "example_en": "observe etiquette"
   },
   {
@@ -86729,7 +86729,7 @@
     "pos": "noun",
     "romanization": "oleumaggil",
     "meaning": "uphill road, upslope",
-    "example_kr": "오르막길을 오르 다",
+    "example_kr": "오르막길을 오르다",
     "example_en": "go up uphill road"
   },
   {
@@ -87017,7 +87017,7 @@
     "pos": "noun",
     "romanization": "yo-yang-won",
     "meaning": "nursing home",
-    "example_kr": "요양원을 방문하 다",
+    "example_kr": "요양원을 방문하다",
     "example_en": "visit a nursing home"
   },
   {
@@ -87161,7 +87161,7 @@
     "pos": "noun",
     "romanization": "useonsun-wi",
     "meaning": "priority",
-    "example_kr": "우선순위를 정하 다",
+    "example_kr": "우선순위를 정하다",
     "example_en": "set priorities"
   },
   {
@@ -87332,7 +87332,7 @@
     "pos": "adjective",
     "romanization": "ultungbultunghada",
     "meaning": "bumpy, uneven",
-    "example_kr": "길이 울퉁불퉁하 다",
+    "example_kr": "길이 울퉁불퉁하다",
     "example_en": "road is bumpy"
   },
   {
@@ -87494,7 +87494,7 @@
     "pos": "noun",
     "romanization": "wonsimlyeog",
     "meaning": "centrifugal force",
-    "example_kr": "원심력을 이용하 다",
+    "example_kr": "원심력을 이용하다",
     "example_en": "utilize centrifugal force"
   },
   {
@@ -87575,7 +87575,7 @@
     "pos": "noun",
     "romanization": "wigyejilseo",
     "meaning": "hierarchy, pecking order",
-    "example_kr": "위계질서를 따르 다",
+    "example_kr": "위계질서를 따르다",
     "example_en": "follow the hierarchy"
   },
   {
@@ -87701,7 +87701,7 @@
     "pos": "noun",
     "romanization": "wihwagam",
     "meaning": "discord, disharmony",
-    "example_kr": "위화감을 조성하 다",
+    "example_kr": "위화감을 조성하다",
     "example_en": "create discord"
   },
   {
@@ -87764,7 +87764,7 @@
     "pos": "noun",
     "romanization": "yudaegam",
     "meaning": "sense of belonging",
-    "example_kr": "유대감을 형성하 다",
+    "example_kr": "유대감을 형성하다",
     "example_en": "form sense of belonging"
   },
   {
@@ -87980,7 +87980,7 @@
     "pos": "noun",
     "romanization": "yuheungbi",
     "meaning": "entertainment expenses",
-    "example_kr": "유흥비로 사용하 다",
+    "example_kr": "유흥비로 사용하다",
     "example_en": "use for entertainment expenses"
   },
   {
@@ -88367,7 +88367,7 @@
     "pos": "noun",
     "romanization": "ibaji",
     "meaning": "contribution, service",
-    "example_kr": "사회에 이바지하 다",
+    "example_kr": "사회에 이바지하다",
     "example_en": "contribute to society"
   },
   {
@@ -88475,7 +88475,7 @@
     "pos": "adverb",
     "romanization": "ije-kkeos",
     "meaning": "so far, until now",
-    "example_kr": "이제껏 돌아다니 다",
+    "example_kr": "이제껏 돌아다니다",
     "example_en": "roam about until now"
   },
   {
@@ -88493,7 +88493,7 @@
     "pos": "noun",
     "romanization": "ijumin",
     "meaning": "migrant, immigrant",
-    "example_kr": "이주민이 늘어나 다",
+    "example_kr": "이주민이 늘어나다",
     "example_en": "migrants increase"
   },
   {
@@ -88628,7 +88628,7 @@
     "pos": "noun",
     "romanization": "inmunhag",
     "meaning": "humanities, liberal arts",
-    "example_kr": "인문학을 공부하 다",
+    "example_kr": "인문학을 공부하다",
     "example_en": "study humanities"
   },
   {
@@ -88673,7 +88673,7 @@
     "pos": "noun",
     "romanization": "injido",
     "meaning": "recognition, awareness, fame",
-    "example_kr": "인지도가 떨어지 다",
+    "example_kr": "인지도가 떨어지다",
     "example_en": "recognition declines"
   },
   {
@@ -88709,7 +88709,7 @@
     "pos": "noun",
     "romanization": "ilgwanseong",
     "meaning": "consistency, coherence",
-    "example_kr": "일관성을 유지하 다",
+    "example_kr": "일관성을 유지하다",
     "example_en": "maintain consistency"
   },
   {
@@ -89132,7 +89132,7 @@
     "pos": "noun",
     "romanization": "ja-asilhyeon",
     "meaning": "self-actualization",
-    "example_kr": "자아실현을 꿈꾸 다",
+    "example_kr": "자아실현을 꿈꾸다",
     "example_en": "dream of self-realization"
   },
   {
@@ -89249,7 +89249,7 @@
     "pos": "noun",
     "romanization": "jagjeong",
     "meaning": "decision, resolution",
-    "example_kr": "떠나기로 작정하 다",
+    "example_kr": "떠나기로 작정하다",
     "example_en": "decide to leave"
   },
   {
@@ -89600,7 +89600,7 @@
     "pos": "noun",
     "romanization": "jeog-eunglyeog",
     "meaning": "adaptability",
-    "example_kr": "적응력이 뛰어나 다",
+    "example_kr": "적응력이 뛰어나다",
     "example_en": "excellent adaptability"
   },
   {
@@ -90284,7 +90284,7 @@
     "pos": "verb",
     "romanization": "jeojhida",
     "meaning": "tilt back, throw back",
-    "example_kr": "고개를 뒤로 젖히 다",
+    "example_kr": "고개를 뒤로 젖히다",
     "example_en": "tilt head back"
   },
   {
@@ -90374,7 +90374,7 @@
     "pos": "adverb",
     "romanization": "jomajoma",
     "meaning": "anxiously, worriedly",
-    "example_kr": "조마조마 걱정하 다",
+    "example_kr": "조마조마 걱정하다",
     "example_en": "worry anxiously"
   },
   {
@@ -90401,7 +90401,7 @@
     "pos": "noun",
     "romanization": "jomungaeg",
     "meaning": "mourner, visitor",
-    "example_kr": "조문객을 맞이하 다",
+    "example_kr": "조문객을 맞이하다",
     "example_en": "greet mourners"
   },
   {
@@ -90419,7 +90419,7 @@
     "pos": "noun",
     "romanization": "joseon-eob",
     "meaning": "shipbuilding industry",
-    "example_kr": "조선업에 종사하 다",
+    "example_kr": "조선업에 종사하다",
     "example_en": "work in shipbuilding"
   },
   {
@@ -90446,7 +90446,7 @@
     "pos": "adverb",
     "romanization": "josimjosim",
     "meaning": "carefully, cautiously",
-    "example_kr": "조심조심 걸어가 다",
+    "example_kr": "조심조심 걸어가다",
     "example_en": "walk carefully"
   },
   {
@@ -90545,7 +90545,7 @@
     "pos": "noun",
     "romanization": "johyeongmi",
     "meaning": "sculptural beauty",
-    "example_kr": "조형미가 돋보이 다",
+    "example_kr": "조형미가 돋보이다",
     "example_en": "sculptural beauty stands out"
   },
   {
@@ -90716,7 +90716,7 @@
     "pos": "noun",
     "romanization": "jusaenghwal",
     "meaning": "housing conditions",
-    "example_kr": "주생활을 개선하 다",
+    "example_kr": "주생활을 개선하다",
     "example_en": "improve housing"
   },
   {
@@ -90779,7 +90779,7 @@
     "pos": "noun",
     "romanization": "junggong-eob",
     "meaning": "heavy industry",
-    "example_kr": "중공업이 발전하 다",
+    "example_kr": "중공업이 발전하다",
     "example_en": "heavy industry develops"
   },
   {
@@ -91157,7 +91157,7 @@
     "pos": "noun",
     "romanization": "jiggwan",
     "meaning": "intuition, instinct",
-    "example_kr": "직관으로 판단하 다",
+    "example_kr": "직관으로 판단하다",
     "example_en": "judge by intuition"
   },
   {
@@ -91292,7 +91292,7 @@
     "pos": "noun",
     "romanization": "jinpunggyeong",
     "meaning": "real spectacle",
-    "example_kr": "진풍경이 펼쳐지 다",
+    "example_kr": "진풍경이 펼쳐지다",
     "example_en": "a real spectacle unfolds"
   },
   {
@@ -91346,7 +91346,7 @@
     "pos": "noun",
     "romanization": "jibsalam",
     "meaning": "wife, spouse",
-    "example_kr": "집사람과 의논하 다",
+    "example_kr": "집사람과 의논하다",
     "example_en": "discuss with one's wife"
   },
   {
@@ -91427,7 +91427,7 @@
     "pos": "verb",
     "romanization": "jjaelyeoboda",
     "meaning": "to glare at",
-    "example_kr": "카메라를 째려보 다",
+    "example_kr": "카메라를 째려보다",
     "example_en": "glare at the camera"
   },
   {
@@ -91616,7 +91616,7 @@
     "pos": "adjective",
     "romanization": "changbaeghada",
     "meaning": "pale, pallid",
-    "example_kr": "얼굴색이 창백하 다",
+    "example_kr": "얼굴색이 창백하다",
     "example_en": "face color is pale"
   },
   {
@@ -91625,7 +91625,7 @@
     "pos": "noun",
     "romanization": "chang-uiseong",
     "meaning": "creativity, originality",
-    "example_kr": "창의성을 발휘하 다",
+    "example_kr": "창의성을 발휘하다",
     "example_en": "display creativity"
   },
   {
@@ -92318,7 +92318,7 @@
     "pos": "verb",
     "romanization": "chi-uchida",
     "meaning": "lean, bias toward",
-    "example_kr": "한쪽으로 치우치 다",
+    "example_kr": "한쪽으로 치우치다",
     "example_en": "lean to one side"
   },
   {
@@ -92921,7 +92921,7 @@
     "pos": "adjective",
     "romanization": "tucheolhada",
     "meaning": "deeply rooted, thorough",
-    "example_kr": "애국심이 투철하 다",
+    "example_kr": "애국심이 투철하다",
     "example_en": "deeply rooted patriotism"
   },
   {
@@ -93830,7 +93830,7 @@
     "pos": "noun",
     "romanization": "pigo-in",
     "meaning": "defendant, accused",
-    "example_kr": "피고인을 변호하 다",
+    "example_kr": "피고인을 변호하다",
     "example_en": "To defend the defendant."
   },
   {
@@ -93956,7 +93956,7 @@
     "pos": "adverb",
     "romanization": "ha-yeom-eobs-i",
     "meaning": "endlessly, ceaselessly",
-    "example_kr": "하염없이 기다리 다",
+    "example_kr": "하염없이 기다리다",
     "example_en": "To wait endlessly."
   },
   {
@@ -94064,7 +94064,7 @@
     "pos": "adverb",
     "romanization": "hangyeolgat-i",
     "meaning": "consistently, uniformly",
-    "example_kr": "한결같이 사랑하 다",
+    "example_kr": "한결같이 사랑하다",
     "example_en": "love consistently"
   },
   {
@@ -94091,7 +94091,7 @@
     "pos": "adverb",
     "romanization": "hannat",
     "meaning": "merely, nothing but",
-    "example_kr": "한낱 꿈에 불과하 다",
+    "example_kr": "한낱 꿈에 불과하다",
     "example_en": "merely a dream"
   },
   {
@@ -94280,7 +94280,7 @@
     "pos": "noun",
     "romanization": "hangsaengje",
     "meaning": "antibiotic",
-    "example_kr": "항생제를 처방하 다",
+    "example_kr": "항생제를 처방하다",
     "example_en": "prescribe antibiotics"
   },
   {
@@ -94676,7 +94676,7 @@
     "pos": "verb",
     "romanization": "he-eonada",
     "meaning": "to escape, get out",
-    "example_kr": "가난에서 헤어나 다",
+    "example_kr": "가난에서 헤어나다",
     "example_en": "to escape from poverty"
   },
   {
@@ -94748,7 +94748,7 @@
     "pos": "noun",
     "romanization": "hyeongijeung",
     "meaning": "dizziness, vertigo",
-    "example_kr": "현기증을 일으키 다",
+    "example_kr": "현기증을 일으키다",
     "example_en": "to cause dizziness"
   },
   {
@@ -94802,7 +94802,7 @@
     "pos": "noun",
     "romanization": "hyeol-yeon",
     "meaning": "blood relation, kinship",
-    "example_kr": "혈연을 중요시하 다",
+    "example_kr": "혈연을 중요시하다",
     "example_en": "to value kinship"
   },
   {
@@ -94892,7 +94892,7 @@
     "pos": "noun",
     "romanization": "hyeongsa",
     "meaning": "detective, investigator",
-    "example_kr": "형사에게 붙잡히 다",
+    "example_kr": "형사에게 붙잡히다",
     "example_en": "to be arrested by a detective"
   },
   {
@@ -95054,7 +95054,7 @@
     "pos": "adjective",
     "romanization": "holgabunhada",
     "meaning": "light, unburdened",
-    "example_kr": "마음이 홀가분하 다",
+    "example_kr": "마음이 홀가분하다",
     "example_en": "mind feels light"
   },
   {
@@ -95306,7 +95306,7 @@
     "pos": "determiner / noun",
     "romanization": "hoeggijeog",
     "meaning": "groundbreaking, epochal",
-    "example_kr": "획기적으로 바꾸 다",
+    "example_kr": "획기적으로 바꾸다",
     "example_en": "transform groundbreakingly"
   },
   {
@@ -95666,7 +95666,7 @@
     "pos": "adjective",
     "romanization": "huibaghada",
     "meaning": "slight, slim, thin",
-    "example_kr": "가능성이 희박하 다",
+    "example_kr": "가능성이 희박하다",
     "example_en": "possibility is slim"
   },
   {

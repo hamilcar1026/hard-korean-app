@@ -1,0 +1,4412 @@
+[
+  {
+    "word": "가르치다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "한국어를 가르치 다"
+  },
+  {
+    "word": "갈아타다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "지하철을 갈아타 다"
+  },
+  {
+    "word": "고르다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "선물을 고르다"
+  },
+  {
+    "word": "고프다",
+    "pos": "adjective",
+    "level": 1,
+    "example_kr": "배가 고프다"
+  },
+  {
+    "word": "교실",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "교실에서 수업하 다"
+  },
+  {
+    "word": "극장",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "극장에서 상영하 다"
+  },
+  {
+    "word": "김치찌개",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "김치찌개를 끓이 다"
+  },
+  {
+    "word": "늦다",
+    "pos": "adjective / verb",
+    "level": 1,
+    "example_kr": "약속 시간에 늦 다"
+  },
+  {
+    "word": "다녀오다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "학교에 다녀오다"
+  },
+  {
+    "word": "다니다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "회사에 다니다"
+  },
+  {
+    "word": "다르다",
+    "pos": "adjective",
+    "level": 1,
+    "example_kr": "모양이 다르다"
+  },
+  {
+    "word": "대학교",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "대학교에 입학하 다"
+  },
+  {
+    "word": "돌아오다",
+    "pos": "verb",
+    "level": 1,
+    "example_kr": "학교에서 돌아오 다"
+  },
+  {
+    "word": "된장찌개",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "된장찌개를 끓이 다"
+  },
+  {
+    "word": "메뉴",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "메뉴를 고르다"
+  },
+  {
+    "word": "박물관",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "박물관을 관람하 다"
+  },
+  {
+    "word": "배",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "배가 고프다"
+  },
+  {
+    "word": "부모님",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "부모님께 효도하 다"
+  },
+  {
+    "word": "사무실",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "사무실에 출근하 다"
+  },
+  {
+    "word": "서점",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "대형 서점"
+  },
+  {
+    "word": "수영장",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "수영장에 다니다"
+  },
+  {
+    "word": "아이스크림",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "아이스크림을 먹 다"
+  },
+  {
+    "word": "이야기",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "이야기를 들려주 다"
+  },
+  {
+    "word": "자동차",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "자동차를 운전하 다"
+  },
+  {
+    "word": "커피숍",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "커피숍에서 만나 다"
+  },
+  {
+    "word": "학교",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "학교에 다니다"
+  },
+  {
+    "word": "학생증",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "학생증을 발급하 다"
+  },
+  {
+    "word": "회사",
+    "pos": "noun",
+    "level": 1,
+    "example_kr": "회사에 다니다"
+  },
+  {
+    "word": "가까이",
+    "pos": "adverb / noun",
+    "level": 2,
+    "example_kr": "가까이 다가오다"
+  },
+  {
+    "word": "각각",
+    "pos": "adverb / noun",
+    "level": 2,
+    "example_kr": "각각 다르다"
+  },
+  {
+    "word": "간단히",
+    "pos": "adverb",
+    "level": 2,
+    "example_kr": "간단히 이야기하 다"
+  },
+  {
+    "word": "경찰서",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "경찰서에 신고하 다"
+  },
+  {
+    "word": "고치다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "컴퓨터를 고치다"
+  },
+  {
+    "word": "공무원",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "공무원으로 일하 다"
+  },
+  {
+    "word": "교과서",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "교과서에서 배우 다"
+  },
+  {
+    "word": "기차역",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "기차역에 도착하 다"
+  },
+  {
+    "word": "꽃다발",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "꽃다발을 선물하 다"
+  },
+  {
+    "word": "노력",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "노력을 다하다"
+  },
+  {
+    "word": "다치다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "팔을 다치다"
+  },
+  {
+    "word": "다하다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "기력이 다하다"
+  },
+  {
+    "word": "대학원",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "대학원을 다니다"
+  },
+  {
+    "word": "데이트",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "데이트를 신청하 다"
+  },
+  {
+    "word": "바깥쪽",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "바깥쪽으로 나가 다"
+  },
+  {
+    "word": "버릇",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "버릇을 고치다"
+  },
+  {
+    "word": "부장",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "부장으로 승진하 다"
+  },
+  {
+    "word": "사계절",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "사계절이 뚜렷하 다"
+  },
+  {
+    "word": "서다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "똑바로 서다"
+  },
+  {
+    "word": "서두르다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "준비를 서두르다"
+  },
+  {
+    "word": "서양",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "동양과 서양"
+  },
+  {
+    "word": "시어머니",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "시어머니를 모시 다"
+  },
+  {
+    "word": "신호등",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "신호등을 기다리 다"
+  },
+  {
+    "word": "신혼여행",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "신혼여행을 떠나 다"
+  },
+  {
+    "word": "쓰레기통",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "쓰레기통에 버리 다"
+  },
+  {
+    "word": "아무것",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "아무것이나 괜찮 다"
+  },
+  {
+    "word": "어울리다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "사람들과 어울리 다"
+  },
+  {
+    "word": "엉덩이",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "엉덩이를 두드리 다"
+  },
+  {
+    "word": "엘리베이터",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "엘리베이터를 타 다"
+  },
+  {
+    "word": "오래간만",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "오래간만에 만나 다"
+  },
+  {
+    "word": "유치원",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "유치원에 입학하 다"
+  },
+  {
+    "word": "음악가",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "음악가가 연주하 다"
+  },
+  {
+    "word": "일어서다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "자리에서 일어서 다"
+  },
+  {
+    "word": "잃어버리다",
+    "pos": "verb",
+    "level": 2,
+    "example_kr": "물건을 잃어버리 다"
+  },
+  {
+    "word": "자연",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "자연으로 돌아가 다"
+  },
+  {
+    "word": "종류",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "종류가 다양하다"
+  },
+  {
+    "word": "중국집",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "중국집에 주문하 다"
+  },
+  {
+    "word": "중학교",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "중학교에 들어가 다"
+  },
+  {
+    "word": "직장",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "직장에 다니다"
+  },
+  {
+    "word": "집들이",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "집들이에 초대하 다"
+  },
+  {
+    "word": "항공권",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "항공권을 예약하 다"
+  },
+  {
+    "word": "현금",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "현금으로 결제하 다"
+  },
+  {
+    "word": "횡단보도",
+    "pos": "noun",
+    "level": 2,
+    "example_kr": "횡단보도를 건너 다"
+  },
+  {
+    "word": "가스레인지",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "가스레인지를 켜 다"
+  },
+  {
+    "word": "고백",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사랑 고백"
+  },
+  {
+    "word": "고춧가루",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "고춧가루를 뿌리 다"
+  },
+  {
+    "word": "공연장",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "공연장에 몰려들 다"
+  },
+  {
+    "word": "과장",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "과장으로 승진하 다"
+  },
+  {
+    "word": "관계있다",
+    "pos": "adjective",
+    "level": 3,
+    "example_kr": "주제와 관련 있 다"
+  },
+  {
+    "word": "교통편",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "교통편을 예약하 다"
+  },
+  {
+    "word": "기능",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "기능이 다양하다"
+  },
+  {
+    "word": "기술자",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "기술자를 양성하 다"
+  },
+  {
+    "word": "기초",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "기초를 다지다"
+  },
+  {
+    "word": "나물",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "나물을 다듬다"
+  },
+  {
+    "word": "내주다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "거스름돈을 내주 다"
+  },
+  {
+    "word": "노약자",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "노약자를 보호하 다"
+  },
+  {
+    "word": "녹음기",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "녹음기로 녹음하 다"
+  },
+  {
+    "word": "농부",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "농부가 씨를 뿌리 다"
+  },
+  {
+    "word": "다리미",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "다리미로 옷을 다 리다"
+  },
+  {
+    "word": "다림질",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "바지를 다림질하 다"
+  },
+  {
+    "word": "다지다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "마늘을 다지다"
+  },
+  {
+    "word": "다행",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "다행으로 생각하 다"
+  },
+  {
+    "word": "단발머리",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "단발머리로 자르 다"
+  },
+  {
+    "word": "단정하다",
+    "pos": "adjective",
+    "level": 3,
+    "example_kr": "옷차림이 단정하 다"
+  },
+  {
+    "word": "당연히",
+    "pos": "adverb",
+    "level": 3,
+    "example_kr": "당연히 다르다"
+  },
+  {
+    "word": "대중가요",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "대중가요를 부르 다"
+  },
+  {
+    "word": "대통령",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "대통령을 선출하 다"
+  },
+  {
+    "word": "독일어",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "독일어를 가르치 다"
+  },
+  {
+    "word": "돌아다니다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "거리를 돌아다니 다"
+  },
+  {
+    "word": "동그라미",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "동그라미를 그리 다"
+  },
+  {
+    "word": "동아리",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "동아리에 가입하 다"
+  },
+  {
+    "word": "동호회",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "동호회에 가입하 다"
+  },
+  {
+    "word": "되돌아오다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "편지가 되돌아오 다"
+  },
+  {
+    "word": "두통약",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "두통약을 복용하 다"
+  },
+  {
+    "word": "드라이브",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "드라이브를 나가 다"
+  },
+  {
+    "word": "드라이어",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "드라이어로 말리 다"
+  },
+  {
+    "word": "등록증",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "등록증을 발급받 다"
+  },
+  {
+    "word": "따라가다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "앞사람을 따라가 다"
+  },
+  {
+    "word": "떨어뜨리다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "바닥에 떨어뜨리 다"
+  },
+  {
+    "word": "뛰어내리다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "아래로 뛰어내리 다"
+  },
+  {
+    "word": "마라톤",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "마라톤을 완주하 다"
+  },
+  {
+    "word": "목적지",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "목적지에 도착하 다"
+  },
+  {
+    "word": "문화재",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "문화재를 보호하 다"
+  },
+  {
+    "word": "바닷물",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "바닷물이 출렁이 다"
+  },
+  {
+    "word": "방송사",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "방송사에 다니다"
+  },
+  {
+    "word": "배고프다",
+    "pos": "adjective",
+    "level": 3,
+    "example_kr": "배고프고 목마르 다"
+  },
+  {
+    "word": "배낭여행",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "배낭여행을 떠나 다"
+  },
+  {
+    "word": "별말씀",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "별말씀이 없으시 다"
+  },
+  {
+    "word": "보고서",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "보고서를 작성하 다"
+  },
+  {
+    "word": "보행자",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "보행자를 배려하 다"
+  },
+  {
+    "word": "부러워하다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "성공을 부러워하 다"
+  },
+  {
+    "word": "뷔페",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "뷔페에서 식사하 다"
+  },
+  {
+    "word": "비밀번호",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "비밀번호를 누르 다"
+  },
+  {
+    "word": "비상구",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "비상구로 대피하 다"
+  },
+  {
+    "word": "비타민",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "비타민을 섭취하 다"
+  },
+  {
+    "word": "비행장",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "비행장에 도착하 다"
+  },
+  {
+    "word": "사라지다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "사람들이 사라지 다"
+  },
+  {
+    "word": "사용법",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사용법을 설명하 다"
+  },
+  {
+    "word": "사우나",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사우나로 땀을 내 다"
+  },
+  {
+    "word": "사이트",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사이트에 접속하 다"
+  },
+  {
+    "word": "사인",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "계약서에 사인하 다"
+  },
+  {
+    "word": "사진관",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사진관을 운영하 다"
+  },
+  {
+    "word": "사회자",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "사회자가 질문하 다"
+  },
+  {
+    "word": "산꼭대기",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "산꼭대기에 오르 다"
+  },
+  {
+    "word": "새엄마",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "새엄마를 맞이하 다"
+  },
+  {
+    "word": "새집",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "새집으로 이사하 다"
+  },
+  {
+    "word": "샴푸",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "샴푸로 머리를 감 다"
+  },
+  {
+    "word": "성당",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "성당에 다니다"
+  },
+  {
+    "word": "세련되다",
+    "pos": "adjective",
+    "level": 3,
+    "example_kr": "옷차림이 세련되 다"
+  },
+  {
+    "word": "소방관",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "소방관이 출동하 다"
+  },
+  {
+    "word": "소방서",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "소방서에 신고하 다"
+  },
+  {
+    "word": "손등",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "손등으로 문지르 다"
+  },
+  {
+    "word": "쇼핑몰",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "쇼핑몰을 운영하 다"
+  },
+  {
+    "word": "쇼핑센터",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "쇼핑센터에서 사 다"
+  },
+  {
+    "word": "수면제",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "수면제를 복용하 다"
+  },
+  {
+    "word": "슈퍼",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "슈퍼에서 구입하 다"
+  },
+  {
+    "word": "시아버지",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "시아버지를 모시 다"
+  },
+  {
+    "word": "시험지",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "시험지를 채점하 다"
+  },
+  {
+    "word": "식사량",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "식사량을 조절하 다"
+  },
+  {
+    "word": "신입생",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "신입생을 모집하 다"
+  },
+  {
+    "word": "신청서",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "신청서를 접수하 다"
+  },
+  {
+    "word": "아랫집",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "아랫집에 내려가 다"
+  },
+  {
+    "word": "안내원",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "안내원을 따라가 다"
+  },
+  {
+    "word": "애완동물",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "애완동물을 기르 다"
+  },
+  {
+    "word": "액세서리",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "액세서리를 걸치 다"
+  },
+  {
+    "word": "어느새",
+    "pos": "adverb",
+    "level": 3,
+    "example_kr": "어느새 다 자라다"
+  },
+  {
+    "word": "여름휴가",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "여름휴가를 떠나 다"
+  },
+  {
+    "word": "역사가",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "역사가가 연구하 다"
+  },
+  {
+    "word": "열쇠고리",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "열쇠고리를 사오 다"
+  },
+  {
+    "word": "예상",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "예상과 다르다"
+  },
+  {
+    "word": "예식장",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "예식장을 예약하 다"
+  },
+  {
+    "word": "옛날이야기",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "옛날이야기를 듣 다"
+  },
+  {
+    "word": "오페라",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "오페라를 감상하 다"
+  },
+  {
+    "word": "외교관",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "외교관을 임명하 다"
+  },
+  {
+    "word": "요구르트",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "요구르트를 마시 다"
+  },
+  {
+    "word": "요리법",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "요리법을 개발하 다"
+  },
+  {
+    "word": "우회전",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "우회전을 허용하 다"
+  },
+  {
+    "word": "웃어른",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "웃어른을 공경하 다"
+  },
+  {
+    "word": "유적지",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "유적지를 조사하 다"
+  },
+  {
+    "word": "이곳저곳",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "이곳저곳을 살피 다"
+  },
+  {
+    "word": "이루어지다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "소원이 이루어지 다"
+  },
+  {
+    "word": "이웃집",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "이웃집을 방문하 다"
+  },
+  {
+    "word": "자동",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "자동으로 움직이 다"
+  },
+  {
+    "word": "장마철",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "장마철이 다가오 다"
+  },
+  {
+    "word": "전문가",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "전문가를 초빙하 다"
+  },
+  {
+    "word": "전시회",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "전시회를 관람하 다"
+  },
+  {
+    "word": "정답",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "정답을 고르다"
+  },
+  {
+    "word": "정수기",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "정수기를 설치하 다"
+  },
+  {
+    "word": "정육점",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "정육점의 고기"
+  },
+  {
+    "word": "제시간",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "제시간에 도착하 다"
+  },
+  {
+    "word": "졸업생",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "졸업생을 배출하 다"
+  },
+  {
+    "word": "주방",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "주방에서 요리하 다"
+  },
+  {
+    "word": "주유소",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "주유소에서 일하 다"
+  },
+  {
+    "word": "중형차",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "중형차를 운전하 다"
+  },
+  {
+    "word": "증명서",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "증명서를 발급하 다"
+  },
+  {
+    "word": "지난날",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "지난날을 기억하 다"
+  },
+  {
+    "word": "촌스럽다",
+    "pos": "adjective",
+    "level": 3,
+    "example_kr": "옷차림이 촌스럽 다"
+  },
+  {
+    "word": "최선",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "최선을 다하다"
+  },
+  {
+    "word": "큰길",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "큰길로 다니다"
+  },
+  {
+    "word": "파출소",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "파출소에 신고하 다"
+  },
+  {
+    "word": "프린터",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "프린터로 출력하 다"
+  },
+  {
+    "word": "해돋이",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "해돋이를 감상하 다"
+  },
+  {
+    "word": "휴가철",
+    "pos": "noun",
+    "level": 3,
+    "example_kr": "휴가철이 시작되 다"
+  },
+  {
+    "word": "흘러가다",
+    "pos": "verb",
+    "level": 3,
+    "example_kr": "시냇물이 흘러가 다"
+  },
+  {
+    "word": "가져다주다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "물건을 가져다주 다"
+  },
+  {
+    "word": "각오",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "각오를 다지다"
+  },
+  {
+    "word": "거래",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "거래가 이루어지 다"
+  },
+  {
+    "word": "걱정스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "자식이 걱정스럽 다"
+  },
+  {
+    "word": "계산기",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "계산기로 계산하 다"
+  },
+  {
+    "word": "고국",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "고국으로 돌아가 다"
+  },
+  {
+    "word": "고급스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "자동차가 고급스 럽다"
+  },
+  {
+    "word": "고마워하다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "부모님께 고마워 하다"
+  },
+  {
+    "word": "고소하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "맛이 고소하다"
+  },
+  {
+    "word": "관심사",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "관심사가 다르다"
+  },
+  {
+    "word": "관점",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "관점이 다르다"
+  },
+  {
+    "word": "교육비",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "교육비로 지출하 다"
+  },
+  {
+    "word": "교육자",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "교육자를 배출하 다"
+  },
+  {
+    "word": "그래프",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "그래프로 나타내 다"
+  },
+  {
+    "word": "근로자",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "근로자를 해고하 다"
+  },
+  {
+    "word": "기념일",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "기념일을 축하하 다"
+  },
+  {
+    "word": "기반",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "기반을 다지다"
+  },
+  {
+    "word": "길가",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "길가에 서다"
+  },
+  {
+    "word": "끊임없이",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "끊임없이 이어지 다"
+  },
+  {
+    "word": "끌어당기다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "의자를 끌어당기 다"
+  },
+  {
+    "word": "날아다니다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "나비가 날아다니 다"
+  },
+  {
+    "word": "내버리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "쓰레기를 내버리 다"
+  },
+  {
+    "word": "넘어뜨리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "나무를 넘어뜨리 다"
+  },
+  {
+    "word": "농산물",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "농산물을 판매하 다"
+  },
+  {
+    "word": "다가가다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "문 쪽으로 다가가 다"
+  },
+  {
+    "word": "다가서다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "가까이에 다가서 다"
+  },
+  {
+    "word": "다가오다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "나에게 다가오다"
+  },
+  {
+    "word": "다녀가다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "집에 다녀가다"
+  },
+  {
+    "word": "다듬다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "콩나물을 다듬다"
+  },
+  {
+    "word": "다루다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "업무를 다루다"
+  },
+  {
+    "word": "다름없다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "전과 다름없다"
+  },
+  {
+    "word": "다리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "옷을 다리다"
+  },
+  {
+    "word": "다물다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "입을 다물다"
+  },
+  {
+    "word": "다투다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "친구와 다투다"
+  },
+  {
+    "word": "다행스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "참 다행스럽다"
+  },
+  {
+    "word": "단골",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "단골 고객"
+  },
+  {
+    "word": "당하다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "사기꾼에게 당하 다"
+  },
+  {
+    "word": "대기업",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "대기업에 취직하 다"
+  },
+  {
+    "word": "대다수",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "대다수가 찬성하 다"
+  },
+  {
+    "word": "도망",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "도망을 다니다"
+  },
+  {
+    "word": "도망치다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "감옥에서 도망치 다"
+  },
+  {
+    "word": "돌려보내다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "물건을 돌려보내 다"
+  },
+  {
+    "word": "동서남북",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "동서남북으로 찾 다"
+  },
+  {
+    "word": "되돌아가다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "집으로 되돌아가 다"
+  },
+  {
+    "word": "되살아나다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "입맛이 되살아나 다"
+  },
+  {
+    "word": "되풀이",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "되풀이가 계속되 다"
+  },
+  {
+    "word": "두드러지다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "이마가 두드러지 다"
+  },
+  {
+    "word": "두려움",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "두려움을 극복하 다"
+  },
+  {
+    "word": "두려워하다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "변화를 두려워하 다"
+  },
+  {
+    "word": "둘러싸이다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "겹겹이 둘러싸이 다"
+  },
+  {
+    "word": "뒤따르다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "앞사람을 뒤따르 다"
+  },
+  {
+    "word": "뒤떨어지다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "열 걸음 뒤떨어지 다"
+  },
+  {
+    "word": "등기",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "등기 서류"
+  },
+  {
+    "word": "땅바닥",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "땅바닥에 내려놓 다"
+  },
+  {
+    "word": "떼",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "떼를 지어 다니다"
+  },
+  {
+    "word": "뛰어나오다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "거리로 뛰어나오 다"
+  },
+  {
+    "word": "뛰어다니다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "집안을 뛰어다니 다"
+  },
+  {
+    "word": "마음가짐",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "마음가짐을 가지 다"
+  },
+  {
+    "word": "마음속",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "마음속으로 다짐 하다"
+  },
+  {
+    "word": "마주",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "마주 서다"
+  },
+  {
+    "word": "마주치다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "손바닥을 마주치 다"
+  },
+  {
+    "word": "말다툼",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "말다툼이 벌어지 다"
+  },
+  {
+    "word": "맘대로",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "맘대로 고르다"
+  },
+  {
+    "word": "망가지다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "컴퓨터가 망가지 다"
+  },
+  {
+    "word": "매달리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "주렁주렁 매달리 다"
+  },
+  {
+    "word": "머릿속",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "머릿속에 떠오르 다"
+  },
+  {
+    "word": "멀쩡하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "팔다리가 멀쩡하 다"
+  },
+  {
+    "word": "모여들다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "구름처럼 모여들 다"
+  },
+  {
+    "word": "목숨",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "목숨을 다하다"
+  },
+  {
+    "word": "몰려들다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "사람들이 몰려들 다"
+  },
+  {
+    "word": "무관심",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "무관심이 지나치 다"
+  },
+  {
+    "word": "무기",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "무기를 들고 싸우 다"
+  },
+  {
+    "word": "문제점",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "문제점을 해결하 다"
+  },
+  {
+    "word": "물속",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "물속에서 헤엄치 다"
+  },
+  {
+    "word": "미지근하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "국물이 미지근하 다"
+  },
+  {
+    "word": "밀리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "사람들에게 밀리 다"
+  },
+  {
+    "word": "바싹",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "바싹 다가서다"
+  },
+  {
+    "word": "받아들이다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "기술을 받아들이 다"
+  },
+  {
+    "word": "발끝",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "발끝으로 서다"
+  },
+  {
+    "word": "발등",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "발등을 다치다"
+  },
+  {
+    "word": "변덕스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "성격이 변덕스럽 다"
+  },
+  {
+    "word": "보살피다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "아이들을 보살피 다"
+  },
+  {
+    "word": "부끄러움",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "부끄러움을 느끼 다"
+  },
+  {
+    "word": "부딪치다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "손바닥을 부딪치 다"
+  },
+  {
+    "word": "불구하다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "그럼에도 불구하 고"
+  },
+  {
+    "word": "붙잡다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "치맛자락을 붙잡 다"
+  },
+  {
+    "word": "비롯되다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "경험에서 비롯되 다"
+  },
+  {
+    "word": "비바람",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "비바람이 몰아치 다"
+  },
+  {
+    "word": "빗방울",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "빗방울이 떨어지 다"
+  },
+  {
+    "word": "뽑히다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "머리카락이 뽑히 다"
+  },
+  {
+    "word": "사고방식",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "사고방식이 다르 다"
+  },
+  {
+    "word": "사무직",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "사무직에 종사하 다"
+  },
+  {
+    "word": "사진첩",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "사진첩에 보관하 다"
+  },
+  {
+    "word": "살아가다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "하루하루 살아가 다"
+  },
+  {
+    "word": "살아남다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "전쟁에서 살아남 다"
+  },
+  {
+    "word": "상상력",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "상상력이 풍부하 다"
+  },
+  {
+    "word": "새끼",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "새끼 고양이"
+  },
+  {
+    "word": "서양인",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "동양인과 서양인"
+  },
+  {
+    "word": "서운하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "헤어지기 서운하 다"
+  },
+  {
+    "word": "서적",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "전공 서적"
+  },
+  {
+    "word": "서툴다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "바느질에 서툴다"
+  },
+  {
+    "word": "소나무",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "소나무가 무성하 다"
+  },
+  {
+    "word": "소문나다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "사업가로 소문나 다"
+  },
+  {
+    "word": "소방차",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "소방차가 출동하 다"
+  },
+  {
+    "word": "소지품",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "소지품을 보관하 다"
+  },
+  {
+    "word": "속마음",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "속마음을 털어 놓 다"
+  },
+  {
+    "word": "수도권",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "수도권에 거주하 다"
+  },
+  {
+    "word": "수도꼭지",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "수도꼭지를 잠그 다"
+  },
+  {
+    "word": "시리즈",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "시리즈로 방영되 다"
+  },
+  {
+    "word": "실장",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "실장으로 승진하 다"
+  },
+  {
+    "word": "쓸데없이",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "쓸데없이 돈을 쓰 다"
+  },
+  {
+    "word": "아무래도",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "아무래도 이상하 다"
+  },
+  {
+    "word": "아무렇다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "아무렇건 상관없 다"
+  },
+  {
+    "word": "어려워하다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "선배를 어려워하 다"
+  },
+  {
+    "word": "연구소",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "연구소를 설립하 다"
+  },
+  {
+    "word": "예",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "예로부터 내려오 다"
+  },
+  {
+    "word": "오래도록",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "오래도록 간직하 다"
+  },
+  {
+    "word": "오로지",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "오로지 공부만 하 다"
+  },
+  {
+    "word": "오르내리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "계단을 오르내리 다"
+  },
+  {
+    "word": "온통",
+    "pos": "adverb / noun",
+    "level": 4,
+    "example_kr": "온통 그 생각뿐이 다"
+  },
+  {
+    "word": "올라타다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "비행기에 올라타 다"
+  },
+  {
+    "word": "올려다보다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "하늘을 올려다보 다"
+  },
+  {
+    "word": "용도",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "용도가 다르다"
+  },
+  {
+    "word": "우아하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "분위기가 우아하 다"
+  },
+  {
+    "word": "울음소리",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "울음소리가 들리 다"
+  },
+  {
+    "word": "움직임",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "움직임을 따라가 다"
+  },
+  {
+    "word": "웃음소리",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "웃음소리가 들리 다"
+  },
+  {
+    "word": "위아래",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "위아래로 정렬하 다"
+  },
+  {
+    "word": "의무",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "의무를 다하다"
+  },
+  {
+    "word": "이해관계",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "이해관계를 따지 다"
+  },
+  {
+    "word": "이혼",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "이혼 서류"
+  },
+  {
+    "word": "자꾸만",
+    "pos": "adverb",
+    "level": 4,
+    "example_kr": "자꾸만 칭얼거리 다"
+  },
+  {
+    "word": "자랑스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "아들이 자랑스럽 다"
+  },
+  {
+    "word": "재활용품",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "재활용품을 모으 다"
+  },
+  {
+    "word": "저마다",
+    "pos": "adverb / noun",
+    "level": 4,
+    "example_kr": "저마다 다르다"
+  },
+  {
+    "word": "적성",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "적성을 고려하다"
+  },
+  {
+    "word": "전문직",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "전문직에 종사하 다"
+  },
+  {
+    "word": "정반대",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "정반대로 행동하 다"
+  },
+  {
+    "word": "정성",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "정성을 다하다"
+  },
+  {
+    "word": "조심스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "행동이 조심스럽 다"
+  },
+  {
+    "word": "주저앉다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "땅바닥에 주저앉 다"
+  },
+  {
+    "word": "중얼거리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "속으로 중얼거리 다"
+  },
+  {
+    "word": "짜증스럽다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "말투가 짜증스럽 다"
+  },
+  {
+    "word": "쫓아내다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "마을에서 쫓아내 다"
+  },
+  {
+    "word": "차원",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "차원이 다르다"
+  },
+  {
+    "word": "찾아다니다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "명소를 찾아다니 다"
+  },
+  {
+    "word": "책임자",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "책임자를 처벌하 다"
+  },
+  {
+    "word": "챔피언",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "챔피언에 등극하 다"
+  },
+  {
+    "word": "첨부",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "첨부 서류"
+  },
+  {
+    "word": "첫사랑",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "첫사랑과 재회하 다"
+  },
+  {
+    "word": "친아들",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "친아들처럼 대하 다"
+  },
+  {
+    "word": "포근하다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "잠자리가 포근하 다"
+  },
+  {
+    "word": "표준어",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "표준어를 사용하 다"
+  },
+  {
+    "word": "학용품",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "학용품을 준비하 다"
+  },
+  {
+    "word": "한밤중",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "한밤중에 일어나 다"
+  },
+  {
+    "word": "한순간",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "한순간에 사라지 다"
+  },
+  {
+    "word": "합격자",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "합격자를 발표하 다"
+  },
+  {
+    "word": "해결책",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "해결책을 마련하 다"
+  },
+  {
+    "word": "현대적",
+    "pos": "determiner / noun",
+    "level": 4,
+    "example_kr": "현대적으로 바꾸 다"
+  },
+  {
+    "word": "확신",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "확신이 서다"
+  },
+  {
+    "word": "흔들리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "비행기가 흔들리 다"
+  },
+  {
+    "word": "흘러나오다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "폐수가 흘러나오 다"
+  },
+  {
+    "word": "흘러내리다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "빗물이 흘러내리 다"
+  },
+  {
+    "word": "흥미롭다",
+    "pos": "adjective",
+    "level": 4,
+    "example_kr": "이야기가 흥미롭 다"
+  },
+  {
+    "word": "흥분",
+    "pos": "noun",
+    "level": 4,
+    "example_kr": "흥분을 가라앉히 다"
+  },
+  {
+    "word": "흩어지다",
+    "pos": "verb",
+    "level": 4,
+    "example_kr": "사방으로 흩어지 다"
+  },
+  {
+    "word": "가야금",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "가야금을 연주하 다"
+  },
+  {
+    "word": "가요계",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "가요계에 종사하 다"
+  },
+  {
+    "word": "가창력",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "가창력이 뛰어나 다"
+  },
+  {
+    "word": "가해자",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "가해자를 처벌하 다"
+  },
+  {
+    "word": "간결하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "디자인이 간결하 다"
+  },
+  {
+    "word": "갈대",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "갈대처럼 흔들리 다"
+  },
+  {
+    "word": "건설업",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "건설업에 종사하 다"
+  },
+  {
+    "word": "걸음걸이",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "걸음걸이가 느리 다"
+  },
+  {
+    "word": "겉보기",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "겉보기와 다르다"
+  },
+  {
+    "word": "결재",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "결재 서류"
+  },
+  {
+    "word": "경영학",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "경영학을 전공하 다"
+  },
+  {
+    "word": "경제학",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "경제학을 전공하 다"
+  },
+  {
+    "word": "경조사",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "경조사에 참여하 다"
+  },
+  {
+    "word": "고가품",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "고가품을 수집하 다"
+  },
+  {
+    "word": "고단하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "몸이 고단하다"
+  },
+  {
+    "word": "고르다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "치아가 고르다"
+  },
+  {
+    "word": "고리",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "방문 고리"
+  },
+  {
+    "word": "고발",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "비리 고발"
+  },
+  {
+    "word": "고상하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "말투가 고상하다"
+  },
+  {
+    "word": "고생스럽다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "생활이 고생스럽"
+  },
+  {
+    "word": "고아원",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "고아원에서 자라 다"
+  },
+  {
+    "word": "고온",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "고온 다습"
+  },
+  {
+    "word": "고이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "물이 고이다"
+  },
+  {
+    "word": "고지서",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "세금 고지서"
+  },
+  {
+    "word": "공감대",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "공감대를 형성하 다"
+  },
+  {
+    "word": "공사장",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "공사장에서 일하 다"
+  },
+  {
+    "word": "교무실",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "교무실에 들어가 다"
+  },
+  {
+    "word": "구경꾼",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "구경꾼이 모여들 다"
+  },
+  {
+    "word": "구비",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "구비 서류"
+  },
+  {
+    "word": "군데군데",
+    "pos": "noun / adverb",
+    "level": 5,
+    "example_kr": "군데군데 둘러보 다"
+  },
+  {
+    "word": "궁금증",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "궁금증을 해결하 다"
+  },
+  {
+    "word": "그때그때",
+    "pos": "noun / adverb",
+    "level": 5,
+    "example_kr": "그때그때 메모하 다"
+  },
+  {
+    "word": "근사하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "옷차림이 근사하 다"
+  },
+  {
+    "word": "기대감",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "기대감을 드러내 다"
+  },
+  {
+    "word": "기성세대",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "기성세대를 따르 다"
+  },
+  {
+    "word": "꺾이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "나뭇가지가 꺾이 다"
+  },
+  {
+    "word": "꼬르륵",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "꼬르륵 소리가 나 다"
+  },
+  {
+    "word": "꼬박꼬박",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "돈을 꼬박꼬박 내 다"
+  },
+  {
+    "word": "끊이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "손님이 끈이지 않 다"
+  },
+  {
+    "word": "끌어들이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "안으로 끌어들이 다"
+  },
+  {
+    "word": "끌어올리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "수준을 끌어올리 다"
+  },
+  {
+    "word": "나들이",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "나들이를 다녀오 다"
+  },
+  {
+    "word": "나침반",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "나침반이 가리키 다"
+  },
+  {
+    "word": "난치병",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "난치병을 고치다"
+  },
+  {
+    "word": "내리치다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "뒤통수를 내리치 다"
+  },
+  {
+    "word": "내보이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "신분증을 내보이 다"
+  },
+  {
+    "word": "내용물",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "내용물을 확인하 다"
+  },
+  {
+    "word": "노동력",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "노동력이 부족하 다"
+  },
+  {
+    "word": "농작물",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "농작물을 수확하 다"
+  },
+  {
+    "word": "놓아주다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "물고기를 놓아주 다"
+  },
+  {
+    "word": "다급하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "상황이 다급하다"
+  },
+  {
+    "word": "다다르다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "정상에 다다르다"
+  },
+  {
+    "word": "다름없이",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "평소와 다름없이"
+  },
+  {
+    "word": "다발",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "장미 꽃 한 다발"
+  },
+  {
+    "word": "다스리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "나라를 다스리다"
+  },
+  {
+    "word": "다시다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "입맛을 다시다"
+  },
+  {
+    "word": "다양화",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "다양화를 추구하 다"
+  },
+  {
+    "word": "단말기",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "단말기를 구입하 다"
+  },
+  {
+    "word": "단백질",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "단백질이 부족하 다"
+  },
+  {
+    "word": "돌이키다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "발걸음을 돌이키 다"
+  },
+  {
+    "word": "두근거리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "가슴이 두근거리 다"
+  },
+  {
+    "word": "뒤집어쓰다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "모자를 뒤집어쓰 다"
+  },
+  {
+    "word": "따라잡다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "앞 사람을 따라잡 다"
+  },
+  {
+    "word": "떠내려가다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "물 위에 떠내려가 다"
+  },
+  {
+    "word": "떠들썩하다",
+    "pos": "verb / adjective",
+    "level": 5,
+    "example_kr": "동네가 떠들썩하 다"
+  },
+  {
+    "word": "뛰쳐나가다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "밖으로 뛰쳐나가 다"
+  },
+  {
+    "word": "뛰쳐나오다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "복도로 뛰쳐나오 다"
+  },
+  {
+    "word": "리더십",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "리더십을 발휘하 다"
+  },
+  {
+    "word": "리포터",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "리포터로 활동하 다"
+  },
+  {
+    "word": "머리기사",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "머리기사로 다루 다"
+  },
+  {
+    "word": "무너뜨리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "성벽을 무너뜨리 다"
+  },
+  {
+    "word": "문화생활",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "문화생활을 즐기 다"
+  },
+  {
+    "word": "미생물",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "미생물이 번식하 다"
+  },
+  {
+    "word": "바라다보다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "서로를 바라다보 다"
+  },
+  {
+    "word": "발명품",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "발명품을 연구하 다"
+  },
+  {
+    "word": "방망이",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "방망이를 휘두르 다"
+  },
+  {
+    "word": "백성",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "백성을 다스리다"
+  },
+  {
+    "word": "범죄자",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "범죄자를 처벌하 다"
+  },
+  {
+    "word": "본국",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "본국으로 돌아가 다"
+  },
+  {
+    "word": "본사",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "본사로 발령이 나 다"
+  },
+  {
+    "word": "불경기",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "불경기를 극복하 다"
+  },
+  {
+    "word": "불량품",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "불량품을 교환하 다"
+  },
+  {
+    "word": "불러들이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "집으로 불러들이 다"
+  },
+  {
+    "word": "불성실",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "태도가 불성실하 다"
+  },
+  {
+    "word": "비뚤어지다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "글씨가 비뚤어지 다"
+  },
+  {
+    "word": "비상약",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "비상약을 준비하 다"
+  },
+  {
+    "word": "빈둥거리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "집에서 빈둥거리 다"
+  },
+  {
+    "word": "빼내다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "벽에서 못을 빼내 다"
+  },
+  {
+    "word": "사자성어",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "사자성어를 외우 다"
+  },
+  {
+    "word": "산더미",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "산더미처럼 쌓이 다"
+  },
+  {
+    "word": "살금살금",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "살금살금 다가가 다"
+  },
+  {
+    "word": "상당수",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "상당수가 참석하 다"
+  },
+  {
+    "word": "상의",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "가족들과 상의하 다"
+  },
+  {
+    "word": "생태계",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "생태계를 보호하 다"
+  },
+  {
+    "word": "서리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "김이 서리다"
+  },
+  {
+    "word": "서먹하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "관계가 서먹하다"
+  },
+  {
+    "word": "서면",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "서면으로 제출하 다"
+  },
+  {
+    "word": "서성이다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "주변을 서성이다"
+  },
+  {
+    "word": "서술어",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "주어와 서술어"
+  },
+  {
+    "word": "성실성",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "성실성이 부족하 다"
+  },
+  {
+    "word": "성인병",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "성인병을 치료하 다"
+  },
+  {
+    "word": "세계관",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "세계관이 뚜렷하 다"
+  },
+  {
+    "word": "세면도구",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "세면도구를 챙기 다"
+  },
+  {
+    "word": "소식",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "소식으로 장수하 다"
+  },
+  {
+    "word": "손꼽히다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "세계에서 손꼽히 다"
+  },
+  {
+    "word": "솟아오르다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "연기가 솟아오르 다"
+  },
+  {
+    "word": "수동",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "수동으로 움직이 다"
+  },
+  {
+    "word": "수수하다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "옷차림이 수수하 다"
+  },
+  {
+    "word": "수익금",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "수익금을 창출하 다"
+  },
+  {
+    "word": "수직",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "수직으로 추락하 다"
+  },
+  {
+    "word": "수학여행",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "수학여행을 떠나 다"
+  },
+  {
+    "word": "수험생",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "수험생이 합격하 다"
+  },
+  {
+    "word": "승강기",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "승강기가 고장 나 다"
+  },
+  {
+    "word": "승합차",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "승합차를 운전하 다"
+  },
+  {
+    "word": "시사회",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "시사회를 개최하 다"
+  },
+  {
+    "word": "실망스럽다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "결과가 실망스럽 다"
+  },
+  {
+    "word": "실업계",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "실업계 고등학교"
+  },
+  {
+    "word": "실업률",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "실업률이 감소하 다"
+  },
+  {
+    "word": "실태",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "실태를 고발하다"
+  },
+  {
+    "word": "쏜살같이",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "쏜살같이 달려가 다"
+  },
+  {
+    "word": "악순환",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "악순환이 계속되 다"
+  },
+  {
+    "word": "알아차리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "사실을 알아차리 다"
+  },
+  {
+    "word": "애니메이션",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "애니메이션을 보 다"
+  },
+  {
+    "word": "양로원",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "양로원을 방문하 다"
+  },
+  {
+    "word": "어미",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "어미가 불규칙하 다"
+  },
+  {
+    "word": "엄지손가락",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "엄지손가락을 들 다"
+  },
+  {
+    "word": "연날리기",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "연날리기를 즐기 다"
+  },
+  {
+    "word": "영양가",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "영양가가 풍부하 다"
+  },
+  {
+    "word": "영양소",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "영양소를 보존하 다"
+  },
+  {
+    "word": "영화제",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "영화제가 개막되 다"
+  },
+  {
+    "word": "예술품",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "예술품을 감상하 다"
+  },
+  {
+    "word": "예정일",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "예정일이 임박하 다"
+  },
+  {
+    "word": "오름세",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "오름세가 지속되 다"
+  },
+  {
+    "word": "외동아들",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "외동아들을 기르 다"
+  },
+  {
+    "word": "우두커니",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "우두커니 서다"
+  },
+  {
+    "word": "우선시",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "능력을 우선시하 다"
+  },
+  {
+    "word": "우수성",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "우수성이 돋보이 다"
+  },
+  {
+    "word": "운수업",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "운수업이 발달하 다"
+  },
+  {
+    "word": "원본",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "원본 서류"
+  },
+  {
+    "word": "유전자",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "유전자를 조작하 다"
+  },
+  {
+    "word": "응급조치",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "응급조치를 취하 다"
+  },
+  {
+    "word": "의약품",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "의약품을 판매하 다"
+  },
+  {
+    "word": "이루",
+    "pos": "adverb",
+    "level": 5,
+    "example_kr": "이루 말할 수 없 다"
+  },
+  {
+    "word": "이면지",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "이면지로 활용하 다"
+  },
+  {
+    "word": "이중",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "이중으로 등록하 다"
+  },
+  {
+    "word": "이직",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "이직을 고려하다"
+  },
+  {
+    "word": "이혼율",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "이혼율이 증가하 다"
+  },
+  {
+    "word": "인문계",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "인문계 고등학교"
+  },
+  {
+    "word": "일그러지다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "표정이 일그러지 다"
+  },
+  {
+    "word": "자국",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "자국으로 돌아가 다"
+  },
+  {
+    "word": "자영업",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "자영업에 종사하 다"
+  },
+  {
+    "word": "자원",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "자원으로 입대하 다"
+  },
+  {
+    "word": "자율성",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "자율성이 보장되 다"
+  },
+  {
+    "word": "장바구니",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "장바구니가 무겁 다"
+  },
+  {
+    "word": "저기압",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "저기압과 고기압"
+  },
+  {
+    "word": "저학력",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "저학력과 고학력"
+  },
+  {
+    "word": "저혈압",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "저혈압과 고혈압"
+  },
+  {
+    "word": "전시관",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "전시관을 구경하 다"
+  },
+  {
+    "word": "주방장",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "주방장이 요리하 다"
+  },
+  {
+    "word": "지원서",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "지원서를 제출하 다"
+  },
+  {
+    "word": "진정",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "진정으로 사랑하 다"
+  },
+  {
+    "word": "집중력",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "집중력이 떨어지 다"
+  },
+  {
+    "word": "차장",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "차장으로 승진하 다"
+  },
+  {
+    "word": "참가자",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "참가자를 모집하 다"
+  },
+  {
+    "word": "채식",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "채식 다이어트"
+  },
+  {
+    "word": "축산업",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "축산업에 종사하 다"
+  },
+  {
+    "word": "출판사",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "출판사와 계약하 다"
+  },
+  {
+    "word": "탄산음료",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "탄산음료를 마시 다"
+  },
+  {
+    "word": "투덜거리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "불평을 투덜거리 다"
+  },
+  {
+    "word": "팀장",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "팀장으로 승진하 다"
+  },
+  {
+    "word": "평생직장",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "평생직장을 구하 다"
+  },
+  {
+    "word": "풀려나다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "감옥에서 풀려나 다"
+  },
+  {
+    "word": "피어오르다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "불길이 피어오르 다"
+  },
+  {
+    "word": "하루하루",
+    "pos": "noun / adverb",
+    "level": 5,
+    "example_kr": "하루하루를 보내 다"
+  },
+  {
+    "word": "햇곡식",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "햇곡식을 수확하 다"
+  },
+  {
+    "word": "헛소문",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "헛소문을 퍼뜨리 다"
+  },
+  {
+    "word": "호프",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "호프에서 한잔하 다"
+  },
+  {
+    "word": "혼란스럽다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "사회가 혼란스럽 다"
+  },
+  {
+    "word": "활기차다",
+    "pos": "adjective",
+    "level": 5,
+    "example_kr": "분위기가 활기차 다"
+  },
+  {
+    "word": "후손",
+    "pos": "noun",
+    "level": 5,
+    "example_kr": "후손에게 물려주 다"
+  },
+  {
+    "word": "흐트러지다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "자세가 흐트러지 다"
+  },
+  {
+    "word": "흥얼거리다",
+    "pos": "verb",
+    "level": 5,
+    "example_kr": "노래를 흥얼거리 다"
+  },
+  {
+    "word": "가로지르다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "도로를 가로지르 다"
+  },
+  {
+    "word": "각기",
+    "pos": "noun / adverb",
+    "level": 6,
+    "example_kr": "각기 다르다"
+  },
+  {
+    "word": "간담회",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "간담회에 참여하 다"
+  },
+  {
+    "word": "가까스로",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "가까스로 살아남 다"
+  },
+  {
+    "word": "가려내다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "불량품을 가려내 다"
+  },
+  {
+    "word": "간주",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "범죄자로 간주하 다"
+  },
+  {
+    "word": "감수성",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "감수성이 풍부하 다"
+  },
+  {
+    "word": "감쪽같이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "감쪽같이 사라지 다"
+  },
+  {
+    "word": "값어치",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "값어치가 떨어지 다"
+  },
+  {
+    "word": "건성",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "건성으로 대답하 다"
+  },
+  {
+    "word": "걸림돌",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "걸림돌을 제거하 다"
+  },
+  {
+    "word": "결단력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "결단력이 부족하 다"
+  },
+  {
+    "word": "결의",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "결의를 다지다"
+  },
+  {
+    "word": "경각심",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "경각심을 일깨우 다"
+  },
+  {
+    "word": "경악",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "경악을 금치 못하 다"
+  },
+  {
+    "word": "경제성",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "경제성이 떨어지 다"
+  },
+  {
+    "word": "고갈",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "에너지 고갈"
+  },
+  {
+    "word": "고귀하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "신분이 고귀하다"
+  },
+  {
+    "word": "고다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "사골을 고다"
+  },
+  {
+    "word": "고달프다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "생활이 고달프다"
+  },
+  {
+    "word": "고되다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "일이 고되다"
+  },
+  {
+    "word": "고사하다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "1등은 고사하고"
+  },
+  {
+    "word": "고수",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "입장 고수"
+  },
+  {
+    "word": "고안",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "방법 고안"
+  },
+  {
+    "word": "고약하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "냄새가 고약하다"
+  },
+  {
+    "word": "고용",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "직원 고용"
+  },
+  {
+    "word": "고조",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "분위기 고조"
+  },
+  {
+    "word": "고찰",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "철학적 고찰"
+  },
+  {
+    "word": "곤두세우다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "신경을 곤두세우 다"
+  },
+  {
+    "word": "골칫거리",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "골칫거리가 생기 다"
+  },
+  {
+    "word": "공권력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "공권력을 강화하 다"
+  },
+  {
+    "word": "공산품",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "공산품을 제조하 다"
+  },
+  {
+    "word": "관련자",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "관련자를 조사하 다"
+  },
+  {
+    "word": "광범위하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "지역이 광범위하 다"
+  },
+  {
+    "word": "교섭",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "교섭이 이루어지 다"
+  },
+  {
+    "word": "구걸",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "구걸을 다니다"
+  },
+  {
+    "word": "구불구불하다",
+    "pos": "verb / adjective",
+    "level": 6,
+    "example_kr": "길이 구불구불하 다"
+  },
+  {
+    "word": "구태여",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "구태여 말리지 않 다"
+  },
+  {
+    "word": "국장",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "국장으로 승진하 다"
+  },
+  {
+    "word": "굴레",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "굴레에서 벗어나 다"
+  },
+  {
+    "word": "권익",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "권익을 향상시키 다"
+  },
+  {
+    "word": "그나저나",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "그나저나 다행이 다"
+  },
+  {
+    "word": "그지없다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "기쁘기가 그지없 다"
+  },
+  {
+    "word": "금융업",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "금융업에 종사하 다"
+  },
+  {
+    "word": "급류",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "급류에 떠내려가 다"
+  },
+  {
+    "word": "기어오르다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "나무에 기어오르 다"
+  },
+  {
+    "word": "기업체",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "기업체를 운영하 다"
+  },
+  {
+    "word": "기웃거리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "방 안을 기웃거리 다"
+  },
+  {
+    "word": "기이하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "생김새가 기이하 다"
+  },
+  {
+    "word": "기인하다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "부주의에 기인하 다"
+  },
+  {
+    "word": "길들이다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "강아지를 길들이 다"
+  },
+  {
+    "word": "까마득하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "앞길이 까마득하 다"
+  },
+  {
+    "word": "까무러치다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "놀라서 까무러치 다"
+  },
+  {
+    "word": "끌려가다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "경찰서에 끌려가 다"
+  },
+  {
+    "word": "난데없이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "난데없이 나타나 다"
+  },
+  {
+    "word": "노하다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "할아버지가 노하 다"
+  },
+  {
+    "word": "녹아내리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "얼음이 녹아내리 다"
+  },
+  {
+    "word": "눈여겨보다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "행동을 눈여겨보 다"
+  },
+  {
+    "word": "느닷없이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "느닷없이 나타나 다"
+  },
+  {
+    "word": "늘어뜨리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "머리를 늘어뜨리 다"
+  },
+  {
+    "word": "능통하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "외국어에 능통하 다"
+  },
+  {
+    "word": "능하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "임기응변에 능하 다"
+  },
+  {
+    "word": "다그치다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "잘못을 다그치다"
+  },
+  {
+    "word": "다량",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "다량으로 구입하 다"
+  },
+  {
+    "word": "다분히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "다분히 고의적이 다"
+  },
+  {
+    "word": "다지다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "땅을 다지다"
+  },
+  {
+    "word": "다채롭다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "행사가 다채롭다"
+  },
+  {
+    "word": "단결",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "단결을 다지다"
+  },
+  {
+    "word": "단단히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "단단히 다지다"
+  },
+  {
+    "word": "달구다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "프라이팬을 달구 다"
+  },
+  {
+    "word": "달라붙다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "스티커가 달라붙 다"
+  },
+  {
+    "word": "달아오르다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "냄비가 달아오르 다"
+  },
+  {
+    "word": "당혹",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "당혹을 금치 못하 다"
+  },
+  {
+    "word": "대학가",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "대학가가 번화하 다"
+  },
+  {
+    "word": "덤비다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "상대방에게 덤비 다"
+  },
+  {
+    "word": "되뇌다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "입버릇처럼 되뇌 다"
+  },
+  {
+    "word": "둥그렇다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "보름달이 둥그렇 다"
+  },
+  {
+    "word": "뒤적이다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "주머니를 뒤적이 다"
+  },
+  {
+    "word": "뒷전",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "뒷전에 서다"
+  },
+  {
+    "word": "등골",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "등골이 서늘하다"
+  },
+  {
+    "word": "따라나서다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "친구를 따라나서 다"
+  },
+  {
+    "word": "딱히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "딱히 갈 곳이 없 다"
+  },
+  {
+    "word": "떠돌아다니다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "정처 없이 떠돌아 다니다"
+  },
+  {
+    "word": "막바지",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "막바지로 접어들 다"
+  },
+  {
+    "word": "말미암다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "부주의로 말미암 다"
+  },
+  {
+    "word": "매진",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "학업에 매진을 하 다"
+  },
+  {
+    "word": "멋스럽다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "옷차림이 멋스럽 다"
+  },
+  {
+    "word": "명승지",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "명승지를 방문하 다"
+  },
+  {
+    "word": "몰아치다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "눈보라가 몰아치 다"
+  },
+  {
+    "word": "물끄러미",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "물끄러미 바라보 다"
+  },
+  {
+    "word": "물러가다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "제자리로 물러가 다"
+  },
+  {
+    "word": "물리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "물건을 도로 물리 다"
+  },
+  {
+    "word": "발돋움",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "세계로 발돋움하 다"
+  },
+  {
+    "word": "범주",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "같은 범주에 속하 다"
+  },
+  {
+    "word": "보육원",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "보육원에서 자라 다"
+  },
+  {
+    "word": "부고",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "신문에 부고를 내 다"
+  },
+  {
+    "word": "부추기다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "경쟁심을 부추기 다"
+  },
+  {
+    "word": "북적거리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "거리가 북적거리 다"
+  },
+  {
+    "word": "불모지",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "불모지를 개척하 다"
+  },
+  {
+    "word": "빗줄기",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "빗줄기가 떨어지 다"
+  },
+  {
+    "word": "빤히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "빤히 들여다보이 다"
+  },
+  {
+    "word": "사로잡히다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "적에게 사로잡히 다"
+  },
+  {
+    "word": "사뭇",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "사뭇 다르다"
+  },
+  {
+    "word": "사사건건",
+    "pos": "noun / adverb",
+    "level": 6,
+    "example_kr": "사사건건 간섭하 다"
+  },
+  {
+    "word": "사시사철",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "사시사철 아름답 다"
+  },
+  {
+    "word": "생필품",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "생필품을 구입하 다"
+  },
+  {
+    "word": "생활권",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "생활권이 넓어지 다"
+  },
+  {
+    "word": "서성거리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "주변을 서성거리 다"
+  },
+  {
+    "word": "섬유질",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "섬유질이 풍부하 다"
+  },
+  {
+    "word": "소란스럽다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "교실이 소란스럽 다"
+  },
+  {
+    "word": "소량",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "소량으로 복용하 다"
+  },
+  {
+    "word": "소화기",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "소화기를 구비하 다"
+  },
+  {
+    "word": "속속들이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "속속들이 조사하 다"
+  },
+  {
+    "word": "손가락질",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "손가락질을 당하 다"
+  },
+  {
+    "word": "수다스럽다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "친구가 수다스럽 다"
+  },
+  {
+    "word": "수두룩하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "문제가 수두룩하 다"
+  },
+  {
+    "word": "수사관",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "수사관이 조사하 다"
+  },
+  {
+    "word": "수산업",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "수산업에 종사하 다"
+  },
+  {
+    "word": "수평선",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "수평선을 바라보 다"
+  },
+  {
+    "word": "순발력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "순발력이 뛰어나 다"
+  },
+  {
+    "word": "슬그머니",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "슬그머니 달아나 다"
+  },
+  {
+    "word": "시무룩하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "표정이 시무룩하 다"
+  },
+  {
+    "word": "아랑곳없이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "아랑곳없이 떠들 다"
+  },
+  {
+    "word": "안락사",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "안락사를 요구하 다"
+  },
+  {
+    "word": "안절부절",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "안절부절 서성거 리다"
+  },
+  {
+    "word": "암기력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "암기력이 뛰어나 다"
+  },
+  {
+    "word": "앞장",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "앞장을 서다"
+  },
+  {
+    "word": "야단맞다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "선생님께 야단맞 다"
+  },
+  {
+    "word": "양질",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "양질의 서비스"
+  },
+  {
+    "word": "어둑어둑",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "어둑어둑 해가 지 다"
+  },
+  {
+    "word": "어렴풋이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "어렴풋이 생각나 다"
+  },
+  {
+    "word": "어지럽히다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "눈앞을 어지럽히 다"
+  },
+  {
+    "word": "얼버무리다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "대답을 얼버무리 다"
+  },
+  {
+    "word": "엉금엉금",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "엉금엉금 기어가 다"
+  },
+  {
+    "word": "엉성하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "차림새가 엉성하 다"
+  },
+  {
+    "word": "에워싸다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "경호원이 에워싸 다"
+  },
+  {
+    "word": "역경",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "역경과 고난"
+  },
+  {
+    "word": "연장자",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "연장자를 우대하 다"
+  },
+  {
+    "word": "영세민",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "영세민을 착취하 다"
+  },
+  {
+    "word": "예의범절",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "예의범절을 지키 다"
+  },
+  {
+    "word": "오르막길",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "오르막길을 오르 다"
+  },
+  {
+    "word": "요양원",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "요양원을 방문하 다"
+  },
+  {
+    "word": "우선순위",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "우선순위를 정하 다"
+  },
+  {
+    "word": "울퉁불퉁하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "길이 울퉁불퉁하 다"
+  },
+  {
+    "word": "원심력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "원심력을 이용하 다"
+  },
+  {
+    "word": "위계질서",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "위계질서를 따르 다"
+  },
+  {
+    "word": "위화감",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "위화감을 조성하 다"
+  },
+  {
+    "word": "유대감",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "유대감을 형성하 다"
+  },
+  {
+    "word": "유흥비",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "유흥비로 사용하 다"
+  },
+  {
+    "word": "이바지",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "사회에 이바지하 다"
+  },
+  {
+    "word": "이제껏",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "이제껏 돌아다니 다"
+  },
+  {
+    "word": "이주민",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "이주민이 늘어나 다"
+  },
+  {
+    "word": "인문학",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "인문학을 공부하 다"
+  },
+  {
+    "word": "인지도",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "인지도가 떨어지 다"
+  },
+  {
+    "word": "일관성",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "일관성을 유지하 다"
+  },
+  {
+    "word": "자아실현",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "자아실현을 꿈꾸 다"
+  },
+  {
+    "word": "작정",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "떠나기로 작정하 다"
+  },
+  {
+    "word": "쟁점",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "쟁점을 다루다"
+  },
+  {
+    "word": "저소득",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "저소득과 고소득"
+  },
+  {
+    "word": "적응력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "적응력이 뛰어나 다"
+  },
+  {
+    "word": "전념",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "전념을 다하다"
+  },
+  {
+    "word": "전력",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "전력을 다하다"
+  },
+  {
+    "word": "정점",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "정점에 다다르다"
+  },
+  {
+    "word": "젖히다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "고개를 뒤로 젖히 다"
+  },
+  {
+    "word": "제각기",
+    "pos": "noun / adverb",
+    "level": 6,
+    "example_kr": "제각기 다르다"
+  },
+  {
+    "word": "조마조마",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "조마조마 걱정하 다"
+  },
+  {
+    "word": "조문객",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "조문객을 맞이하 다"
+  },
+  {
+    "word": "조선업",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "조선업에 종사하 다"
+  },
+  {
+    "word": "조심조심",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "조심조심 걸어가 다"
+  },
+  {
+    "word": "조형미",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "조형미가 돋보이 다"
+  },
+  {
+    "word": "주생활",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "주생활을 개선하 다"
+  },
+  {
+    "word": "중공업",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "중공업이 발전하 다"
+  },
+  {
+    "word": "직관",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "직관으로 판단하 다"
+  },
+  {
+    "word": "진풍경",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "진풍경이 펼쳐지 다"
+  },
+  {
+    "word": "집사람",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "집사람과 의논하 다"
+  },
+  {
+    "word": "째려보다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "카메라를 째려보 다"
+  },
+  {
+    "word": "창백하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "얼굴색이 창백하 다"
+  },
+  {
+    "word": "창의성",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "창의성을 발휘하 다"
+  },
+  {
+    "word": "치우치다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "한쪽으로 치우치 다"
+  },
+  {
+    "word": "탄탄히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "탄탄히 다지다"
+  },
+  {
+    "word": "투철하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "애국심이 투철하 다"
+  },
+  {
+    "word": "피고인",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "피고인을 변호하 다"
+  },
+  {
+    "word": "하루빨리",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "하루빨리 고치다"
+  },
+  {
+    "word": "하염없이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "하염없이 기다리 다"
+  },
+  {
+    "word": "한결같이",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "한결같이 사랑하 다"
+  },
+  {
+    "word": "한낱",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "한낱 꿈에 불과하 다"
+  },
+  {
+    "word": "항생제",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "항생제를 처방하 다"
+  },
+  {
+    "word": "헤어나다",
+    "pos": "verb",
+    "level": 6,
+    "example_kr": "가난에서 헤어나 다"
+  },
+  {
+    "word": "현기증",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "현기증을 일으키 다"
+  },
+  {
+    "word": "혈연",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "혈연을 중요시하 다"
+  },
+  {
+    "word": "형사",
+    "pos": "noun",
+    "level": 6,
+    "example_kr": "형사에게 붙잡히 다"
+  },
+  {
+    "word": "홀가분하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "마음이 홀가분하 다"
+  },
+  {
+    "word": "확연히",
+    "pos": "adverb",
+    "level": 6,
+    "example_kr": "확연히 다르다"
+  },
+  {
+    "word": "획기적",
+    "pos": "determiner / noun",
+    "level": 6,
+    "example_kr": "획기적으로 바꾸 다"
+  },
+  {
+    "word": "희박하다",
+    "pos": "adjective",
+    "level": 6,
+    "example_kr": "가능성이 희박하 다"
+  }
+]

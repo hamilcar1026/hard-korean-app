@@ -29,7 +29,7 @@
     "form": "까지",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "from … to …",
+    "meaning": "until; up to; to (endpoint particle)",
     "examples": [
       "서울에서 부산까지 기차로 가요. (I go from Seoul to Busan by train.)",
       "아홉 시까지 기다렸어요. (I waited until 9 o'clock.)"
@@ -677,7 +677,7 @@
     "form": "-는데1",
     "related": "-은데1, -ㄴ데1",
     "conjugation_rule": "",
-    "meaning": "contrast / opposition",
+    "meaning": "contrast / opposition; background",
     "examples": [
       "학교에 가는데 비가 와요. (I'm going to school but it's raining.)",
       "배가 고픈데 음식이 없어요. (I'm hungry but there's no food.)"
@@ -833,7 +833,7 @@
     "form": "-지",
     "related": "-지요(-죠)",
     "conjugation_rule": "",
-    "meaning": "command",
+    "meaning": "statement; question; command; request",
     "examples": [
       "빨리 와, 기다리고 있잖아. (Come quickly, we're waiting.)",
       "그냥 말하지 그래요. (Just go ahead and say it.)"
@@ -1641,7 +1641,7 @@
     "meaning": "if it weren't for; as long as it's not",
     "examples": [
       "너만 아니면 다 괜찮아. (Everything is fine as long as it's not you.)",
-      "비만 아니면 가겠어요. (I would go if it weren't for the rain.)"
+      "이 문제만 아니면 괜찮아요. (It would be fine if it weren't for this problem.)"
     ]
   },
   {
@@ -1688,7 +1688,7 @@
     "conjugation_rule": "아가지고 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여가지고 after 하다 stems (contracted to 해가지고); 어가지고 after all other stems",
     "meaning": "by doing; having done (colloquial sequential reason)",
     "examples": [
-      "늦어서 택시를 타 가지고 왔어요. (I was late so I took a taxi and came.)",
+      "음식을 사 가지고 집에 왔어요. (I bought food and brought it home.)",
       "물을 사 가지고 왔어요. (I bought water and brought it.)"
     ]
   },
@@ -1809,7 +1809,7 @@
     "meaning": "seems like; appears to (inference from observation)",
     "examples": [
       "아직 안 온 걸 보니 바쁜 모양이에요. (Since he hasn't come yet, he seems busy.)",
-      "큰 소리가 나는 모양이에요. (It seems like there's a loud sound.)"
+      "그 사람이 화가 난 모양이에요. (That person seems to be angry.)"
     ]
   },
   {
@@ -2060,7 +2060,7 @@
     "conjugation_rule": "",
     "meaning": "even after doing; despite having done (contrast after action)",
     "examples": [
-      "거짓말을 하고도 뻔뻔하게 있어요. (He told a lie and still acts shamelessly.)",
+      "거짓말을 하고도 사과를 안 해요. (Even after lying, they don't apologize.)",
       "밥을 먹고도 배가 고파요. (Even after eating, I'm still hungry.)"
     ]
   },
@@ -2156,7 +2156,7 @@
     "conjugation_rule": "을래야 after consonant-ending stems; ㄹ래야 after vowel-ending stems",
     "meaning": "no matter how much one tries (impossibility despite effort)",
     "examples": [
-      "울래야 눈물도 안 나요. (I can't even cry no matter how much I try.)",
+      "먹을래야 입맛이 없어요. (I can't eat no matter how much I try.)",
       "잘래야 잠이 안 와요. (I cannot sleep no matter how much I try.)"
     ]
   },
@@ -2361,7 +2361,7 @@
     "meaning": "follow-up question",
     "examples": [
       "무슨 일 있어요? 그리고요? (Is something going on? And what else?)",
-      "저도 갔어요. 친구도 갔고요. (I went too. And my friend went too.)"
+      "언제 왔어요? 혼자 왔고요? (When did you come? And alone?)"
     ]
   },
   {
@@ -2384,7 +2384,7 @@
     "conjugation_rule": "",
     "meaning": "merely; nothing but; all one does is (limitation / sole action)",
     "examples": [
-      "말을 들을 따름이에요. (All I do is follow orders.)",
+      "시키는 대로 할 따름이에요. (All I do is what I'm told.)",
       "기다릴 따름이에요. (All I can do is wait.)"
     ]
   },
@@ -2397,7 +2397,7 @@
     "meaning": "insist on doing (persistent/stubborn action)",
     "examples": [
       "아이가 자꾸 밖에 나가고 들어요. (The child keeps insisting on going outside.)",
-      "그 사람이 도와주겠다고 고집스럽게 들어요. (That person insists on saying they'll help.)"
+      "그 사람이 혼자 하겠다고 들어요. (That person keeps insisting on doing it alone.)"
     ]
   },
   {
@@ -2934,7 +2934,7 @@
     "form": "-는다니1",
     "related": "-다니2, -라니5, -으라니2, -자니2",
     "conjugation_rule": "",
-    "meaning": "command",
+    "meaning": "question about the content of a command/directive",
     "examples": [
       "지금 온다니요? (They're saying they're coming now?)",
       "혼자 한다니 믿기 어려워요. (It's hard to believe they're doing it alone.)"
@@ -2949,7 +2949,7 @@
     "meaning": "was; used to be (past-attributive — discontinued past state)",
     "examples": [
       "예전에 살았던 동네가 많이 변했어요. (The neighborhood I used to live in has changed a lot.)",
-      "살았던 동네가 많이 변했어요. (The neighborhood I used to live in has changed a lot.)"
+      "오래전에 다니던 학교에 다시 가 봤어요. (I visited the school I used to attend a long time ago.)"
     ]
   },
   {
@@ -2973,7 +2973,7 @@
     "meaning": "because; as (literary reason linked to the action itself)",
     "examples": [
       "그 사람이 일찍 오자기에 서둘렀어요. (I hurried because that person said to come early.)",
-      "맛있다고 하자기에 먹어 봤어요. (I tried it because they said it was delicious.)"
+      "같이 먹자기에 식당에 갔어요. (I went to the restaurant because they suggested eating together.)"
     ]
   },
   {
@@ -3368,8 +3368,8 @@
     "conjugation_rule": "",
     "meaning": "contrast / opposition",
     "examples": [
-      "반대하마는 어쩔 수 없어요. (I oppose it, but there's nothing I can do.)",
-      "가기 싫마는 가야 해요. (I don't want to go, but I have to.)"
+      "반대하다마는 어쩔 수 없어요. (I oppose it, but there's nothing I can do.)",
+      "가기 싫다마는 가야 해요. (I don't want to go, but I have to.)"
     ]
   },
   {
@@ -3441,7 +3441,7 @@
     "meaning": "as one keeps doing; if one continues to (progressive condition)",
     "examples": [
       "연습하노라면 언젠가 잘하게 돼요. (If you keep practicing, someday you'll get good at it.)",
-      "살다 보면 좋은 일도 생기는 법이에요. (If you keep on living, good things will also happen.)"
+      "사노라면 좋은 일도 생기는 법이에요. (As you keep on living, good things are bound to happen.)"
     ]
   },
   {
@@ -3777,7 +3777,7 @@
     "meaning": "self-directed wonder or rhetorical question (literary)",
     "examples": [
       "어디서 그가 살고 있나 궁금해요. (I wonder where he is living.)",
-      "과연 이게 옳은 길인가 생각해 봤어요. (I thought about whether this was truly the right path.)"
+      "과연 이게 옳은 길이나 생각해 봤어요. (I wondered to myself whether this was truly the right path.)"
     ]
   },
   {
@@ -3798,7 +3798,7 @@
     "form": "-던가1",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "question / wonder",
+    "meaning": "question about past experience (recalling something one experienced)",
     "examples": [
       "어제 어디 갔던가? (Where did you go yesterday?)",
       "그 영화 재미있었던가? (Was that movie interesting?)"
@@ -3810,7 +3810,7 @@
     "form": "-던가2",
     "related": "",
     "conjugation_rule": "",
-    "meaning": "question / wonder",
+    "meaning": "question based on inference or supposition (recalling something one assumed)",
     "examples": [
       "작년에 거기 가셨던가요? (Did you go there last year?)",
       "그분이 누구셨던가요? (Who was that person?)"
@@ -3848,7 +3848,7 @@
     "conjugation_rule": "",
     "meaning": "it is; please do (formal polite ending — 하오체)",
     "examples": [
-      "거기 있으시오. (Please stay there.)",
+      "거기 있으소. (Please stay there.)",
       "잠시 기다리소. (Please wait a moment.)"
     ]
   },
@@ -3990,7 +3990,7 @@
     "form": "-는다던가1",
     "related": "-다던가1, -라던가1",
     "conjugation_rule": "",
-    "meaning": "vague or uncertain quotation; something like (imprecise recalled speech)",
+    "meaning": "question confirming a command; asking about the content of an order or directive",
     "examples": [
       "온다던가 뭐라던가 했어요. (They said something like they are coming or something.)",
       "내일 간다던가 했는데 잘 모르겠어요. (They said something like going tomorrow, but I am not sure.)"

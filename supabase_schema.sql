@@ -22,8 +22,9 @@ create table if not exists grammar (
   id         serial primary key,
   level      smallint not null check (level between 1 and 6),
   category   text     not null,
-  form       text     not null,
-  related    text     not null default '',
+  form                text     not null,
+  conjugation_rule    text     not null default '',
+  related             text     not null default '',
   meaning    text     not null default '',
   examples   text[]   not null default '{}',
   created_at timestamptz default now()
@@ -37,7 +38,7 @@ create table if not exists user_progress (
   user_id      uuid    references auth.users on delete cascade,
   item_type    text    not null check (item_type in ('vocab', 'grammar')),
   item_id      integer not null,
-  status       text    not null check (status in ('new', 'learning', 'known')) default 'new',
+  status       text    not null check (status in ('learning', 'known')) default 'learning',
   reviewed_at  timestamptz default now(),
   unique (user_id, item_type, item_id)
 );
