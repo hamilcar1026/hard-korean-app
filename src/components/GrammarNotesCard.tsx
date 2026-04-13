@@ -1,9 +1,12 @@
 import type { GrammarItem } from '@/types'
 import LevelBadge from './LevelBadge'
 import TTSButton from './TTSButton'
+import FavoriteButton from './FavoriteButton'
 
 interface Props {
   item: GrammarItem
+  isFavorite?: boolean
+  onToggleFavorite?: () => void
 }
 
 function parseExample(example: string): { kr: string; en: string } {
@@ -13,7 +16,7 @@ function parseExample(example: string): { kr: string; en: string } {
   return { kr: parts[0]?.trim() ?? example, en: parts[1]?.trim() ?? '' }
 }
 
-export default function GrammarNotesCard({ item }: Props) {
+export default function GrammarNotesCard({ item, isFavorite, onToggleFavorite }: Props) {
   return (
     <article className="bg-card border border-border rounded-3xl p-6">
       <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -26,6 +29,7 @@ export default function GrammarNotesCard({ item }: Props) {
       <div className="flex items-center gap-2 mb-2">
         <h2 className="text-3xl font-black text-text">{item.form}</h2>
         <TTSButton text={item.form} />
+        <FavoriteButton active={!!isFavorite} onToggle={onToggleFavorite} size="md" />
       </div>
 
       {item.meaning ? (

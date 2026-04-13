@@ -105,7 +105,7 @@
     "romanization": "ga-eul",
     "meaning": "autumn, fall",
     "example_kr": "계절",
-    "example_en": "a season"
+    "example_en": "a season - Autumn is a season."
   },
   {
     "level": 1,
@@ -231,7 +231,7 @@
     "romanization": "gae",
     "meaning": "dog",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A dog is an animal."
   },
   {
     "level": 1,
@@ -339,7 +339,7 @@
     "romanization": "gyeo-ul",
     "meaning": "winter",
     "example_kr": "계절",
-    "example_en": "a season"
+    "example_en": "a season - Winter is a season."
   },
   {
     "level": 1,
@@ -519,7 +519,7 @@
     "romanization": "gu",
     "meaning": "nine",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Nine is a number."
   },
   {
     "level": 1,
@@ -546,7 +546,7 @@
     "romanization": "gusib",
     "meaning": "ninety",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ninety is a number."
   },
   {
     "level": 1,
@@ -555,7 +555,7 @@
     "romanization": "gu-wol",
     "meaning": "September",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - September is a month."
   },
   {
     "level": 1,
@@ -789,7 +789,7 @@
     "romanization": "geum-yo-il",
     "meaning": "Friday",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Friday is a day of the week."
   },
   {
     "level": 1,
@@ -1059,7 +1059,7 @@
     "romanization": "namsan",
     "meaning": "Namsan",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Namsan is a place name."
   },
   {
     "level": 1,
@@ -1185,7 +1185,7 @@
     "romanization": "ne",
     "meaning": "four (determiner)",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Four (determiner) is a number."
   },
   {
     "level": 1,
@@ -1203,7 +1203,7 @@
     "romanization": "nes",
     "meaning": "four (numeral)",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Four (numeral) is a number."
   },
   {
     "level": 1,
@@ -1374,7 +1374,7 @@
     "romanization": "daseos",
     "meaning": "five",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Five is a number."
   },
   {
     "level": 1,
@@ -1545,7 +1545,7 @@
     "romanization": "dog-il",
     "meaning": "Germany",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Germany is a country."
   },
   {
     "level": 1,
@@ -1635,7 +1635,7 @@
     "romanization": "du",
     "meaning": "two",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Two is a number."
   },
   {
     "level": 1,
@@ -1644,7 +1644,7 @@
     "romanization": "dul",
     "meaning": "two",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Two is a number."
   },
   {
     "level": 1,
@@ -1797,7 +1797,7 @@
     "romanization": "leosi-a",
     "meaning": "Russia",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Russia is a country."
   },
   {
     "level": 1,
@@ -1833,7 +1833,7 @@
     "romanization": "maheun",
     "meaning": "forty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Forty is a number."
   },
   {
     "level": 1,
@@ -1842,7 +1842,7 @@
     "romanization": "man",
     "meaning": "ten thousand",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ten thousand is a number."
   },
   {
     "level": 1,
@@ -1905,7 +1905,7 @@
     "romanization": "malle-isi-a",
     "meaning": "Malaysia",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Malaysia is a country."
   },
   {
     "level": 1,
@@ -2112,7 +2112,7 @@
     "romanization": "mog-yo-il",
     "meaning": "Thursday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Thursday is a day of the week."
   },
   {
     "level": 1,
@@ -2157,7 +2157,7 @@
     "romanization": "monggol",
     "meaning": "Mongolia",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Mongolia is a country."
   },
   {
     "level": 1,
@@ -2247,7 +2247,7 @@
     "romanization": "migug",
     "meaning": "United States",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - United States is a country."
   },
   {
     "level": 1,
@@ -2490,7 +2490,7 @@
     "romanization": "baeg",
     "meaning": "hundred",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Hundred is a number."
   },
   {
     "level": 1,
@@ -2499,7 +2499,7 @@
     "romanization": "baegman",
     "meaning": "million",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Million is a number."
   },
   {
     "level": 1,
@@ -2544,7 +2544,7 @@
     "romanization": "beteunam",
     "meaning": "Vietnam",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Vietnam is a country."
   },
   {
     "level": 1,
@@ -2634,7 +2634,7 @@
     "romanization": "bom",
     "meaning": "spring",
     "example_kr": "계절",
-    "example_en": "a season"
+    "example_en": "a season - Spring is a season."
   },
   {
     "level": 1,
@@ -2661,7 +2661,7 @@
     "romanization": "busan",
     "meaning": "Busan",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Busan is a place name."
   },
   {
     "level": 1,
@@ -2715,7 +2715,7 @@
     "romanization": "bulgogi",
     "meaning": "Korean beef barbecue",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Korean beef barbecue is a kind of food."
   },
   {
     "level": 1,
@@ -2742,7 +2742,7 @@
     "romanization": "bibimbab",
     "meaning": "bibimbap",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Bibimbap is a kind of food."
   },
   {
     "level": 1,
@@ -2805,7 +2805,7 @@
     "romanization": "sa",
     "meaning": "four",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Four is a number."
   },
   {
     "level": 1,
@@ -2868,7 +2868,7 @@
     "romanization": "sasib",
     "meaning": "forty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Forty is a number."
   },
   {
     "level": 1,
@@ -2886,7 +2886,7 @@
     "romanization": "sa-wol",
     "meaning": "April",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - April is a month."
   },
   {
     "level": 1,
@@ -2976,7 +2976,7 @@
     "romanization": "samgyetang",
     "meaning": "ginseng chicken soup",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Ginseng chicken soup is a kind of food."
   },
   {
     "level": 1,
@@ -2985,7 +2985,7 @@
     "romanization": "samsib",
     "meaning": "thirty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Thirty is a number."
   },
   {
     "level": 1,
@@ -2994,7 +2994,7 @@
     "romanization": "sam-wol",
     "meaning": "March",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - March is a month."
   },
   {
     "level": 1,
@@ -3048,7 +3048,7 @@
     "romanization": "seoleun",
     "meaning": "thirty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Thirty is a number."
   },
   {
     "level": 1,
@@ -3057,7 +3057,7 @@
     "romanization": "seo-ul",
     "meaning": "Seoul",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Seoul is a place name."
   },
   {
     "level": 1,
@@ -3102,7 +3102,7 @@
     "romanization": "se",
     "meaning": "three",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Three is a number."
   },
   {
     "level": 1,
@@ -3120,7 +3120,7 @@
     "romanization": "ses",
     "meaning": "three",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Three is a number."
   },
   {
     "level": 1,
@@ -3210,7 +3210,7 @@
     "romanization": "su-yo-il",
     "meaning": "Wednesday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Wednesday is a day of the week."
   },
   {
     "level": 1,
@@ -3273,7 +3273,7 @@
     "romanization": "seumul",
     "meaning": "twenty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Twenty is a number."
   },
   {
     "level": 1,
@@ -3336,7 +3336,7 @@
     "romanization": "si-wol",
     "meaning": "October",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - October is a month."
   },
   {
     "level": 1,
@@ -3462,7 +3462,7 @@
     "romanization": "sib",
     "meaning": "ten",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ten is a number."
   },
   {
     "level": 1,
@@ -3471,7 +3471,7 @@
     "romanization": "sibman",
     "meaning": "one hundred thousand",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - One hundred thousand is a number."
   },
   {
     "level": 1,
@@ -3480,7 +3480,7 @@
     "romanization": "sib-i-wol",
     "meaning": "December",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - December is a month."
   },
   {
     "level": 1,
@@ -3489,7 +3489,7 @@
     "romanization": "sib-il-wol",
     "meaning": "November",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - November is a month."
   },
   {
     "level": 1,
@@ -3723,7 +3723,7 @@
     "romanization": "ahob",
     "meaning": "nine",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Nine is a number."
   },
   {
     "level": 1,
@@ -3732,7 +3732,7 @@
     "romanization": "aheun",
     "meaning": "ninety",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ninety is a number."
   },
   {
     "level": 1,
@@ -3948,7 +3948,7 @@
     "romanization": "eog",
     "meaning": "hundred million",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Hundred million is a number."
   },
   {
     "level": 1,
@@ -4038,7 +4038,7 @@
     "romanization": "yeodeolb",
     "meaning": "eight",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Eight is a number."
   },
   {
     "level": 1,
@@ -4056,7 +4056,7 @@
     "romanization": "yeodeun",
     "meaning": "eighty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Eighty is a number."
   },
   {
     "level": 1,
@@ -4101,7 +4101,7 @@
     "romanization": "yeoseos",
     "meaning": "six",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Six is a number."
   },
   {
     "level": 1,
@@ -4173,7 +4173,7 @@
     "romanization": "yeol",
     "meaning": "ten",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ten is a number."
   },
   {
     "level": 1,
@@ -4209,7 +4209,7 @@
     "romanization": "yeong",
     "meaning": "zero",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Zero is a number."
   },
   {
     "level": 1,
@@ -4218,7 +4218,7 @@
     "romanization": "yeonggug",
     "meaning": "England",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - England is a country."
   },
   {
     "level": 1,
@@ -4290,7 +4290,7 @@
     "romanization": "o",
     "meaning": "five",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Five is a number."
   },
   {
     "level": 1,
@@ -4344,7 +4344,7 @@
     "romanization": "osib",
     "meaning": "fifty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Fifty is a number."
   },
   {
     "level": 1,
@@ -4353,7 +4353,7 @@
     "romanization": "o-wol",
     "meaning": "May",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - May is a month."
   },
   {
     "level": 1,
@@ -4605,7 +4605,7 @@
     "romanization": "wol-yo-il",
     "meaning": "Monday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Monday is a day of the week."
   },
   {
     "level": 1,
@@ -4632,7 +4632,7 @@
     "romanization": "yu-wol",
     "meaning": "June",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - June is a month."
   },
   {
     "level": 1,
@@ -4641,7 +4641,7 @@
     "romanization": "yug",
     "meaning": "six",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Six is a number."
   },
   {
     "level": 1,
@@ -4650,7 +4650,7 @@
     "romanization": "yugsib",
     "meaning": "sixty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Sixty is a number."
   },
   {
     "level": 1,
@@ -4731,7 +4731,7 @@
     "romanization": "i",
     "meaning": "two",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Two is a number."
   },
   {
     "level": 1,
@@ -4776,7 +4776,7 @@
     "romanization": "isib",
     "meaning": "twenty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Twenty is a number."
   },
   {
     "level": 1,
@@ -4794,7 +4794,7 @@
     "romanization": "i-wol",
     "meaning": "February",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - February is a month."
   },
   {
     "level": 1,
@@ -4821,7 +4821,7 @@
     "romanization": "indonesi-a",
     "meaning": "Indonesia",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Indonesia is a country."
   },
   {
     "level": 1,
@@ -4875,7 +4875,7 @@
     "romanization": "il",
     "meaning": "one, number",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - One is a number."
   },
   {
     "level": 1,
@@ -4893,7 +4893,7 @@
     "romanization": "ilgob",
     "meaning": "seven, number",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Seven is a number."
   },
   {
     "level": 1,
@@ -4902,7 +4902,7 @@
     "romanization": "ilbon",
     "meaning": "Japan",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - Japan is a country."
   },
   {
     "level": 1,
@@ -4920,7 +4920,7 @@
     "romanization": "il-yo-il",
     "meaning": "Sunday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Sunday is a day of the week."
   },
   {
     "level": 1,
@@ -4929,7 +4929,7 @@
     "romanization": "il-wol",
     "meaning": "January",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - January is a month."
   },
   {
     "level": 1,
@@ -4956,7 +4956,7 @@
     "romanization": "ilheun",
     "meaning": "seventy, number",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Seventy is a number."
   },
   {
     "level": 1,
@@ -5316,7 +5316,7 @@
     "romanization": "jejudo",
     "meaning": "Jeju Island",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Jeju Island is a place name."
   },
   {
     "level": 1,
@@ -5505,7 +5505,7 @@
     "romanization": "junggug",
     "meaning": "China",
     "example_kr": "나라",
-    "example_en": "country"
+    "example_en": "country - China is a country."
   },
   {
     "level": 1,
@@ -5739,7 +5739,7 @@
     "romanization": "cheon",
     "meaning": "thousand",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Thousand is a number."
   },
   {
     "level": 1,
@@ -5748,7 +5748,7 @@
     "romanization": "cheonman",
     "meaning": "ten million",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Ten million is a number."
   },
   {
     "level": 1,
@@ -5919,7 +5919,7 @@
     "romanization": "chil",
     "meaning": "seven",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Seven is a number."
   },
   {
     "level": 1,
@@ -5928,7 +5928,7 @@
     "romanization": "chilsib",
     "meaning": "seventy",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Seventy is a number."
   },
   {
     "level": 1,
@@ -5937,7 +5937,7 @@
     "romanization": "chil-wol",
     "meaning": "July",
     "example_kr": "달",
-    "example_en": "month"
+    "example_en": "month - July is a month."
   },
   {
     "level": 1,
@@ -5982,7 +5982,7 @@
     "romanization": "kaenada",
     "meaning": "Canada",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - Canada is a country."
   },
   {
     "level": 1,
@@ -6117,7 +6117,7 @@
     "romanization": "taegug",
     "meaning": "Thailand",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - Thailand is a country."
   },
   {
     "level": 1,
@@ -6171,7 +6171,7 @@
     "romanization": "to-yo-il",
     "meaning": "Saturday",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Saturday is a day of the week."
   },
   {
     "level": 1,
@@ -6234,7 +6234,7 @@
     "romanization": "pal",
     "meaning": "eight",
     "example_kr": "숫자",
-    "example_en": "a number"
+    "example_en": "a number - Eight is a number."
   },
   {
     "level": 1,
@@ -6252,7 +6252,7 @@
     "romanization": "palsib",
     "meaning": "eighty",
     "example_kr": "숫자",
-    "example_en": "a number"
+    "example_en": "a number - Eighty is a number."
   },
   {
     "level": 1,
@@ -6306,7 +6306,7 @@
     "romanization": "peulangseu",
     "meaning": "France",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - France is a country."
   },
   {
     "level": 1,
@@ -6369,7 +6369,7 @@
     "romanization": "hana",
     "meaning": "one",
     "example_kr": "숫자",
-    "example_en": "a number"
+    "example_en": "a number - One is a number."
   },
   {
     "level": 1,
@@ -6459,7 +6459,7 @@
     "romanization": "hangug",
     "meaning": "Korea",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - Korea is a country."
   },
   {
     "level": 1,
@@ -6540,7 +6540,7 @@
     "romanization": "hwa-yo-il",
     "meaning": "Tuesday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Tuesday is a day of the week."
   },
   {
     "level": 1,
@@ -6756,7 +6756,7 @@
     "romanization": "galsaeg",
     "meaning": "brown, tan",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Brown is a color."
   },
   {
     "level": 2,
@@ -6999,7 +6999,7 @@
     "romanization": "geom-eunsaeg",
     "meaning": "black",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Black is a color."
   },
   {
     "level": 2,
@@ -7008,7 +7008,7 @@
     "romanization": "geomjeong",
     "meaning": "black, dark",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Black is a color."
   },
   {
     "level": 2,
@@ -7188,7 +7188,7 @@
     "romanization": "gomo",
     "meaning": "paternal aunt",
     "example_kr": "친척",
-    "example_en": "relative"
+    "example_en": "relative - A paternal aunt is a relative."
   },
   {
     "level": 2,
@@ -7368,7 +7368,7 @@
     "romanization": "gwangju",
     "meaning": "Gwangju",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Gwangju is a place name."
   },
   {
     "level": 2,
@@ -7926,7 +7926,7 @@
     "romanization": "kkamansaeg",
     "meaning": "black color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Black color is a color."
   },
   {
     "level": 2,
@@ -8385,7 +8385,7 @@
     "romanization": "nolansaeg",
     "meaning": "yellow color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Yellow color is a color."
   },
   {
     "level": 2,
@@ -8430,7 +8430,7 @@
     "romanization": "nogsaeg",
     "meaning": "green color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Green color is a color."
   },
   {
     "level": 2,
@@ -8808,7 +8808,7 @@
     "romanization": "daejeon",
     "meaning": "Daejeon",
     "example_kr": "지명",
-    "example_en": "place name"
+    "example_en": "place name - Daejeon is a place name."
   },
   {
     "level": 2,
@@ -10275,7 +10275,7 @@
     "romanization": "baem",
     "meaning": "snake",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A snake is an animal."
   },
   {
     "level": 2,
@@ -10365,7 +10365,7 @@
     "romanization": "byeonhosa",
     "meaning": "lawyer",
     "example_kr": "직업",
-    "example_en": "occupation"
+    "example_en": "occupation - Lawyer is an occupation."
   },
   {
     "level": 2,
@@ -10392,7 +10392,7 @@
     "romanization": "bolasaeg",
     "meaning": "purple",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Purple is a color."
   },
   {
     "level": 2,
@@ -10617,7 +10617,7 @@
     "romanization": "bunhongsaeg",
     "meaning": "pink",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Pink is a color."
   },
   {
     "level": 2,
@@ -10761,7 +10761,7 @@
     "romanization": "ppalgansaeg",
     "meaning": "red",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Red is a color."
   },
   {
     "level": 2,
@@ -10923,7 +10923,7 @@
     "romanization": "samgyeobsal",
     "meaning": "pork belly, samgyeopsal",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Pork belly is a kind of food."
   },
   {
     "level": 2,
@@ -10932,7 +10932,7 @@
     "romanization": "samchon",
     "meaning": "uncle",
     "example_kr": "친척",
-    "example_en": "relative"
+    "example_en": "relative - An uncle is a relative."
   },
   {
     "level": 2,
@@ -10986,7 +10986,7 @@
     "romanization": "sae",
     "meaning": "bird",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A bird is an animal."
   },
   {
     "level": 2,
@@ -11040,7 +11040,7 @@
     "romanization": "saeg",
     "meaning": "color",
     "example_kr": "색깔",
-    "example_en": "color"
+    "example_en": "color - Color is a color."
   },
   {
     "level": 2,
@@ -11058,7 +11058,7 @@
     "romanization": "saendeu-wichi",
     "meaning": "sandwich",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Sandwich is a kind of food."
   },
   {
     "level": 2,
@@ -11247,7 +11247,7 @@
     "romanization": "seolleongtang",
     "meaning": "ox bone soup, seolleongtang",
     "example_kr": "음식",
-    "example_en": "food"
+    "example_en": "food - Ox bone soup is a kind of food."
   },
   {
     "level": 2,
@@ -11607,7 +11607,7 @@
     "romanization": "su",
     "meaning": "number, numeral",
     "example_kr": "숫자",
-    "example_en": "numeral"
+    "example_en": "numeral - Number is a number."
   },
   {
     "level": 2,
@@ -11715,7 +11715,7 @@
     "romanization": "swin",
     "meaning": "fifty",
     "example_kr": "숫자",
-    "example_en": "numeral"
+    "example_en": "numeral - Fifty is a number."
   },
   {
     "level": 2,
@@ -11724,7 +11724,7 @@
     "romanization": "seumu",
     "meaning": "twenty",
     "example_kr": "숫자",
-    "example_en": "numeral"
+    "example_en": "numeral - Twenty is a number."
   },
   {
     "level": 2,
@@ -12903,7 +12903,7 @@
     "romanization": "yesun",
     "meaning": "sixty",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Sixty is a number."
   },
   {
     "level": 2,
@@ -13524,7 +13524,7 @@
     "romanization": "imo",
     "meaning": "aunt",
     "example_kr": "친척",
-    "example_en": "relative"
+    "example_en": "relative - An aunt is a relative."
   },
   {
     "level": 2,
@@ -14550,7 +14550,7 @@
     "romanization": "juhwangsaeg",
     "meaning": "orange (color)",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Orange (color) is a color."
   },
   {
     "level": 2,
@@ -15189,7 +15189,7 @@
     "romanization": "chologsaeg",
     "meaning": "green color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Green color is a color."
   },
   {
     "level": 2,
@@ -15450,7 +15450,7 @@
     "romanization": "ko-kkili",
     "meaning": "elephant",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - An elephant is an animal."
   },
   {
     "level": 2,
@@ -15729,7 +15729,7 @@
     "romanization": "palansaeg",
     "meaning": "blue color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Blue color is a color."
   },
   {
     "level": 2,
@@ -15909,7 +15909,7 @@
     "romanization": "haneulsaeg",
     "meaning": "sky blue",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Sky blue is a color."
   },
   {
     "level": 2,
@@ -15936,7 +15936,7 @@
     "romanization": "ha-yansaeg",
     "meaning": "white color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - White color is a color."
   },
   {
     "level": 2,
@@ -16242,7 +16242,7 @@
     "romanization": "holang-i",
     "meaning": "tiger",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A tiger is an animal."
   },
   {
     "level": 2,
@@ -16368,7 +16368,7 @@
     "romanization": "hoesaeg",
     "meaning": "gray",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Gray is a color."
   },
   {
     "level": 2,
@@ -16503,7 +16503,7 @@
     "romanization": "huinsaeg",
     "meaning": "white",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - White is a color."
   },
   {
     "level": 2,
@@ -17268,7 +17268,7 @@
     "romanization": "gom",
     "meaning": "bear",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A bear is an animal."
   },
   {
     "level": 3,
@@ -17304,7 +17304,7 @@
     "romanization": "gong",
     "meaning": "zero",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Zero is a number."
   },
   {
     "level": 3,
@@ -17979,7 +17979,7 @@
     "romanization": "geum",
     "meaning": "Friday",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Friday is a day of the week."
   },
   {
     "level": 3,
@@ -18762,7 +18762,7 @@
     "romanization": "nolang",
     "meaning": "yellow",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Yellow is a color."
   },
   {
     "level": 3,
@@ -19365,7 +19365,7 @@
     "romanization": "dae-yeoseos",
     "meaning": "about five or six",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - About five or six is a number."
   },
   {
     "level": 3,
@@ -19455,7 +19455,7 @@
     "romanization": "daehanmingug",
     "meaning": "South Korea",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - South Korea is a country."
   },
   {
     "level": 3,
@@ -21624,7 +21624,7 @@
     "romanization": "bamsaeg",
     "meaning": "chestnut brown",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Chestnut brown is a color."
   },
   {
     "level": 3,
@@ -22722,7 +22722,7 @@
     "romanization": "ppalgang",
     "meaning": "red, redness",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Red is a color."
   },
   {
     "level": 3,
@@ -22938,7 +22938,7 @@
     "romanization": "saja",
     "meaning": "lion",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A lion is an animal."
   },
   {
     "level": 3,
@@ -23334,7 +23334,7 @@
     "romanization": "seoneos",
     "meaning": "three or four",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Three or four is a number."
   },
   {
     "level": 3,
@@ -23937,7 +23937,7 @@
     "romanization": "su",
     "meaning": "water",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Water is a day of the week."
   },
   {
     "level": 3,
@@ -25854,7 +25854,7 @@
     "romanization": "yeondusaeg",
     "meaning": "light green color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Light green color is a color."
   },
   {
     "level": 3,
@@ -26799,7 +26799,7 @@
     "romanization": "wol",
     "meaning": "month",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Month is a day of the week."
   },
   {
     "level": 3,
@@ -27348,7 +27348,7 @@
     "romanization": "il",
     "meaning": "day, day of the week",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Day is a day of the week."
   },
   {
     "level": 3,
@@ -27663,7 +27663,7 @@
     "romanization": "jajusaeg",
     "meaning": "purple color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Purple color is a color."
   },
   {
     "level": 3,
@@ -27681,7 +27681,7 @@
     "romanization": "jag-eun-abeoji",
     "meaning": "paternal uncle",
     "example_kr": "친척",
-    "example_en": "relative"
+    "example_en": "relative - A paternal uncle is a relative."
   },
   {
     "level": 3,
@@ -27690,7 +27690,7 @@
     "romanization": "jag-eun-eomeoni",
     "meaning": "paternal aunt",
     "example_kr": "친척",
-    "example_en": "relative"
+    "example_en": "relative - A paternal aunt is a relative."
   },
   {
     "level": 3,
@@ -29724,7 +29724,7 @@
     "romanization": "cholog",
     "meaning": "green",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Green is a color."
   },
   {
     "level": 3,
@@ -30165,7 +30165,7 @@
     "romanization": "to",
     "meaning": "Saturday",
     "example_kr": "요일",
-    "example_en": "day of week"
+    "example_en": "day of week - Saturday is a day of the week."
   },
   {
     "level": 3,
@@ -30327,7 +30327,7 @@
     "romanization": "palang",
     "meaning": "blue",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Blue is a color."
   },
   {
     "level": 3,
@@ -30660,7 +30660,7 @@
     "romanization": "ha-yang",
     "meaning": "white",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - White is a color."
   },
   {
     "level": 3,
@@ -31092,7 +31092,7 @@
     "romanization": "hwa",
     "meaning": "fire",
     "example_kr": "요일",
-    "example_en": "day of the week"
+    "example_en": "day of the week - Fire is a day of the week."
   },
   {
     "level": 3,
@@ -32109,7 +32109,7 @@
     "romanization": "geobug-i",
     "meaning": "tortoise, turtle",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A tortoise is an animal."
   },
   {
     "level": 4,
@@ -47265,7 +47265,7 @@
     "romanization": "jo",
     "meaning": "trillion",
     "example_kr": "숫자",
-    "example_en": "number"
+    "example_en": "number - Trillion is a number."
   },
   {
     "level": 4,
@@ -54078,7 +54078,7 @@
     "romanization": "gilin",
     "meaning": "giraffe",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A giraffe is an animal."
   },
   {
     "level": 5,
@@ -54870,7 +54870,7 @@
     "romanization": "namsaeg",
     "meaning": "dark blue",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Dark blue is a color."
   },
   {
     "level": 5,
@@ -55545,7 +55545,7 @@
     "romanization": "neugdae",
     "meaning": "wolf",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A wolf is an animal."
   },
   {
     "level": 5,
@@ -56598,7 +56598,7 @@
     "romanization": "du-kkeobi",
     "meaning": "toad",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A toad is an animal."
   },
   {
     "level": 5,
@@ -58515,7 +58515,7 @@
     "romanization": "bangsong-in",
     "meaning": "broadcaster",
     "example_kr": "직업",
-    "example_en": "occupation"
+    "example_en": "occupation - Broadcaster is an occupation."
   },
   {
     "level": 5,
@@ -59613,7 +59613,7 @@
     "romanization": "bulg-eunsaeg",
     "meaning": "red color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Red color is a color."
   },
   {
     "level": 5,
@@ -60063,7 +60063,7 @@
     "romanization": "saseum",
     "meaning": "deer",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A deer is an animal."
   },
   {
     "level": 5,
@@ -65031,7 +65031,7 @@
     "romanization": "uiseong-eo",
     "meaning": "onomatopoeia",
     "example_kr": "언어",
-    "example_en": "language"
+    "example_en": "language - Onomatopoeia is related to language."
   },
   {
     "level": 5,
@@ -65076,7 +65076,7 @@
     "romanization": "uitae-eo",
     "meaning": "mimetic word",
     "example_kr": "언어",
-    "example_en": "language"
+    "example_en": "language - Mimetic word is related to language."
   },
   {
     "level": 5,
@@ -66480,7 +66480,7 @@
     "romanization": "jeogsaeg",
     "meaning": "red color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Red color is a color."
   },
   {
     "level": 5,
@@ -67119,7 +67119,7 @@
     "romanization": "joseon",
     "meaning": "Joseon, Korea",
     "example_kr": "나라",
-    "example_en": "a country"
+    "example_en": "a country - Joseon is a country."
   },
   {
     "level": 5,
@@ -68649,7 +68649,7 @@
     "romanization": "cheolhagja",
     "meaning": "philosopher",
     "example_kr": "직업",
-    "example_en": "occupation"
+    "example_en": "occupation - Philosopher is an occupation."
   },
   {
     "level": 5,
@@ -68712,7 +68712,7 @@
     "romanization": "cheongsaeg",
     "meaning": "blue color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Blue color is a color."
   },
   {
     "level": 5,
@@ -70584,7 +70584,7 @@
     "romanization": "puleunsaeg",
     "meaning": "blue color",
     "example_kr": "색깔",
-    "example_en": "color"
+    "example_en": "color - Blue color is a color."
   },
   {
     "level": 5,
@@ -71826,7 +71826,7 @@
     "romanization": "hongsaeg",
     "meaning": "red",
     "example_kr": "색깔",
-    "example_en": "color"
+    "example_en": "color - Red is a color."
   },
   {
     "level": 5,
@@ -72042,7 +72042,7 @@
     "romanization": "hwangsaeg",
     "meaning": "yellow",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Yellow is a color."
   },
   {
     "level": 5,
@@ -72366,7 +72366,7 @@
     "romanization": "heugsaeg",
     "meaning": "black color",
     "example_kr": "색",
-    "example_en": "color"
+    "example_en": "color - Black color is a color."
   },
   {
     "level": 5,
@@ -76848,7 +76848,7 @@
     "romanization": "nagta",
     "meaning": "camel",
     "example_kr": "동물",
-    "example_en": "animal"
+    "example_en": "animal - A camel is an animal."
   },
   {
     "level": 6,
@@ -77433,7 +77433,7 @@
     "romanization": "nop-imbeob",
     "meaning": "honorific language",
     "example_kr": "언어",
-    "example_en": "language"
+    "example_en": "language - Honorific language is related to language."
   },
   {
     "level": 6,
@@ -82392,7 +82392,7 @@
     "romanization": "bisog-eo",
     "meaning": "vulgar language",
     "example_kr": "언어",
-    "example_en": "language"
+    "example_en": "language - Vulgar language is related to language."
   },
   {
     "level": 6,

@@ -29,6 +29,12 @@ export interface UserProgressRow {
   reviewed_at: string
 }
 
+export interface FavoriteItemRow {
+  item_type: 'vocab' | 'grammar'
+  item_id: number
+  created_at: string
+}
+
 export type MemoryGameMode = 'all' | 'review'
 
 export interface MemoryScoreRow {

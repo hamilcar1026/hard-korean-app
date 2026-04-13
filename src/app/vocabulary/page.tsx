@@ -6,14 +6,16 @@ import { vocabData } from '@/lib/data'
 import FlashCard from '@/components/FlashCard'
 import LevelBadge from '@/components/LevelBadge'
 import TTSButton from '@/components/TTSButton'
+import FavoriteButton from '@/components/FavoriteButton'
 import { useAuth } from '@/contexts/AuthContext'
 import { getUserProgress, saveProgress } from '@/lib/progress'
+import { getUserFavorites, setFavorite } from '@/lib/favorites'
 import type { UserProgressRow, VocabItem } from '@/types'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 const PAGE_SIZE = 20
 
-type StatusFilter = 'all' | 'known' | 'learning' | 'unmarked'
+type StatusFilter = 'all' | 'known' | 'learning' | 'unmarked' | 'favorites'
 
 function VocabContent() {
   const searchParams = useSearchParams()
@@ -37,6 +39,7 @@ function VocabContent() {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [selectedPos, setSelectedPos] = useState('All')
   const [progress, setProgress] = useState<UserProgressRow[]>([])
+  const [favoriteIds, setFavoriteIds] = useState<number[]>([])
 
   useEffect(() => {
     if (!user) return
@@ -56,6 +59,24 @@ function VocabContent() {
     }
   }, [user])
 
+  useEffect(() => {
+    if (!user) return
+
+    let cancelled = false
+
+    const loadFavorites = async () => {
+      const result = await getUserFavorites(user.id, 'vocab')
+      if (cancelled || result.error) return
+      setFavoriteIds(result.data.map((row) => row.item_id))
+    }
+
+    void loadFavorites()
+
+    return () => {
+      cancelled = true
+    }
+  }, [user])
+
   const progressMap = useMemo(() => {
     const source = user ? progress : []
     const map = new Map<number, UserProgressRow['status']>()
@@ -64,6 +85,8 @@ function VocabContent() {
     }
     return map
   }, [progress, user])
+
+  const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds])
 
   const posOptions = useMemo(
     () => ['All', ...new Set(vocabData.map((item) => item.pos).filter(Boolean))],
@@ -92,6 +115,9 @@ function VocabContent() {
 
     if (statusFilter !== 'all') {
       items = items.filter((item) => {
+        if (statusFilter === 'favorites') {
+          return item.id != null && favoriteSet.has(item.id)
+        }
         const status = item.id != null ? progressMap.get(item.id) : undefined
         if (statusFilter === 'known') return status === 'known'
         if (statusFilter === 'learning') return status === 'learning'
@@ -100,7 +126,17 @@ function VocabContent() {
     }
 
     return items
-  }, [progressMap, search, selectedLevel, selectedPos, statusFilter])
+  }, [favoriteSet, progressMap, search, selectedLevel, selectedPos, statusFilter])
+
+  const toggleFavorite = async (itemId: number) => {
+    if (!user) return
+    const next = !favoriteSet.has(itemId)
+    const error = await setFavorite(user.id, 'vocab', itemId, next)
+    if (error) return
+    setFavoriteIds((prev) =>
+      next ? [...prev, itemId] : prev.filter((existingId) => existingId !== itemId)
+    )
+  }
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
@@ -240,6 +276,7 @@ function VocabContent() {
               <option value="known">Known Only</option>
               <option value="learning">Learning Only</option>
               <option value="unmarked">Unmarked Only</option>
+              <option value="favorites">Favorites Only</option>
             </select>
 
             <button onClick={clearFilters} className="btn-ghost px-4 py-2.5 rounded-xl">
@@ -255,9 +292,11 @@ function VocabContent() {
                 ? 'All study states'
                 : statusFilter === 'known'
                   ? 'Known only'
-                  : statusFilter === 'learning'
+                : statusFilter === 'learning'
                     ? 'Learning only'
-                    : 'Unmarked only'}
+                    : statusFilter === 'unmarked'
+                      ? 'Unmarked only'
+                      : 'Favorites only'}
             </span>
             {!user ? <span>Log in to filter by study state</span> : null}
           </div>
@@ -283,6 +322,12 @@ function VocabContent() {
                 ? () => saveProgress(user.id, 'vocab', filtered[cardIndex].id!, 'learning').then(() => {})
                 : undefined
             }
+            onToggleFavorite={
+              user && filtered[cardIndex].id != null
+                ? () => void toggleFavorite(filtered[cardIndex].id!)
+                : undefined
+            }
+            isFavorite={filtered[cardIndex].id != null && favoriteSet.has(filtered[cardIndex].id!)}
             loginHint={!user}
           />
         </div>
@@ -300,6 +345,14 @@ function VocabContent() {
                   <div className="flex items-center gap-1.5">
                     <span className="text-xl font-bold text-text">{item.word}</span>
                     <TTSButton text={item.word} />
+                    <FavoriteButton
+                      active={item.id != null && favoriteSet.has(item.id)}
+                      onToggle={
+                        user && item.id != null
+                          ? () => void toggleFavorite(item.id!)
+                          : undefined
+                      }
+                    />
                   </div>
                   <LevelBadge level={item.level} />
                 </div>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { VocabItem } from '@/types'
 import LevelBadge from './LevelBadge'
 import TTSButton from './TTSButton'
+import FavoriteButton from './FavoriteButton'
 
 interface Props {
   item: VocabItem
@@ -15,12 +16,14 @@ interface Props {
   total: number
   onKnown?: () => void
   onUnknown?: () => void
+  onToggleFavorite?: () => void
+  isFavorite?: boolean
   loginHint?: boolean
 }
 
 export default function FlashCard({
   item, onNext, onPrev, onGoTo, current, total,
-  onKnown, onUnknown, loginHint,
+  onKnown, onUnknown, onToggleFavorite, isFavorite, loginHint,
 }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [inputActive, setInputActive] = useState(false)
@@ -98,6 +101,7 @@ export default function FlashCard({
             <div className="flex items-center gap-3">
               <p className="text-5xl font-bold text-text">{item.word}</p>
               <TTSButton text={item.word} size="md" />
+              <FavoriteButton active={!!isFavorite} onToggle={onToggleFavorite} size="md" />
             </div>
             <p className="text-text-muted text-lg">{item.romanization}</p>
             <p className="text-text-subtle text-sm">{item.pos}</p>

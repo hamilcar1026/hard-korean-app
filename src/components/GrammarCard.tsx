@@ -1,9 +1,12 @@
 import type { GrammarItem } from '@/types'
 import LevelBadge from './LevelBadge'
 import TTSButton from './TTSButton'
+import FavoriteButton from './FavoriteButton'
 
 interface Props {
   item: GrammarItem
+  isFavorite?: boolean
+  onToggleFavorite?: () => void
 }
 
 function parseExample(ex: string): { kr: string; en: string } {
@@ -14,7 +17,7 @@ function parseExample(ex: string): { kr: string; en: string } {
   return { kr: parts[0]?.trim() ?? ex, en: parts[1]?.trim() ?? '' }
 }
 
-export default function GrammarCard({ item }: Props) {
+export default function GrammarCard({ item, isFavorite, onToggleFavorite }: Props) {
   return (
     <div className="bg-card border border-border rounded-2xl p-5 hover:border-border-hover transition-all hover:shadow-md hover:shadow-[#FF6B6B11]">
       <div className="flex items-start justify-between gap-2 mb-3">
@@ -29,6 +32,7 @@ export default function GrammarCard({ item }: Props) {
       <div className="flex items-center gap-2 mb-1">
         <h3 className="text-2xl font-bold text-text">{item.form}</h3>
         <TTSButton text={item.form} />
+        <FavoriteButton active={!!isFavorite} onToggle={onToggleFavorite} />
       </div>
 
       {item.meaning && (

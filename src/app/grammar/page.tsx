@@ -1,13 +1,16 @@
 'use client'
 
-import { Suspense, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { grammarData } from '@/lib/data'
 import GrammarCard from '@/components/GrammarCard'
 import GrammarNotesCard from '@/components/GrammarNotesCard'
+import { useAuth } from '@/contexts/AuthContext'
+import { getUserFavorites, setFavorite } from '@/lib/favorites'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 const PAGE_SIZE = 24
+type GrammarFilter = 'all' | 'favorites'
 
 const CATEGORIES = [
   'All',
@@ -22,6 +25,7 @@ const CATEGORIES = [
 function GrammarContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
+  const { user } = useAuth()
 
   const levelParam = searchParams.get('level')
   const viewParam = searchParams.get('view')
@@ -32,8 +36,30 @@ function GrammarContent() {
     viewParam === 'notes' ? 'notes' : 'card'
   )
   const [selectedCategory, setSelectedCategory] = useState('All')
+  const [grammarFilter, setGrammarFilter] = useState<GrammarFilter>('all')
   const [search, setSearch] = useState('')
   const [page, setPage] = useState(0)
+  const [favoriteIds, setFavoriteIds] = useState<number[]>([])
+
+  useEffect(() => {
+    if (!user) return
+
+    let cancelled = false
+
+    const loadFavorites = async () => {
+      const result = await getUserFavorites(user.id, 'grammar')
+      if (cancelled || result.error) return
+      setFavoriteIds(result.data.map((row) => row.item_id))
+    }
+
+    void loadFavorites()
+
+    return () => {
+      cancelled = true
+    }
+  }, [user])
+
+  const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds])
 
   const filtered = useMemo(() => {
     let items = selectedLevel ? grammarData.filter((g) => g.level === selectedLevel) : grammarData
@@ -57,8 +83,22 @@ function GrammarContent() {
       })
     }
 
+    if (grammarFilter === 'favorites') {
+      items = items.filter((item) => item.id != null && favoriteSet.has(item.id))
+    }
+
     return items
-  }, [search, selectedCategory, selectedLevel])
+  }, [favoriteSet, grammarFilter, search, selectedCategory, selectedLevel])
+
+  const toggleFavorite = async (itemId: number) => {
+    if (!user) return
+    const next = !favoriteSet.has(itemId)
+    const error = await setFavorite(user.id, 'grammar', itemId, next)
+    if (error) return
+    setFavoriteIds((prev) =>
+      next ? [...prev, itemId] : prev.filter((existingId) => existingId !== itemId)
+    )
+  }
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
@@ -151,6 +191,32 @@ function GrammarContent() {
       </div>
 
       <div className="bg-card border border-border rounded-2xl p-4 mb-6">
+        <div className="flex gap-2 mb-4">
+          {(
+            [
+              ['all', 'All Grammar'],
+              ['favorites', 'Favorites Only'],
+            ] as [GrammarFilter, string][]
+          ).map(([value, label]) => (
+            <button
+              key={value}
+              onClick={() => {
+                setGrammarFilter(value)
+                setPage(0)
+              }}
+              disabled={!user && value === 'favorites'}
+              className={`px-3 py-1 text-xs rounded-xl font-medium transition-colors disabled:opacity-40 ${
+                grammarFilter === value
+                  ? 'text-white'
+                  : 'bg-card-surface text-text-faint hover:bg-border hover:text-text-subtle'
+              }`}
+              style={grammarFilter === value ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <div className="flex flex-wrap gap-2 mb-4">
           {CATEGORIES.map((category) => (
             <button
@@ -190,20 +256,36 @@ function GrammarContent() {
         <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-text-subtle">
           <span>{filtered.length} matches</span>
           <span>{selectedCategory === 'All' ? 'All categories' : selectedCategory}</span>
+          <span>{grammarFilter === 'all' ? 'All grammar' : 'Favorites only'}</span>
           <span>{search.trim() ? 'Expanded search enabled' : 'Browse mode'}</span>
+          {!user ? <span>Log in to use favorites</span> : null}
         </div>
       </div>
 
       {viewMode === 'card' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {pageItems.map((item, idx) => (
-            <GrammarCard key={`${item.form}-${idx}`} item={item} />
+            <GrammarCard
+              key={`${item.form}-${idx}`}
+              item={item}
+              isFavorite={item.id != null && favoriteSet.has(item.id)}
+              onToggleFavorite={
+                user && item.id != null ? () => void toggleFavorite(item.id!) : undefined
+              }
+            />
           ))}
         </div>
       ) : (
         <div className="space-y-4">
           {pageItems.map((item, idx) => (
-            <GrammarNotesCard key={`${item.form}-${idx}`} item={item} />
+            <GrammarNotesCard
+              key={`${item.form}-${idx}`}
+              item={item}
+              isFavorite={item.id != null && favoriteSet.has(item.id)}
+              onToggleFavorite={
+                user && item.id != null ? () => void toggleFavorite(item.id!) : undefined
+              }
+            />
           ))}
         </div>
       )}
