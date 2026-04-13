@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Suspense, useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { vocabData } from '@/lib/data'
@@ -12,6 +12,7 @@ import {
   saveMemoryScore,
 } from '@/lib/memory'
 import { getUserProgress } from '@/lib/progress'
+import { playTextToSpeech } from '@/lib/tts'
 import type { MemoryGameMode, MemoryScoreRow, UserProgressRow, VocabItem } from '@/types'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
@@ -23,6 +24,13 @@ type Card = {
   kind: 'word' | 'meaning'
   value: string
   meta: VocabItem
+}
+
+type MoveSnapshot = {
+  matched: number[]
+  moves: number
+  finished: boolean
+  roundDurationMs: number
 }
 
 function shuffle<T>(arr: T[]) {
@@ -136,6 +144,9 @@ function MemoryContent() {
   const [scoresLoading, setScoresLoading] = useState(false)
   const [savedRank, setSavedRank] = useState<number | null>(null)
   const [newPersonalBest, setNewPersonalBest] = useState(false)
+  const [moveHistory, setMoveHistory] = useState<MoveSnapshot[]>([])
+  const [autoPlayAudio, setAutoPlayAudio] = useState(true)
+  const mismatchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     if (!user) return
@@ -249,6 +260,10 @@ function MemoryContent() {
   }, [leaderboard, user])
 
   const startGame = (startedAt: number) => {
+    if (mismatchTimeoutRef.current) {
+      clearTimeout(mismatchTimeoutRef.current)
+      mismatchTimeoutRef.current = null
+    }
     const chosen = shuffle(activePool).slice(0, pairCount)
     setCards(buildDeck(chosen))
     setFlipped([])
@@ -263,6 +278,7 @@ function MemoryContent() {
     setSaveError('')
     setSavedRank(null)
     setNewPersonalBest(false)
+    setMoveHistory([])
     setStartTime(startedAt)
     setGameStarted(true)
   }
@@ -280,9 +296,21 @@ function MemoryContent() {
 
     const nextFlipped = [...flipped, card.id]
     setFlipped(nextFlipped)
+    if (autoPlayAudio && card.kind === 'word') {
+      void playTextToSpeech(card.value)
+    }
 
     if (nextFlipped.length !== 2) return
 
+    setMoveHistory((history) => [
+      ...history,
+      {
+        matched: [...matched],
+        moves,
+        finished,
+        roundDurationMs,
+      },
+    ])
     setMoves((value) => value + 1)
     const selectedCards = cards.filter((item) => nextFlipped.includes(item.id))
     const isMatch =
@@ -305,10 +333,34 @@ function MemoryContent() {
     }
 
     setLocked(true)
-    setTimeout(() => {
+    mismatchTimeoutRef.current = setTimeout(() => {
       setFlipped([])
       setLocked(false)
+      mismatchTimeoutRef.current = null
     }, 800)
+  }
+
+  const handleUndoMove = () => {
+    if (moveHistory.length === 0) return
+
+    if (mismatchTimeoutRef.current) {
+      clearTimeout(mismatchTimeoutRef.current)
+      mismatchTimeoutRef.current = null
+    }
+
+    const previous = moveHistory[moveHistory.length - 1]
+    setMoveHistory((history) => history.slice(0, -1))
+    setMatched(previous.matched)
+    setMoves(previous.moves)
+    setFinished(previous.finished)
+    setRoundDurationMs(previous.roundDurationMs)
+    setFlipped([])
+    setLocked(false)
+    setSaveStatus('idle')
+    setSaveMessage('')
+    setSaveError('')
+    setSavedRank(null)
+    setNewPersonalBest(false)
   }
 
   const handleSaveScore = async () => {
@@ -588,6 +640,24 @@ function MemoryContent() {
           </div>
 
           <div className="mb-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Audio</p>
+            <label className="flex items-start gap-3 bg-card-surface border border-border rounded-2xl p-4 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={autoPlayAudio}
+                onChange={(event) => setAutoPlayAudio(event.target.checked)}
+                className="mt-1"
+              />
+              <span>
+                <span className="block font-semibold text-text">Auto-play Korean cards</span>
+                <span className="block text-sm text-text-subtle">
+                  Automatically read the Korean word aloud whenever a word card flips open.
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Deck Size</p>
             <div className="flex gap-2">
               {PAIR_OPTIONS.map((size) => (
@@ -801,6 +871,13 @@ function MemoryContent() {
 
       {!finished && (
         <div className="flex flex-col sm:flex-row gap-3 mt-8">
+          <button
+            onClick={handleUndoMove}
+            disabled={moveHistory.length === 0}
+            className="btn-ghost px-5 py-3 rounded-2xl text-sm disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            Undo Last Move
+          </button>
           <button onClick={(event) => startGame(event.timeStamp)} className="btn-ghost px-5 py-3 rounded-2xl text-sm">
             Shuffle New Board
           </button>

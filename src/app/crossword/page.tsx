@@ -1,6 +1,20 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { vocabData } from '@/lib/data'
+import type { VocabItem } from '@/types'
+
+type Orientation = 'across' | 'down'
+
+type Placement = {
+  word: VocabItem
+  answer: string
+  clue: string
+  row: number
+  col: number
+  orientation: Orientation
+  number?: number
+}
 
 type Cell = {
   row: number
@@ -9,181 +23,461 @@ type Cell = {
   clueNumber?: number
 }
 
-const GRID_SIZE = 3
+type CrosswordPuzzle = {
+  size: number
+  cells: Cell[]
+  placements: Placement[]
+}
 
-const CELLS: Cell[] = [
-  { row: 0, col: 0, answer: '학', clueNumber: 1 },
-  { row: 0, col: 1, answer: '교', clueNumber: 2 },
-  { row: 1, col: 1, answer: '실', clueNumber: 3 },
-  { row: 1, col: 2, answer: '수', clueNumber: 4 },
-  { row: 2, col: 2, answer: '업' },
-]
-
-const ACROSS = [
-  { number: 1, answer: '학교', clue: 'school' },
-  { number: 3, answer: '실수', clue: 'mistake' },
-]
-
-const DOWN = [
-  { number: 2, answer: '교실', clue: 'classroom' },
-  { number: 4, answer: '수업', clue: 'lesson / class' },
-]
+const LEVELS = [1, 2, 3, 4, 5, 6]
+const TARGET_WORD_COUNT = 4
+const MAX_ATTEMPTS = 160
 
 function getCellKey(row: number, col: number) {
   return `${row}-${col}`
 }
 
-export default function CrosswordPage() {
-  const initialEntries = useMemo(
-    () =>
-      Object.fromEntries(CELLS.map((cell) => [getCellKey(cell.row, cell.col), ''])) as Record<string, string>,
-    []
-  )
+function splitBlocks(word: string) {
+  return [...word.trim()]
+}
 
-  const [entries, setEntries] = useState<Record<string, string>>(initialEntries)
+function isGoodCrosswordWord(item: VocabItem) {
+  return /^[\uAC00-\uD7A3]{2,4}$/.test(item.word.trim())
+}
+
+function shuffle<T>(items: T[]) {
+  const copy = [...items]
+  for (let i = copy.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[copy[i], copy[j]] = [copy[j], copy[i]]
+  }
+  return copy
+}
+
+function getIntersectingPairs(a: string, b: string) {
+  const matches: Array<{ aIndex: number; bIndex: number }> = []
+  const aBlocks = splitBlocks(a)
+  const bBlocks = splitBlocks(b)
+
+  aBlocks.forEach((blockA, aIndex) => {
+    bBlocks.forEach((blockB, bIndex) => {
+      if (blockA === blockB) {
+        matches.push({ aIndex, bIndex })
+      }
+    })
+  })
+
+  return matches
+}
+
+function getOccupiedCells(placements: Placement[]) {
+  const occupied = new Map<string, { answer: string; orientation: Orientation }>()
+
+  placements.forEach((placement) => {
+    splitBlocks(placement.answer).forEach((block, index) => {
+      const row = placement.row + (placement.orientation === 'down' ? index : 0)
+      const col = placement.col + (placement.orientation === 'across' ? index : 0)
+      occupied.set(getCellKey(row, col), { answer: block, orientation: placement.orientation })
+    })
+  })
+
+  return occupied
+}
+
+function canPlaceWord(placements: Placement[], candidate: Placement) {
+  const occupied = getOccupiedCells(placements)
+  let intersections = 0
+
+  for (const [index, block] of splitBlocks(candidate.answer).entries()) {
+    const row = candidate.row + (candidate.orientation === 'down' ? index : 0)
+    const col = candidate.col + (candidate.orientation === 'across' ? index : 0)
+    const existing = occupied.get(getCellKey(row, col))
+
+    if (!existing) continue
+    if (existing.answer !== block || existing.orientation === candidate.orientation) {
+      return false
+    }
+
+    intersections += 1
+  }
+
+  return placements.length === 0 || intersections > 0
+}
+
+function normalizePuzzle(placements: Placement[]) {
+  const rows: number[] = []
+  const cols: number[] = []
+
+  placements.forEach((placement) => {
+    splitBlocks(placement.answer).forEach((_, index) => {
+      rows.push(placement.row + (placement.orientation === 'down' ? index : 0))
+      cols.push(placement.col + (placement.orientation === 'across' ? index : 0))
+    })
+  })
+
+  const minRow = Math.min(...rows)
+  const minCol = Math.min(...cols)
+
+  return placements.map((placement) => ({
+    ...placement,
+    row: placement.row - minRow,
+    col: placement.col - minCol,
+  }))
+}
+
+function assignNumbers(placements: Placement[]) {
+  const starts = [...new Set(placements.map((placement) => `${placement.row}-${placement.col}`))]
+    .map((key) => {
+      const [row, col] = key.split('-').map(Number)
+      return { row, col }
+    })
+    .sort((a, b) => a.row - b.row || a.col - b.col)
+
+  const numberMap = new Map(starts.map((start, index) => [getCellKey(start.row, start.col), index + 1]))
+
+  return placements.map((placement) => ({
+    ...placement,
+    number: numberMap.get(getCellKey(placement.row, placement.col)),
+  }))
+}
+
+function buildPuzzleFromPlacements(placements: Placement[]): CrosswordPuzzle {
+  const normalized = assignNumbers(normalizePuzzle(placements))
+  const cells = new Map<string, Cell>()
+
+  normalized.forEach((placement) => {
+    splitBlocks(placement.answer).forEach((block, index) => {
+      const row = placement.row + (placement.orientation === 'down' ? index : 0)
+      const col = placement.col + (placement.orientation === 'across' ? index : 0)
+      const key = getCellKey(row, col)
+      const current = cells.get(key)
+
+      cells.set(key, {
+        row,
+        col,
+        answer: block,
+        clueNumber: index === 0 ? placement.number : current?.clueNumber,
+      })
+    })
+  })
+
+  const maxRow = Math.max(...[...cells.values()].map((cell) => cell.row))
+  const maxCol = Math.max(...[...cells.values()].map((cell) => cell.col))
+
+  return {
+    size: Math.max(maxRow, maxCol) + 1,
+    cells: [...cells.values()],
+    placements: normalized.sort((a, b) => (a.number ?? 0) - (b.number ?? 0) || a.orientation.localeCompare(b.orientation)),
+  }
+}
+
+function buildEmptyEntries(puzzle: CrosswordPuzzle | null) {
+  if (!puzzle) return {}
+  return Object.fromEntries(puzzle.cells.map((cell) => [getCellKey(cell.row, cell.col), ''])) as Record<string, string>
+}
+
+function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
+  const pool = shuffle(
+    vocabData.filter((item) => item.level === level && isGoodCrosswordWord(item))
+  ).slice(0, 48)
+
+  if (pool.length < TARGET_WORD_COUNT) return null
+
+  for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
+    const placements: Placement[] = [
+      {
+        word: pool[attempt % pool.length],
+        answer: pool[attempt % pool.length].word.trim(),
+        clue: pool[attempt % pool.length].meaning,
+        row: 0,
+        col: 0,
+        orientation: 'across',
+      },
+    ]
+
+    const used = new Set([placements[0].word.id])
+    const candidates = shuffle(pool.filter((item) => item.id !== placements[0].word.id))
+
+    for (const word of candidates) {
+      if (used.has(word.id)) continue
+
+      const answer = word.word.trim()
+      let placed = false
+
+      for (const anchor of shuffle(placements)) {
+        const intersections = shuffle(getIntersectingPairs(anchor.answer, answer))
+
+        for (const match of intersections) {
+          const nextOrientation: Orientation = anchor.orientation === 'across' ? 'down' : 'across'
+          const row =
+            nextOrientation === 'down'
+              ? anchor.row - match.bIndex
+              : anchor.row + match.aIndex
+          const col =
+            nextOrientation === 'across'
+              ? anchor.col - match.bIndex
+              : anchor.col + match.aIndex
+
+          const candidatePlacement: Placement = {
+            word,
+            answer,
+            clue: word.meaning,
+            row,
+            col,
+            orientation: nextOrientation,
+          }
+
+          if (canPlaceWord(placements, candidatePlacement)) {
+            placements.push(candidatePlacement)
+            used.add(word.id)
+            placed = true
+            break
+          }
+        }
+
+        if (placed) break
+      }
+
+      if (placements.length === TARGET_WORD_COUNT) {
+        return buildPuzzleFromPlacements(placements)
+      }
+    }
+  }
+
+  return null
+}
+
+const INITIAL_LEVEL = 1
+const INITIAL_PUZZLE = tryGeneratePuzzle(INITIAL_LEVEL)
+
+export default function CrosswordPage() {
+  const [selectedLevel, setSelectedLevel] = useState(INITIAL_LEVEL)
+  const [puzzle, setPuzzle] = useState<CrosswordPuzzle | null>(INITIAL_PUZZLE)
   const [checked, setChecked] = useState(false)
   const [revealed, setRevealed] = useState(false)
+  const [entries, setEntries] = useState<Record<string, string>>(() => buildEmptyEntries(INITIAL_PUZZLE))
 
-  const correctCount = CELLS.filter((cell) => {
-    const key = getCellKey(cell.row, cell.col)
-    return entries[key] === cell.answer
-  }).length
+  const loadPuzzle = (level: number) => {
+    const nextPuzzle = tryGeneratePuzzle(level)
+    setSelectedLevel(level)
+    setPuzzle(nextPuzzle)
+    setEntries(buildEmptyEntries(nextPuzzle))
+    setChecked(false)
+    setRevealed(false)
+  }
 
-  const allCorrect = correctCount === CELLS.length
+  const cellMap = useMemo(() => {
+    if (!puzzle) return new Map<string, Cell>()
+    return new Map(puzzle.cells.map((cell) => [getCellKey(cell.row, cell.col), cell]))
+  }, [puzzle])
 
-  const fillAnswer = (value: string) => value.trim().slice(0, 1)
+  const correctCount = puzzle
+    ? puzzle.cells.filter((cell) => entries[getCellKey(cell.row, cell.col)] === cell.answer).length
+    : 0
+
+  const allCorrect = Boolean(puzzle && correctCount === puzzle.cells.length)
+
+  const across = puzzle?.placements.filter((placement) => placement.orientation === 'across') ?? []
+  const down = puzzle?.placements.filter((placement) => placement.orientation === 'down') ?? []
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Mini Puzzle</p>
         <h1 className="text-3xl font-black text-text mb-2">Korean Crossword</h1>
         <p className="text-text-subtle max-w-2xl">
-          A small demo crossword with Korean syllable blocks. Fill one block per square and use the clues to complete the grid.
+          This version automatically builds a small crossword from TOPIK vocabulary that shares matching Korean blocks.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8">
-        <section className="bg-card border border-border rounded-3xl p-6">
-          <div className="grid gap-2 mx-auto w-fit" style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, minmax(0, 4.5rem))` }}>
-            {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, index) => {
-              const row = Math.floor(index / GRID_SIZE)
-              const col = index % GRID_SIZE
-              const cell = CELLS.find((candidate) => candidate.row === row && candidate.col === col)
-
-              if (!cell) {
-                return (
-                  <div
-                    key={index}
-                    className="aspect-square rounded-2xl"
-                    style={{ background: 'var(--t-result-err-bg)' }}
-                  />
-                )
-              }
-
-              const key = getCellKey(row, col)
-              const currentValue = revealed ? cell.answer : entries[key]
-              const isCorrect = checked && entries[key] === cell.answer
-              const isWrong = checked && entries[key] && entries[key] !== cell.answer
-
-              return (
-                <div key={index} className="relative">
-                  {cell.clueNumber ? (
-                    <span className="absolute left-2 top-1 text-[10px] font-semibold text-text-faint">
-                      {cell.clueNumber}
-                    </span>
-                  ) : null}
-                  <input
-                    value={currentValue}
-                    onChange={(e) => {
-                      setChecked(false)
-                      setRevealed(false)
-                      setEntries((prev) => ({
-                        ...prev,
-                        [key]: fillAnswer(e.target.value),
-                      }))
-                    }}
-                    className={`aspect-square w-full rounded-2xl border text-center text-3xl font-black bg-card text-text focus:outline-none transition-colors ${
-                      isCorrect ? 'border-emerald-400' : isWrong ? 'border-coral' : 'border-border'
-                    }`}
-                    maxLength={1}
-                  />
-                </div>
-              )
-            })}
-          </div>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              onClick={() => setChecked(true)}
-              className="btn-coral px-5 py-3 rounded-2xl text-sm"
-            >
-              Check Answers
-            </button>
-            <button
-              onClick={() => {
-                setEntries(initialEntries)
-                setChecked(false)
-                setRevealed(false)
-              }}
-              className="btn-ghost px-5 py-3 rounded-2xl text-sm"
-            >
-              Reset
-            </button>
-            <button
-              onClick={() => {
-                setRevealed(true)
-                setChecked(false)
-              }}
-              className="btn-ghost px-5 py-3 rounded-2xl text-sm"
-            >
-              Reveal
-            </button>
-          </div>
-
-          <div className="mt-5 text-sm text-text-subtle">
-            {revealed ? 'Answers revealed.' : checked ? `${correctCount} / ${CELLS.length} squares correct.` : 'Enter one Korean block per square.'}
-            {checked && allCorrect ? <span className="text-emerald-400 font-semibold"> Puzzle complete.</span> : null}
-          </div>
-        </section>
-
-        <section className="bg-card border border-border rounded-3xl p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h2 className="text-lg font-black text-text mb-3">Across</h2>
-              <div className="space-y-3">
-                {ACROSS.map((clue) => (
-                  <div key={clue.number} className="bg-card-surface border border-border rounded-2xl p-4">
-                    <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Across</p>
-                    <p className="text-sm text-text">{clue.clue}</p>
-                    <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
-                  </div>
-                ))}
-              </div>
+      <div className="bg-card border border-border rounded-3xl p-6 mb-8">
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Choose a Level</p>
+            <div className="flex flex-wrap gap-2">
+              {LEVELS.map((level) => (
+                <button
+                  key={level}
+                  onClick={() => loadPuzzle(level)}
+                  className={`px-4 py-2 text-sm rounded-xl font-medium transition-colors ${
+                    selectedLevel === level
+                      ? 'text-white'
+                      : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
+                  }`}
+                  style={selectedLevel === level ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+                >
+                  Level {level}
+                </button>
+              ))}
             </div>
-
-            <div>
-              <h2 className="text-lg font-black text-text mb-3">Down</h2>
-              <div className="space-y-3">
-                {DOWN.map((clue) => (
-                  <div key={clue.number} className="bg-card-surface border border-border rounded-2xl p-4">
-                    <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Down</p>
-                    <p className="text-sm text-text">{clue.clue}</p>
-                    <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 rounded-2xl border border-border bg-card-surface p-4">
-            <p className="text-sm font-semibold text-text mb-1">How This Demo Works</p>
-            <p className="text-sm text-text-subtle">
-              This first version uses a hand-made mini puzzle so we can test Korean crossword interaction before building automatic puzzle generation.
+            <p className="text-sm text-text-subtle mt-3">
+              Jump to any TOPIK level you want, or keep moving upward with the next-level button.
             </p>
           </div>
-        </section>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={() => loadPuzzle(selectedLevel)}
+              className="btn-coral px-5 py-3 rounded-2xl text-sm"
+            >
+              New Puzzle
+            </button>
+            <button
+              onClick={() => {
+                const currentIndex = LEVELS.indexOf(selectedLevel)
+                const nextLevel = LEVELS[(currentIndex + 1) % LEVELS.length]
+                loadPuzzle(nextLevel)
+              }}
+              className="btn-ghost px-5 py-3 rounded-2xl text-sm"
+            >
+              Next Level
+            </button>
+          </div>
+        </div>
       </div>
+
+      {!puzzle ? (
+        <div className="bg-card border border-border rounded-3xl p-6">
+          <p className="font-bold text-text mb-2">No crossword was generated this round</p>
+          <p className="text-text-subtle mb-4">
+            Try another level or generate a new puzzle. The generator only uses short words that can actually cross.
+          </p>
+          <button
+            onClick={() => loadPuzzle(selectedLevel)}
+            className="btn-coral px-5 py-3 rounded-2xl text-sm"
+          >
+            Try Again
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8">
+          <section className="bg-card border border-border rounded-3xl p-6">
+            <div
+              className="grid gap-2 mx-auto w-fit"
+              style={{ gridTemplateColumns: `repeat(${puzzle.size}, minmax(0, 4.5rem))` }}
+            >
+              {Array.from({ length: puzzle.size * puzzle.size }).map((_, index) => {
+                const row = Math.floor(index / puzzle.size)
+                const col = index % puzzle.size
+                const cell = cellMap.get(getCellKey(row, col))
+
+                if (!cell) {
+                  return (
+                    <div
+                      key={index}
+                      className="aspect-square rounded-2xl"
+                      style={{ background: 'var(--t-result-err-bg)' }}
+                    />
+                  )
+                }
+
+                const key = getCellKey(row, col)
+                const currentValue = revealed ? cell.answer : entries[key] ?? ''
+                const isCorrect = checked && entries[key] === cell.answer
+                const isWrong = checked && entries[key] && entries[key] !== cell.answer
+
+                return (
+                  <div key={index} className="relative">
+                    {cell.clueNumber ? (
+                      <span className="absolute left-2 top-1 text-[10px] font-semibold text-text-faint">
+                        {cell.clueNumber}
+                      </span>
+                    ) : null}
+                    <input
+                      value={currentValue}
+                      onChange={(event) => {
+                        setChecked(false)
+                        setRevealed(false)
+                        setEntries((prev) => ({
+                          ...prev,
+                          [key]: event.target.value.trim().slice(0, 1),
+                        }))
+                      }}
+                      className={`aspect-square w-full rounded-2xl border text-center text-3xl font-black bg-card text-text focus:outline-none transition-colors ${
+                        isCorrect ? 'border-emerald-400' : isWrong ? 'border-coral' : 'border-border'
+                      }`}
+                      maxLength={1}
+                    />
+                  </div>
+                )
+              })}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <button onClick={() => setChecked(true)} className="btn-coral px-5 py-3 rounded-2xl text-sm">
+                Check Answers
+              </button>
+              <button
+                onClick={() => {
+                  setEntries(
+                    buildEmptyEntries(puzzle)
+                  )
+                  setChecked(false)
+                  setRevealed(false)
+                }}
+                className="btn-ghost px-5 py-3 rounded-2xl text-sm"
+              >
+                Reset
+              </button>
+              <button
+                onClick={() => {
+                  setRevealed(true)
+                  setChecked(false)
+                }}
+                className="btn-ghost px-5 py-3 rounded-2xl text-sm"
+              >
+                Reveal
+              </button>
+            </div>
+
+            <div className="mt-5 text-sm text-text-subtle">
+              {revealed
+                ? 'Answers revealed.'
+                : checked
+                  ? `${correctCount} / ${puzzle.cells.length} squares correct.`
+                  : 'Enter one Korean block per square.'}
+              {checked && allCorrect ? <span className="text-emerald-400 font-semibold"> Puzzle complete.</span> : null}
+            </div>
+          </section>
+
+          <section className="bg-card border border-border rounded-3xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h2 className="text-lg font-black text-text mb-3">Across</h2>
+                <div className="space-y-3">
+                  {across.map((clue) => (
+                    <div key={`${clue.number}-across`} className="bg-card-surface border border-border rounded-2xl p-4">
+                      <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Across</p>
+                      <p className="text-sm text-text">{clue.clue}</p>
+                      <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-lg font-black text-text mb-3">Down</h2>
+                <div className="space-y-3">
+                  {down.map((clue) => (
+                    <div key={`${clue.number}-down`} className="bg-card-surface border border-border rounded-2xl p-4">
+                      <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Down</p>
+                      <p className="text-sm text-text">{clue.clue}</p>
+                      <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-border bg-card-surface p-4">
+              <p className="text-sm font-semibold text-text mb-1">How The Generator Works</p>
+              <p className="text-sm text-text-subtle">
+                It picks short Korean words from the selected TOPIK level and only places words that share at least one matching block.
+              </p>
+            </div>
+          </section>
+        </div>
+      )}
     </div>
   )
 }

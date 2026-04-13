@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useState } from 'react'
+import { playTextToSpeech } from '@/lib/tts'
 
 interface Props {
   text: string
@@ -9,54 +10,14 @@ interface Props {
 }
 
 export default function TTSButton({ text, lang = 'ko-KR', size = 'sm' }: Props) {
-  const audioRef = useRef<HTMLAudioElement | null>(null)
-  const objectUrlRef = useRef<string | null>(null)
   const [loading, setLoading] = useState(false)
-
-  const speakWithBrowser = () => {
-    if (typeof window === 'undefined' || !window.speechSynthesis) return
-    window.speechSynthesis.cancel()
-    const utterance = new SpeechSynthesisUtterance(text)
-    utterance.lang = lang
-    utterance.rate = 0.85
-    window.speechSynthesis.speak(utterance)
-  }
-
-  const cleanupObjectUrl = () => {
-    if (objectUrlRef.current) {
-      URL.revokeObjectURL(objectUrlRef.current)
-      objectUrlRef.current = null
-    }
-  }
 
   const speak = async () => {
     if (loading) return
 
     setLoading(true)
     try {
-      const response = await fetch('/api/tts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text, lang }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Natural TTS unavailable')
-      }
-
-      const blob = await response.blob()
-      cleanupObjectUrl()
-      objectUrlRef.current = URL.createObjectURL(blob)
-
-      if (!audioRef.current) {
-        audioRef.current = new Audio()
-      }
-
-      audioRef.current.src = objectUrlRef.current
-      audioRef.current.currentTime = 0
-      await audioRef.current.play()
-    } catch {
-      speakWithBrowser()
+      await playTextToSpeech(text, lang)
     } finally {
       setLoading(false)
     }
