@@ -13,6 +13,7 @@ const links = [
   { href: '/favorites', label: 'Favorites' },
   { href: '/quiz', label: 'Quiz' },
   { href: '/memory', label: 'Memory' },
+  { href: '/crossword', label: 'Crossword' },
 ]
 
 export default function NavBar() {

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import type { User } from '@supabase/supabase-js'
 import { createClient, supabaseConfigured } from '@/lib/supabase'
 
 type Mode = 'login' | 'register'
@@ -18,6 +19,10 @@ function getEmailRedirectUrl() {
   }
 
   return undefined
+}
+
+function isVerifiedUser(user: User | null | undefined) {
+  return !!user?.email_confirmed_at
 }
 
 export default function AuthPage() {
@@ -54,7 +59,7 @@ export default function AuthPage() {
 
     try {
       if (mode === 'register') {
-        const { error } = await supabase.auth.signUp({
+        const { data, error } = await supabase.auth.signUp({
           email,
           password,
           options: {
@@ -62,10 +67,17 @@ export default function AuthPage() {
           },
         })
         if (error) throw error
+        if (data.session && !isVerifiedUser(data.user)) {
+          await supabase.auth.signOut()
+        }
         setDone(true)
       } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password })
+        const { data, error } = await supabase.auth.signInWithPassword({ email, password })
         if (error) throw error
+        if (!isVerifiedUser(data.user)) {
+          await supabase.auth.signOut()
+          throw new Error('Please verify your email before logging in.')
+        }
         router.push('/')
         router.refresh()
       }

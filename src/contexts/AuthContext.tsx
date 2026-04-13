@@ -20,6 +20,10 @@ const AuthContext = createContext<AuthContextType>({
   signOut: async () => {},
 })
 
+function isVerifiedUser(user: User | null | undefined) {
+  return !!user?.email_confirmed_at
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser]       = useState<User | null>(null)
   const [session, setSession] = useState<Session | null>(null)
@@ -52,18 +56,35 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const supabase = createClient()
 
     supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session)
-      setUser(data.session?.user ?? null)
-      if (data.session?.user) {
-        fetchRole(data.session.user.id, data.session.user.email)
+      const currentUser = data.session?.user ?? null
+      if (currentUser && !isVerifiedUser(currentUser)) {
+        void supabase.auth.signOut()
+        setSession(null)
+        setUser(null)
+        setRole(null)
+      } else {
+        setSession(data.session)
+        setUser(currentUser)
+        if (currentUser) {
+          fetchRole(currentUser.id, currentUser.email)
+        }
       }
       setLoading(false)
     })
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, s) => {
+      const currentUser = s?.user ?? null
+      if (currentUser && !isVerifiedUser(currentUser)) {
+        void supabase.auth.signOut()
+        setSession(null)
+        setUser(null)
+        setRole(null)
+        return
+      }
+
       setSession(s)
-      setUser(s?.user ?? null)
-      if (s?.user) fetchRole(s.user.id, s.user.email)
+      setUser(currentUser)
+      if (currentUser) fetchRole(currentUser.id, currentUser.email)
       else setRole(null)
     })
 
