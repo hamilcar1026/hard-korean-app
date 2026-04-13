@@ -10,6 +10,7 @@ type Placement = {
   word: VocabItem
   answer: string
   clue: string
+  pos: string
   row: number
   col: number
   orientation: Orientation
@@ -24,7 +25,8 @@ type Cell = {
 }
 
 type CrosswordPuzzle = {
-  size: number
+  width: number
+  height: number
   cells: Cell[]
   placements: Placement[]
 }
@@ -84,6 +86,90 @@ function getOccupiedCells(placements: Placement[]) {
   return occupied
 }
 
+function getContiguousSequence(
+  occupied: Map<string, { answer: string; orientation: Orientation }>,
+  row: number,
+  col: number,
+  orientation: Orientation
+) {
+  const rowStep = orientation === 'down' ? 1 : 0
+  const colStep = orientation === 'across' ? 1 : 0
+  let startRow = row
+  let startCol = col
+
+  while (occupied.has(getCellKey(startRow - rowStep, startCol - colStep))) {
+    startRow -= rowStep
+    startCol -= colStep
+  }
+
+  let answer = ''
+  let currentRow = startRow
+  let currentCol = startCol
+
+  while (occupied.has(getCellKey(currentRow, currentCol))) {
+    answer += occupied.get(getCellKey(currentRow, currentCol))?.answer ?? ''
+    currentRow += rowStep
+    currentCol += colStep
+  }
+
+  return { row: startRow, col: startCol, answer }
+}
+
+function isValidCrosswordLayout(placements: Placement[]) {
+  const occupied = getOccupiedCells(placements)
+
+  for (const placement of placements) {
+    const answerBlocks = splitBlocks(placement.answer)
+    const rowStep = placement.orientation === 'down' ? 1 : 0
+    const colStep = placement.orientation === 'across' ? 1 : 0
+
+    const beforeKey = getCellKey(placement.row - rowStep, placement.col - colStep)
+    const afterKey = getCellKey(
+      placement.row + rowStep * answerBlocks.length,
+      placement.col + colStep * answerBlocks.length
+    )
+
+    if (occupied.has(beforeKey) || occupied.has(afterKey)) {
+      return false
+    }
+
+    for (const [index] of answerBlocks.entries()) {
+      const row = placement.row + rowStep * index
+      const col = placement.col + colStep * index
+      const horizontal = getContiguousSequence(occupied, row, col, 'across')
+      const vertical = getContiguousSequence(occupied, row, col, 'down')
+
+      if (placement.orientation === 'across') {
+        if (vertical.answer.length > 1) {
+          const intersectsPlacedWord = placements.some(
+            (candidate) =>
+              candidate.orientation === 'down' &&
+              candidate.row === vertical.row &&
+              candidate.col === vertical.col &&
+              candidate.answer === vertical.answer
+          )
+
+          if (!intersectsPlacedWord) return false
+        }
+      } else {
+        if (horizontal.answer.length > 1) {
+          const intersectsPlacedWord = placements.some(
+            (candidate) =>
+              candidate.orientation === 'across' &&
+              candidate.row === horizontal.row &&
+              candidate.col === horizontal.col &&
+              candidate.answer === horizontal.answer
+          )
+
+          if (!intersectsPlacedWord) return false
+        }
+      }
+    }
+  }
+
+  return true
+}
+
 function canPlaceWord(placements: Placement[], candidate: Placement) {
   const occupied = getOccupiedCells(placements)
   let intersections = 0
@@ -101,7 +187,11 @@ function canPlaceWord(placements: Placement[], candidate: Placement) {
     intersections += 1
   }
 
-  return placements.length === 0 || intersections > 0
+  if (placements.length > 0 && intersections === 0) {
+    return false
+  }
+
+  return isValidCrosswordLayout([...placements, candidate])
 }
 
 function normalizePuzzle(placements: Placement[]) {
@@ -165,7 +255,8 @@ function buildPuzzleFromPlacements(placements: Placement[]): CrosswordPuzzle {
   const maxCol = Math.max(...[...cells.values()].map((cell) => cell.col))
 
   return {
-    size: Math.max(maxRow, maxCol) + 1,
+    width: maxCol + 1,
+    height: maxRow + 1,
     cells: [...cells.values()],
     placements: normalized.sort((a, b) => (a.number ?? 0) - (b.number ?? 0) || a.orientation.localeCompare(b.orientation)),
   }
@@ -189,6 +280,7 @@ function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
         word: pool[attempt % pool.length],
         answer: pool[attempt % pool.length].word.trim(),
         clue: pool[attempt % pool.length].meaning,
+        pos: pool[attempt % pool.length].pos,
         row: 0,
         col: 0,
         orientation: 'across',
@@ -222,6 +314,7 @@ function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
             word,
             answer,
             clue: word.meaning,
+            pos: word.pos,
             row,
             col,
             orientation: nextOrientation,
@@ -286,7 +379,7 @@ export default function CrosswordPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Mini Puzzle</p>
         <h1 className="text-3xl font-black text-text mb-2">Korean Crossword</h1>
         <p className="text-text-subtle max-w-2xl">
-          This version automatically builds a small crossword from TOPIK vocabulary that shares matching Korean blocks.
+          Practice TOPIK vocabulary by filling in a small Korean crossword puzzle.
         </p>
       </div>
 
@@ -311,7 +404,7 @@ export default function CrosswordPage() {
               ))}
             </div>
             <p className="text-sm text-text-subtle mt-3">
-              Jump to any TOPIK level you want, or keep moving upward with the next-level button.
+              Jump to any TOPIK level you want, or move upward one level at a time.
             </p>
           </div>
 
@@ -354,11 +447,11 @@ export default function CrosswordPage() {
           <section className="bg-card border border-border rounded-3xl p-6">
             <div
               className="grid gap-2 mx-auto w-fit"
-              style={{ gridTemplateColumns: `repeat(${puzzle.size}, minmax(0, 4.5rem))` }}
+              style={{ gridTemplateColumns: `repeat(${puzzle.width}, minmax(0, 4.5rem))` }}
             >
-              {Array.from({ length: puzzle.size * puzzle.size }).map((_, index) => {
-                const row = Math.floor(index / puzzle.size)
-                const col = index % puzzle.size
+              {Array.from({ length: puzzle.width * puzzle.height }).map((_, index) => {
+                const row = Math.floor(index / puzzle.width)
+                const col = index % puzzle.width
                 const cell = cellMap.get(getCellKey(row, col))
 
                 if (!cell) {
@@ -448,6 +541,7 @@ export default function CrosswordPage() {
                   {across.map((clue) => (
                     <div key={`${clue.number}-across`} className="bg-card-surface border border-border rounded-2xl p-4">
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Across</p>
+                      <p className="text-xs text-text-faint mb-2">{clue.pos}</p>
                       <p className="text-sm text-text">{clue.clue}</p>
                       <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
                     </div>
@@ -461,6 +555,7 @@ export default function CrosswordPage() {
                   {down.map((clue) => (
                     <div key={`${clue.number}-down`} className="bg-card-surface border border-border rounded-2xl p-4">
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Down</p>
+                      <p className="text-xs text-text-faint mb-2">{clue.pos}</p>
                       <p className="text-sm text-text">{clue.clue}</p>
                       <p className="text-xs text-text-faint mt-2">{clue.answer.length} blocks</p>
                     </div>
@@ -470,9 +565,9 @@ export default function CrosswordPage() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-border bg-card-surface p-4">
-              <p className="text-sm font-semibold text-text mb-1">How The Generator Works</p>
+              <p className="text-sm font-semibold text-text mb-1">Puzzle Notes</p>
               <p className="text-sm text-text-subtle">
-                It picks short Korean words from the selected TOPIK level and only places words that share at least one matching block.
+                Each clue keeps the original part of speech and meaning so the puzzle still feels like study material.
               </p>
             </div>
           </section>
