@@ -4,6 +4,7 @@ import { Suspense, useMemo, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { grammarData } from '@/lib/data'
 import GrammarCard from '@/components/GrammarCard'
+import GrammarNotesCard from '@/components/GrammarNotesCard'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 const PAGE_SIZE = 24
@@ -23,8 +24,12 @@ function GrammarContent() {
   const router = useRouter()
 
   const levelParam = searchParams.get('level')
+  const viewParam = searchParams.get('view')
   const [selectedLevel, setSelectedLevel] = useState<number | null>(
     levelParam ? Number(levelParam) : null
+  )
+  const [viewMode, setViewMode] = useState<'card' | 'notes'>(
+    viewParam === 'notes' ? 'notes' : 'card'
   )
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [search, setSearch] = useState('')
@@ -63,6 +68,16 @@ function GrammarContent() {
     setPage(0)
     const params = new URLSearchParams()
     if (lvl) params.set('level', String(lvl))
+    if (viewMode === 'notes') params.set('view', 'notes')
+    router.replace(`/grammar?${params}`)
+  }
+
+  const handleViewModeChange = (nextMode: 'card' | 'notes') => {
+    setViewMode(nextMode)
+    setPage(0)
+    const params = new URLSearchParams()
+    if (selectedLevel) params.set('level', String(selectedLevel))
+    if (nextMode === 'notes') params.set('view', 'notes')
     router.replace(`/grammar?${params}`)
   }
 
@@ -110,6 +125,31 @@ function GrammarContent() {
         ))}
       </div>
 
+      <div className="flex gap-2 mb-4">
+        <button
+          onClick={() => handleViewModeChange('card')}
+          className={`px-4 py-1.5 text-sm rounded-xl font-medium transition-colors ${
+            viewMode === 'card'
+              ? 'text-white'
+              : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
+          }`}
+          style={viewMode === 'card' ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+        >
+          Cards
+        </button>
+        <button
+          onClick={() => handleViewModeChange('notes')}
+          className={`px-4 py-1.5 text-sm rounded-xl font-medium transition-colors ${
+            viewMode === 'notes'
+              ? 'text-white'
+              : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
+          }`}
+          style={viewMode === 'notes' ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+        >
+          Notes
+        </button>
+      </div>
+
       <div className="bg-card border border-border rounded-2xl p-4 mb-6">
         <div className="flex flex-wrap gap-2 mb-4">
           {CATEGORIES.map((category) => (
@@ -154,11 +194,19 @@ function GrammarContent() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {pageItems.map((item, idx) => (
-          <GrammarCard key={`${item.form}-${idx}`} item={item} />
-        ))}
-      </div>
+      {viewMode === 'card' ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {pageItems.map((item, idx) => (
+            <GrammarCard key={`${item.form}-${idx}`} item={item} />
+          ))}
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {pageItems.map((item, idx) => (
+            <GrammarNotesCard key={`${item.form}-${idx}`} item={item} />
+          ))}
+        </div>
+      )}
 
       {totalPages > 1 ? (
         <div className="flex items-center justify-center gap-3 mt-8">
