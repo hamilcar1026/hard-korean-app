@@ -6,12 +6,26 @@ function normalizeQuizError(message?: string | null) {
 
   if (
     message.includes('quiz_attempts') &&
-    (message.includes('does not exist') || message.includes('relation'))
+    (message.includes('does not exist') ||
+      message.includes('relation') ||
+      message.includes('schema cache'))
   ) {
-    return 'Quiz result storage is not set up yet. Run supabase_schema_v6.sql in Supabase first.'
+    return 'Quiz result storage is not set up in the current Supabase project. Run supabase_schema_v6.sql on the same Supabase project used by Vercel.'
   }
 
-  return message
+  if (message.includes('permission denied') || message.includes('row-level security')) {
+    return 'Quiz result saving is blocked by Supabase permissions. Check the quiz_attempts policies.'
+  }
+
+  if (message.includes('Failed to fetch') || message.includes('fetch')) {
+    return 'Could not reach Supabase. Check your connection and project settings.'
+  }
+
+  if (message.includes('JWT') || message.includes('auth') || message.includes('session')) {
+    return 'Your login session expired. Log in again and try saving the result.'
+  }
+
+  return 'Could not save the quiz result right now.'
 }
 
 export async function saveQuizAttempt(input: {

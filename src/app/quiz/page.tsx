@@ -38,6 +38,13 @@ type TypeQuestion = {
 
 type Question = ChoiceQuestion | TypeQuestion
 
+type AnswerResult = {
+  display: string
+  chosen: string
+  correct: string
+  ok: boolean
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -51,6 +58,16 @@ function normalize(s: string) {
   return s.trim().toLowerCase().replace(/\s+/g, ' ')
 }
 
+function uniqueByLabel<T>(items: T[], getLabel: (item: T) => string) {
+  const seen = new Set<string>()
+  return items.filter((item) => {
+    const label = getLabel(item)
+    if (!label || seen.has(label)) return false
+    seen.add(label)
+    return true
+  })
+}
+
 function isCorrectTyping(input: string, correct: string) {
   const userNorm = normalize(input)
   const answers = correct.split('/').map((p) => normalize(p.trim()))
@@ -60,6 +77,10 @@ function isCorrectTyping(input: string, correct: string) {
 function blankWordInExample(example: string, word: string) {
   if (!example) return ''
   return example.replace(word, '_____')
+}
+
+function buildChoiceSet(correct: string, distractors: string[]) {
+  return uniqueByLabel([correct, ...distractors], (value) => value)
 }
 
 function getModeLabel(mode: QuizMode | string) {
@@ -105,13 +126,14 @@ function QuizContent() {
   const [submitted, setSubmitted] = useState(false)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
-  const [answers, setAnswers] = useState<{ display: string; chosen: string; correct: string; ok: boolean }[]>([])
+  const [answers, setAnswers] = useState<AnswerResult[]>([])
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>('idle')
   const [saveError, setSaveError] = useState('')
   const [recentAttempts, setRecentAttempts] = useState<QuizAttemptRow[]>([])
   const [attemptsLoading, setAttemptsLoading] = useState(false)
   const [learningIds, setLearningIds] = useState<number[]>([])
   const [progressLoading, setProgressLoading] = useState(false)
+  const [pendingAnswer, setPendingAnswer] = useState<AnswerResult | null>(null)
 
   useEffect(() => {
     if (!user) return
@@ -191,38 +213,56 @@ function QuizContent() {
       }
 
       if (quizMode === 'word_to_meaning') {
-        const distractors = shuffle(pool.filter((v) => v.word !== item.word)).slice(0, 3)
+        const distractors = uniqueByLabel(
+          shuffle(pool.filter((v) => v.word !== item.word)),
+          (v) => v.meaning
+        )
+          .slice(0, 3)
+          .map((d) => d.meaning)
+
         return {
           type: 'word_to_meaning',
           prompt: item.word,
           secondary: item.romanization,
           level: item.level,
           correct: item.meaning,
-          choices: shuffle([item.meaning, ...distractors.map((d) => d.meaning)]),
+          choices: shuffle(buildChoiceSet(item.meaning, distractors)),
           speechText: item.word,
         } satisfies ChoiceQuestion
       }
 
       if (quizMode === 'meaning_to_word') {
-        const distractors = shuffle(pool.filter((v) => v.word !== item.word)).slice(0, 3)
+        const distractors = uniqueByLabel(
+          shuffle(pool.filter((v) => v.word !== item.word)),
+          (v) => v.word
+        )
+          .slice(0, 3)
+          .map((d) => d.word)
+
         return {
           type: 'meaning_to_word',
           prompt: item.meaning,
-          secondary: item.pos,
+          secondary: `${item.pos} / ${item.example_en}`,
           level: item.level,
           correct: item.word,
-          choices: shuffle([item.word, ...distractors.map((d) => d.word)]),
+          choices: shuffle(buildChoiceSet(item.word, distractors)),
         } satisfies ChoiceQuestion
       }
 
-      const distractors = shuffle(pool.filter((v) => v.word !== item.word)).slice(0, 3)
+      const distractors = uniqueByLabel(
+        shuffle(pool.filter((v) => v.word !== item.word)),
+        (v) => v.word
+      )
+        .slice(0, 3)
+        .map((d) => d.word)
+
       return {
         type: 'example_blank',
         prompt: blankWordInExample(item.example_kr, item.word) || item.example_kr,
         secondary: item.example_en,
         level: item.level,
         correct: item.word,
-        choices: shuffle([item.word, ...distractors.map((d) => d.word)]),
+        choices: shuffle(buildChoiceSet(item.word, distractors)),
       } satisfies ChoiceQuestion
     })
 
@@ -234,6 +274,7 @@ function QuizContent() {
     setScore(0)
     setFinished(false)
     setAnswers([])
+    setPendingAnswer(null)
     setSaveStatus('idle')
     setSaveError('')
   }
@@ -247,6 +288,7 @@ function QuizContent() {
     setScore(0)
     setFinished(false)
     setAnswers([])
+    setPendingAnswer(null)
     setSaveStatus('idle')
     setSaveError('')
   }
@@ -261,18 +303,27 @@ function QuizContent() {
 
   const advance = (ok: boolean, chosen: string, correct: string, display: string) => {
     if (ok) setScore((s) => s + 1)
-    setAnswers((prev) => [...prev, { display, chosen, correct, ok }])
-    setTimeout(() => {
-      if (qIndex + 1 >= totalQuestions) {
-        setFinished(true)
-      } else {
-        setQIndex((i) => i + 1)
-        setSelected(null)
-        setTyped('')
-        setSubmitted(false)
-        setTimeout(() => inputRef.current?.focus(), 50)
+    setPendingAnswer({ display, chosen, correct, ok })
+  }
+
+  const goToNextQuestion = () => {
+    if (!pendingAnswer) return
+    setAnswers((prev) => [...prev, pendingAnswer])
+    setPendingAnswer(null)
+    if (qIndex + 1 >= totalQuestions) {
+      setFinished(true)
+      if (user && saveStatus === 'idle') {
+        setTimeout(() => {
+          void handleSaveAttempt()
+        }, 0)
       }
-    }, 1000)
+      return
+    }
+    setQIndex((i) => i + 1)
+    setSelected(null)
+    setTyped('')
+    setSubmitted(false)
+    setTimeout(() => inputRef.current?.focus(), 50)
   }
 
   const handleChoiceAnswer = (choice: string) => {
@@ -292,7 +343,7 @@ function QuizContent() {
   }
 
   const handleSaveAttempt = async () => {
-    if (!user || !finished || saveStatus !== 'idle') return
+    if (!user || saveStatus !== 'idle') return
 
     setSaveStatus('saving')
     setSaveError('')
@@ -472,14 +523,20 @@ function QuizContent() {
                 </div>
                 <button
                   onClick={handleSaveAttempt}
-                  disabled={saveStatus !== 'idle'}
+                  disabled={saveStatus === 'saving' || saveStatus === 'saved'}
                   className="btn-coral px-5 py-3 rounded-2xl text-sm disabled:opacity-40"
                 >
-                  {saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'Saved' : 'Save Result'}
+                  {saveStatus === 'saving'
+                    ? 'Saving...'
+                    : saveStatus === 'saved'
+                      ? 'Saved'
+                        : 'Save Result'}
                 </button>
               </div>
-              {saveError ? <p className="text-sm text-coral mt-3">{saveError}</p> : null}
               {saveStatus === 'saved' ? <p className="text-sm text-emerald-400 mt-3">Quiz result saved.</p> : null}
+              {saveError ? (
+                <p className="text-sm text-coral mt-3 break-words">{saveError}</p>
+              ) : null}
             </>
           ) : (
             <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
@@ -595,6 +652,22 @@ function QuizContent() {
             )
           })}
         </div>
+
+        {pendingAnswer ? (
+          <div className="mt-6 text-center">
+            <p className={`text-sm font-bold ${pendingAnswer.ok ? 'text-emerald-400' : 'text-coral'}`}>
+              {pendingAnswer.ok ? 'Correct!' : 'Incorrect'}
+            </p>
+            {!pendingAnswer.ok ? (
+              <p className="text-text-subtle text-sm mt-2">
+                Answer: <span className="font-semibold text-text">{pendingAnswer.correct}</span>
+              </p>
+            ) : null}
+            <button onClick={goToNextQuestion} className="btn-coral px-6 py-3 rounded-xl mt-4">
+              {qIndex + 1 >= totalQuestions ? 'See Results' : 'Next Question'}
+            </button>
+          </div>
+        ) : null}
       </div>
     )
   }
@@ -642,7 +715,9 @@ function QuizContent() {
           </div>
         )}
         {submitted && isOk && (
-          <p className="text-center text-emerald-400 text-sm font-bold">Correct!</p>
+          <div className="text-center">
+            <p className="text-emerald-400 text-sm font-bold">Correct!</p>
+          </div>
         )}
 
         {!submitted && (
@@ -654,6 +729,12 @@ function QuizContent() {
             Check
           </button>
         )}
+
+        {submitted && pendingAnswer ? (
+          <button type="button" onClick={goToNextQuestion} className="btn-coral w-full py-3 rounded-xl">
+            {qIndex + 1 >= totalQuestions ? 'See Results' : 'Next Question'}
+          </button>
+        ) : null}
       </form>
     </div>
   )

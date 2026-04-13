@@ -6,7 +6,7 @@
     "romanization": "gage",
     "meaning": "store, shop",
     "example_kr": "가게에 가다",
-    "example_en": "go to a store"
+    "example_en": "go to the store"
   },
   {
     "level": 1,
@@ -15,7 +15,7 @@
     "romanization": "gagyeog",
     "meaning": "price",
     "example_kr": "가격이 비싸다",
-    "example_en": "price is expensive"
+    "example_en": "the price is high"
   },
   {
     "level": 1,
@@ -24,7 +24,7 @@
     "romanization": "gagu",
     "meaning": "furniture",
     "example_kr": "가구를 놓다",
-    "example_en": "place furniture"
+    "example_en": "place the furniture"
   },
   {
     "level": 1,
@@ -33,7 +33,7 @@
     "romanization": "ga-kkabda",
     "meaning": "close, near",
     "example_kr": "거리가 가깝다",
-    "example_en": "distance is close"
+    "example_en": "it is close by"
   },
   {
     "level": 1,
@@ -87,7 +87,7 @@
     "romanization": "ga-yo",
     "meaning": "pop music",
     "example_kr": "가요를 부르다",
-    "example_en": "sing pop music"
+    "example_en": "sing a pop song"
   },
   {
     "level": 1,
@@ -96,7 +96,7 @@
     "romanization": "ga-unde",
     "meaning": "middle, center",
     "example_kr": "가운데 자리",
-    "example_en": "middle seat"
+    "example_en": "a seat in the middle"
   },
   {
     "level": 1,
@@ -105,7 +105,7 @@
     "romanization": "ga-eul",
     "meaning": "autumn, fall",
     "example_kr": "계절",
-    "example_en": "season"
+    "example_en": "a season"
   },
   {
     "level": 1,
@@ -339,7 +339,7 @@
     "romanization": "gyeo-ul",
     "meaning": "winter",
     "example_kr": "계절",
-    "example_en": "season"
+    "example_en": "a season"
   },
   {
     "level": 1,
@@ -366,7 +366,7 @@
     "romanization": "gyejeol",
     "meaning": "season",
     "example_kr": "계절이 바뀌다",
-    "example_en": "season changes"
+    "example_en": "the seasons change"
   },
   {
     "level": 1,
@@ -2517,7 +2517,7 @@
     "romanization": "beoseu",
     "meaning": "bus",
     "example_kr": "버스를 타다",
-    "example_en": "ride a bus"
+    "example_en": "take a bus"
   },
   {
     "level": 1,
@@ -2634,7 +2634,7 @@
     "romanization": "bom",
     "meaning": "spring",
     "example_kr": "계절",
-    "example_en": "season"
+    "example_en": "a season"
   },
   {
     "level": 1,
@@ -4983,7 +4983,7 @@
     "romanization": "ibda",
     "meaning": "to wear, put on",
     "example_kr": "옷을 입다",
-    "example_en": "wear clothes"
+    "example_en": "put on clothes"
   },
   {
     "level": 1,
@@ -6891,7 +6891,7 @@
     "romanization": "geoli",
     "meaning": "distance",
     "example_kr": "거리가 가깝다",
-    "example_en": "the distance is close"
+    "example_en": "the distance is short"
   },
   {
     "level": 2,
@@ -29616,7 +29616,7 @@
     "romanization": "cheol",
     "meaning": "season",
     "example_kr": "철이 바뀌다",
-    "example_en": "season changes"
+    "example_en": "the seasons change"
   },
   {
     "level": 3,

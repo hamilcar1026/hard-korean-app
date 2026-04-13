@@ -7,6 +7,33 @@ import { createClient } from '@/lib/supabase'
 import StudentDashboard from '@/components/StudentDashboard'
 import type { MemoryScoreRow, QuizAttemptRow } from '@/types'
 
+function normalizeDashboardError(message?: string | null) {
+  if (!message) return ''
+
+  if (
+    message.includes('user_progress') &&
+    (message.includes('schema cache') || message.includes('does not exist') || message.includes('relation'))
+  ) {
+    return 'Study progress is not set up in the current Supabase project. Run supabase_schema.sql on the same Supabase project used by Vercel.'
+  }
+
+  if (
+    message.includes('quiz_attempts') &&
+    (message.includes('schema cache') || message.includes('does not exist') || message.includes('relation'))
+  ) {
+    return 'Quiz history is not set up in the current Supabase project. Run supabase_schema_v6.sql on the same Supabase project used by Vercel.'
+  }
+
+  if (
+    message.includes('memory_scores') &&
+    (message.includes('schema cache') || message.includes('does not exist') || message.includes('relation'))
+  ) {
+    return 'Memory scores are not set up in the current Supabase project. Run supabase_schema_v3.sql on the same Supabase project used by Vercel.'
+  }
+
+  return 'Could not load dashboard data from Supabase right now.'
+}
+
 interface StudentStat {
   user_id: string
   email: string
@@ -47,7 +74,7 @@ export default function DashboardPage() {
       .select('user_id, status')
 
     if (progressError) {
-      setError(progressError.message)
+      setError(normalizeDashboardError(progressError.message))
       setFetching(false)
       return
     }
@@ -57,7 +84,7 @@ export default function DashboardPage() {
       .select('user_id, moves, duration_ms, is_public, completed_at')
 
     if (memoryError && !memoryError.message.includes('memory_scores')) {
-      setError(memoryError.message)
+      setError(normalizeDashboardError(memoryError.message))
       setFetching(false)
       return
     }
@@ -67,7 +94,7 @@ export default function DashboardPage() {
       .select('user_id, correct_pct, created_at')
 
     if (quizError && !quizError.message.includes('quiz_attempts')) {
-      setError(quizError.message)
+      setError(normalizeDashboardError(quizError.message))
       setFetching(false)
       return
     }
@@ -77,7 +104,7 @@ export default function DashboardPage() {
       .select('id, email')
 
     if (profilesError) {
-      setError(profilesError.message)
+      setError(normalizeDashboardError(profilesError.message))
       setFetching(false)
       return
     }
