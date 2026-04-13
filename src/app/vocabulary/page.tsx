@@ -17,6 +17,55 @@ const PAGE_SIZE = 20
 
 type StatusFilter = 'all' | 'known' | 'learning' | 'unmarked' | 'favorites'
 
+const POS_DISPLAY_ORDER = [
+  'noun',
+  'verb',
+  'adjective',
+  'adverb',
+  'determiner',
+  'numeral',
+  'interjection',
+  'dependent noun',
+  'suffix',
+  'abbreviated form',
+  'mixed / other',
+] as const
+
+function normalizePosLabel(pos: string) {
+  const value = pos.trim().toLowerCase()
+
+  if (value === '접사') return 'suffix'
+  if (value === '줄어든꼴' || value === '줄어든말') return 'abbreviated form'
+  if (value === 'noun' || value === 'verb' || value === 'adjective' || value === 'adverb') {
+    return value
+  }
+  if (value === 'determiner') return 'determiner'
+  if (value === 'numeral') return 'numeral'
+  if (value === 'interjection') return 'interjection'
+  if (value === 'dependent noun') return 'dependent noun'
+
+  const parts = value
+    .split('/')
+    .map((part) => part.trim())
+    .filter(Boolean)
+
+  if (parts.length === 0) return 'mixed / other'
+  if (parts.every((part) => part === 'verb' || part === 'adjective')) {
+    return 'verb / adjective'
+  }
+  if (parts.every((part) => part === 'numeral' || part === 'determiner')) {
+    return 'numeral / determiner'
+  }
+  if (parts.every((part) => part === 'noun' || part === 'determiner')) {
+    return 'noun / determiner'
+  }
+  if (parts.every((part) => part === 'noun' || part === 'adverb')) {
+    return 'noun / adverb'
+  }
+
+  return 'mixed / other'
+}
+
 function VocabContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -88,10 +137,10 @@ function VocabContent() {
 
   const favoriteSet = useMemo(() => new Set(favoriteIds), [favoriteIds])
 
-  const posOptions = useMemo(
-    () => ['All', ...new Set(vocabData.map((item) => item.pos).filter(Boolean))],
-    []
-  )
+  const posOptions = useMemo(() => {
+    const normalized = new Set(vocabData.map((item) => normalizePosLabel(item.pos)).filter(Boolean))
+    return ['All', ...POS_DISPLAY_ORDER.filter((label) => normalized.has(label))]
+  }, [])
 
   const filtered = useMemo(() => {
     let items = selectedLevel ? vocabData.filter((v) => v.level === selectedLevel) : vocabData
@@ -103,14 +152,14 @@ function VocabContent() {
           v.word.toLowerCase().includes(q) ||
           v.meaning.toLowerCase().includes(q) ||
           v.romanization.toLowerCase().includes(q) ||
-          v.pos.toLowerCase().includes(q) ||
+          normalizePosLabel(v.pos).toLowerCase().includes(q) ||
           v.example_kr.toLowerCase().includes(q) ||
           v.example_en.toLowerCase().includes(q)
       )
     }
 
     if (selectedPos !== 'All') {
-      items = items.filter((v) => v.pos === selectedPos)
+      items = items.filter((v) => normalizePosLabel(v.pos) === selectedPos)
     }
 
     if (statusFilter !== 'all') {
@@ -357,7 +406,7 @@ function VocabContent() {
                   <LevelBadge level={item.level} />
                 </div>
                 <p className="text-xs text-text-subtle mb-1">{item.romanization}</p>
-                <p className="text-xs text-text-faint mb-2">{item.pos}</p>
+                <p className="text-xs text-text-faint mb-2">{normalizePosLabel(item.pos)}</p>
                 <p className="text-sm text-coral-light leading-snug">{item.meaning}</p>
                 {item.example_kr ? (
                   <div className="mt-2 border-t border-border pt-2">
