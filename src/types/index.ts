@@ -43,3 +43,14 @@ export interface MemoryScoreRow {
   is_public: boolean
   completed_at: string
 }
+
+export interface QuizAttemptRow {
+  id: number
+  user_id: string
+  level: number | null
+  quiz_mode: string
+  score: number
+  total_questions: number
+  correct_pct: number
+  created_at: string
+}

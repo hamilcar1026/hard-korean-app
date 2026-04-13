@@ -6,7 +6,14 @@ import { useAuth } from '@/contexts/AuthContext'
 import { grammarData, vocabData } from '@/lib/data'
 import { getUserMemoryBest, getUserRecentMemoryScores } from '@/lib/memory'
 import { getUserProgress } from '@/lib/progress'
-import type { GrammarItem, MemoryScoreRow, UserProgressRow, VocabItem } from '@/types'
+import { getUserRecentQuizAttempts } from '@/lib/quiz'
+import type {
+  GrammarItem,
+  MemoryScoreRow,
+  QuizAttemptRow,
+  UserProgressRow,
+  VocabItem,
+} from '@/types'
 
 type ReviewItem =
   | { kind: 'vocab'; item: VocabItem; reviewed_at: string }
@@ -28,6 +35,21 @@ function formatTimestamp(value: string) {
     hour: 'numeric',
     minute: '2-digit',
   })
+}
+
+function getQuizModeLabel(mode: string) {
+  switch (mode) {
+    case 'word_to_meaning':
+      return 'Word to Meaning'
+    case 'meaning_to_word':
+      return 'Meaning to Word'
+    case 'example_blank':
+      return 'Example Blank'
+    case 'typing':
+      return 'Type the Word'
+    default:
+      return mode
+  }
 }
 
 function getLevelProgress(progress: UserProgressRow[]) {
@@ -84,6 +106,7 @@ export default function StudentDashboard() {
   const [progress, setProgress] = useState<UserProgressRow[]>([])
   const [memoryBest, setMemoryBest] = useState<MemoryScoreRow | null>(null)
   const [recentMemoryScores, setRecentMemoryScores] = useState<MemoryScoreRow[]>([])
+  const [recentQuizAttempts, setRecentQuizAttempts] = useState<QuizAttemptRow[]>([])
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true)
 
@@ -94,7 +117,7 @@ export default function StudentDashboard() {
 
     const load = async () => {
       setLoading(true)
-      const [progressResult, bestResult, recentResult] = await Promise.all([
+      const [progressResult, bestResult, recentMemoryResult, recentQuizResult] = await Promise.all([
         getUserProgress(user.id),
         getUserMemoryBest(user.id, {
           level: 1,
@@ -102,16 +125,29 @@ export default function StudentDashboard() {
           gameMode: 'all',
         }),
         getUserRecentMemoryScores(user.id, 4),
+        getUserRecentQuizAttempts(user.id, 5),
       ])
 
       if (cancelled) return
 
-      if (progressResult.error || bestResult.error || recentResult.error) {
-        setError(progressResult.error ?? bestResult.error ?? recentResult.error ?? '')
+      if (
+        progressResult.error ||
+        bestResult.error ||
+        recentMemoryResult.error ||
+        recentQuizResult.error
+      ) {
+        setError(
+          progressResult.error ??
+            bestResult.error ??
+            recentMemoryResult.error ??
+            recentQuizResult.error ??
+            ''
+        )
       } else {
         setProgress(progressResult.data)
         setMemoryBest(bestResult.data)
-        setRecentMemoryScores(recentResult.data)
+        setRecentMemoryScores(recentMemoryResult.data)
+        setRecentQuizAttempts(recentQuizResult.data)
       }
       setLoading(false)
     }
@@ -129,9 +165,16 @@ export default function StudentDashboard() {
     const known = progress.filter((item) => item.status === 'known').length
     const learning = progress.filter((item) => item.status === 'learning').length
     const reviewedToday = getTodayCount(progress)
+    const bestQuiz = recentQuizAttempts.reduce<QuizAttemptRow | null>((best, attempt) => {
+      if (!best) return attempt
+      if (attempt.correct_pct !== best.correct_pct) {
+        return attempt.correct_pct > best.correct_pct ? attempt : best
+      }
+      return attempt.score > best.score ? attempt : best
+    }, null)
 
-    return { levelProgress, reviewItems, known, learning, reviewedToday }
-  }, [progress])
+    return { levelProgress, reviewItems, known, learning, reviewedToday, bestQuiz }
+  }, [progress, recentQuizAttempts])
 
   if (!user) return null
 
@@ -190,7 +233,7 @@ export default function StudentDashboard() {
                 <>
                   <p className="text-2xl font-black text-text">{memoryBest.moves} moves</p>
                   <p className="text-sm text-text-muted mt-1">
-                    L{memoryBest.level} • {memoryBest.pair_count} pairs • {formatDuration(memoryBest.duration_ms)}
+                    L{memoryBest.level} / {memoryBest.pair_count} pairs / {formatDuration(memoryBest.duration_ms)}
                   </p>
                 </>
               ) : (
@@ -234,10 +277,10 @@ export default function StudentDashboard() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">
-                        TOPIK {entry.level} • {entry.pair_count} pairs • {entry.game_mode === 'review' ? 'Review' : 'All cards'}
+                        TOPIK {entry.level} / {entry.pair_count} pairs / {entry.game_mode === 'review' ? 'Review' : 'All cards'}
                       </p>
                       <p className="font-bold text-text">
-                        {entry.moves} moves • {formatDuration(entry.duration_ms)}
+                        {entry.moves} moves / {formatDuration(entry.duration_ms)}
                       </p>
                       <p className="text-sm text-text-muted mt-1">{formatTimestamp(entry.completed_at)}</p>
                     </div>
@@ -312,7 +355,7 @@ export default function StudentDashboard() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">
-                        {entry.kind === 'vocab' ? 'Vocabulary' : 'Grammar'} • TOPIK {entry.item.level}
+                        {entry.kind === 'vocab' ? 'Vocabulary' : 'Grammar'} / TOPIK {entry.item.level}
                       </p>
                       <p className="font-bold text-text">
                         {entry.kind === 'vocab' ? entry.item.word : entry.item.form}
@@ -343,16 +386,60 @@ export default function StudentDashboard() {
 
         <section className="bg-card border border-border rounded-3xl p-6">
           <div className="mb-5">
-            <h2 className="text-xl font-black text-text">Quick Actions</h2>
-            <p className="text-sm text-text-subtle">Jump into the next study block.</p>
+            <h2 className="text-xl font-black text-text">Quiz Snapshot</h2>
+            <p className="text-sm text-text-subtle">Your latest saved quiz runs and best recent accuracy.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+            <div className="bg-card-surface border border-border rounded-2xl p-4">
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Best Recent Quiz</p>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading...</p>
+              ) : stats.bestQuiz ? (
+                <>
+                  <p className="text-2xl font-black text-text">{stats.bestQuiz.correct_pct}%</p>
+                  <p className="text-sm text-text-muted mt-1">
+                    {stats.bestQuiz.score}/{stats.bestQuiz.total_questions} / {getQuizModeLabel(stats.bestQuiz.quiz_mode)}
+                  </p>
+                </>
+              ) : (
+                <p className="text-sm text-text-faint">Save a quiz result to see your quiz stats here.</p>
+              )}
+            </div>
+
+            <div className="bg-card-surface border border-border rounded-2xl p-4">
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Saved Attempts</p>
+              <p className="text-2xl font-black text-text">{loading ? '...' : recentQuizAttempts.length}</p>
+              <p className="text-sm text-text-muted mt-1">Recent quiz runs currently shown below</p>
+            </div>
+          </div>
+
+          <div className="space-y-3 mb-5">
+            {loading ? (
+              <p className="text-sm text-text-faint">Loading quiz history...</p>
+            ) : recentQuizAttempts.length === 0 ? (
+              <p className="text-sm text-text-faint">Save a quiz result to start tracking your accuracy here.</p>
+            ) : (
+              recentQuizAttempts.map((attempt) => (
+                <div key={attempt.id} className="bg-card-surface border border-border rounded-2xl p-4">
+                  <p className="font-bold text-text">
+                    {attempt.score}/{attempt.total_questions} / {attempt.correct_pct}%
+                  </p>
+                  <p className="text-sm text-text-muted mt-1">
+                    {getQuizModeLabel(attempt.quiz_mode)} / {attempt.level ? `TOPIK ${attempt.level}` : 'All levels'}
+                  </p>
+                  <p className="text-xs text-text-faint mt-2">{formatTimestamp(attempt.created_at)}</p>
+                </div>
+              ))
+            )}
           </div>
 
           <div className="space-y-3">
-            <Link href="/memory" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
-              Play memory game
-            </Link>
             <Link href="/quiz" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
               Take a quiz
+            </Link>
+            <Link href="/memory" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Play memory game
             </Link>
             <Link href="/vocabulary" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
               Review vocabulary

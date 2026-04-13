@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { createClient } from '@/lib/supabase'
 import StudentDashboard from '@/components/StudentDashboard'
-import type { MemoryScoreRow } from '@/types'
+import type { MemoryScoreRow, QuizAttemptRow } from '@/types'
 
 interface StudentStat {
   user_id: string
@@ -17,10 +17,12 @@ interface StudentStat {
   memory_best_time_ms: number | null
   memory_recent_runs: number
   memory_public_runs: number
+  quiz_recent_attempts: number
+  quiz_best_pct: number | null
 }
 
 function formatDuration(durationMs: number | null) {
-  if (durationMs === null) return '—'
+  if (durationMs === null) return 'No record'
 
   const totalSeconds = Math.max(1, Math.round(durationMs / 1000))
   const minutes = Math.floor(totalSeconds / 60)
@@ -40,47 +42,73 @@ export default function DashboardPage() {
     setError('')
     const supabase = createClient()
 
-    const { data: progress, error: pErr } = await supabase
+    const { data: progress, error: progressError } = await supabase
       .from('user_progress')
       .select('user_id, status')
 
-    if (pErr) { setError(pErr.message); setFetching(false); return }
-
-    const { data: memoryScores, error: mErr } = await supabase
-      .from('memory_scores')
-      .select('user_id, moves, duration_ms, is_public, completed_at')
-
-    if (mErr && !mErr.message.includes('memory_scores')) {
-      setError(mErr.message)
+    if (progressError) {
+      setError(progressError.message)
       setFetching(false)
       return
     }
 
-    const { data: profiles, error: prErr } = await supabase
+    const { data: memoryScores, error: memoryError } = await supabase
+      .from('memory_scores')
+      .select('user_id, moves, duration_ms, is_public, completed_at')
+
+    if (memoryError && !memoryError.message.includes('memory_scores')) {
+      setError(memoryError.message)
+      setFetching(false)
+      return
+    }
+
+    const { data: quizAttempts, error: quizError } = await supabase
+      .from('quiz_attempts')
+      .select('user_id, correct_pct, created_at')
+
+    if (quizError && !quizError.message.includes('quiz_attempts')) {
+      setError(quizError.message)
+      setFetching(false)
+      return
+    }
+
+    const { data: profiles, error: profilesError } = await supabase
       .from('profiles')
       .select('id, email')
 
-    if (prErr) { setError(prErr.message); setFetching(false); return }
-
-    const emailMap: Record<string, string> = {}
-    for (const p of profiles ?? []) emailMap[p.id] = p.email
-
-    const agg: Record<string, { known: number; learning: number }> = {}
-    for (const row of progress ?? []) {
-      if (!agg[row.user_id]) agg[row.user_id] = { known: 0, learning: 0 }
-      if (row.status === 'known') agg[row.user_id].known++
-      else if (row.status === 'learning') agg[row.user_id].learning++
+    if (profilesError) {
+      setError(profilesError.message)
+      setFetching(false)
+      return
     }
 
-    const memoryAgg: Record<string, {
-      bestMoves: number | null
-      bestTimeMs: number | null
-      recentRuns: number
-      publicRuns: number
-    }> = {}
+    const emailMap: Record<string, string> = {}
+    for (const profile of profiles ?? []) {
+      emailMap[profile.id] = profile.email
+    }
+
+    const progressAgg: Record<string, { known: number; learning: number }> = {}
+    for (const row of progress ?? []) {
+      if (!progressAgg[row.user_id]) progressAgg[row.user_id] = { known: 0, learning: 0 }
+      if (row.status === 'known') progressAgg[row.user_id].known += 1
+      if (row.status === 'learning') progressAgg[row.user_id].learning += 1
+    }
+
+    const memoryAgg: Record<
+      string,
+      {
+        bestMoves: number | null
+        bestTimeMs: number | null
+        recentRuns: number
+        publicRuns: number
+      }
+    > = {}
 
     const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000
-    for (const row of (memoryScores as Pick<MemoryScoreRow, 'user_id' | 'moves' | 'duration_ms' | 'is_public' | 'completed_at'>[] | null) ?? []) {
+    for (const row of (memoryScores as Pick<
+      MemoryScoreRow,
+      'user_id' | 'moves' | 'duration_ms' | 'is_public' | 'completed_at'
+    >[] | null) ?? []) {
       if (!memoryAgg[row.user_id]) {
         memoryAgg[row.user_id] = {
           bestMoves: null,
@@ -95,45 +123,63 @@ export default function DashboardPage() {
         current.bestMoves === null ||
         row.moves < current.bestMoves ||
         (row.moves === current.bestMoves &&
-          current.bestTimeMs !== null &&
-          row.duration_ms < current.bestTimeMs)
+          (current.bestTimeMs === null || row.duration_ms < current.bestTimeMs))
 
       if (isBetter) {
         current.bestMoves = row.moves
         current.bestTimeMs = row.duration_ms
       }
 
-      if (row.is_public) {
-        current.publicRuns += 1
+      if (row.is_public) current.publicRuns += 1
+      if (new Date(row.completed_at).getTime() >= weekAgo) current.recentRuns += 1
+    }
+
+    const quizAgg: Record<string, { recentAttempts: number; bestPct: number | null }> = {}
+    for (const row of (quizAttempts as Pick<QuizAttemptRow, 'user_id' | 'correct_pct' | 'created_at'>[] | null) ?? []) {
+      if (!quizAgg[row.user_id]) {
+        quizAgg[row.user_id] = { recentAttempts: 0, bestPct: null }
       }
 
-      if (new Date(row.completed_at).getTime() >= weekAgo) {
-        current.recentRuns += 1
+      if (new Date(row.created_at).getTime() >= weekAgo) {
+        quizAgg[row.user_id].recentAttempts += 1
+      }
+
+      if (
+        quizAgg[row.user_id].bestPct === null ||
+        row.correct_pct > (quizAgg[row.user_id].bestPct ?? 0)
+      ) {
+        quizAgg[row.user_id].bestPct = row.correct_pct
       }
     }
 
     const studentIds = new Set([
-      ...Object.keys(agg),
+      ...Object.keys(progressAgg),
       ...Object.keys(memoryAgg),
+      ...Object.keys(quizAgg),
     ])
 
-    const result: StudentStat[] = [...studentIds].map((uid) => {
-      const counts = agg[uid] ?? { known: 0, learning: 0 }
-      return {
-        user_id: uid,
-        email: emailMap[uid] ?? uid,
-        known: counts.known,
-        learning: counts.learning,
-        total: counts.known + counts.learning,
-        memory_best_moves: memoryAgg[uid]?.bestMoves ?? null,
-        memory_best_time_ms: memoryAgg[uid]?.bestTimeMs ?? null,
-        memory_recent_runs: memoryAgg[uid]?.recentRuns ?? 0,
-        memory_public_runs: memoryAgg[uid]?.publicRuns ?? 0,
-      }
-    }).sort((a, b) => {
-      if (b.total !== a.total) return b.total - a.total
-      return b.memory_recent_runs - a.memory_recent_runs
-    })
+    const result: StudentStat[] = [...studentIds]
+      .map((uid) => {
+        const counts = progressAgg[uid] ?? { known: 0, learning: 0 }
+        return {
+          user_id: uid,
+          email: emailMap[uid] ?? uid,
+          known: counts.known,
+          learning: counts.learning,
+          total: counts.known + counts.learning,
+          memory_best_moves: memoryAgg[uid]?.bestMoves ?? null,
+          memory_best_time_ms: memoryAgg[uid]?.bestTimeMs ?? null,
+          memory_recent_runs: memoryAgg[uid]?.recentRuns ?? 0,
+          memory_public_runs: memoryAgg[uid]?.publicRuns ?? 0,
+          quiz_recent_attempts: quizAgg[uid]?.recentAttempts ?? 0,
+          quiz_best_pct: quizAgg[uid]?.bestPct ?? null,
+        }
+      })
+      .sort((a, b) => {
+        if (b.total !== a.total) return b.total - a.total
+        if (b.quiz_recent_attempts !== a.quiz_recent_attempts) return b.quiz_recent_attempts - a.quiz_recent_attempts
+        return b.memory_recent_runs - a.memory_recent_runs
+      })
 
     setStats(result)
     setFetching(false)
@@ -141,7 +187,10 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (loading) return
-    if (!user) { router.replace('/auth'); return }
+    if (!user) {
+      router.replace('/auth')
+      return
+    }
     if (role === 'teacher') {
       queueMicrotask(() => {
         void loadStats()
@@ -150,24 +199,20 @@ export default function DashboardPage() {
   }, [loading, role, router, user])
 
   if (loading) {
-    return (
-      <div className="text-center py-20 text-text-faint">Loading...</div>
-    )
+    return <div className="text-center py-20 text-text-faint">Loading...</div>
   }
 
-  if (!user) return null
-
-  if (!role) return null
+  if (!user || !role) return null
 
   if (role !== 'teacher') {
     return <StudentDashboard />
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
+    <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-black text-text mb-1">Teacher Dashboard</h1>
-        <p className="text-text-subtle text-sm">Track student study progress and memory game activity.</p>
+        <p className="text-text-subtle text-sm">Track student study progress, quiz scores, and memory activity.</p>
       </div>
 
       {error && (
@@ -182,9 +227,7 @@ export default function DashboardPage() {
       {fetching ? (
         <div className="text-center py-20 text-text-faint">Loading student progress...</div>
       ) : stats.length === 0 ? (
-        <div className="text-center py-20 text-text-faint">
-          No study records yet.
-        </div>
+        <div className="text-center py-20 text-text-faint">No study records yet.</div>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -194,51 +237,53 @@ export default function DashboardPage() {
                 <th className="pb-3 pr-6 font-semibold text-emerald-400">Known</th>
                 <th className="pb-3 pr-6 font-semibold text-amber-400">Learning</th>
                 <th className="pb-3 pr-6 font-semibold">Total</th>
+                <th className="pb-3 pr-6 font-semibold">Best Quiz</th>
+                <th className="pb-3 pr-6 font-semibold">Quiz Runs This Week</th>
                 <th className="pb-3 pr-6 font-semibold">Best Memory</th>
-                <th className="pb-3 pr-6 font-semibold">Runs This Week</th>
+                <th className="pb-3 pr-6 font-semibold">Memory Runs This Week</th>
                 <th className="pb-3 font-semibold">Public Shares</th>
               </tr>
             </thead>
             <tbody>
-              {stats.map((s) => (
+              {stats.map((student) => (
                 <tr
-                  key={s.user_id}
+                  key={student.user_id}
                   className="border-b border-border hover:bg-card-surface transition-colors"
                 >
-                  <td className="py-3 pr-6 text-text font-medium truncate max-w-[220px]">
-                    {s.email}
-                  </td>
-                  <td className="py-3 pr-6 text-emerald-400 font-semibold">{s.known}</td>
-                  <td className="py-3 pr-6 text-amber-400 font-semibold">{s.learning}</td>
-                  <td className="py-3 text-text-subtle">
-                    {s.total}
-                    {s.total > 0 && (
-                      <span className="ml-2 text-xs text-text-faint">
-                        ({Math.round((s.known / s.total) * 100)}% known)
-                      </span>
-                    )}
-                  </td>
+                  <td className="py-3 pr-6 text-text font-medium truncate max-w-[220px]">{student.email}</td>
+                  <td className="py-3 pr-6 text-emerald-400 font-semibold">{student.known}</td>
+                  <td className="py-3 pr-6 text-amber-400 font-semibold">{student.learning}</td>
                   <td className="py-3 pr-6 text-text-subtle">
-                    {s.memory_best_moves === null ? (
-                      '—'
+                    {student.total}
+                    {student.total > 0 ? (
+                      <span className="ml-2 text-xs text-text-faint">
+                        ({Math.round((student.known / student.total) * 100)}% known)
+                      </span>
+                    ) : null}
+                  </td>
+                  <td className="py-3 pr-6 text-text">
+                    {student.quiz_best_pct === null ? 'No record' : `${student.quiz_best_pct}%`}
+                  </td>
+                  <td className="py-3 pr-6 text-text">{student.quiz_recent_attempts}</td>
+                  <td className="py-3 pr-6 text-text-subtle">
+                    {student.memory_best_moves === null ? (
+                      'No record'
                     ) : (
                       <span>
-                        {s.memory_best_moves} moves
+                        {student.memory_best_moves} moves
                         <span className="ml-2 text-xs text-text-faint">
-                          {formatDuration(s.memory_best_time_ms)}
+                          {formatDuration(student.memory_best_time_ms)}
                         </span>
                       </span>
                     )}
                   </td>
-                  <td className="py-3 pr-6 text-text">{s.memory_recent_runs}</td>
-                  <td className="py-3 text-text">{s.memory_public_runs}</td>
+                  <td className="py-3 pr-6 text-text">{student.memory_recent_runs}</td>
+                  <td className="py-3 text-text">{student.memory_public_runs}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <p className="mt-4 text-xs text-text-faint text-right">
-            Total students: {stats.length}
-          </p>
+          <p className="mt-4 text-xs text-text-faint text-right">Total students: {stats.length}</p>
         </div>
       )}
     </div>

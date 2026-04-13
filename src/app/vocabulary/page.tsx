@@ -1,17 +1,19 @@
 'use client'
 
-import { useState, useMemo, Suspense } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { vocabData } from '@/lib/data'
 import FlashCard from '@/components/FlashCard'
 import LevelBadge from '@/components/LevelBadge'
 import TTSButton from '@/components/TTSButton'
 import { useAuth } from '@/contexts/AuthContext'
-import { saveProgress } from '@/lib/progress'
-import type { VocabItem } from '@/types'
+import { getUserProgress, saveProgress } from '@/lib/progress'
+import type { UserProgressRow, VocabItem } from '@/types'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 const PAGE_SIZE = 20
+
+type StatusFilter = 'all' | 'known' | 'learning' | 'unmarked'
 
 function VocabContent() {
   const searchParams = useSearchParams()
@@ -32,20 +34,73 @@ function VocabContent() {
   const [cardIndex, setCardIndex] = useState(0)
   const [pageInputActive, setPageInputActive] = useState(false)
   const [pageInputVal, setPageInputVal] = useState('')
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
+  const [selectedPos, setSelectedPos] = useState('All')
+  const [progress, setProgress] = useState<UserProgressRow[]>([])
+
+  useEffect(() => {
+    if (!user) return
+
+    let cancelled = false
+
+    const loadProgress = async () => {
+      const result = await getUserProgress(user.id)
+      if (cancelled || result.error) return
+      setProgress(result.data.filter((row) => row.item_type === 'vocab'))
+    }
+
+    void loadProgress()
+
+    return () => {
+      cancelled = true
+    }
+  }, [user])
+
+  const progressMap = useMemo(() => {
+    const source = user ? progress : []
+    const map = new Map<number, UserProgressRow['status']>()
+    for (const row of source) {
+      map.set(row.item_id, row.status)
+    }
+    return map
+  }, [progress, user])
+
+  const posOptions = useMemo(
+    () => ['All', ...new Set(vocabData.map((item) => item.pos).filter(Boolean))],
+    []
+  )
 
   const filtered = useMemo(() => {
     let items = selectedLevel ? vocabData.filter((v) => v.level === selectedLevel) : vocabData
+
     if (search.trim()) {
       const q = search.toLowerCase()
       items = items.filter(
         (v) =>
-          v.word.includes(q) ||
+          v.word.toLowerCase().includes(q) ||
           v.meaning.toLowerCase().includes(q) ||
-          v.romanization.toLowerCase().includes(q)
+          v.romanization.toLowerCase().includes(q) ||
+          v.pos.toLowerCase().includes(q) ||
+          v.example_kr.toLowerCase().includes(q) ||
+          v.example_en.toLowerCase().includes(q)
       )
     }
+
+    if (selectedPos !== 'All') {
+      items = items.filter((v) => v.pos === selectedPos)
+    }
+
+    if (statusFilter !== 'all') {
+      items = items.filter((item) => {
+        const status = item.id != null ? progressMap.get(item.id) : undefined
+        if (statusFilter === 'known') return status === 'known'
+        if (statusFilter === 'learning') return status === 'learning'
+        return status == null
+      })
+    }
+
     return items
-  }, [selectedLevel, search])
+  }, [progressMap, search, selectedLevel, selectedPos, statusFilter])
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
@@ -60,13 +115,21 @@ function VocabContent() {
     router.replace(`/vocabulary?${params}`)
   }
 
-  const handleModeChange = (m: 'list' | 'flashcard') => {
-    setMode(m)
+  const handleModeChange = (nextMode: 'list' | 'flashcard') => {
+    setMode(nextMode)
     setCardIndex(0)
     const params = new URLSearchParams()
     if (selectedLevel) params.set('level', String(selectedLevel))
-    if (m === 'flashcard') params.set('mode', 'flashcard')
+    if (nextMode === 'flashcard') params.set('mode', 'flashcard')
     router.replace(`/vocabulary?${params}`)
+  }
+
+  const clearFilters = () => {
+    setSearch('')
+    setSelectedPos('All')
+    setStatusFilter('all')
+    setPage(0)
+    setCardIndex(0)
   }
 
   return (
@@ -75,7 +138,7 @@ function VocabContent() {
         <h1 className="text-3xl font-black text-text mb-2">Vocabulary</h1>
         <p className="text-text-subtle">
           {filtered.length.toLocaleString()} words
-          {selectedLevel ? ` • TOPIK Level ${selectedLevel}` : ' • All levels'}
+          {selectedLevel ? ` / TOPIK Level ${selectedLevel}` : ' / All levels'}
         </p>
       </div>
 
@@ -92,18 +155,18 @@ function VocabContent() {
           >
             All
           </button>
-          {LEVELS.map((l) => (
+          {LEVELS.map((level) => (
             <button
-              key={l}
-              onClick={() => handleLevelChange(l)}
+              key={level}
+              onClick={() => handleLevelChange(level)}
               className={`px-3 py-1 text-sm rounded-xl font-medium transition-colors ${
-                selectedLevel === l
+                selectedLevel === level
                   ? 'text-white'
                   : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
               }`}
-              style={selectedLevel === l ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+              style={selectedLevel === level ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
             >
-              Level {l}
+              Level {level}
             </button>
           ))}
         </div>
@@ -134,43 +197,98 @@ function VocabContent() {
         </div>
       </div>
 
-      {mode === 'list' && (
-        <input
-          type="text"
-          placeholder="Search words, meanings..."
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value)
-            setPage(0)
-            setCardIndex(0)
-          }}
-          className="w-full mb-6 px-4 py-2.5 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
-        />
-      )}
+      {mode === 'list' ? (
+        <div className="bg-card border border-border rounded-2xl p-4 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.8fr_0.8fr_auto] gap-3">
+            <input
+              type="text"
+              placeholder="Search words, meanings, romanization, or examples..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value)
+                setPage(0)
+                setCardIndex(0)
+              }}
+              className="w-full px-4 py-2.5 bg-card-surface border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
+            />
 
-      {mode === 'flashcard' && filtered.length > 0 && (
+            <select
+              value={selectedPos}
+              onChange={(e) => {
+                setSelectedPos(e.target.value)
+                setPage(0)
+              }}
+              className="w-full px-4 py-2.5 bg-card-surface border border-border rounded-xl text-text focus:outline-none focus:border-border-hover transition-colors"
+            >
+              {posOptions.map((pos) => (
+                <option key={pos} value={pos}>
+                  {pos === 'All' ? 'All Parts of Speech' : pos}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={statusFilter}
+              onChange={(e) => {
+                setStatusFilter(e.target.value as StatusFilter)
+                setPage(0)
+              }}
+              disabled={!user}
+              className="w-full px-4 py-2.5 bg-card-surface border border-border rounded-xl text-text focus:outline-none focus:border-border-hover transition-colors disabled:opacity-40"
+            >
+              <option value="all">All Study States</option>
+              <option value="known">Known Only</option>
+              <option value="learning">Learning Only</option>
+              <option value="unmarked">Unmarked Only</option>
+            </select>
+
+            <button onClick={clearFilters} className="btn-ghost px-4 py-2.5 rounded-xl">
+              Clear
+            </button>
+          </div>
+
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-text-subtle">
+            <span>{filtered.length.toLocaleString()} matches</span>
+            <span>{selectedPos === 'All' ? 'All parts of speech' : selectedPos}</span>
+            <span>
+              {statusFilter === 'all'
+                ? 'All study states'
+                : statusFilter === 'known'
+                  ? 'Known only'
+                  : statusFilter === 'learning'
+                    ? 'Learning only'
+                    : 'Unmarked only'}
+            </span>
+            {!user ? <span>Log in to filter by study state</span> : null}
+          </div>
+        </div>
+      ) : null}
+
+      {mode === 'flashcard' && filtered.length > 0 ? (
         <div className="flex justify-center py-8">
           <FlashCard
             item={filtered[cardIndex]}
             current={cardIndex}
             total={filtered.length}
-            onNext={() => setCardIndex((i) => Math.min(i + 1, filtered.length - 1))}
-            onPrev={() => setCardIndex((i) => Math.max(i - 1, 0))}
-            onGoTo={(i) => setCardIndex(i)}
-            onKnown={user && filtered[cardIndex].id != null
-              ? () => saveProgress(user.id, 'vocab', filtered[cardIndex].id!, 'known').then(() => {})
-              : undefined
+            onNext={() => setCardIndex((index) => Math.min(index + 1, filtered.length - 1))}
+            onPrev={() => setCardIndex((index) => Math.max(index - 1, 0))}
+            onGoTo={(index) => setCardIndex(index)}
+            onKnown={
+              user && filtered[cardIndex].id != null
+                ? () => saveProgress(user.id, 'vocab', filtered[cardIndex].id!, 'known').then(() => {})
+                : undefined
             }
-            onUnknown={user && filtered[cardIndex].id != null
-              ? () => saveProgress(user.id, 'vocab', filtered[cardIndex].id!, 'learning').then(() => {})
-              : undefined
+            onUnknown={
+              user && filtered[cardIndex].id != null
+                ? () => saveProgress(user.id, 'vocab', filtered[cardIndex].id!, 'learning').then(() => {})
+                : undefined
             }
             loginHint={!user}
           />
         </div>
-      )}
+      ) : null}
 
-      {mode === 'list' && (
+      {mode === 'list' ? (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             {pageItems.map((item: VocabItem, idx: number) => (
@@ -188,25 +306,25 @@ function VocabContent() {
                 <p className="text-xs text-text-subtle mb-1">{item.romanization}</p>
                 <p className="text-xs text-text-faint mb-2">{item.pos}</p>
                 <p className="text-sm text-coral-light leading-snug">{item.meaning}</p>
-                {item.example_kr && (
+                {item.example_kr ? (
                   <div className="mt-2 border-t border-border pt-2">
                     <div className="flex items-start gap-1.5">
                       <TTSButton text={item.example_kr} />
                       <p className="text-xs text-text-muted leading-relaxed">{item.example_kr}</p>
                     </div>
-                    {item.example_en && (
+                    {item.example_en ? (
                       <p className="text-xs text-text-faint mt-0.5">{item.example_en}</p>
-                    )}
+                    ) : null}
                   </div>
-                )}
+                ) : null}
               </div>
             ))}
           </div>
 
-          {totalPages > 1 && (
+          {totalPages > 1 ? (
             <div className="flex items-center justify-center gap-3 mt-8">
               <button
-                onClick={() => setPage((p) => Math.max(p - 1, 0))}
+                onClick={() => setPage((currentPage) => Math.max(currentPage - 1, 0))}
                 disabled={page === 0}
                 className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
               >
@@ -221,8 +339,10 @@ function VocabContent() {
                     onChange={(e) => setPageInputVal(e.target.value)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') {
-                        const n = parseInt(pageInputVal, 10)
-                        if (!isNaN(n) && n >= 1 && n <= totalPages) setPage(n - 1)
+                        const nextPage = parseInt(pageInputVal, 10)
+                        if (!Number.isNaN(nextPage) && nextPage >= 1 && nextPage <= totalPages) {
+                          setPage(nextPage - 1)
+                        }
                         setPageInputActive(false)
                         setPageInputVal('')
                       } else if (e.key === 'Escape') {
@@ -230,12 +350,18 @@ function VocabContent() {
                         setPageInputVal('')
                       }
                     }}
-                    onBlur={() => { setPageInputActive(false); setPageInputVal('') }}
+                    onBlur={() => {
+                      setPageInputActive(false)
+                      setPageInputVal('')
+                    }}
                     className="w-14 text-center px-2 py-0.5 bg-card border border-border-hover rounded-lg text-text focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                   />
                 ) : (
                   <button
-                    onClick={() => { setPageInputActive(true); setPageInputVal(String(page + 1)) }}
+                    onClick={() => {
+                      setPageInputActive(true)
+                      setPageInputVal(String(page + 1))
+                    }}
                     className="min-w-[2rem] text-center px-2 py-0.5 rounded-lg hover:bg-card-surface hover:text-text transition-colors"
                   >
                     {page + 1}
@@ -244,20 +370,20 @@ function VocabContent() {
                 <span>/ {totalPages}</span>
               </div>
               <button
-                onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
+                onClick={() => setPage((currentPage) => Math.min(currentPage + 1, totalPages - 1))}
                 disabled={page === totalPages - 1}
                 className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
               >
                 Next
               </button>
             </div>
-          )}
+          ) : null}
         </>
-      )}
+      ) : null}
 
-      {filtered.length === 0 && (
+      {filtered.length === 0 ? (
         <div className="text-center py-20 text-text-faint">No results found.</div>
-      )}
+      ) : null}
     </div>
   )
 }

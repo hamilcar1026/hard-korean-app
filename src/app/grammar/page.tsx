@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, Suspense } from 'react'
+import { Suspense, useMemo, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { grammarData } from '@/lib/data'
 import GrammarCard from '@/components/GrammarCard'
@@ -32,20 +32,28 @@ function GrammarContent() {
 
   const filtered = useMemo(() => {
     let items = selectedLevel ? grammarData.filter((g) => g.level === selectedLevel) : grammarData
+
     if (selectedCategory !== 'All') {
       items = items.filter((g) => g.category === selectedCategory)
     }
+
     if (search.trim()) {
       const q = search.toLowerCase()
-      items = items.filter(
-        (g) =>
+      items = items.filter((g) => {
+        const examples = g.examples.join(' ').toLowerCase()
+        return (
           g.form.toLowerCase().includes(q) ||
           g.meaning.toLowerCase().includes(q) ||
-          g.category.toLowerCase().includes(q)
-      )
+          g.category.toLowerCase().includes(q) ||
+          g.related.toLowerCase().includes(q) ||
+          g.conjugation_rule.toLowerCase().includes(q) ||
+          examples.includes(q)
+        )
+      })
     }
+
     return items
-  }, [selectedLevel, selectedCategory, search])
+  }, [search, selectedCategory, selectedLevel])
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const pageItems = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
@@ -58,13 +66,19 @@ function GrammarContent() {
     router.replace(`/grammar?${params}`)
   }
 
+  const clearFilters = () => {
+    setSelectedCategory('All')
+    setSearch('')
+    setPage(0)
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-black text-text mb-2">Grammar</h1>
         <p className="text-text-subtle">
           {filtered.length} grammar points
-          {selectedLevel ? ` • TOPIK Level ${selectedLevel}` : ' • All levels'}
+          {selectedLevel ? ` / TOPIK Level ${selectedLevel}` : ' / All levels'}
         </p>
       </div>
 
@@ -80,46 +94,65 @@ function GrammarContent() {
         >
           All
         </button>
-        {LEVELS.map((l) => (
+        {LEVELS.map((level) => (
           <button
-            key={l}
-            onClick={() => handleLevelChange(l)}
+            key={level}
+            onClick={() => handleLevelChange(level)}
             className={`px-3 py-1 text-sm rounded-xl font-medium transition-colors ${
-              selectedLevel === l
+              selectedLevel === level
                 ? 'text-white'
                 : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
             }`}
-            style={selectedLevel === l ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+            style={selectedLevel === level ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
           >
-            Level {l}
+            Level {level}
           </button>
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-5">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => { setSelectedCategory(cat); setPage(0) }}
-            className={`px-3 py-1 text-xs rounded-xl font-medium transition-colors ${
-              selectedCategory === cat
-                ? 'text-white'
-                : 'bg-card-surface text-text-faint hover:bg-border hover:text-text-subtle'
-            }`}
-            style={selectedCategory === cat ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      <div className="bg-card border border-border rounded-2xl p-4 mb-6">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {CATEGORIES.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setSelectedCategory(category)
+                setPage(0)
+              }}
+              className={`px-3 py-1 text-xs rounded-xl font-medium transition-colors ${
+                selectedCategory === category
+                  ? 'text-white'
+                  : 'bg-card-surface text-text-faint hover:bg-border hover:text-text-subtle'
+              }`}
+              style={selectedCategory === category ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      <input
-        type="text"
-        placeholder="Search grammar forms, meanings..."
-        value={search}
-        onChange={(e) => { setSearch(e.target.value); setPage(0) }}
-        className="w-full mb-6 px-4 py-2.5 bg-card border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
-      />
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-3">
+          <input
+            type="text"
+            placeholder="Search forms, meanings, related grammar, rules, or examples..."
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value)
+              setPage(0)
+            }}
+            className="w-full px-4 py-2.5 bg-card-surface border border-border rounded-xl text-text placeholder-text-faint focus:outline-none focus:border-border-hover transition-colors"
+          />
+          <button onClick={clearFilters} className="btn-ghost px-4 py-2.5 rounded-xl">
+            Clear
+          </button>
+        </div>
+
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-text-subtle">
+          <span>{filtered.length} matches</span>
+          <span>{selectedCategory === 'All' ? 'All categories' : selectedCategory}</span>
+          <span>{search.trim() ? 'Expanded search enabled' : 'Browse mode'}</span>
+        </div>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {pageItems.map((item, idx) => (
@@ -127,10 +160,10 @@ function GrammarContent() {
         ))}
       </div>
 
-      {totalPages > 1 && (
+      {totalPages > 1 ? (
         <div className="flex items-center justify-center gap-3 mt-8">
           <button
-            onClick={() => setPage((p) => Math.max(p - 1, 0))}
+            onClick={() => setPage((currentPage) => Math.max(currentPage - 1, 0))}
             disabled={page === 0}
             className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
           >
@@ -140,18 +173,18 @@ function GrammarContent() {
             {page + 1} / {totalPages}
           </span>
           <button
-            onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
+            onClick={() => setPage((currentPage) => Math.min(currentPage + 1, totalPages - 1))}
             disabled={page === totalPages - 1}
             className="btn-ghost px-4 py-2 rounded-xl disabled:opacity-30"
           >
             Next
           </button>
         </div>
-      )}
+      ) : null}
 
-      {filtered.length === 0 && (
+      {filtered.length === 0 ? (
         <div className="text-center py-20 text-text-faint">No results found.</div>
-      )}
+      ) : null}
     </div>
   )
 }
