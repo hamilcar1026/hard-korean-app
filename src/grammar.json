@@ -572,7 +572,7 @@
     "meaning": "only; nothing but (limiting particle, used with negation)",
     "examples": [
       "천 원밖에 없어요. (I only have 1,000 won.)",
-      "이것밖에 없어요. (There is only this.)"
+      "이것밖에 없어요. (This is all there is.)"
     ]
   },
   {
@@ -596,7 +596,7 @@
     "meaning": "used to mean starting from a place or time",
     "examples": [
       "서울에서부터 걸어왔어요. (I walked all the way from Seoul.)",
-      "집에서부터 여기까지 걸어왔어요. (I walked all the way from home to here.)"
+      "집에서부터 여기까지 걸어왔어요. (I walked all the way here from home.)"
     ]
   },
   {
@@ -667,8 +667,8 @@
     "conjugation_rule": "",
     "meaning": "or (connecting two alternative actions or states)",
     "examples": [
-      "집에 가거나 카페에 가요. (I either go home or go to a cafe.)",
-      "먹거나 마셔요. (I eat something or have a drink.)"
+      "집에 가거나 카페에 가요. (I either go home or head to a cafe.)",
+      "먹거나 마셔요. (I eat or grab something to drink.)"
     ]
   },
   {
@@ -728,7 +728,7 @@
     "meaning": "interruption and transition (action stops midway and changes to another action)",
     "examples": [
       "TV를 보다가 잠이 들었어요. (I fell asleep while watching TV.)",
-      "밥을 먹다가 전화가 왔어요. (A call came while I was eating.)"
+      "밥을 먹다가 전화가 왔어요. (I got a call while I was eating.)"
     ]
   },
   {
@@ -847,7 +847,7 @@
     "conjugation_rule": "",
     "meaning": "used to express surprise or admiration about something just noticed",
     "examples": [
-      "벌써 다 먹었는데요! (You already finished it all!)",
+      "벌써 다 먹었는데요! (You finished it already!)",
       "이 음식이 맛있는데요! (This food is really delicious!)"
     ]
   },
@@ -1088,8 +1088,8 @@
     "conjugation_rule": "",
     "meaning": "like; as; together (similarity / comitative)",
     "examples": [
-      "선생님같이 말해요. (I speak like the teacher.)",
-      "친구같이 편하게 이야기해요. (I talk comfortably like a friend.)"
+      "선생님같이 말해요. (I speak like the teacher does.)",
+      "친구같이 편하게 이야기해요. (I speak casually, like I would with a friend.)"
     ]
   },
   {
@@ -1125,7 +1125,7 @@
     "meaning": "from (source / origin — formal)",
     "examples": [
       "부모님으로부터 용돈을 받았어요. (I received allowance from my parents.)",
-      "회사로부터 연락이 왔어요. (A message came from the company.)"
+      "회사로부터 연락이 왔어요. (I got a message from the company.)"
     ]
   },
   {
@@ -1292,7 +1292,7 @@
     "conjugation_rule": "아다가 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여다가 after 하다 stems (contracted to 해다가); 어다가 after all other stems",
     "meaning": "brings and does; fetches and then does (transfer + action)",
     "examples": [
-      "마트에서 사다가 냉장고에 넣었어요. (I bought it from the market and put it in the fridge.)",
+      "마트에서 사다가 냉장고에 넣었어요. (I bought it at the market and put it in the fridge.)",
       "도서관에서 빌려다가 읽었어요. (I borrowed it from the library and read it.)"
     ]
   },
@@ -1700,7 +1700,7 @@
     "conjugation_rule": "아놓다 when the verb/adjective stem's last vowel is ㅏ or ㅗ; 여놓다 after 하다 stems (contracted to 해놓다); 어놓다 after all other stems",
     "meaning": "do in advance and leave (completed preparatory action)",
     "examples": [
-      "음식을 만들어 놓았어요. (I made food in advance.)",
+      "음식을 만들어 놓았어요. (I prepared the food in advance.)",
       "메모를 적어 놓았어요. (I wrote down a memo in advance.)"
     ]
   },
@@ -1916,8 +1916,8 @@
     "conjugation_rule": "이며 after consonant-ending nouns; 며 after vowel-ending nouns",
     "meaning": "used to list multiple things, often in a formal or written style",
     "examples": [
-      "책이며 공책이며 다 샀어요. (I bought books, notebooks, and everything.)",
-      "사과며 배며 과일을 많이 먹어요. (I eat lots of fruit including apples and pears.)"
+      "책이며 공책이며 다 샀어요. (I bought books, notebooks, and other things.)",
+      "사과며 배며 과일을 많이 먹어요. (I eat many kinds of fruit, including apples and pears.)"
     ]
   },
   {
@@ -2217,7 +2217,7 @@
     "meaning": "as if; just as (similarity / analogy)",
     "examples": [
       "새처럼 날고 싶어요. (I want to fly like a bird.)",
-      "알듯이 모르는 것도 있어요. (There are things I half-know as well.)"
+      "알듯이 모르는 것도 있어요. (There are also things I only half know.)"
     ]
   },
   {
@@ -2420,8 +2420,8 @@
     "conjugation_rule": "",
     "meaning": "because; the reason being (colloquial reason)",
     "examples": [
-      "바쁘고 해서 못 갔어요. (I couldn't go, partly because I was busy.)",
-      "비도 오고 해서 집에 있었어요. (I stayed home partly because it was also raining.)"
+      "바쁘고 해서 못 갔어요. (I couldn't go because I was busy, among other reasons.)",
+      "비도 오고 해서 집에 있었어요. (I stayed home partly because it was raining too.)"
     ]
   },
   {
@@ -2661,7 +2661,7 @@
     "meaning": "almost; narrowly; was on the verge of (near-miss)",
     "examples": [
       "넘어질 뻔했어요. (I almost fell.)",
-      "늦을 뻔했어요. (I almost was late.)"
+      "늦을 뻔했어요. (I was almost late.)"
     ]
   },
   {
@@ -2709,7 +2709,7 @@
     "meaning": "along; following (direction / accompanying particle — formal)",
     "examples": [
       "강을 따라 걸었어요. (I walked along the river.)",
-      "선생님을 따라 읽으세요. (Read along with the teacher.)"
+      "선생님을 따라 읽으세요. (Read after the teacher.)"
     ]
   },
   {
@@ -2900,8 +2900,8 @@
     "conjugation_rule": "",
     "meaning": "you know; it seems (soft assertion / mild protest)",
     "examples": [
-      "지금 집에 가는걸요. (I'm actually going home right now.)",
-      "배가 부른걸요. (I'm actually full.)"
+      "지금 집에 가는걸요. (I'm on my way home right now, actually.)",
+      "배가 부른걸요. (I'm actually full already.)"
     ]
   },
   {
@@ -3104,8 +3104,8 @@
     "conjugation_rule": "",
     "meaning": "at the same time as; simultaneously",
     "examples": [
-      "요리하는 동시에 전화로 이야기해요. (I talk on the phone at the same time as I cook.)",
-      "공부하는 동시에 음악을 들어요. (I listen to music at the same time as I study.)"
+      "요리하는 동시에 전화로 이야기해요. (I talk on the phone while I cook.)",
+      "공부하는 동시에 음악을 들어요. (I listen to music while I study.)"
     ]
   },
   {
@@ -3465,7 +3465,7 @@
     "meaning": "but; however (concession with disappointment — literary)",
     "examples": [
       "열심히 하건만 결과가 안 나와요. (I work hard, but the results don't come.)",
-      "노력은 했건만 실패했어요. (I made effort, but I failed.)"
+      "노력은 했건만 실패했어요. (I made an effort, but I still failed.)"
     ]
   },
   {
@@ -3621,7 +3621,7 @@
     "meaning": "used to express surprise or admiration in an old-fashioned tone",
     "examples": [
       "오늘도 열심히 일하는구려. (You are working hard again today.)",
-      "그 친구가 이미 가는구려. (That friend is already leaving.)"
+      "그 친구가 이미 가는구려. (That friend is already on the way out.)"
     ]
   },
   {
@@ -3957,7 +3957,7 @@
     "meaning": "get it over with; do away with decisively (decisive completion)",
     "examples": [
       "남은 음식을 먹어 치웠어요. (I finished off the remaining food.)",
-      "오래된 문제를 해결해 치웠어요. (I got the old problem over with.)"
+      "오래된 문제를 해결해 치웠어요. (I got that old problem out of the way.)"
     ]
   },
   {
@@ -3969,7 +3969,7 @@
     "meaning": "the claim or plan that (quoted statement / intention)",
     "examples": [
       "그가 온다는 소식을 들었어요. (I heard the news that he is coming.)",
-      "공부를 열심히 한다는 말은 믿기 어려워요. (It's hard to believe the claim that they study hard.)"
+      "공부를 열심히 한다는 말은 믿기 어려워요. (It's hard to believe them when they say they study hard.)"
     ]
   },
   {
