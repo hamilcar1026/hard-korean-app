@@ -7,6 +7,19 @@ import { createClient, supabaseConfigured } from '@/lib/supabase'
 
 type Mode = 'login' | 'register'
 
+function getEmailRedirectUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim()
+  if (configuredUrl) {
+    return `${configuredUrl.replace(/\/$/, '')}/auth`
+  }
+
+  if (typeof window !== 'undefined') {
+    return `${window.location.origin}/auth`
+  }
+
+  return undefined
+}
+
 export default function AuthPage() {
   const router = useRouter()
   const [mode, setMode] = useState<Mode>('login')
@@ -41,7 +54,13 @@ export default function AuthPage() {
 
     try {
       if (mode === 'register') {
-        const { error } = await supabase.auth.signUp({ email, password })
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: getEmailRedirectUrl(),
+          },
+        })
         if (error) throw error
         setDone(true)
       } else {
@@ -64,6 +83,9 @@ export default function AuthPage() {
         <h2 className="text-xl font-bold text-text mb-2">Check your email</h2>
         <p className="text-text-subtle text-sm leading-relaxed">
           We sent a confirmation link to <span className="text-text-muted">{email}</span>.
+        </p>
+        <p className="text-text-faint text-xs mt-3">
+          The confirmation link should bring you back to this site.
         </p>
         <Link href="/" className="mt-6 inline-block text-coral hover:text-coral-light transition-colors">
           Back to home
