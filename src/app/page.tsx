@@ -8,7 +8,7 @@ const LEVEL_INFO: Record<number, { label: string; accent: string; border: string
   1: { label: 'Beginner 1', accent: 'from-emerald-500 to-teal-400', border: 'border-emerald-800 hover:border-emerald-500', desc: 'Survival Korean' },
   2: { label: 'Beginner 2', accent: 'from-sky-500 to-blue-400', border: 'border-sky-800 hover:border-sky-500', desc: 'Daily life basics' },
   3: { label: 'Intermediate 1', accent: 'from-amber-500 to-yellow-400', border: 'border-amber-800 hover:border-amber-500', desc: 'Social topics' },
-  4: { label: 'Intermediate 2', accent: 'from-orange-500 to-amber-400', border: 'border-orange-800 hover:border-orange-500', desc: 'Abstract ideas' },
+  4: { label: 'Intermediate 2', accent: 'from-orange-500 to-amber-400', border: 'border-orange-800 hover:border-amber-500', desc: 'Abstract ideas' },
   5: { label: 'Advanced 1', accent: 'from-coral to-coral-light', border: 'border-[#6B3040] hover:border-coral', desc: 'Professional Korean' },
   6: { label: 'Advanced 2', accent: 'from-purple-500 to-pink-soft', border: 'border-purple-900 hover:border-purple-500', desc: 'Native-level mastery' },
 }
@@ -23,10 +23,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <div
-        className="relative overflow-hidden"
-        style={{ background: 'var(--t-hero-bg)' }}
-      >
+      <div className="relative overflow-hidden" style={{ background: 'var(--t-hero-bg)' }}>
         <div
           className="absolute -top-20 -left-20 w-80 h-80 rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: '#FF6B6B' }}
@@ -55,16 +52,10 @@ export default function HomePage() {
             No shortcuts. Study hard.
           </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <Link
-              href="/vocabulary"
-              className="btn-coral px-7 py-3 rounded-2xl text-sm shadow-lg"
-            >
+            <Link href="/vocabulary" className="btn-coral px-7 py-3 rounded-2xl text-sm shadow-lg">
               Start Vocabulary
             </Link>
-            <Link
-              href="/grammar"
-              className="btn-ghost px-7 py-3 rounded-2xl text-sm border border-border"
-            >
+            <Link href="/grammar" className="btn-ghost px-7 py-3 rounded-2xl text-sm border border-border">
               Study Grammar
             </Link>
           </div>
@@ -86,7 +77,11 @@ export default function HomePage() {
             >
               <p
                 className="text-2xl font-black"
-                style={{ background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+                style={{
+                  background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
               >
                 {value}
               </p>
@@ -114,29 +109,29 @@ export default function HomePage() {
                 <span>•</span>
                 <span>{grammar} grammar</span>
               </div>
-              <div className="flex gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 <Link
                   href={`/vocabulary?level=${level}`}
-                  className="flex-1 text-center px-3 py-1.5 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors"
+                  className="min-w-0 text-center px-3 py-2 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors break-words"
                 >
                   Vocabulary
                 </Link>
                 <Link
                   href={`/quiz?level=${level}`}
-                  className="flex-1 text-center px-3 py-1.5 text-sm rounded-xl text-white font-semibold transition-all hover:opacity-90"
+                  className="min-w-0 text-center px-3 py-2 text-sm rounded-xl text-white font-semibold transition-all hover:opacity-90 break-words"
                   style={{ background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' }}
                 >
                   Vocabulary Quiz
                 </Link>
                 <Link
                   href={`/grammar?level=${level}`}
-                  className="flex-1 text-center px-3 py-1.5 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors"
+                  className="min-w-0 text-center px-3 py-2 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors break-words"
                 >
                   Grammar
                 </Link>
                 <Link
                   href={`/grammar-quiz?level=${level}`}
-                  className="flex-1 text-center px-3 py-1.5 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors"
+                  className="min-w-0 text-center px-3 py-2 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors break-words"
                 >
                   Grammar Quiz
                 </Link>
