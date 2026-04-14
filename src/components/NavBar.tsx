@@ -9,10 +9,10 @@ import ThemeToggle from './ThemeToggle'
 const links = [
   { href: '/', label: 'Home' },
   { href: '/vocabulary', label: 'Vocabulary' },
+  { href: '/quiz', label: 'Vocabulary Quiz' },
   { href: '/grammar', label: 'Grammar' },
   { href: '/grammar-quiz', label: 'Grammar Quiz' },
   { href: '/favorites', label: 'Favorites' },
-  { href: '/quiz', label: 'Quiz' },
   { href: '/memory', label: 'Memory' },
   { href: '/crossword', label: 'Crossword' },
 ]

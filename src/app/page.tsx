@@ -119,7 +119,14 @@ export default function HomePage() {
                   href={`/vocabulary?level=${level}`}
                   className="flex-1 text-center px-3 py-1.5 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors"
                 >
-                  Vocab
+                  Vocabulary
+                </Link>
+                <Link
+                  href={`/quiz?level=${level}`}
+                  className="flex-1 text-center px-3 py-1.5 text-sm rounded-xl text-white font-semibold transition-all hover:opacity-90"
+                  style={{ background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' }}
+                >
+                  Vocabulary Quiz
                 </Link>
                 <Link
                   href={`/grammar?level=${level}`}
@@ -128,11 +135,10 @@ export default function HomePage() {
                   Grammar
                 </Link>
                 <Link
-                  href={`/quiz?level=${level}`}
-                  className="flex-1 text-center px-3 py-1.5 text-sm rounded-xl text-white font-semibold transition-all hover:opacity-90"
-                  style={{ background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' }}
+                  href={`/grammar-quiz?level=${level}`}
+                  className="flex-1 text-center px-3 py-1.5 bg-card-surface text-text-muted text-sm rounded-xl hover:text-text hover:bg-border transition-colors"
                 >
-                  Quiz
+                  Grammar Quiz
                 </Link>
               </div>
             </div>
