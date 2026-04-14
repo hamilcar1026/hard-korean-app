@@ -7,6 +7,10 @@ import StudentDashboard from '@/components/StudentDashboard'
 import { createClient } from '@/lib/supabase'
 import type { MemoryScoreRow, QuizAttemptRow } from '@/types'
 
+function isGrammarQuizMode(mode?: string | null) {
+  return typeof mode === 'string' && mode.startsWith('grammar_')
+}
+
 function normalizeDashboardError(message?: string | null) {
   if (!message) return ''
 
@@ -101,7 +105,7 @@ export default function DashboardPage() {
     ] = await Promise.all([
       supabase.from('user_progress').select('user_id, status, reviewed_at'),
       supabase.from('memory_scores').select('user_id, duration_ms, completed_at'),
-      supabase.from('quiz_attempts').select('user_id, correct_pct, created_at'),
+      supabase.from('quiz_attempts').select('user_id, correct_pct, created_at, quiz_mode'),
       supabase.from('crossword_completions').select('user_id, completed_at'),
       supabase.from('profiles').select('id, email'),
     ])
@@ -199,7 +203,7 @@ export default function DashboardPage() {
       }
 
       const current = quizAgg[row.user_id]
-      const isGrammar = row.quiz_mode.startsWith('grammar_')
+      const isGrammar = isGrammarQuizMode(row.quiz_mode)
       if (isGrammar) {
         current.grammarTotalPct += row.correct_pct
         current.grammarCount += 1

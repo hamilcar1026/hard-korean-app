@@ -58,8 +58,8 @@ function getQuizModeLabel(mode: string) {
   }
 }
 
-function isGrammarQuizMode(mode: string) {
-  return mode.startsWith('grammar_')
+function isGrammarQuizMode(mode?: string | null) {
+  return typeof mode === 'string' && mode.startsWith('grammar_')
 }
 
 function getLevelProgress(progress: UserProgressRow[]) {

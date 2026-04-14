@@ -39,8 +39,8 @@ type AnswerResult = {
   ok: boolean
 }
 
-function isGrammarQuizMode(mode: string) {
-  return mode.startsWith('grammar_')
+function isGrammarQuizMode(mode?: string | null) {
+  return typeof mode === 'string' && mode.startsWith('grammar_')
 }
 
 function formatTimestamp(value: string) {
@@ -84,44 +84,19 @@ function getModeLabel(mode: GrammarQuizMode) {
   }
 }
 
-function getQuestionGuide(mode: GrammarQuizMode) {
-  switch (mode) {
-    case 'form_to_meaning':
-      return 'Match the grammar form to the clearest meaning.'
-    case 'meaning_to_form':
-      return 'Pick the grammar form that best matches the meaning.'
-    case 'example_blank':
-      return 'Pick the form that completes the sentence naturally.'
-    default:
-      return ''
-  }
-}
-
-function getWhyThisFits(question: GrammarQuestion) {
-  switch (question.mode) {
-    case 'form_to_meaning':
-      return `This grammar form is used for: ${question.meaning}.`
-    case 'meaning_to_form':
-      return `The meaning points to the grammar form ${question.form}.`
-    case 'example_blank':
-      return question.usedForm
-        ? `This sentence needs ${question.usedForm}, which comes from the grammar ${question.form}.`
-        : `This sentence is completed with the grammar ${question.form}.`
-    default:
-      return ''
-  }
-}
-
-function getWatchOut(question: GrammarQuestion) {
-  if (question.related) {
-    return `Watch out for related grammar: ${question.related}.`
+function getShortExplanation(question: GrammarQuestion) {
+  if (question.mode === 'example_blank' && question.usedForm) {
+    if (question.usedForm === question.form) {
+      return `Correct form: ${question.usedForm}.`
+    }
+    return `Correct form: ${question.usedForm} (${question.form}).`
   }
 
-  if (question.category) {
-    return `This item belongs to the ${question.category} category.`
+  if (question.mode === 'meaning_to_form') {
+    return `The matching grammar form is ${question.form}.`
   }
 
-  return ''
+  return `This grammar means: ${question.meaning}.`
 }
 
 function getExampleParts(example: string) {
@@ -586,55 +561,34 @@ function GrammarQuizContent() {
                 <p className="font-semibold text-text mb-2">
                   {currentResult?.ok ? 'Correct' : 'Not quite'}
                 </p>
-                <div className="space-y-2 mb-4 text-sm text-text-subtle">
-                  <p>
-                    <span className="font-semibold text-text">How to read this:</span>{' '}
-                    {getQuestionGuide(current.mode)}
-                  </p>
-                  <p>
-                    <span className="font-semibold text-text">Why it fits:</span>{' '}
-                    {getWhyThisFits(current)}
-                  </p>
-                  {getWatchOut(current) ? (
-                    <p>
-                      <span className="font-semibold text-text">Watch out:</span>{' '}
-                      {getWatchOut(current)}
-                    </p>
-                  ) : null}
-                </div>
+                <p className="mb-4 text-sm text-text-subtle">{getShortExplanation(current)}</p>
                 <div className="grid gap-2 text-sm text-text-subtle">
-                  <p>
-                    <span className="font-semibold text-text">Grammar:</span> {current.form}
-                  </p>
                   {current.usedForm && (
                     <p>
                       <span className="font-semibold text-text">Used here:</span> {current.usedForm}
                     </p>
                   )}
                   <p>
+                    <span className="font-semibold text-text">Basic form:</span> {current.form}
+                  </p>
+                  <p>
                     <span className="font-semibold text-text">Meaning:</span> {current.meaning}
                   </p>
-                  {current.conjugationRule && (
+                  {current.mode !== 'example_blank' && current.conjugationRule && (
                     <p>
                       <span className="font-semibold text-text">Rule:</span>{' '}
                       {current.conjugationRule}
                     </p>
                   )}
-                  {current.related && (
+                  {current.related && current.mode !== 'example_blank' ? (
                     <p>
                       <span className="font-semibold text-text">Related:</span> {current.related}
                     </p>
-                  )}
+                  ) : null}
                   {current.examples[0] && (
                     <p>
                       <span className="font-semibold text-text">Example:</span>{' '}
                       {current.examples[0]}
-                    </p>
-                  )}
-                  {current.exampleEnglish && (
-                    <p>
-                      <span className="font-semibold text-text">English prompt:</span>{' '}
-                      {current.exampleEnglish}
                     </p>
                   )}
                 </div>
