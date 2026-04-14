@@ -13,6 +13,10 @@ export type HardWorkerRow = {
 function normalizeActivityError(message?: string | null) {
   if (!message) return null
 
+  if (message.includes('get_hard_worker_leaders')) {
+    return 'Hard worker ranking sync is not set up yet. Run supabase_schema_v10.sql on the same Supabase project used by Vercel.'
+  }
+
   if (
     message.includes('crossword_completions') &&
     (message.includes('does not exist') || message.includes('relation') || message.includes('schema cache'))
@@ -71,6 +75,30 @@ export async function getHardWorkerLeaders(
   limit = 5
 ): Promise<{ data: HardWorkerRow[]; error: string | null }> {
   const supabase = createClient()
+
+  const { data: rpcData, error: rpcError } = await supabase.rpc('get_hard_worker_leaders', {
+    period_name: period,
+    result_limit: limit,
+  })
+
+  if (!rpcError && rpcData) {
+    return {
+      data: ((rpcData as HardWorkerRow[] | null) ?? []).map((row) => ({
+        user_id: row.user_id,
+        display_name: row.display_name,
+        memory_completed: Number(row.memory_completed ?? 0),
+        crossword_completed: Number(row.crossword_completed ?? 0),
+        quiz_completed: Number(row.quiz_completed ?? 0),
+        total_completed: Number(row.total_completed ?? 0),
+        best_memory_moves:
+          row.best_memory_moves === null || row.best_memory_moves === undefined
+            ? null
+            : Number(row.best_memory_moves),
+      })),
+      error: null,
+    }
+  }
+
   const since =
     period === 'week'
       ? new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
@@ -103,6 +131,11 @@ export async function getHardWorkerLeaders(
   ] = await Promise.all([memoryQuery, crosswordQuery, quizQuery])
 
   const normalizedError =
+    (rpcError &&
+    !rpcError.message.includes('Could not find the function public.get_hard_worker_leaders') &&
+    !rpcError.message.includes('get_hard_worker_leaders')
+      ? normalizeActivityError(rpcError.message)
+      : null) ??
     normalizeActivityError(memoryError?.message) ??
     normalizeActivityError(crosswordError?.message) ??
     normalizeActivityError(quizError?.message)
