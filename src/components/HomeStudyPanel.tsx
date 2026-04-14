@@ -2,19 +2,14 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { getHardWorkerLeaders, type HardWorkerRow } from '@/lib/activity'
 import { useAuth } from '@/contexts/AuthContext'
 import { grammarData, vocabData } from '@/lib/data'
-import { getPublicMemoryLeaders } from '@/lib/memory'
 import { getUserProgress } from '@/lib/progress'
-import type { MemoryGameMode, MemoryScoreRow, UserProgressRow } from '@/types'
+import type { UserProgressRow } from '@/types'
 
-const PAIR_FILTERS = ['all', 3, 4, 6, 8] as const
 const PERIOD_FILTERS = ['week', 'all'] as const
-const MODE_FILTERS = ['all', 'review'] as const
-
 type PeriodFilter = (typeof PERIOD_FILTERS)[number]
-type PairFilter = (typeof PAIR_FILTERS)[number]
-type ModeFilter = (typeof MODE_FILTERS)[number]
 
 function getNextLevel(progress: UserProgressRow[]) {
   const knownVocab = new Set(
@@ -36,19 +31,8 @@ function isReviewedToday(reviewedAt: string) {
   return new Date(reviewedAt).toDateString() === new Date().toDateString()
 }
 
-function formatDuration(durationMs: number) {
-  const totalSeconds = Math.max(1, Math.round(durationMs / 1000))
-  const minutes = Math.floor(totalSeconds / 60)
-  const seconds = totalSeconds % 60
-  return `${minutes}:${String(seconds).padStart(2, '0')}`
-}
-
 function getPeriodLabel(period: PeriodFilter) {
   return period === 'week' ? 'This Week' : 'All Time'
-}
-
-function getModeLabel(mode: ModeFilter) {
-  return mode === 'all' ? 'All Cards' : 'Review Queue'
 }
 
 function getPlacementBadge(index: number) {
@@ -78,23 +62,15 @@ function RankingCard({
   leaderboardError,
   leaderboardLoading,
   periodFilter,
-  pairFilter,
-  modeFilter,
   currentUserId,
   onPeriodChange,
-  onPairChange,
-  onModeChange,
 }: {
-  leaders: MemoryScoreRow[]
+  leaders: HardWorkerRow[]
   leaderboardError: string
   leaderboardLoading: boolean
   periodFilter: PeriodFilter
-  pairFilter: PairFilter
-  modeFilter: ModeFilter
   currentUserId?: string
   onPeriodChange: (period: PeriodFilter) => void
-  onPairChange: (pair: PairFilter) => void
-  onModeChange: (mode: ModeFilter) => void
 }) {
   const currentUserRank = currentUserId
     ? leaders.findIndex((entry) => entry.user_id === currentUserId) + 1 || null
@@ -102,67 +78,29 @@ function RankingCard({
 
   return (
     <div className="bg-card border border-border rounded-3xl p-6 sm:p-8">
-      <div className="flex items-end justify-between gap-4 mb-5">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Memory Ranking</p>
-          <h2 className="text-2xl font-black text-text">{getPeriodLabel(periodFilter)} Fastest Runs</h2>
-        </div>
-        <Link href="/memory" className="text-sm text-coral hover:text-coral-light transition-colors">
-          Open game
-        </Link>
+      <div className="mb-5">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-text-subtle mb-3">Study Ranking</p>
+        <h2 className="text-2xl font-black text-text">Hard Workers {getPeriodLabel(periodFilter)}</h2>
+        <p className="text-sm text-text-muted mt-2">
+          Ranked by completed public memory sessions, saved crossword clears, and finished quizzes.
+        </p>
       </div>
 
-      <div className="flex flex-wrap gap-3 mb-5">
-        <div className="flex flex-wrap gap-2">
-          {PERIOD_FILTERS.map((value) => (
-            <button
-              key={value}
-              onClick={() => onPeriodChange(value)}
-              className={`px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
-                periodFilter === value
-                  ? 'text-white'
-                  : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
-              }`}
-              style={periodFilter === value ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
-            >
-              {getPeriodLabel(value)}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          {PAIR_FILTERS.map((value) => (
-            <button
-              key={String(value)}
-              onClick={() => onPairChange(value)}
-              className={`px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
-                pairFilter === value
-                  ? 'text-white'
-                  : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
-              }`}
-              style={pairFilter === value ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
-            >
-              {value === 'all' ? 'All Sizes' : `${value} Pairs`}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          {MODE_FILTERS.map((value) => (
-            <button
-              key={value}
-              onClick={() => onModeChange(value)}
-              className={`px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
-                modeFilter === value
-                  ? 'text-white'
-                  : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
-              }`}
-              style={modeFilter === value ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
-            >
-              {getModeLabel(value)}
-            </button>
-          ))}
-        </div>
+      <div className="flex flex-wrap gap-2 mb-5">
+        {PERIOD_FILTERS.map((value) => (
+          <button
+            key={value}
+            onClick={() => onPeriodChange(value)}
+            className={`px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
+              periodFilter === value
+                ? 'text-white'
+                : 'bg-card-surface text-text-subtle hover:bg-border hover:text-text'
+            }`}
+            style={periodFilter === value ? { background: 'linear-gradient(135deg, #FF6B6B, #FF8E9E)' } : {}}
+          >
+            {getPeriodLabel(value)}
+          </button>
+        ))}
       </div>
 
       {currentUserRank ? (
@@ -174,7 +112,7 @@ function RankingCard({
             </div>
             {currentUserRank <= 3 ? <Badge label={`Top ${currentUserRank}`} tone="gold" /> : null}
           </div>
-          <p className="text-sm text-text-muted mt-1">Your best public score is currently on this board.</p>
+          <p className="text-sm text-text-muted mt-1">Based on completed memory, crossword, and quiz sessions.</p>
         </div>
       ) : null}
 
@@ -183,17 +121,16 @@ function RankingCard({
       ) : leaderboardLoading ? (
         <p className="text-sm text-text-faint">Loading ranking...</p>
       ) : leaders.length === 0 ? (
-        <p className="text-sm text-text-faint">
-          No public runs for this filter yet. Share a memory result to kick off the board.
-        </p>
+        <p className="text-sm text-text-faint">No completed sessions yet for this period.</p>
       ) : (
         <div className="space-y-3">
           {leaders.map((entry, index) => {
             const isCurrentUser = currentUserId === entry.user_id
             const placementBadge = getPlacementBadge(index)
+
             return (
               <div
-                key={entry.id}
+                key={entry.user_id}
                 className={`rounded-2xl p-4 border ${
                   isCurrentUser ? 'bg-card border-coral/60 shadow-sm' : 'bg-card-surface border-border'
                 }`}
@@ -202,19 +139,19 @@ function RankingCard({
                   <div>
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       <p className="text-xs uppercase tracking-wide text-text-subtle">
-                        #{index + 1} • {entry.display_name}
-                        {isCurrentUser ? ' • You' : ''}
+                        #{index + 1} · {entry.display_name}
+                        {isCurrentUser ? ' · You' : ''}
                       </p>
                       {placementBadge ? <Badge label={placementBadge} tone="gold" /> : null}
-                      {isCurrentUser ? <Badge label="Your Best" tone="accent" /> : null}
+                      {isCurrentUser ? <Badge label="You" tone="accent" /> : null}
                     </div>
-                    <p className="font-bold text-text">
-                      {entry.moves} moves • {formatDuration(entry.duration_ms)}
-                    </p>
+                    <p className="font-bold text-text">{entry.total_completed} completed sessions</p>
                     <p className="text-sm text-text-muted mt-1">
-                      TOPIK {entry.level} • {entry.pair_count} pairs •{' '}
-                      {entry.game_mode === 'review' ? 'Review' : 'All cards'}
+                      Memory {entry.memory_completed} · Crossword {entry.crossword_completed} · Quiz {entry.quiz_completed}
                     </p>
+                    {entry.best_memory_moves !== null ? (
+                      <p className="text-xs text-text-faint mt-1">Best memory run: {entry.best_memory_moves} moves</p>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -229,14 +166,12 @@ function RankingCard({
 export default function HomeStudyPanel() {
   const { user, loading } = useAuth()
   const [progress, setProgress] = useState<UserProgressRow[]>([])
-  const [leaders, setLeaders] = useState<MemoryScoreRow[]>([])
+  const [leaders, setLeaders] = useState<HardWorkerRow[]>([])
   const [error, setError] = useState('')
   const [fetching, setFetching] = useState(false)
   const [leaderboardError, setLeaderboardError] = useState('')
   const [leaderboardLoading, setLeaderboardLoading] = useState(true)
   const [periodFilter, setPeriodFilter] = useState<PeriodFilter>('week')
-  const [pairFilter, setPairFilter] = useState<PairFilter>('all')
-  const [modeFilter, setModeFilter] = useState<ModeFilter>('all')
 
   useEffect(() => {
     let cancelled = false
@@ -244,14 +179,7 @@ export default function HomeStudyPanel() {
     const loadLeaderboard = async () => {
       setLeaderboardLoading(true)
       setLeaderboardError('')
-      const result = await getPublicMemoryLeaders(
-        {
-          period: periodFilter,
-          pairCount: pairFilter,
-          gameMode: modeFilter as MemoryGameMode | 'all',
-        },
-        5
-      )
+      const result = await getHardWorkerLeaders(periodFilter, 5)
 
       if (cancelled) return
 
@@ -269,7 +197,7 @@ export default function HomeStudyPanel() {
     return () => {
       cancelled = true
     }
-  }, [modeFilter, pairFilter, periodFilter])
+  }, [periodFilter])
 
   useEffect(() => {
     if (!user) return
@@ -303,12 +231,8 @@ export default function HomeStudyPanel() {
       leaderboardError={leaderboardError}
       leaderboardLoading={leaderboardLoading}
       periodFilter={periodFilter}
-      pairFilter={pairFilter}
-      modeFilter={modeFilter}
       currentUserId={user?.id}
       onPeriodChange={setPeriodFilter}
-      onPairChange={setPairFilter}
-      onModeChange={setModeFilter}
     />
   )
 
@@ -374,9 +298,7 @@ export default function HomeStudyPanel() {
             </Link>
           </div>
 
-          {error && (
-            <p className="mt-4 text-sm text-coral">{error}</p>
-          )}
+          {error ? <p className="mt-4 text-sm text-coral">{error}</p> : null}
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             <div className="bg-card-surface border border-border rounded-2xl p-4">

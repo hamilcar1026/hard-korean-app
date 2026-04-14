@@ -1,6 +1,15 @@
 import { createClient } from './supabase'
 import type { MemoryGameMode, MemoryScoreRow } from '@/types'
 
+export type PublicMemoryWorkerRow = {
+  user_id: string
+  display_name: string
+  total_runs: number
+  week_runs: number
+  best_moves: number | null
+  best_duration_ms: number | null
+}
+
 type ScoreFilters = {
   level: number
   pairCount: number
@@ -185,4 +194,82 @@ export async function getPublicMemoryLeaders(
     data: (data as MemoryScoreRow[] | null) ?? [],
     error: normalizeMemoryError(error?.message),
   }
+}
+
+export async function getPublicMemoryWorkers(
+  period: 'week' | 'all',
+  limit = 5
+): Promise<{
+  data: PublicMemoryWorkerRow[]
+  error: string | null
+}> {
+  const supabase = createClient()
+  let query = supabase
+    .from('memory_scores')
+    .select('user_id, display_name, moves, duration_ms, completed_at')
+    .eq('is_public', true)
+
+  const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
+  if (period === 'week') {
+    query = query.gte('completed_at', weekAgo)
+  }
+
+  const { data, error } = await query
+
+  if (error) {
+    return { data: [], error: normalizeMemoryError(error.message) }
+  }
+
+  const rows = (data as Array<{
+    user_id: string
+    display_name: string
+    moves: number
+    duration_ms: number
+    completed_at: string
+  }> | null) ?? []
+
+  const workers = new Map<string, PublicMemoryWorkerRow>()
+
+  rows.forEach((row) => {
+    const current = workers.get(row.user_id) ?? {
+      user_id: row.user_id,
+      display_name: row.display_name,
+      total_runs: 0,
+      week_runs: 0,
+      best_moves: null,
+      best_duration_ms: null,
+    }
+
+    current.total_runs += 1
+    if (new Date(row.completed_at).getTime() >= Date.now() - 7 * 24 * 60 * 60 * 1000) {
+      current.week_runs += 1
+    }
+
+    const isBetter =
+      current.best_moves === null ||
+      row.moves < current.best_moves ||
+      (row.moves === current.best_moves &&
+        (current.best_duration_ms === null || row.duration_ms < current.best_duration_ms))
+
+    if (isBetter) {
+      current.best_moves = row.moves
+      current.best_duration_ms = row.duration_ms
+    }
+
+    workers.set(row.user_id, current)
+  })
+
+  const sorted = [...workers.values()]
+    .sort((a, b) => {
+      const aRuns = period === 'week' ? a.week_runs : a.total_runs
+      const bRuns = period === 'week' ? b.week_runs : b.total_runs
+      if (bRuns !== aRuns) return bRuns - aRuns
+      if ((a.best_moves ?? Infinity) !== (b.best_moves ?? Infinity)) {
+        return (a.best_moves ?? Infinity) - (b.best_moves ?? Infinity)
+      }
+      return (a.best_duration_ms ?? Infinity) - (b.best_duration_ms ?? Infinity)
+    })
+    .slice(0, limit)
+
+  return { data: sorted, error: null }
 }

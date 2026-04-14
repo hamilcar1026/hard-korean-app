@@ -1,6 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { saveCrosswordCompletion } from '@/lib/activity'
+import { useAuth } from '@/contexts/AuthContext'
 import { vocabData } from '@/lib/data'
 import type { VocabItem } from '@/types'
 
@@ -141,7 +143,7 @@ function isValidCrosswordLayout(placements: Placement[]) {
 
       if (placement.orientation === 'across') {
         if (vertical.answer.length > 1) {
-          const intersectsPlacedWord = placements.some(
+          const matchesPlacedWord = placements.some(
             (candidate) =>
               candidate.orientation === 'down' &&
               candidate.row === vertical.row &&
@@ -149,20 +151,18 @@ function isValidCrosswordLayout(placements: Placement[]) {
               candidate.answer === vertical.answer
           )
 
-          if (!intersectsPlacedWord) return false
+          if (!matchesPlacedWord) return false
         }
-      } else {
-        if (horizontal.answer.length > 1) {
-          const intersectsPlacedWord = placements.some(
-            (candidate) =>
-              candidate.orientation === 'across' &&
-              candidate.row === horizontal.row &&
-              candidate.col === horizontal.col &&
-              candidate.answer === horizontal.answer
-          )
+      } else if (horizontal.answer.length > 1) {
+        const matchesPlacedWord = placements.some(
+          (candidate) =>
+            candidate.orientation === 'across' &&
+            candidate.row === horizontal.row &&
+            candidate.col === horizontal.col &&
+            candidate.answer === horizontal.answer
+        )
 
-          if (!intersectsPlacedWord) return false
-        }
+        if (!matchesPlacedWord) return false
       }
     }
   }
@@ -267,10 +267,18 @@ function buildEmptyEntries(puzzle: CrosswordPuzzle | null) {
   return Object.fromEntries(puzzle.cells.map((cell) => [getCellKey(cell.row, cell.col), ''])) as Record<string, string>
 }
 
+function buildPuzzleKey(level: number, puzzle: CrosswordPuzzle | null) {
+  if (!puzzle) return ''
+  return [
+    `level:${level}`,
+    ...puzzle.placements.map(
+      (placement) => `${placement.number}:${placement.orientation}:${placement.row},${placement.col}:${placement.answer}`
+    ),
+  ].join('|')
+}
+
 function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
-  const pool = shuffle(
-    vocabData.filter((item) => item.level === level && isGoodCrosswordWord(item))
-  ).slice(0, 48)
+  const pool = shuffle(vocabData.filter((item) => item.level === level && isGoodCrosswordWord(item))).slice(0, 48)
 
   if (pool.length < TARGET_WORD_COUNT) return null
 
@@ -301,14 +309,8 @@ function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
 
         for (const match of intersections) {
           const nextOrientation: Orientation = anchor.orientation === 'across' ? 'down' : 'across'
-          const row =
-            nextOrientation === 'down'
-              ? anchor.row - match.bIndex
-              : anchor.row + match.aIndex
-          const col =
-            nextOrientation === 'across'
-              ? anchor.col - match.bIndex
-              : anchor.col + match.aIndex
+          const row = nextOrientation === 'down' ? anchor.row - match.bIndex : anchor.row + match.aIndex
+          const col = nextOrientation === 'across' ? anchor.col - match.bIndex : anchor.col + match.aIndex
 
           const candidatePlacement: Placement = {
             word,
@@ -344,11 +346,16 @@ const INITIAL_LEVEL = 1
 const INITIAL_PUZZLE = tryGeneratePuzzle(INITIAL_LEVEL)
 
 export default function CrosswordPage() {
+  const { user } = useAuth()
   const [selectedLevel, setSelectedLevel] = useState(INITIAL_LEVEL)
   const [puzzle, setPuzzle] = useState<CrosswordPuzzle | null>(INITIAL_PUZZLE)
   const [checked, setChecked] = useState(false)
   const [revealed, setRevealed] = useState(false)
   const [entries, setEntries] = useState<Record<string, string>>(() => buildEmptyEntries(INITIAL_PUZZLE))
+  const [includeInPublicStats, setIncludeInPublicStats] = useState(false)
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>('idle')
+  const [saveMessage, setSaveMessage] = useState('')
+  const [saveError, setSaveError] = useState('')
 
   const loadPuzzle = (level: number) => {
     const nextPuzzle = tryGeneratePuzzle(level)
@@ -357,6 +364,10 @@ export default function CrosswordPage() {
     setEntries(buildEmptyEntries(nextPuzzle))
     setChecked(false)
     setRevealed(false)
+    setIncludeInPublicStats(false)
+    setSaveStatus('idle')
+    setSaveMessage('')
+    setSaveError('')
   }
 
   const cellMap = useMemo(() => {
@@ -369,9 +380,38 @@ export default function CrosswordPage() {
     : 0
 
   const allCorrect = Boolean(puzzle && correctCount === puzzle.cells.length)
-
+  const puzzleKey = buildPuzzleKey(selectedLevel, puzzle)
   const across = puzzle?.placements.filter((placement) => placement.orientation === 'across') ?? []
   const down = puzzle?.placements.filter((placement) => placement.orientation === 'down') ?? []
+
+  const handleSaveCompletion = async () => {
+    if (!user || !puzzle || !allCorrect || saveStatus === 'saving' || saveStatus === 'saved') return
+
+    setSaveStatus('saving')
+    setSaveMessage('')
+    setSaveError('')
+
+    const result = await saveCrosswordCompletion({
+      userId: user.id,
+      level: selectedLevel,
+      puzzleKey,
+      includeInPublicStats,
+      fallbackName: user.email?.split('@')[0],
+    })
+
+    if (result.error) {
+      setSaveStatus('idle')
+      setSaveError(result.error)
+      return
+    }
+
+    setSaveStatus('saved')
+    setSaveMessage(
+      includeInPublicStats
+        ? 'Crossword saved. This completed session is now included in public records.'
+        : 'Crossword saved privately. This session will stay out of public records.'
+    )
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -409,10 +449,7 @@ export default function CrosswordPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <button
-              onClick={() => loadPuzzle(selectedLevel)}
-              className="btn-coral px-5 py-3 rounded-2xl text-sm"
-            >
+            <button onClick={() => loadPuzzle(selectedLevel)} className="btn-coral px-5 py-3 rounded-2xl text-sm">
               New Puzzle
             </button>
             <button
@@ -435,10 +472,7 @@ export default function CrosswordPage() {
           <p className="text-text-subtle mb-4">
             Try another level or generate a new puzzle. The generator only uses short words that can actually cross.
           </p>
-          <button
-            onClick={() => loadPuzzle(selectedLevel)}
-            className="btn-coral px-5 py-3 rounded-2xl text-sm"
-          >
+          <button onClick={() => loadPuzzle(selectedLevel)} className="btn-coral px-5 py-3 rounded-2xl text-sm">
             Try Again
           </button>
         </div>
@@ -502,9 +536,7 @@ export default function CrosswordPage() {
               </button>
               <button
                 onClick={() => {
-                  setEntries(
-                    buildEmptyEntries(puzzle)
-                  )
+                  setEntries(buildEmptyEntries(puzzle))
                   setChecked(false)
                   setRevealed(false)
                 }}
@@ -531,6 +563,47 @@ export default function CrosswordPage() {
                   : 'Enter one Korean block per square.'}
               {checked && allCorrect ? <span className="text-emerald-400 font-semibold"> Puzzle complete.</span> : null}
             </div>
+
+            {allCorrect ? (
+              user ? (
+                <div className="mt-5 bg-card-surface border border-border rounded-2xl p-4">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={includeInPublicStats}
+                      onChange={(event) => setIncludeInPublicStats(event.target.checked)}
+                      disabled={saveStatus === 'saving' || saveStatus === 'saved'}
+                      className="mt-1"
+                    />
+                    <span>
+                      <span className="block font-semibold text-text">Include this completed session in public records</span>
+                      <span className="block text-sm text-text-subtle">
+                        Turn this on if you want this crossword clear to count in Hard Workers.
+                      </span>
+                    </span>
+                  </label>
+
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <button
+                      onClick={() => void handleSaveCompletion()}
+                      disabled={saveStatus === 'saving' || saveStatus === 'saved'}
+                      className="btn-coral px-5 py-3 rounded-2xl text-sm disabled:opacity-40"
+                    >
+                      {saveStatus === 'saving' ? 'Saving...' : saveStatus === 'saved' ? 'Saved' : 'Save Completion'}
+                    </button>
+                    {saveMessage ? <p className="text-sm text-emerald-400 self-center">{saveMessage}</p> : null}
+                    {saveError ? <p className="text-sm text-coral self-center">{saveError}</p> : null}
+                  </div>
+                </div>
+              ) : (
+                <div className="mt-5 bg-card-surface border border-border rounded-2xl p-4">
+                  <p className="font-semibold text-text mb-1">Log in to save this crossword</p>
+                  <p className="text-sm text-text-subtle">
+                    Signing in lets you choose whether this completed session appears in public stats.
+                  </p>
+                </div>
+              )
+            ) : null}
           </section>
 
           <section className="bg-card border border-border rounded-3xl p-6">

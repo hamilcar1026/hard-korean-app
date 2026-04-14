@@ -422,9 +422,9 @@ function MemoryContent() {
     setSaveMessage(
       shareScore
         ? nextSavedRank
-          ? `Result saved and shared. You are now #${nextSavedRank} on this board.`
-          : 'Result saved and shared to the leaderboard.'
-        : 'Result saved privately. You can keep competing anytime.'
+          ? `Result saved. This completed session is public and you are now #${nextSavedRank} on this board.`
+          : 'Result saved. This completed session is now included in public records.'
+        : 'Result saved privately. This run will stay out of public records.'
     )
     setScoreRefreshKey((value) => value + 1)
   }
@@ -768,9 +768,9 @@ function MemoryContent() {
                   className="mt-1"
                 />
                 <span>
-                  <span className="block font-semibold text-text">Share this score publicly</span>
+                  <span className="block font-semibold text-text">Include this completed session in public records</span>
                   <span className="block text-sm text-text-subtle">
-                    Keep it off to save privately. Turn it on if you want your name on the leaderboard.
+                    Turn this on if you want this run to count in the leaderboard and Hard Workers.
                   </span>
                 </span>
               </label>
