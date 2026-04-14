@@ -47,10 +47,12 @@ interface StudentStat {
   known: number
   learning: number
   total: number
-  quiz_attempts_7d: number
+  vocab_quiz_attempts_7d: number
+  grammar_quiz_attempts_7d: number
   memory_sessions_7d: number
   crossword_completions_7d: number
-  avg_quiz_score: number | null
+  avg_vocab_quiz_score: number | null
+  avg_grammar_quiz_score: number | null
   avg_memory_time_ms: number | null
   weekly_activity: number
   monthly_activity: number
@@ -130,7 +132,17 @@ export default function DashboardPage() {
 
     const progressAgg: Record<string, { known: number; learning: number }> = {}
     const activityAgg: Record<string, { week: number; month: number; year: number; latestAt: string | null }> = {}
-    const quizAgg: Record<string, { attempts7d: number; totalPct: number; count: number }> = {}
+    const quizAgg: Record<
+      string,
+      {
+        vocabAttempts7d: number
+        grammarAttempts7d: number
+        vocabTotalPct: number
+        grammarTotalPct: number
+        vocabCount: number
+        grammarCount: number
+      }
+    > = {}
     const memoryAgg: Record<string, { sessions7d: number; totalDuration: number; count: number }> = {}
     const crosswordAgg: Record<string, { completions7d: number }> = {}
 
@@ -174,16 +186,33 @@ export default function DashboardPage() {
       bumpActivity(row.user_id, row.completed_at)
     }
 
-    for (const row of (quizAttempts as Pick<QuizAttemptRow, 'user_id' | 'correct_pct' | 'created_at'>[] | null) ?? []) {
+    for (const row of (quizAttempts as Pick<QuizAttemptRow, 'user_id' | 'correct_pct' | 'created_at' | 'quiz_mode'>[] | null) ?? []) {
       if (!quizAgg[row.user_id]) {
-        quizAgg[row.user_id] = { attempts7d: 0, totalPct: 0, count: 0 }
+        quizAgg[row.user_id] = {
+          vocabAttempts7d: 0,
+          grammarAttempts7d: 0,
+          vocabTotalPct: 0,
+          grammarTotalPct: 0,
+          vocabCount: 0,
+          grammarCount: 0,
+        }
       }
 
       const current = quizAgg[row.user_id]
-      current.totalPct += row.correct_pct
-      current.count += 1
+      const isGrammar = row.quiz_mode.startsWith('grammar_')
+      if (isGrammar) {
+        current.grammarTotalPct += row.correct_pct
+        current.grammarCount += 1
+      } else {
+        current.vocabTotalPct += row.correct_pct
+        current.vocabCount += 1
+      }
       if (new Date(row.created_at).getTime() >= weekAgo) {
-        current.attempts7d += 1
+        if (isGrammar) {
+          current.grammarAttempts7d += 1
+        } else {
+          current.vocabAttempts7d += 1
+        }
       }
 
       bumpActivity(row.user_id, row.created_at)
@@ -212,7 +241,14 @@ export default function DashboardPage() {
     const result: StudentStat[] = [...studentIds]
       .map((uid) => {
         const progressInfo = progressAgg[uid] ?? { known: 0, learning: 0 }
-        const quizInfo = quizAgg[uid] ?? { attempts7d: 0, totalPct: 0, count: 0 }
+        const quizInfo = quizAgg[uid] ?? {
+          vocabAttempts7d: 0,
+          grammarAttempts7d: 0,
+          vocabTotalPct: 0,
+          grammarTotalPct: 0,
+          vocabCount: 0,
+          grammarCount: 0,
+        }
         const memoryInfo = memoryAgg[uid] ?? { sessions7d: 0, totalDuration: 0, count: 0 }
 
         return {
@@ -221,10 +257,16 @@ export default function DashboardPage() {
           known: progressInfo.known,
           learning: progressInfo.learning,
           total: progressInfo.known + progressInfo.learning,
-          quiz_attempts_7d: quizInfo.attempts7d,
+          vocab_quiz_attempts_7d: quizInfo.vocabAttempts7d,
+          grammar_quiz_attempts_7d: quizInfo.grammarAttempts7d,
           memory_sessions_7d: memoryInfo.sessions7d,
           crossword_completions_7d: crosswordAgg[uid]?.completions7d ?? 0,
-          avg_quiz_score: quizInfo.count > 0 ? Math.round(quizInfo.totalPct / quizInfo.count) : null,
+          avg_vocab_quiz_score:
+            quizInfo.vocabCount > 0 ? Math.round(quizInfo.vocabTotalPct / quizInfo.vocabCount) : null,
+          avg_grammar_quiz_score:
+            quizInfo.grammarCount > 0
+              ? Math.round(quizInfo.grammarTotalPct / quizInfo.grammarCount)
+              : null,
           avg_memory_time_ms: memoryInfo.count > 0 ? Math.round(memoryInfo.totalDuration / memoryInfo.count) : null,
           weekly_activity: activityAgg[uid]?.week ?? 0,
           monthly_activity: activityAgg[uid]?.month ?? 0,
@@ -296,10 +338,12 @@ export default function DashboardPage() {
                 <th className="pb-3 pr-6 font-semibold">Tracked</th>
                 <th className="pb-3 pr-6 font-semibold">Known</th>
                 <th className="pb-3 pr-6 font-semibold">Learning</th>
-                <th className="pb-3 pr-6 font-semibold">Quiz 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Vocab Quiz 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Grammar Quiz 7d</th>
                 <th className="pb-3 pr-6 font-semibold">Memory 7d</th>
                 <th className="pb-3 pr-6 font-semibold">Crossword 7d</th>
-                <th className="pb-3 pr-6 font-semibold">Avg Quiz</th>
+                <th className="pb-3 pr-6 font-semibold">Avg Vocab Quiz</th>
+                <th className="pb-3 pr-6 font-semibold">Avg Grammar Quiz</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Memory Time</th>
                 <th className="pb-3 pr-6 font-semibold">Study 7d</th>
                 <th className="pb-3 pr-6 font-semibold">Study 30d</th>
@@ -314,11 +358,15 @@ export default function DashboardPage() {
                   <td className="py-3 pr-6 text-text">{student.total}</td>
                   <td className="py-3 pr-6 text-emerald-400 font-semibold">{student.known}</td>
                   <td className="py-3 pr-6 text-amber-400 font-semibold">{student.learning}</td>
-                  <td className="py-3 pr-6 text-text">{student.quiz_attempts_7d}</td>
+                  <td className="py-3 pr-6 text-text">{student.vocab_quiz_attempts_7d}</td>
+                  <td className="py-3 pr-6 text-text">{student.grammar_quiz_attempts_7d}</td>
                   <td className="py-3 pr-6 text-text">{student.memory_sessions_7d}</td>
                   <td className="py-3 pr-6 text-text">{student.crossword_completions_7d}</td>
                   <td className="py-3 pr-6 text-text">
-                    {student.avg_quiz_score === null ? 'No data' : `${student.avg_quiz_score}%`}
+                    {student.avg_vocab_quiz_score === null ? 'No data' : `${student.avg_vocab_quiz_score}%`}
+                  </td>
+                  <td className="py-3 pr-6 text-text">
+                    {student.avg_grammar_quiz_score === null ? 'No data' : `${student.avg_grammar_quiz_score}%`}
                   </td>
                   <td className="py-3 pr-6 text-text">
                     {formatDuration(student.avg_memory_time_ms)}
@@ -334,7 +382,8 @@ export default function DashboardPage() {
 
           <div className="mt-4 text-xs text-text-faint space-y-1">
             <p>`Tracked / Known / Learning` comes only from saved vocabulary and grammar progress.</p>
-            <p>`Avg Quiz` is the average saved quiz score. `Avg Memory Time` is the average saved memory completion time.</p>
+            <p>`Avg Vocab Quiz` and `Avg Grammar Quiz` are based on saved quiz results for each type.</p>
+            <p>`Avg Memory Time` is the average saved memory completion time.</p>
             <p>`Study 7d / 30d / 365d` combines saved progress reviews, quiz completions, memory sessions, and crossword completions.</p>
           </div>
         </div>

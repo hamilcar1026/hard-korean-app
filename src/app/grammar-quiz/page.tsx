@@ -1,17 +1,19 @@
 'use client'
 
-import { Suspense, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import LevelBadge from '@/components/LevelBadge'
 import TTSButton from '@/components/TTSButton'
+import { useAuth } from '@/contexts/AuthContext'
 import { grammarData } from '@/lib/data'
-import type { GrammarItem } from '@/types'
+import { getUserRecentQuizAttempts, saveQuizAttempt } from '@/lib/quiz'
+import type { GrammarItem, QuizAttemptRow } from '@/types'
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
 const QUESTION_COUNT = 10
 
-type GrammarQuizMode = 'form_to_meaning' | 'meaning_to_form'
+type GrammarQuizMode = 'form_to_meaning' | 'meaning_to_form' | 'example_blank'
 
 type GrammarQuestion = {
   itemId: number
@@ -27,12 +29,27 @@ type GrammarQuestion = {
   correct: string
   choices: string[]
   mode: GrammarQuizMode
+  usedForm?: string
+  exampleEnglish?: string
 }
 
 type AnswerResult = {
   chosen: string
   correct: string
   ok: boolean
+}
+
+function isGrammarQuizMode(mode: string) {
+  return mode.startsWith('grammar_')
+}
+
+function formatTimestamp(value: string) {
+  return new Date(value).toLocaleString([], {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  })
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -55,10 +72,138 @@ function uniqueBy<T>(items: T[], getKey: (item: T) => string) {
 }
 
 function getModeLabel(mode: GrammarQuizMode) {
-  return mode === 'form_to_meaning' ? 'Grammar -> Meaning' : 'Meaning -> Grammar'
+  switch (mode) {
+    case 'form_to_meaning':
+      return 'Grammar -> Meaning'
+    case 'meaning_to_form':
+      return 'Meaning -> Grammar'
+    case 'example_blank':
+      return 'Example Blank'
+    default:
+      return mode
+  }
+}
+
+function getQuestionGuide(mode: GrammarQuizMode) {
+  switch (mode) {
+    case 'form_to_meaning':
+      return 'Match the grammar form to the clearest meaning.'
+    case 'meaning_to_form':
+      return 'Pick the grammar form that best matches the meaning.'
+    case 'example_blank':
+      return 'Pick the form that completes the sentence naturally.'
+    default:
+      return ''
+  }
+}
+
+function getWhyThisFits(question: GrammarQuestion) {
+  switch (question.mode) {
+    case 'form_to_meaning':
+      return `This grammar form is used for: ${question.meaning}.`
+    case 'meaning_to_form':
+      return `The meaning points to the grammar form ${question.form}.`
+    case 'example_blank':
+      return question.usedForm
+        ? `This sentence needs ${question.usedForm}, which comes from the grammar ${question.form}.`
+        : `This sentence is completed with the grammar ${question.form}.`
+    default:
+      return ''
+  }
+}
+
+function getWatchOut(question: GrammarQuestion) {
+  if (question.related) {
+    return `Watch out for related grammar: ${question.related}.`
+  }
+
+  if (question.category) {
+    return `This item belongs to the ${question.category} category.`
+  }
+
+  return ''
+}
+
+function getExampleParts(example: string) {
+  const match = example.match(/^(.*)\s+\((.*)\)\s*$/)
+  if (!match) {
+    return { korean: example.trim(), english: '' }
+  }
+
+  return {
+    korean: match[1].trim(),
+    english: match[2].trim(),
+  }
+}
+
+function getFormVariants(form: string) {
+  return form
+    .split(/[\/,]/)
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .map((part) => part.replace(/[0-9]/g, '').trim())
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length)
+}
+
+function makeBlankQuestionData(item: GrammarItem) {
+  const firstExample = item.examples[0]
+  if (!firstExample) return null
+
+  const { korean, english } = getExampleParts(firstExample)
+  if (!korean) return null
+
+  for (const variant of getFormVariants(item.form)) {
+    if (korean.includes(variant)) {
+      return {
+        blankedKorean: korean.replace(variant, '_____'),
+        usedForm: variant,
+        english,
+      }
+    }
+  }
+
+  return null
 }
 
 function buildQuestion(item: GrammarItem, pool: GrammarItem[], mode: GrammarQuizMode): GrammarQuestion {
+  if (mode === 'example_blank') {
+    const blankData = makeBlankQuestionData(item)
+    if (!blankData) {
+      return buildQuestion(item, pool, 'meaning_to_form')
+    }
+
+    const blankablePool = pool
+      .map((entry) => {
+        const data = makeBlankQuestionData(entry)
+        if (!data || entry.id === item.id) return null
+        return { entry, usedForm: data.usedForm }
+      })
+      .filter((entry): entry is { entry: GrammarItem; usedForm: string } => Boolean(entry))
+
+    const distractors = uniqueBy(blankablePool, (entry) => entry.usedForm)
+      .slice(0, 3)
+      .map((entry) => entry.usedForm)
+
+    return {
+      itemId: item.id ?? 0,
+      level: item.level,
+      category: item.category,
+      form: item.form,
+      meaning: item.meaning,
+      related: item.related,
+      conjugationRule: item.conjugation_rule,
+      examples: item.examples,
+      prompt: blankData.english || item.meaning,
+      secondary: blankData.blankedKorean,
+      correct: blankData.usedForm,
+      choices: shuffle(uniqueBy([blankData.usedForm, ...distractors], (value) => value)),
+      mode,
+      usedForm: blankData.usedForm,
+      exampleEnglish: blankData.english,
+    }
+  }
+
   if (mode === 'form_to_meaning') {
     const distractors = uniqueBy(
       shuffle(pool.filter((entry) => entry.id !== item.id)),
@@ -111,6 +256,7 @@ function buildQuestion(item: GrammarItem, pool: GrammarItem[], mode: GrammarQuiz
 function GrammarQuizContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
+  const { user } = useAuth()
   const levelParam = searchParams.get('level')
 
   const [selectedLevel, setSelectedLevel] = useState<number | null>(
@@ -124,15 +270,28 @@ function GrammarQuizContent() {
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
   const [answers, setAnswers] = useState<AnswerResult[]>([])
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle')
+  const [saveError, setSaveError] = useState('')
+  const [recentAttempts, setRecentAttempts] = useState<QuizAttemptRow[]>([])
+  const [attemptsLoading, setAttemptsLoading] = useState(false)
 
-  const pool = useMemo(
+  const levelPool = useMemo(
     () => (selectedLevel ? grammarData.filter((item) => item.level === selectedLevel) : grammarData),
     [selectedLevel]
   )
+  const blankPool = useMemo(
+    () => levelPool.filter((item) => makeBlankQuestionData(item)),
+    [levelPool]
+  )
+  const pool = quizMode === 'example_blank' ? blankPool : levelPool
 
   const current = questions?.[qIndex] ?? null
   const totalQuestions = questions?.length ?? QUESTION_COUNT
   const currentResult = submitted ? answers[qIndex] : null
+  const grammarRecentAttempts = useMemo(
+    () => recentAttempts.filter((attempt) => isGrammarQuizMode(attempt.quiz_mode)),
+    [recentAttempts]
+  )
 
   const startQuiz = () => {
     if (pool.length < 4) return
@@ -145,6 +304,8 @@ function GrammarQuizContent() {
     setScore(0)
     setFinished(false)
     setAnswers([])
+    setSaveStatus('idle')
+    setSaveError('')
   }
 
   const handleSubmit = () => {
@@ -176,6 +337,22 @@ function GrammarQuizContent() {
     setSubmitted(false)
   }
 
+  const retryWrongAnswers = () => {
+    if (!questions || answers.length === 0) return
+    const wrongQuestions = questions.filter((_, index) => answers[index] && !answers[index].ok)
+    if (wrongQuestions.length === 0) return
+
+    setQuestions(wrongQuestions)
+    setQIndex(0)
+    setSelected(null)
+    setSubmitted(false)
+    setScore(0)
+    setFinished(false)
+    setAnswers([])
+    setSaveStatus('idle')
+    setSaveError('')
+  }
+
   const handleLevelChange = (level: number | null) => {
     setSelectedLevel(level)
     setQuestions(null)
@@ -184,10 +361,53 @@ function GrammarQuizContent() {
     setSubmitted(false)
     setFinished(false)
     setAnswers([])
+    setSaveStatus('idle')
+    setSaveError('')
     const params = new URLSearchParams()
     if (level) params.set('level', String(level))
     router.replace(`/grammar-quiz?${params}`)
   }
+
+  useEffect(() => {
+    if (!finished || !questions || !user || saveStatus !== 'idle') return
+
+    let cancelled = false
+
+    const saveResult = async () => {
+      setSaveStatus('saving')
+      const result = await saveQuizAttempt({
+        userId: user.id,
+        level: selectedLevel,
+        quizMode: `grammar_${quizMode}`,
+        score,
+        totalQuestions,
+      })
+
+      if (cancelled) return
+
+      if (result.error) {
+        setSaveError(result.error)
+        setSaveStatus('error')
+        return
+      }
+
+      setSaveStatus('saved')
+      setSaveError('')
+      setAttemptsLoading(true)
+      const recentResult = await getUserRecentQuizAttempts(user.id, 8)
+      if (cancelled) return
+      if (!recentResult.error) {
+        setRecentAttempts(recentResult.data)
+      }
+      setAttemptsLoading(false)
+    }
+
+    void saveResult()
+
+    return () => {
+      cancelled = true
+    }
+  }, [finished, questions, quizMode, saveStatus, score, selectedLevel, totalQuestions, user])
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
@@ -238,6 +458,7 @@ function GrammarQuizContent() {
             [
               ['form_to_meaning', 'Grammar -> Meaning'],
               ['meaning_to_form', 'Meaning -> Grammar'],
+              ['example_blank', 'Example Blank'],
             ] as [GrammarQuizMode, string][]
           ).map(([value, label]) => (
             <button
@@ -307,10 +528,12 @@ function GrammarQuizContent() {
                   {current.prompt}
                 </h2>
                 {current.secondary && (
-                  <p className="mt-2 text-text-subtle">{current.secondary}</p>
+                  <p className="mt-2 text-text-subtle">
+                    {current.mode === 'example_blank' ? `Sentence: ${current.secondary}` : current.secondary}
+                  </p>
                 )}
               </div>
-              {current.mode === 'form_to_meaning' && (
+              {(current.mode === 'form_to_meaning' || current.mode === 'example_blank') && (
                 <TTSButton text={current.form} className="shrink-0" />
               )}
             </div>
@@ -363,10 +586,31 @@ function GrammarQuizContent() {
                 <p className="font-semibold text-text mb-2">
                   {currentResult?.ok ? 'Correct' : 'Not quite'}
                 </p>
+                <div className="space-y-2 mb-4 text-sm text-text-subtle">
+                  <p>
+                    <span className="font-semibold text-text">How to read this:</span>{' '}
+                    {getQuestionGuide(current.mode)}
+                  </p>
+                  <p>
+                    <span className="font-semibold text-text">Why it fits:</span>{' '}
+                    {getWhyThisFits(current)}
+                  </p>
+                  {getWatchOut(current) ? (
+                    <p>
+                      <span className="font-semibold text-text">Watch out:</span>{' '}
+                      {getWatchOut(current)}
+                    </p>
+                  ) : null}
+                </div>
                 <div className="grid gap-2 text-sm text-text-subtle">
                   <p>
                     <span className="font-semibold text-text">Grammar:</span> {current.form}
                   </p>
+                  {current.usedForm && (
+                    <p>
+                      <span className="font-semibold text-text">Used here:</span> {current.usedForm}
+                    </p>
+                  )}
                   <p>
                     <span className="font-semibold text-text">Meaning:</span> {current.meaning}
                   </p>
@@ -385,6 +629,12 @@ function GrammarQuizContent() {
                     <p>
                       <span className="font-semibold text-text">Example:</span>{' '}
                       {current.examples[0]}
+                    </p>
+                  )}
+                  {current.exampleEnglish && (
+                    <p>
+                      <span className="font-semibold text-text">English prompt:</span>{' '}
+                      {current.exampleEnglish}
                     </p>
                   )}
                 </div>
@@ -410,6 +660,20 @@ function GrammarQuizContent() {
             You finished the {getModeLabel(quizMode)} set for
             {selectedLevel ? ` TOPIK ${selectedLevel}` : ' all levels'}.
           </p>
+
+          {user ? (
+            <div className="mb-6 rounded-2xl border border-border bg-card-surface px-4 py-3 text-sm text-text-subtle">
+              {saveStatus === 'saving'
+                ? 'Saving this grammar quiz result...'
+                : saveStatus === 'saved'
+                  ? 'Grammar quiz result saved.'
+                  : saveError || 'Waiting to save your grammar quiz result.'}
+            </div>
+          ) : (
+            <div className="mb-6 rounded-2xl border border-border bg-card-surface px-4 py-3 text-sm text-text-subtle">
+              Log in if you want your grammar quiz results to appear in your dashboard.
+            </div>
+          )}
 
           <div className="grid gap-3 mb-6">
             {questions.map((question, index) => {
@@ -437,9 +701,50 @@ function GrammarQuizContent() {
             <button onClick={startQuiz} className="btn-coral px-5 py-2 rounded-xl">
               Try Again
             </button>
+            {answers.some((answer) => !answer.ok) ? (
+              <button onClick={retryWrongAnswers} className="btn-ghost px-5 py-2 rounded-xl">
+                Retry Wrong Answers
+              </button>
+            ) : null}
             <Link href={selectedLevel ? `/grammar?level=${selectedLevel}` : '/grammar'} className="btn-ghost px-5 py-2 rounded-xl">
               Study Grammar
             </Link>
+          </div>
+
+          <div className="mt-6 space-y-3">
+            <div className="flex items-center justify-between gap-3">
+              <h3 className="text-sm font-semibold text-text">Recent Grammar Quiz Saves</h3>
+              <Link href="/dashboard" className="text-xs text-text-subtle hover:text-text transition-colors">
+                Open dashboard
+              </Link>
+            </div>
+
+            {user ? (
+              attemptsLoading ? (
+                <p className="text-sm text-text-faint">Loading grammar quiz history...</p>
+              ) : grammarRecentAttempts.length === 0 ? (
+                <p className="text-sm text-text-faint">Your saved grammar quiz runs will show up here.</p>
+              ) : (
+                grammarRecentAttempts.map((attempt) => (
+                  <div key={attempt.id} className="rounded-2xl border border-border bg-card-surface px-4 py-3">
+                    <p className="font-bold text-text">
+                      {attempt.score}/{attempt.total_questions} / {attempt.correct_pct}%
+                    </p>
+                    <p className="text-sm text-text-muted mt-1">
+                      {getModeLabel(
+                        attempt.quiz_mode === 'grammar_form_to_meaning'
+                          ? 'form_to_meaning'
+                          : attempt.quiz_mode === 'grammar_example_blank'
+                            ? 'example_blank'
+                            : 'meaning_to_form'
+                      )}{' '}
+                      / {attempt.level ? `TOPIK ${attempt.level}` : 'All levels'}
+                    </p>
+                    <p className="text-xs text-text-faint mt-2">{formatTimestamp(attempt.created_at)}</p>
+                  </div>
+                ))
+              )
+            ) : null}
           </div>
         </div>
       )}

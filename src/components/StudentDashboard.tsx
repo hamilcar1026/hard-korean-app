@@ -47,9 +47,19 @@ function getQuizModeLabel(mode: string) {
       return 'Example Blank'
     case 'typing':
       return 'Type the Word'
+    case 'grammar_form_to_meaning':
+      return 'Grammar to Meaning'
+    case 'grammar_meaning_to_form':
+      return 'Meaning to Grammar'
+    case 'grammar_example_blank':
+      return 'Grammar Blank'
     default:
       return mode
   }
+}
+
+function isGrammarQuizMode(mode: string) {
+  return mode.startsWith('grammar_')
 }
 
 function getLevelProgress(progress: UserProgressRow[]) {
@@ -165,7 +175,16 @@ export default function StudentDashboard() {
     const known = progress.filter((item) => item.status === 'known').length
     const learning = progress.filter((item) => item.status === 'learning').length
     const reviewedToday = getTodayCount(progress)
-    const bestQuiz = recentQuizAttempts.reduce<QuizAttemptRow | null>((best, attempt) => {
+    const vocabularyQuizAttempts = recentQuizAttempts.filter((attempt) => !isGrammarQuizMode(attempt.quiz_mode))
+    const grammarQuizAttempts = recentQuizAttempts.filter((attempt) => isGrammarQuizMode(attempt.quiz_mode))
+    const bestQuiz = vocabularyQuizAttempts.reduce<QuizAttemptRow | null>((best, attempt) => {
+      if (!best) return attempt
+      if (attempt.correct_pct !== best.correct_pct) {
+        return attempt.correct_pct > best.correct_pct ? attempt : best
+      }
+      return attempt.score > best.score ? attempt : best
+    }, null)
+    const bestGrammarQuiz = grammarQuizAttempts.reduce<QuizAttemptRow | null>((best, attempt) => {
       if (!best) return attempt
       if (attempt.correct_pct !== best.correct_pct) {
         return attempt.correct_pct > best.correct_pct ? attempt : best
@@ -173,7 +192,17 @@ export default function StudentDashboard() {
       return attempt.score > best.score ? attempt : best
     }, null)
 
-    return { levelProgress, reviewItems, known, learning, reviewedToday, bestQuiz }
+    return {
+      levelProgress,
+      reviewItems,
+      known,
+      learning,
+      reviewedToday,
+      bestQuiz,
+      bestGrammarQuiz,
+      vocabularyQuizAttempts,
+      grammarQuizAttempts,
+    }
   }, [progress, recentQuizAttempts])
 
   if (!user) return null
@@ -387,12 +416,12 @@ export default function StudentDashboard() {
         <section className="bg-card border border-border rounded-3xl p-6">
           <div className="mb-5">
             <h2 className="text-xl font-black text-text">Quiz Snapshot</h2>
-            <p className="text-sm text-text-subtle">Your latest saved quiz runs and best recent accuracy.</p>
+            <p className="text-sm text-text-subtle">Track vocabulary and grammar quiz results separately.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
             <div className="bg-card-surface border border-border rounded-2xl p-4">
-              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Best Recent Quiz</p>
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Best Vocab Quiz</p>
               {loading ? (
                 <p className="text-sm text-text-faint">Loading...</p>
               ) : stats.bestQuiz ? (
@@ -408,35 +437,92 @@ export default function StudentDashboard() {
             </div>
 
             <div className="bg-card-surface border border-border rounded-2xl p-4">
+              <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Best Grammar Quiz</p>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading...</p>
+              ) : stats.bestGrammarQuiz ? (
+                <>
+                  <p className="text-2xl font-black text-text">{stats.bestGrammarQuiz.correct_pct}%</p>
+                  <p className="text-sm text-text-muted mt-1">
+                    {stats.bestGrammarQuiz.score}/{stats.bestGrammarQuiz.total_questions} / {getQuizModeLabel(stats.bestGrammarQuiz.quiz_mode)}
+                  </p>
+                </>
+              ) : (
+                <p className="text-sm text-text-faint">Save a grammar quiz result to see it here.</p>
+              )}
+            </div>
+
+            <div className="bg-card-surface border border-border rounded-2xl p-4">
               <p className="text-xs text-text-subtle uppercase tracking-wide mb-2">Saved Attempts</p>
               <p className="text-2xl font-black text-text">{loading ? '...' : recentQuizAttempts.length}</p>
-              <p className="text-sm text-text-muted mt-1">Recent quiz runs currently shown below</p>
+              <p className="text-sm text-text-muted mt-1">
+                {loading
+                  ? 'Loading...'
+                  : `${stats.vocabularyQuizAttempts.length} vocab / ${stats.grammarQuizAttempts.length} grammar`}
+              </p>
             </div>
           </div>
 
-          <div className="space-y-3 mb-5">
-            {loading ? (
-              <p className="text-sm text-text-faint">Loading quiz history...</p>
-            ) : recentQuizAttempts.length === 0 ? (
-              <p className="text-sm text-text-faint">Save a quiz result to start tracking your accuracy here.</p>
-            ) : (
-              recentQuizAttempts.map((attempt) => (
-                <div key={attempt.id} className="bg-card-surface border border-border rounded-2xl p-4">
-                  <p className="font-bold text-text">
-                    {attempt.score}/{attempt.total_questions} / {attempt.correct_pct}%
-                  </p>
-                  <p className="text-sm text-text-muted mt-1">
-                    {getQuizModeLabel(attempt.quiz_mode)} / {attempt.level ? `TOPIK ${attempt.level}` : 'All levels'}
-                  </p>
-                  <p className="text-xs text-text-faint mt-2">{formatTimestamp(attempt.created_at)}</p>
-                </div>
-              ))
-            )}
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-5">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-text">Recent Vocabulary Quiz Runs</h3>
+                <Link href="/quiz" className="text-xs text-text-subtle hover:text-text transition-colors">
+                  Open
+                </Link>
+              </div>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading quiz history...</p>
+              ) : stats.vocabularyQuizAttempts.length === 0 ? (
+                <p className="text-sm text-text-faint">Save a vocabulary quiz result to start tracking it here.</p>
+              ) : (
+                stats.vocabularyQuizAttempts.map((attempt) => (
+                  <div key={attempt.id} className="bg-card-surface border border-border rounded-2xl p-4">
+                    <p className="font-bold text-text">
+                      {attempt.score}/{attempt.total_questions} / {attempt.correct_pct}%
+                    </p>
+                    <p className="text-sm text-text-muted mt-1">
+                      {getQuizModeLabel(attempt.quiz_mode)} / {attempt.level ? `TOPIK ${attempt.level}` : 'All levels'}
+                    </p>
+                    <p className="text-xs text-text-faint mt-2">{formatTimestamp(attempt.created_at)}</p>
+                  </div>
+                ))
+              )}
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-text">Recent Grammar Quiz Runs</h3>
+                <Link href="/grammar-quiz" className="text-xs text-text-subtle hover:text-text transition-colors">
+                  Open
+                </Link>
+              </div>
+              {loading ? (
+                <p className="text-sm text-text-faint">Loading grammar quiz history...</p>
+              ) : stats.grammarQuizAttempts.length === 0 ? (
+                <p className="text-sm text-text-faint">Save a grammar quiz result to start tracking it here.</p>
+              ) : (
+                stats.grammarQuizAttempts.map((attempt) => (
+                  <div key={attempt.id} className="bg-card-surface border border-border rounded-2xl p-4">
+                    <p className="font-bold text-text">
+                      {attempt.score}/{attempt.total_questions} / {attempt.correct_pct}%
+                    </p>
+                    <p className="text-sm text-text-muted mt-1">
+                      {getQuizModeLabel(attempt.quiz_mode)} / {attempt.level ? `TOPIK ${attempt.level}` : 'All levels'}
+                    </p>
+                    <p className="text-xs text-text-faint mt-2">{formatTimestamp(attempt.created_at)}</p>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
 
           <div className="space-y-3">
             <Link href="/quiz" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
-              Take a quiz
+              Take a vocabulary quiz
+            </Link>
+            <Link href="/grammar-quiz" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
+              Take a grammar quiz
             </Link>
             <Link href="/memory" className="btn-ghost px-4 py-3 rounded-2xl text-sm inline-block w-full text-center">
               Play memory game
