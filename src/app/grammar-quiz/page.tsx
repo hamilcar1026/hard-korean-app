@@ -71,6 +71,49 @@ function uniqueBy<T>(items: T[], getKey: (item: T) => string) {
   })
 }
 
+function getMeaningTokens(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/[^a-z\s-]/g, ' ')
+    .split(/[\s-]+/)
+    .map((token) => token.trim())
+    .filter(Boolean)
+    .filter(
+      (token) =>
+        ![
+          'used',
+          'to',
+          'show',
+          'mean',
+          'means',
+          'marker',
+          'form',
+          'after',
+          'before',
+          'the',
+          'a',
+          'an',
+          'or',
+          'and',
+          'of',
+          'in',
+          'on',
+        ].includes(token)
+    )
+}
+
+function meaningsOverlap(a: string, b: string) {
+  const tokensA = new Set(getMeaningTokens(a))
+  const tokensB = new Set(getMeaningTokens(b))
+
+  for (const token of tokensA) {
+    if (tokensB.has(token)) return true
+  }
+
+  return false
+}
+
 function getModeLabel(mode: GrammarQuizMode) {
   switch (mode) {
     case 'form_to_meaning':
@@ -156,7 +199,10 @@ function buildQuestion(item: GrammarItem, pool: GrammarItem[], mode: GrammarQuiz
       })
       .filter((entry): entry is { entry: GrammarItem; usedForm: string } => Boolean(entry))
 
-    const distractors = uniqueBy(blankablePool, (entry) => entry.usedForm)
+    const distractors = uniqueBy(
+      blankablePool.filter((entry) => !meaningsOverlap(entry.entry.meaning, item.meaning)),
+      (entry) => entry.usedForm
+    )
       .slice(0, 3)
       .map((entry) => entry.usedForm)
 
@@ -181,7 +227,11 @@ function buildQuestion(item: GrammarItem, pool: GrammarItem[], mode: GrammarQuiz
 
   if (mode === 'form_to_meaning') {
     const distractors = uniqueBy(
-      shuffle(pool.filter((entry) => entry.id !== item.id)),
+      shuffle(
+        pool.filter(
+          (entry) => entry.id !== item.id && !meaningsOverlap(entry.meaning, item.meaning)
+        )
+      ),
       (entry) => entry.meaning
     )
       .slice(0, 3)
