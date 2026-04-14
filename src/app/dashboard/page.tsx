@@ -47,12 +47,11 @@ interface StudentStat {
   known: number
   learning: number
   total: number
-  quiz_best_pct: number | null
-  quiz_recent_attempts: number
-  memory_best_moves: number | null
-  memory_best_time_ms: number | null
-  memory_recent_runs: number
-  crossword_recent_completions: number
+  quiz_attempts_7d: number
+  memory_sessions_7d: number
+  crossword_completions_7d: number
+  avg_quiz_score: number | null
+  avg_memory_time_ms: number | null
   weekly_activity: number
   monthly_activity: number
   yearly_activity: number
@@ -60,7 +59,7 @@ interface StudentStat {
 }
 
 function formatDuration(durationMs: number | null) {
-  if (durationMs === null) return 'No record'
+  if (durationMs === null) return 'No data'
 
   const totalSeconds = Math.max(1, Math.round(durationMs / 1000))
   const minutes = Math.floor(totalSeconds / 60)
@@ -77,15 +76,6 @@ function formatTimestamp(value: string | null) {
     hour: 'numeric',
     minute: '2-digit',
   })
-}
-
-function MiniStat({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="rounded-xl border border-border bg-card-surface px-3 py-2 min-w-[88px]">
-      <p className="text-[10px] uppercase tracking-wide text-text-faint mb-1">{label}</p>
-      <p className="font-bold text-text text-sm">{value}</p>
-    </div>
-  )
 }
 
 export default function DashboardPage() {
@@ -108,7 +98,7 @@ export default function DashboardPage() {
       { data: profiles, error: profilesError },
     ] = await Promise.all([
       supabase.from('user_progress').select('user_id, status, reviewed_at'),
-      supabase.from('memory_scores').select('user_id, moves, duration_ms, completed_at'),
+      supabase.from('memory_scores').select('user_id, duration_ms, completed_at'),
       supabase.from('quiz_attempts').select('user_id, correct_pct, created_at'),
       supabase.from('crossword_completions').select('user_id, completed_at'),
       supabase.from('profiles').select('id, email'),
@@ -140,9 +130,9 @@ export default function DashboardPage() {
 
     const progressAgg: Record<string, { known: number; learning: number }> = {}
     const activityAgg: Record<string, { week: number; month: number; year: number; latestAt: string | null }> = {}
-    const quizAgg: Record<string, { bestPct: number | null; recentAttempts: number }> = {}
-    const memoryAgg: Record<string, { bestMoves: number | null; bestTimeMs: number | null; recentRuns: number }> = {}
-    const crosswordAgg: Record<string, { recentCompletions: number }> = {}
+    const quizAgg: Record<string, { attempts7d: number; totalPct: number; count: number }> = {}
+    const memoryAgg: Record<string, { sessions7d: number; totalDuration: number; count: number }> = {}
+    const crosswordAgg: Record<string, { completions7d: number }> = {}
 
     const bumpActivity = (userId: string, timestamp: string) => {
       if (!activityAgg[userId]) {
@@ -154,8 +144,8 @@ export default function DashboardPage() {
       if (time >= monthAgo) activityAgg[userId].month += 1
       if (time >= yearAgo) activityAgg[userId].year += 1
 
-      const currentLatest = activityAgg[userId].latestAt
-      if (!currentLatest || time > new Date(currentLatest).getTime()) {
+      const latestAt = activityAgg[userId].latestAt
+      if (!latestAt || time > new Date(latestAt).getTime()) {
         activityAgg[userId].latestAt = timestamp
       }
     }
@@ -169,25 +159,16 @@ export default function DashboardPage() {
       bumpActivity(row.user_id, row.reviewed_at)
     }
 
-    for (const row of (memoryScores as Pick<MemoryScoreRow, 'user_id' | 'moves' | 'duration_ms' | 'completed_at'>[] | null) ?? []) {
+    for (const row of (memoryScores as Pick<MemoryScoreRow, 'user_id' | 'duration_ms' | 'completed_at'>[] | null) ?? []) {
       if (!memoryAgg[row.user_id]) {
-        memoryAgg[row.user_id] = { bestMoves: null, bestTimeMs: null, recentRuns: 0 }
+        memoryAgg[row.user_id] = { sessions7d: 0, totalDuration: 0, count: 0 }
       }
 
       const current = memoryAgg[row.user_id]
-      const isBetter =
-        current.bestMoves === null ||
-        row.moves < current.bestMoves ||
-        (row.moves === current.bestMoves &&
-          (current.bestTimeMs === null || row.duration_ms < current.bestTimeMs))
-
-      if (isBetter) {
-        current.bestMoves = row.moves
-        current.bestTimeMs = row.duration_ms
-      }
-
+      current.totalDuration += row.duration_ms
+      current.count += 1
       if (new Date(row.completed_at).getTime() >= weekAgo) {
-        current.recentRuns += 1
+        current.sessions7d += 1
       }
 
       bumpActivity(row.user_id, row.completed_at)
@@ -195,15 +176,14 @@ export default function DashboardPage() {
 
     for (const row of (quizAttempts as Pick<QuizAttemptRow, 'user_id' | 'correct_pct' | 'created_at'>[] | null) ?? []) {
       if (!quizAgg[row.user_id]) {
-        quizAgg[row.user_id] = { bestPct: null, recentAttempts: 0 }
+        quizAgg[row.user_id] = { attempts7d: 0, totalPct: 0, count: 0 }
       }
 
       const current = quizAgg[row.user_id]
-      if (current.bestPct === null || row.correct_pct > current.bestPct) {
-        current.bestPct = row.correct_pct
-      }
+      current.totalPct += row.correct_pct
+      current.count += 1
       if (new Date(row.created_at).getTime() >= weekAgo) {
-        current.recentAttempts += 1
+        current.attempts7d += 1
       }
 
       bumpActivity(row.user_id, row.created_at)
@@ -211,11 +191,11 @@ export default function DashboardPage() {
 
     for (const row of ((crosswordCompletions as Array<{ user_id: string; completed_at: string }> | null) ?? [])) {
       if (!crosswordAgg[row.user_id]) {
-        crosswordAgg[row.user_id] = { recentCompletions: 0 }
+        crosswordAgg[row.user_id] = { completions7d: 0 }
       }
 
       if (new Date(row.completed_at).getTime() >= weekAgo) {
-        crosswordAgg[row.user_id].recentCompletions += 1
+        crosswordAgg[row.user_id].completions7d += 1
       }
 
       bumpActivity(row.user_id, row.completed_at)
@@ -232,18 +212,20 @@ export default function DashboardPage() {
     const result: StudentStat[] = [...studentIds]
       .map((uid) => {
         const progressInfo = progressAgg[uid] ?? { known: 0, learning: 0 }
+        const quizInfo = quizAgg[uid] ?? { attempts7d: 0, totalPct: 0, count: 0 }
+        const memoryInfo = memoryAgg[uid] ?? { sessions7d: 0, totalDuration: 0, count: 0 }
+
         return {
           user_id: uid,
           email: emailMap[uid] ?? uid,
           known: progressInfo.known,
           learning: progressInfo.learning,
           total: progressInfo.known + progressInfo.learning,
-          quiz_best_pct: quizAgg[uid]?.bestPct ?? null,
-          quiz_recent_attempts: quizAgg[uid]?.recentAttempts ?? 0,
-          memory_best_moves: memoryAgg[uid]?.bestMoves ?? null,
-          memory_best_time_ms: memoryAgg[uid]?.bestTimeMs ?? null,
-          memory_recent_runs: memoryAgg[uid]?.recentRuns ?? 0,
-          crossword_recent_completions: crosswordAgg[uid]?.recentCompletions ?? 0,
+          quiz_attempts_7d: quizInfo.attempts7d,
+          memory_sessions_7d: memoryInfo.sessions7d,
+          crossword_completions_7d: crosswordAgg[uid]?.completions7d ?? 0,
+          avg_quiz_score: quizInfo.count > 0 ? Math.round(quizInfo.totalPct / quizInfo.count) : null,
+          avg_memory_time_ms: memoryInfo.count > 0 ? Math.round(memoryInfo.totalDuration / memoryInfo.count) : null,
           weekly_activity: activityAgg[uid]?.week ?? 0,
           monthly_activity: activityAgg[uid]?.month ?? 0,
           yearly_activity: activityAgg[uid]?.year ?? 0,
@@ -252,8 +234,8 @@ export default function DashboardPage() {
       })
       .sort((a, b) => {
         if (b.weekly_activity !== a.weekly_activity) return b.weekly_activity - a.weekly_activity
-        if (b.total !== a.total) return b.total - a.total
-        return b.monthly_activity - a.monthly_activity
+        if (b.monthly_activity !== a.monthly_activity) return b.monthly_activity - a.monthly_activity
+        return b.total - a.total
       })
 
     setStats(result)
@@ -288,7 +270,7 @@ export default function DashboardPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-black text-text mb-1">Teacher Dashboard</h1>
         <p className="text-text-subtle text-sm">
-          A cleaner weekly view of progress, practice variety, and recent student activity.
+          A compact view for large classes: averages, counts, and recent activity.
         </p>
       </div>
 
@@ -306,65 +288,54 @@ export default function DashboardPage() {
       ) : stats.length === 0 ? (
         <div className="text-center py-20 text-text-faint">No study records yet.</div>
       ) : (
-        <div className="space-y-4">
-          {stats.map((student) => (
-            <div key={student.user_id} className="bg-card border border-border rounded-3xl p-5">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                <div>
-                  <h2 className="text-lg font-black text-text">{student.email}</h2>
-                  <p className="text-sm text-text-muted mt-1">
-                    Latest activity: {formatTimestamp(student.latest_activity_at)}
-                  </p>
-                </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border text-left text-text-subtle">
+                <th className="pb-3 pr-6 font-semibold">Student Email</th>
+                <th className="pb-3 pr-6 font-semibold">Tracked</th>
+                <th className="pb-3 pr-6 font-semibold">Known</th>
+                <th className="pb-3 pr-6 font-semibold">Learning</th>
+                <th className="pb-3 pr-6 font-semibold">Quiz 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Memory 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Crossword 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Avg Quiz</th>
+                <th className="pb-3 pr-6 font-semibold">Avg Memory Time</th>
+                <th className="pb-3 pr-6 font-semibold">Study 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Study 30d</th>
+                <th className="pb-3 pr-6 font-semibold">Study 365d</th>
+                <th className="pb-3 font-semibold">Latest Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {stats.map((student) => (
+                <tr key={student.user_id} className="border-b border-border hover:bg-card-surface transition-colors">
+                  <td className="py-3 pr-6 text-text font-medium truncate max-w-[240px]">{student.email}</td>
+                  <td className="py-3 pr-6 text-text">{student.total}</td>
+                  <td className="py-3 pr-6 text-emerald-400 font-semibold">{student.known}</td>
+                  <td className="py-3 pr-6 text-amber-400 font-semibold">{student.learning}</td>
+                  <td className="py-3 pr-6 text-text">{student.quiz_attempts_7d}</td>
+                  <td className="py-3 pr-6 text-text">{student.memory_sessions_7d}</td>
+                  <td className="py-3 pr-6 text-text">{student.crossword_completions_7d}</td>
+                  <td className="py-3 pr-6 text-text">
+                    {student.avg_quiz_score === null ? 'No data' : `${student.avg_quiz_score}%`}
+                  </td>
+                  <td className="py-3 pr-6 text-text">
+                    {formatDuration(student.avg_memory_time_ms)}
+                  </td>
+                  <td className="py-3 pr-6 text-text">{student.weekly_activity}</td>
+                  <td className="py-3 pr-6 text-text">{student.monthly_activity}</td>
+                  <td className="py-3 pr-6 text-text">{student.yearly_activity}</td>
+                  <td className="py-3 text-text-subtle">{formatTimestamp(student.latest_activity_at)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
 
-                <div className="flex flex-wrap gap-2">
-                  <MiniStat label="Known" value={student.known} />
-                  <MiniStat label="Learning" value={student.learning} />
-                  <MiniStat label="Tracked" value={student.total} />
-                  <MiniStat label="Study 7d" value={student.weekly_activity} />
-                  <MiniStat label="Study 30d" value={student.monthly_activity} />
-                  <MiniStat label="Study 365d" value={student.yearly_activity} />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
-                <div className="bg-card-surface border border-border rounded-2xl p-4">
-                  <p className="text-xs uppercase tracking-wide text-text-subtle mb-2">This Week</p>
-                  <p className="text-sm text-text">Quiz {student.quiz_recent_attempts}</p>
-                  <p className="text-sm text-text">Memory {student.memory_recent_runs}</p>
-                  <p className="text-sm text-text">Crossword {student.crossword_recent_completions}</p>
-                </div>
-
-                <div className="bg-card-surface border border-border rounded-2xl p-4">
-                  <p className="text-xs uppercase tracking-wide text-text-subtle mb-2">Best Quiz</p>
-                  <p className="text-lg font-bold text-text">
-                    {student.quiz_best_pct === null ? 'No record' : `${student.quiz_best_pct}%`}
-                  </p>
-                  <p className="text-xs text-text-faint mt-2">Highest saved quiz score</p>
-                </div>
-
-                <div className="bg-card-surface border border-border rounded-2xl p-4">
-                  <p className="text-xs uppercase tracking-wide text-text-subtle mb-2">Best Memory</p>
-                  <p className="text-lg font-bold text-text">
-                    {student.memory_best_moves === null ? 'No record' : `${student.memory_best_moves} moves`}
-                  </p>
-                  <p className="text-xs text-text-faint mt-2">
-                    {student.memory_best_moves === null ? 'No saved memory run yet' : formatDuration(student.memory_best_time_ms)}
-                  </p>
-                </div>
-              </div>
-
-              {student.total === 0 ? (
-                <p className="mt-4 text-xs text-text-faint">
-                  This student has activity records, but has not marked any vocabulary or grammar items as known or learning yet.
-                </p>
-              ) : null}
-            </div>
-          ))}
-
-          <div className="text-xs text-text-faint space-y-1">
+          <div className="mt-4 text-xs text-text-faint space-y-1">
+            <p>`Tracked / Known / Learning` comes only from saved vocabulary and grammar progress.</p>
+            <p>`Avg Quiz` is the average saved quiz score. `Avg Memory Time` is the average saved memory completion time.</p>
             <p>`Study 7d / 30d / 365d` combines saved progress reviews, quiz completions, memory sessions, and crossword completions.</p>
-            <p>`Tracked` counts only vocabulary and grammar items saved as known or learning.</p>
           </div>
         </div>
       )}
