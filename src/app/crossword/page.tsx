@@ -387,6 +387,10 @@ export default function CrosswordPage() {
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>('idle')
   const [saveMessage, setSaveMessage] = useState('')
   const [saveError, setSaveError] = useState('')
+  const [activeCellKey, setActiveCellKey] = useState<string | null>(
+    INITIAL_PUZZLE?.cells[0] ? getCellKey(INITIAL_PUZZLE.cells[0].row, INITIAL_PUZZLE.cells[0].col) : null
+  )
+  const [activeDirection, setActiveDirection] = useState<Orientation>('across')
 
   const loadPuzzle = (level: number) => {
     const nextPuzzle = tryGeneratePuzzle(level)
@@ -399,12 +403,48 @@ export default function CrosswordPage() {
     setSaveStatus('idle')
     setSaveMessage('')
     setSaveError('')
+    setActiveCellKey(
+      nextPuzzle?.cells[0] ? getCellKey(nextPuzzle.cells[0].row, nextPuzzle.cells[0].col) : null
+    )
+    setActiveDirection('across')
   }
 
   const cellMap = useMemo(() => {
     if (!puzzle) return new Map<string, Cell>()
     return new Map(puzzle.cells.map((cell) => [getCellKey(cell.row, cell.col), cell]))
   }, [puzzle])
+
+  const placementLookup = useMemo(() => {
+    const lookup = new Map<string, Placement[]>()
+    if (!puzzle) return lookup
+
+    puzzle.placements.forEach((placement) => {
+      splitBlocks(placement.answer).forEach((_, index) => {
+        const row = placement.row + (placement.orientation === 'down' ? index : 0)
+        const col = placement.col + (placement.orientation === 'across' ? index : 0)
+        const key = getCellKey(row, col)
+        const current = lookup.get(key) ?? []
+        current.push(placement)
+        lookup.set(key, current)
+      })
+    })
+
+    return lookup
+  }, [puzzle])
+
+  const activePlacement = useMemo(() => {
+    if (!activeCellKey) return null
+    const placements = placementLookup.get(activeCellKey) ?? []
+    return (
+      placements.find((placement) => placement.orientation === activeDirection) ??
+      placements[0] ??
+      null
+    )
+  }, [activeCellKey, activeDirection, placementLookup])
+
+  const activePlacementKey = activePlacement
+    ? `${activePlacement.number}-${activePlacement.orientation}`
+    : null
 
   const correctCount = puzzle
     ? puzzle.cells.filter((cell) => entries[getCellKey(cell.row, cell.col)] === cell.answer).length
@@ -414,6 +454,19 @@ export default function CrosswordPage() {
   const puzzleKey = buildPuzzleKey(selectedLevel, puzzle)
   const across = puzzle?.placements.filter((placement) => placement.orientation === 'across') ?? []
   const down = puzzle?.placements.filter((placement) => placement.orientation === 'down') ?? []
+
+  const moveToSiblingCell = (currentKey: string, direction: Orientation, step: 1 | -1) => {
+    const currentCell = cellMap.get(currentKey)
+    if (!currentCell) return
+
+    const nextRow = currentCell.row + (direction === 'down' ? step : 0)
+    const nextCol = currentCell.col + (direction === 'across' ? step : 0)
+    const nextKey = getCellKey(nextRow, nextCol)
+
+    if (cellMap.has(nextKey)) {
+      setActiveCellKey(nextKey)
+    }
+  }
 
   const handleSaveCompletion = async () => {
     if (!user || !puzzle || !allCorrect || saveStatus === 'saving' || saveStatus === 'saved') return
@@ -543,16 +596,72 @@ export default function CrosswordPage() {
                     ) : null}
                     <input
                       value={currentValue}
+                      onFocus={() => {
+                        setActiveCellKey(key)
+                        const placements = placementLookup.get(key) ?? []
+                        if (placements.some((placement) => placement.orientation === activeDirection)) return
+                        if (placements[0]) setActiveDirection(placements[0].orientation)
+                      }}
+                      onClick={() => {
+                        if (activeCellKey === key) {
+                          const placements = placementLookup.get(key) ?? []
+                          if (placements.length > 1) {
+                            setActiveDirection((prev) => (prev === 'across' ? 'down' : 'across'))
+                          }
+                        }
+                      }}
                       onChange={(event) => {
                         setChecked(false)
                         setRevealed(false)
+                        setActiveCellKey(key)
+                        const nextValue = event.target.value.trim().slice(0, 1)
                         setEntries((prev) => ({
                           ...prev,
-                          [key]: event.target.value.trim().slice(0, 1),
+                          [key]: nextValue,
                         }))
+                        if (nextValue) {
+                          moveToSiblingCell(key, activeDirection, 1)
+                        }
+                      }}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Backspace' && !entries[key]) {
+                          moveToSiblingCell(key, activeDirection, -1)
+                          return
+                        }
+
+                        if (event.key === 'ArrowRight') {
+                          event.preventDefault()
+                          setActiveDirection('across')
+                          moveToSiblingCell(key, 'across', 1)
+                        } else if (event.key === 'ArrowLeft') {
+                          event.preventDefault()
+                          setActiveDirection('across')
+                          moveToSiblingCell(key, 'across', -1)
+                        } else if (event.key === 'ArrowDown') {
+                          event.preventDefault()
+                          setActiveDirection('down')
+                          moveToSiblingCell(key, 'down', 1)
+                        } else if (event.key === 'ArrowUp') {
+                          event.preventDefault()
+                          setActiveDirection('down')
+                          moveToSiblingCell(key, 'down', -1)
+                        }
                       }}
                       className={`aspect-square w-full rounded-2xl border text-center text-3xl font-black bg-card text-text focus:outline-none transition-colors ${
-                        isCorrect ? 'border-emerald-400' : isWrong ? 'border-coral' : 'border-border'
+                        isCorrect
+                          ? 'border-emerald-400'
+                          : isWrong
+                            ? 'border-coral'
+                            : activeCellKey === key
+                              ? 'border-coral shadow-sm'
+                              : activePlacement &&
+                                  splitBlocks(activePlacement.answer).some((_, index) => {
+                                    const row = activePlacement.row + (activePlacement.orientation === 'down' ? index : 0)
+                                    const col = activePlacement.col + (activePlacement.orientation === 'across' ? index : 0)
+                                    return getCellKey(row, col) === key
+                                  })
+                                ? 'border-border-hover bg-card-surface'
+                                : 'border-border'
                       }`}
                       maxLength={1}
                     />
@@ -643,7 +752,14 @@ export default function CrosswordPage() {
                 <h2 className="text-lg font-black text-text mb-3">Across</h2>
                 <div className="space-y-3">
                   {across.map((clue) => (
-                    <div key={`${clue.number}-across`} className="bg-card-surface border border-border rounded-2xl p-4">
+                    <div
+                      key={`${clue.number}-across`}
+                      className={`border rounded-2xl p-4 transition-colors ${
+                        activePlacementKey === `${clue.number}-across`
+                          ? 'bg-card border-coral/60'
+                          : 'bg-card-surface border-border'
+                      }`}
+                    >
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Across</p>
                       <p className="text-xs text-text-faint mb-2">{clue.pos}</p>
                       <p className="text-sm text-text">{clue.clue}</p>
@@ -657,7 +773,14 @@ export default function CrosswordPage() {
                 <h2 className="text-lg font-black text-text mb-3">Down</h2>
                 <div className="space-y-3">
                   {down.map((clue) => (
-                    <div key={`${clue.number}-down`} className="bg-card-surface border border-border rounded-2xl p-4">
+                    <div
+                      key={`${clue.number}-down`}
+                      className={`border rounded-2xl p-4 transition-colors ${
+                        activePlacementKey === `${clue.number}-down`
+                          ? 'bg-card border-coral/60'
+                          : 'bg-card-surface border-border'
+                      }`}
+                    >
                       <p className="text-xs uppercase tracking-wide text-text-subtle mb-1">{clue.number} Down</p>
                       <p className="text-xs text-text-faint mb-2">{clue.pos}</p>
                       <p className="text-sm text-text">{clue.clue}</p>
