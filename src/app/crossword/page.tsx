@@ -31,6 +31,8 @@ type CrosswordPuzzle = {
   height: number
   cells: Cell[]
   placements: Placement[]
+  intersectionCount: number
+  qualityScore: number
 }
 
 const LEVELS = [1, 2, 3, 4, 5, 6]
@@ -234,6 +236,7 @@ function assignNumbers(placements: Placement[]) {
 function buildPuzzleFromPlacements(placements: Placement[]): CrosswordPuzzle {
   const normalized = assignNumbers(normalizePuzzle(placements))
   const cells = new Map<string, Cell>()
+  let intersectionCount = 0
 
   normalized.forEach((placement) => {
     splitBlocks(placement.answer).forEach((block, index) => {
@@ -241,6 +244,10 @@ function buildPuzzleFromPlacements(placements: Placement[]): CrosswordPuzzle {
       const col = placement.col + (placement.orientation === 'across' ? index : 0)
       const key = getCellKey(row, col)
       const current = cells.get(key)
+
+      if (current) {
+        intersectionCount += 1
+      }
 
       cells.set(key, {
         row,
@@ -253,12 +260,24 @@ function buildPuzzleFromPlacements(placements: Placement[]): CrosswordPuzzle {
 
   const maxRow = Math.max(...[...cells.values()].map((cell) => cell.row))
   const maxCol = Math.max(...[...cells.values()].map((cell) => cell.col))
+  const width = maxCol + 1
+  const height = maxRow + 1
+  const occupiedCount = cells.size
+  const area = width * height
+  const density = occupiedCount / area
+  const qualityScore =
+    intersectionCount * 30 +
+    normalized.length * 18 +
+    Math.round(density * 100) -
+    area
 
   return {
-    width: maxCol + 1,
-    height: maxRow + 1,
+    width,
+    height,
     cells: [...cells.values()],
     placements: normalized.sort((a, b) => (a.number ?? 0) - (b.number ?? 0) || a.orientation.localeCompare(b.orientation)),
+    intersectionCount,
+    qualityScore,
   }
 }
 
@@ -281,6 +300,7 @@ function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
   const pool = shuffle(vocabData.filter((item) => item.level === level && isGoodCrosswordWord(item))).slice(0, 48)
 
   if (pool.length < TARGET_WORD_COUNT) return null
+  let bestPuzzle: CrosswordPuzzle | null = null
 
   for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt += 1) {
     const placements: Placement[] = [
@@ -334,12 +354,23 @@ function tryGeneratePuzzle(level: number): CrosswordPuzzle | null {
       }
 
       if (placements.length === TARGET_WORD_COUNT) {
-        return buildPuzzleFromPlacements(placements)
+        const puzzle = buildPuzzleFromPlacements(placements)
+        const isBetter =
+          !bestPuzzle ||
+          puzzle.qualityScore > bestPuzzle.qualityScore ||
+          (puzzle.qualityScore === bestPuzzle.qualityScore &&
+            puzzle.intersectionCount > bestPuzzle.intersectionCount)
+
+        if (isBetter) {
+          bestPuzzle = puzzle
+        }
+
+        break
       }
     }
   }
 
-  return null
+  return bestPuzzle
 }
 
 const INITIAL_LEVEL = 1
