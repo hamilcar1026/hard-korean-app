@@ -68,6 +68,50 @@ function uniqueByLabel<T>(items: T[], getLabel: (item: T) => string) {
   })
 }
 
+function getMeaningTokens(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/[^a-z\s-]/g, ' ')
+    .split(/[\s-/,]+/)
+    .map((token) => token.trim())
+    .filter(Boolean)
+    .filter(
+      (token) =>
+        ![
+          'to',
+          'a',
+          'an',
+          'the',
+          'be',
+          'of',
+          'and',
+          'or',
+          'with',
+          'used',
+          'very',
+        ].includes(token)
+    )
+}
+
+function meaningsOverlap(a: string, b: string) {
+  const tokensA = new Set(getMeaningTokens(a))
+  const tokensB = new Set(getMeaningTokens(b))
+
+  for (const token of tokensA) {
+    if (tokensB.has(token)) return true
+  }
+
+  return false
+}
+
+function buildMeaningHint(item: (typeof vocabData)[number]) {
+  const extra = []
+  if (item.pos) extra.push(item.pos)
+  if (item.example_en) extra.push(item.example_en)
+  return extra.join(' / ')
+}
+
 function isCorrectTyping(input: string, correct: string) {
   const userNorm = normalize(input)
   const answers = correct.split('/').map((p) => normalize(p.trim()))
@@ -214,7 +258,11 @@ function QuizContent() {
 
       if (quizMode === 'word_to_meaning') {
         const distractors = uniqueByLabel(
-          shuffle(pool.filter((v) => v.word !== item.word)),
+          shuffle(
+            pool.filter(
+              (v) => v.word !== item.word && !meaningsOverlap(v.meaning, item.meaning)
+            )
+          ),
           (v) => v.meaning
         )
           .slice(0, 3)
@@ -233,7 +281,14 @@ function QuizContent() {
 
       if (quizMode === 'meaning_to_word') {
         const distractors = uniqueByLabel(
-          shuffle(pool.filter((v) => v.word !== item.word)),
+          shuffle(
+            pool.filter(
+              (v) =>
+                v.word !== item.word &&
+                v.pos !== item.pos &&
+                !meaningsOverlap(v.meaning, item.meaning)
+            )
+          ),
           (v) => v.word
         )
           .slice(0, 3)
@@ -242,7 +297,7 @@ function QuizContent() {
         return {
           type: 'meaning_to_word',
           prompt: item.meaning,
-          secondary: `${item.pos} / ${item.example_en}`,
+          secondary: buildMeaningHint(item),
           level: item.level,
           correct: item.word,
           choices: shuffle(buildChoiceSet(item.word, distractors)),
@@ -250,7 +305,7 @@ function QuizContent() {
       }
 
       const distractors = uniqueByLabel(
-        shuffle(pool.filter((v) => v.word !== item.word)),
+        shuffle(pool.filter((v) => v.word !== item.word && v.pos !== item.pos)),
         (v) => v.word
       )
         .slice(0, 3)
