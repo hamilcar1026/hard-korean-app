@@ -7,9 +7,10 @@ interface Props {
   text: string
   lang?: string
   size?: 'sm' | 'md'
+  className?: string
 }
 
-export default function TTSButton({ text, lang = 'ko-KR', size = 'sm' }: Props) {
+export default function TTSButton({ text, lang = 'ko-KR', size = 'sm', className = '' }: Props) {
   const [loading, setLoading] = useState(false)
 
   const speak = async () => {
@@ -35,7 +36,7 @@ export default function TTSButton({ text, lang = 'ko-KR', size = 'sm' }: Props) 
         void speak()
       }}
       title={loading ? 'Loading voice...' : 'Listen'}
-      className={cls}
+      className={`${cls} ${className}`.trim()}
       disabled={loading}
     >
       <svg

@@ -137,6 +137,15 @@ function GrammarContent() {
         </p>
       </div>
 
+      <div className="mb-6 flex flex-wrap gap-3">
+        <button
+          onClick={() => router.push(selectedLevel ? `/grammar-quiz?level=${selectedLevel}` : '/grammar-quiz')}
+          className="btn-coral px-5 py-2 rounded-xl"
+        >
+          Start Grammar Quiz
+        </button>
+      </div>
+
       <div className="flex flex-wrap gap-2 mb-4">
         <button
           onClick={() => handleLevelChange(null)}
