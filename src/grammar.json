@@ -759,9 +759,9 @@
     "level": 2,
     "category": "adnominal/nominalizing ending",
     "form": "-은2/-ㄴ4",
-    "related": "",
-    "conjugation_rule": "-은 after consonant-ending stems; -ㄴ after vowel-ending stems (adnominal past/descriptive)",
-    "meaning": "adnominal modifier (past tense)",
+    "related": "-은3",
+    "conjugation_rule": "-은 after consonant-ending verb stems; -ㄴ after vowel-ending verb stems. Used to make a past adnominal form before a noun.",
+    "meaning": "basic past adnominal ending used to describe a noun by a completed action",
     "examples": [
       "어제 먹은 음식이 맛있었어요. (The food I ate yesterday was delicious.)",
       "읽은 책을 반납했어요. (I returned the book I read.)"
@@ -783,12 +783,12 @@
     "level": 2,
     "category": "adnominal/nominalizing ending",
     "form": "-은3",
-    "related": "",
-    "conjugation_rule": "",
-    "meaning": "adnominal modifier for past or completed state",
+    "related": "-은2/-ㄴ4",
+    "conjugation_rule": "Often appears in forms that describe a resulting or established state before a noun, overlapping with the broader past adnominal ending -은2/-ㄴ4.",
+    "meaning": "adnominal form often used for a resulting or established state before a noun",
     "examples": [
-      "닫힌 문을 열었어요. (I opened the closed door.)",
-      "배운 내용을 복습했어요. (I reviewed what I learned.)"
+      "닫힌 창문을 닫아 두었어요. (I left the closed window shut.)",
+      "익힌 고기를 접시에 담았어요. (I put the cooked meat on a plate.)"
     ]
   },
   {
