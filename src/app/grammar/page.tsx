@@ -262,13 +262,13 @@ function GrammarContent() {
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-text-subtle">
-          <span>{filtered.length} matches</span>
-          <span>{selectedCategory === 'All' ? 'All categories' : selectedCategory}</span>
-          <span>{grammarFilter === 'all' ? 'All grammar' : 'Favorites only'}</span>
-          <span>{search.trim() ? 'Expanded search enabled' : 'Browse mode'}</span>
-          {!user ? <span>Log in to use favorites</span> : null}
-        </div>
+        <p className="mt-3 text-[11px] sm:text-xs text-text-faint">
+          Current view: {filtered.length} matches •{' '}
+          {selectedCategory === 'All' ? 'All categories' : selectedCategory} •{' '}
+          {grammarFilter === 'all' ? 'All grammar' : 'Favorites only'} •{' '}
+          {search.trim() ? 'Search active' : 'Browse mode'}
+          {!user ? ' • Log in to use favorites' : ''}
+        </p>
       </div>
 
       {viewMode === 'card' ? (

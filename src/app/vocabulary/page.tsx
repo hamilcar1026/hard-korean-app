@@ -333,22 +333,20 @@ function VocabContent() {
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3 text-xs text-text-subtle">
-            <span>{filtered.length.toLocaleString()} matches</span>
-            <span>{selectedPos === 'All' ? 'All parts of speech' : selectedPos}</span>
-            <span>
-              {statusFilter === 'all'
-                ? 'All study states'
-                : statusFilter === 'known'
-                  ? 'Known only'
+          <p className="mt-3 text-[11px] sm:text-xs text-text-faint">
+            Current view: {filtered.length.toLocaleString()} matches •{' '}
+            {selectedPos === 'All' ? 'All parts of speech' : selectedPos} •{' '}
+            {statusFilter === 'all'
+              ? 'All study states'
+              : statusFilter === 'known'
+                ? 'Known only'
                 : statusFilter === 'learning'
-                    ? 'Learning only'
-                    : statusFilter === 'unmarked'
-                      ? 'Unmarked only'
-                      : 'Favorites only'}
-            </span>
-            {!user ? <span>Log in to filter by study state</span> : null}
-          </div>
+                  ? 'Learning only'
+                  : statusFilter === 'unmarked'
+                    ? 'Unmarked only'
+                    : 'Favorites only'}
+            {!user ? ' • Log in to filter by study state' : ''}
+          </p>
         </div>
       ) : null}
 

@@ -159,7 +159,7 @@ function getFormVariants(form: string) {
     .split(/[\/,]/)
     .map((part) => part.trim())
     .filter(Boolean)
-    .map((part) => part.replace(/[0-9]/g, '').trim())
+    .map((part) => part.replace(/[0-9]/g, '').replace(/^-+/, '').trim())
     .filter(Boolean)
     .sort((a, b) => b.length - a.length)
 }
@@ -215,8 +215,8 @@ function buildQuestion(item: GrammarItem, pool: GrammarItem[], mode: GrammarQuiz
       related: item.related,
       conjugationRule: item.conjugation_rule,
       examples: item.examples,
-      prompt: blankData.english || item.meaning,
-      secondary: blankData.blankedKorean,
+      prompt: blankData.blankedKorean,
+      secondary: blankData.english || item.meaning,
       correct: blankData.usedForm,
       choices: shuffle(uniqueBy([blankData.usedForm, ...distractors], (value) => value)),
       mode,
@@ -545,7 +545,11 @@ function GrammarQuizContent() {
 
           <div className="mb-6">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-faint mb-3">
-              {current.mode === 'form_to_meaning' ? 'Grammar Form' : 'Meaning'}
+              {current.mode === 'example_blank'
+                ? 'Sentence'
+                : current.mode === 'form_to_meaning'
+                  ? 'Grammar Form'
+                  : 'Meaning'}
             </p>
             <div className="flex items-start gap-3">
               <div className="min-w-0">
@@ -554,7 +558,7 @@ function GrammarQuizContent() {
                 </h2>
                 {current.secondary && (
                   <p className="mt-2 text-text-subtle">
-                    {current.mode === 'example_blank' ? `Sentence: ${current.secondary}` : current.secondary}
+                    {current.mode === 'example_blank' ? current.secondary : current.secondary}
                   </p>
                 )}
               </div>
