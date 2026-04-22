@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import NavBar from '@/components/NavBar'
 import { AuthProvider } from '@/contexts/AuthContext'
@@ -14,10 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')}catch(e){}})()` }} />
-      </head>
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-app-bg text-text">
         <AuthProvider>
           <NavBar />
@@ -26,6 +24,9 @@ export default function RootLayout({
             Hard Korean • Built with TOPIK vocabulary &amp; grammar data
           </footer>
         </AuthProvider>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`}
+        </Script>
       </body>
     </html>
   )

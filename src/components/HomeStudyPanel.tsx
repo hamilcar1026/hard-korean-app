@@ -131,27 +131,23 @@ function RankingCard({
             return (
               <div
                 key={entry.user_id}
-                className={`rounded-2xl p-4 border ${
+                className={`rounded-2xl px-4 py-2.5 border ${
                   isCurrentUser ? 'bg-card border-coral/60 shadow-sm' : 'bg-card-surface border-border'
                 }`}
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <div className="flex items-center gap-2 flex-wrap mb-1">
-                      <p className="text-xs uppercase tracking-wide text-text-subtle">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <p className="text-xs uppercase tracking-wide text-text-subtle truncate">
                         #{index + 1} · {entry.display_name}
                         {isCurrentUser ? ' · You' : ''}
                       </p>
                       {placementBadge ? <Badge label={placementBadge} tone="gold" /> : null}
                       {isCurrentUser ? <Badge label="You" tone="accent" /> : null}
                     </div>
-                    <p className="font-bold text-text">{entry.total_completed} completed sessions</p>
-                    <p className="text-sm text-text-muted mt-1">
-                      Memory {entry.memory_completed} · Crossword {entry.crossword_completed} · Quiz {entry.quiz_completed}
+                    <p className="text-sm text-text mt-1 leading-tight truncate">
+                      <span className="font-bold">{entry.total_completed}</span> sessions · M {entry.memory_completed} · C {entry.crossword_completed} · Q {entry.quiz_completed}
                     </p>
-                    {entry.best_memory_moves !== null ? (
-                      <p className="text-xs text-text-faint mt-1">Best memory run: {entry.best_memory_moves} moves</p>
-                    ) : null}
                   </div>
                 </div>
               </div>

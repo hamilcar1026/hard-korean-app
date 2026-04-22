@@ -8,6 +8,7 @@ import ThemeToggle from './ThemeToggle'
 
 const links = [
   { href: '/', label: 'Home' },
+  { href: '/hangul-quiz', label: 'Hangul Quiz' },
   { href: '/vocabulary', label: 'Vocabulary' },
   { href: '/quiz', label: 'Vocabulary Quiz' },
   { href: '/grammar', label: 'Grammar' },
