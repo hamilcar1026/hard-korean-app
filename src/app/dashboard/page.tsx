@@ -85,12 +85,37 @@ function formatTimestamp(value: string | null) {
   })
 }
 
+function getWeekStartTime() {
+  const start = new Date()
+  const daysSinceMonday = (start.getDay() + 6) % 7
+  start.setDate(start.getDate() - daysSinceMonday)
+  start.setHours(0, 0, 0, 0)
+  return start.getTime()
+}
+
+function formatRangeDate(date: Date) {
+  return date.toLocaleDateString([], { month: 'short', day: 'numeric' })
+}
+
+function getCurrentWeekRangeLabel() {
+  const start = new Date()
+  const daysSinceMonday = (start.getDay() + 6) % 7
+  start.setDate(start.getDate() - daysSinceMonday)
+  start.setHours(0, 0, 0, 0)
+
+  const end = new Date(start)
+  end.setDate(start.getDate() + 6)
+
+  return `${formatRangeDate(start)} - ${formatRangeDate(end)}`
+}
+
 export default function DashboardPage() {
   const { user, role, loading } = useAuth()
   const router = useRouter()
   const [stats, setStats] = useState<StudentStat[]>([])
   const [fetching, setFetching] = useState(false)
   const [error, setError] = useState('')
+  const weekRangeLabel = getCurrentWeekRangeLabel()
 
   const loadStats = async () => {
     setFetching(true)
@@ -126,7 +151,7 @@ export default function DashboardPage() {
     }
 
     const now = Date.now()
-    const weekAgo = now - 7 * 24 * 60 * 60 * 1000
+    const weekStart = getWeekStartTime()
     const monthAgo = now - 30 * 24 * 60 * 60 * 1000
     const yearAgo = now - 365 * 24 * 60 * 60 * 1000
 
@@ -158,7 +183,7 @@ export default function DashboardPage() {
 
       const time = new Date(timestamp).getTime()
       completedAgg[userId].all += 1
-      if (time >= weekAgo) completedAgg[userId].week += 1
+      if (time >= weekStart) completedAgg[userId].week += 1
       if (time >= monthAgo) completedAgg[userId].month += 1
       if (time >= yearAgo) completedAgg[userId].year += 1
 
@@ -184,7 +209,7 @@ export default function DashboardPage() {
       const current = memoryAgg[row.user_id]
       current.totalDuration += row.duration_ms
       current.count += 1
-      if (new Date(row.completed_at).getTime() >= weekAgo) {
+      if (new Date(row.completed_at).getTime() >= weekStart) {
         current.sessions7d += 1
       }
 
@@ -212,7 +237,7 @@ export default function DashboardPage() {
         current.vocabTotalPct += row.correct_pct
         current.vocabCount += 1
       }
-      if (new Date(row.created_at).getTime() >= weekAgo) {
+      if (new Date(row.created_at).getTime() >= weekStart) {
         if (isGrammar) {
           current.grammarAttempts7d += 1
         } else {
@@ -228,7 +253,7 @@ export default function DashboardPage() {
         crosswordAgg[row.user_id] = { completions7d: 0 }
       }
 
-      if (new Date(row.completed_at).getTime() >= weekAgo) {
+      if (new Date(row.completed_at).getTime() >= weekStart) {
         crosswordAgg[row.user_id].completions7d += 1
       }
 
@@ -320,6 +345,9 @@ export default function DashboardPage() {
         <p className="text-text-subtle text-sm">
           A compact view for large classes: averages, counts, and recent activity.
         </p>
+        <p className="text-text-faint text-xs font-semibold uppercase tracking-wide mt-2">
+          This week: {weekRangeLabel}
+        </p>
       </div>
 
       {error ? (
@@ -345,13 +373,13 @@ export default function DashboardPage() {
                 <th className="pb-3 pr-6 font-semibold">Known</th>
                 <th className="pb-3 pr-6 font-semibold">Learning</th>
                 <th className="pb-3 pr-6 font-semibold">Completed All</th>
-                <th className="pb-3 pr-6 font-semibold">Completed 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Completed This Week</th>
                 <th className="pb-3 pr-6 font-semibold">Completed 30d</th>
                 <th className="pb-3 pr-6 font-semibold">Completed 365d</th>
-                <th className="pb-3 pr-6 font-semibold">Vocab Quiz 7d</th>
-                <th className="pb-3 pr-6 font-semibold">Grammar Quiz 7d</th>
-                <th className="pb-3 pr-6 font-semibold">Memory 7d</th>
-                <th className="pb-3 pr-6 font-semibold">Crossword 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Vocab Quiz This Week</th>
+                <th className="pb-3 pr-6 font-semibold">Grammar Quiz This Week</th>
+                <th className="pb-3 pr-6 font-semibold">Memory This Week</th>
+                <th className="pb-3 pr-6 font-semibold">Crossword This Week</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Vocab Quiz</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Grammar Quiz</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Memory Time</th>

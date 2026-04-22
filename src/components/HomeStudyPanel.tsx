@@ -35,6 +35,22 @@ function getPeriodLabel(period: PeriodFilter) {
   return period === 'week' ? 'This Week' : 'All Time'
 }
 
+function formatRangeDate(date: Date) {
+  return date.toLocaleDateString([], { month: 'short', day: 'numeric' })
+}
+
+function getCurrentWeekRangeLabel() {
+  const start = new Date()
+  const daysSinceMonday = (start.getDay() + 6) % 7
+  start.setDate(start.getDate() - daysSinceMonday)
+  start.setHours(0, 0, 0, 0)
+
+  const end = new Date(start)
+  end.setDate(start.getDate() + 6)
+
+  return `${formatRangeDate(start)} - ${formatRangeDate(end)}`
+}
+
 function getPlacementBadge(index: number) {
   if (index === 0) return 'Top 1'
   if (index === 1) return 'Top 2'
@@ -62,6 +78,7 @@ function RankingCard({
   leaderboardError,
   leaderboardLoading,
   periodFilter,
+  weekRangeLabel,
   currentUserId,
   onPeriodChange,
 }: {
@@ -69,6 +86,7 @@ function RankingCard({
   leaderboardError: string
   leaderboardLoading: boolean
   periodFilter: PeriodFilter
+  weekRangeLabel: string
   currentUserId?: string
   onPeriodChange: (period: PeriodFilter) => void
 }) {
@@ -83,6 +101,9 @@ function RankingCard({
         <h2 className="text-2xl font-black text-text">Hard Workers {getPeriodLabel(periodFilter)}</h2>
         <p className="text-sm text-text-muted mt-2">
           Ranked by completed public memory sessions, saved crossword clears, and finished quizzes.
+        </p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-text-faint mt-2">
+          {periodFilter === 'week' ? `Period: ${weekRangeLabel}` : 'Period: All time'}
         </p>
       </div>
 
@@ -121,7 +142,14 @@ function RankingCard({
       ) : leaderboardLoading ? (
         <p className="text-sm text-text-faint">Loading ranking...</p>
       ) : leaders.length === 0 ? (
-        <p className="text-sm text-text-faint">No completed sessions yet for this period.</p>
+        <div className="rounded-2xl border border-border bg-card-surface px-4 py-4">
+          <p className="text-sm font-semibold text-text">No completed sessions {periodFilter === 'week' ? 'this week' : 'yet'}.</p>
+          <p className="text-sm text-text-muted mt-1">
+            {periodFilter === 'week'
+              ? `This week runs ${weekRangeLabel}. Switch to All Time to see earlier records.`
+              : 'Complete a quiz, public memory game, or public crossword to start the ranking.'}
+          </p>
+        </div>
       ) : (
         <div className="space-y-3">
           {leaders.map((entry, index) => {
@@ -168,6 +196,7 @@ export default function HomeStudyPanel() {
   const [leaderboardError, setLeaderboardError] = useState('')
   const [leaderboardLoading, setLeaderboardLoading] = useState(true)
   const [periodFilter, setPeriodFilter] = useState<PeriodFilter>('week')
+  const weekRangeLabel = getCurrentWeekRangeLabel()
 
   useEffect(() => {
     let cancelled = false
@@ -227,6 +256,7 @@ export default function HomeStudyPanel() {
       leaderboardError={leaderboardError}
       leaderboardLoading={leaderboardLoading}
       periodFilter={periodFilter}
+      weekRangeLabel={weekRangeLabel}
       currentUserId={user?.id}
       onPeriodChange={setPeriodFilter}
     />

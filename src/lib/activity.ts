@@ -48,6 +48,14 @@ async function getDisplayName(userId: string, fallbackName?: string) {
   return 'Learner'
 }
 
+function getWeekStartIso() {
+  const start = new Date()
+  const daysSinceMonday = (start.getDay() + 6) % 7
+  start.setDate(start.getDate() - daysSinceMonday)
+  start.setHours(0, 0, 0, 0)
+  return start.toISOString()
+}
+
 export async function saveCrosswordCompletion(input: {
   userId: string
   level: number
@@ -101,7 +109,7 @@ export async function getHardWorkerLeaders(
 
   const since =
     period === 'week'
-      ? new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
+      ? getWeekStartIso()
       : null
 
   let memoryQuery = supabase

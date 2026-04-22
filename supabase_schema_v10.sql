@@ -17,7 +17,7 @@ set search_path = public
 as $$
   with cutoff as (
     select case
-      when period_name = 'week' then now() - interval '7 days'
+      when period_name = 'week' then date_trunc('week', now())
       else null
     end as since_at
   ),
