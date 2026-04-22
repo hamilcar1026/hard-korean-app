@@ -39,6 +39,10 @@ type AnswerResult = {
   ok: boolean
 }
 
+type StartQuizOptions = {
+  resetUsed?: boolean
+}
+
 function isGrammarQuizMode(mode?: string | null) {
   return typeof mode === 'string' && mode.startsWith('grammar_')
 }
@@ -299,6 +303,7 @@ function GrammarQuizContent() {
   const [saveError, setSaveError] = useState('')
   const [recentAttempts, setRecentAttempts] = useState<QuizAttemptRow[]>([])
   const [attemptsLoading, setAttemptsLoading] = useState(false)
+  const [usedQuestionIds, setUsedQuestionIds] = useState<number[]>([])
 
   const levelPool = useMemo(
     () => (selectedLevel ? grammarData.filter((item) => item.level === selectedLevel) : grammarData),
@@ -313,16 +318,31 @@ function GrammarQuizContent() {
   const current = questions?.[qIndex] ?? null
   const totalQuestions = questions?.length ?? QUESTION_COUNT
   const currentResult = submitted ? answers[qIndex] : null
+  const usedQuestionIdSet = useMemo(() => new Set(usedQuestionIds), [usedQuestionIds])
+  const remainingPool = useMemo(
+    () => pool.filter((item) => item.id && !usedQuestionIdSet.has(item.id)),
+    [pool, usedQuestionIdSet]
+  )
+  const remainingCount = remainingPool.length
   const grammarRecentAttempts = useMemo(
     () => recentAttempts.filter((attempt) => isGrammarQuizMode(attempt.quiz_mode)),
     [recentAttempts]
   )
 
-  const startQuiz = () => {
+  const startQuiz = (options: StartQuizOptions = {}) => {
     if (pool.length < 4) return
-    const picked = shuffle(pool).slice(0, Math.min(QUESTION_COUNT, pool.length))
+    const basePool = options.resetUsed ? pool : remainingPool
+    const sourcePool = basePool.length > 0 ? basePool : pool
+    const picked = shuffle(sourcePool).slice(0, Math.min(QUESTION_COUNT, sourcePool.length))
     const nextQuestions = picked.map((item) => buildQuestion(item, pool, quizMode))
+    const pickedIds = picked.map((item) => item.id).filter((id): id is number => typeof id === 'number')
+
     setQuestions(nextQuestions)
+    setUsedQuestionIds((prev) => {
+      const next = options.resetUsed ? new Set<number>() : new Set(prev)
+      pickedIds.forEach((id) => next.add(id))
+      return [...next]
+    })
     setQIndex(0)
     setSelected(null)
     setSubmitted(false)
@@ -388,6 +408,7 @@ function GrammarQuizContent() {
     setAnswers([])
     setSaveStatus('idle')
     setSaveError('')
+    setUsedQuestionIds([])
     const params = new URLSearchParams()
     if (level) params.set('level', String(level))
     router.replace(`/grammar-quiz?${params}`)
@@ -496,6 +517,7 @@ function GrammarQuizContent() {
                 setSubmitted(false)
                 setFinished(false)
                 setAnswers([])
+                setUsedQuestionIds([])
               }}
               className={`px-3 py-1.5 text-sm rounded-xl font-medium transition-colors ${
                 quizMode === value
@@ -513,13 +535,14 @@ function GrammarQuizContent() {
           <div className="text-sm text-text-subtle">
             {pool.length} grammar points
             {selectedLevel ? ` / TOPIK Level ${selectedLevel}` : ' / All levels'}
+            {usedQuestionIds.length > 0 ? ` / ${remainingCount} left in this round` : ''}
           </div>
           <button
-            onClick={startQuiz}
+            onClick={() => startQuiz({ resetUsed: true })}
             disabled={pool.length < 4}
             className="btn-coral px-5 py-2 rounded-xl disabled:opacity-50"
           >
-            {questions ? 'Restart Quiz' : 'Start Quiz'}
+            {questions ? 'Restart From Beginning' : 'Start Quiz'}
           </button>
         </div>
       </div>
@@ -667,6 +690,7 @@ function GrammarQuizContent() {
           <p className="text-text-subtle mb-6">
             You finished the {getModeLabel(quizMode)} set for
             {selectedLevel ? ` TOPIK ${selectedLevel}` : ' all levels'}.
+            {remainingCount > 0 ? ` ${remainingCount} grammar points are still unused in this round.` : ' You have covered every grammar point in this round.'}
           </p>
 
           {user ? (
@@ -706,8 +730,13 @@ function GrammarQuizContent() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <button onClick={startQuiz} className="btn-coral px-5 py-2 rounded-xl">
-              Try Again
+            {remainingCount > 0 ? (
+              <button onClick={() => startQuiz()} className="btn-coral px-5 py-2 rounded-xl">
+                Continue Remaining
+              </button>
+            ) : null}
+            <button onClick={() => startQuiz({ resetUsed: true })} className={remainingCount > 0 ? 'btn-ghost px-5 py-2 rounded-xl' : 'btn-coral px-5 py-2 rounded-xl'}>
+              Restart From Beginning
             </button>
             {answers.some((answer) => !answer.ok) ? (
               <button onClick={retryWrongAnswers} className="btn-ghost px-5 py-2 rounded-xl">

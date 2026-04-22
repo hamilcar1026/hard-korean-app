@@ -51,6 +51,10 @@ interface StudentStat {
   known: number
   learning: number
   total: number
+  completed_sessions_all: number
+  completed_sessions_7d: number
+  completed_sessions_30d: number
+  completed_sessions_365d: number
   vocab_quiz_attempts_7d: number
   grammar_quiz_attempts_7d: number
   memory_sessions_7d: number
@@ -58,9 +62,6 @@ interface StudentStat {
   avg_vocab_quiz_score: number | null
   avg_grammar_quiz_score: number | null
   avg_memory_time_ms: number | null
-  weekly_activity: number
-  monthly_activity: number
-  yearly_activity: number
   latest_activity_at: string | null
 }
 
@@ -104,9 +105,9 @@ export default function DashboardPage() {
       { data: profiles, error: profilesError },
     ] = await Promise.all([
       supabase.from('user_progress').select('user_id, status, reviewed_at'),
-      supabase.from('memory_scores').select('user_id, duration_ms, completed_at'),
+      supabase.from('memory_scores').select('user_id, duration_ms, completed_at').eq('is_public', true),
       supabase.from('quiz_attempts').select('user_id, correct_pct, created_at, quiz_mode'),
-      supabase.from('crossword_completions').select('user_id, completed_at'),
+      supabase.from('crossword_completions').select('user_id, completed_at').eq('is_public', true),
       supabase.from('profiles').select('id, email'),
     ])
 
@@ -135,7 +136,7 @@ export default function DashboardPage() {
     }
 
     const progressAgg: Record<string, { known: number; learning: number }> = {}
-    const activityAgg: Record<string, { week: number; month: number; year: number; latestAt: string | null }> = {}
+    const completedAgg: Record<string, { all: number; week: number; month: number; year: number; latestAt: string | null }> = {}
     const quizAgg: Record<
       string,
       {
@@ -150,19 +151,20 @@ export default function DashboardPage() {
     const memoryAgg: Record<string, { sessions7d: number; totalDuration: number; count: number }> = {}
     const crosswordAgg: Record<string, { completions7d: number }> = {}
 
-    const bumpActivity = (userId: string, timestamp: string) => {
-      if (!activityAgg[userId]) {
-        activityAgg[userId] = { week: 0, month: 0, year: 0, latestAt: null }
+    const bumpCompleted = (userId: string, timestamp: string) => {
+      if (!completedAgg[userId]) {
+        completedAgg[userId] = { all: 0, week: 0, month: 0, year: 0, latestAt: null }
       }
 
       const time = new Date(timestamp).getTime()
-      if (time >= weekAgo) activityAgg[userId].week += 1
-      if (time >= monthAgo) activityAgg[userId].month += 1
-      if (time >= yearAgo) activityAgg[userId].year += 1
+      completedAgg[userId].all += 1
+      if (time >= weekAgo) completedAgg[userId].week += 1
+      if (time >= monthAgo) completedAgg[userId].month += 1
+      if (time >= yearAgo) completedAgg[userId].year += 1
 
-      const latestAt = activityAgg[userId].latestAt
+      const latestAt = completedAgg[userId].latestAt
       if (!latestAt || time > new Date(latestAt).getTime()) {
-        activityAgg[userId].latestAt = timestamp
+        completedAgg[userId].latestAt = timestamp
       }
     }
 
@@ -172,7 +174,6 @@ export default function DashboardPage() {
       }
       if (row.status === 'known') progressAgg[row.user_id].known += 1
       if (row.status === 'learning') progressAgg[row.user_id].learning += 1
-      bumpActivity(row.user_id, row.reviewed_at)
     }
 
     for (const row of (memoryScores as Pick<MemoryScoreRow, 'user_id' | 'duration_ms' | 'completed_at'>[] | null) ?? []) {
@@ -187,7 +188,7 @@ export default function DashboardPage() {
         current.sessions7d += 1
       }
 
-      bumpActivity(row.user_id, row.completed_at)
+      bumpCompleted(row.user_id, row.completed_at)
     }
 
     for (const row of (quizAttempts as Pick<QuizAttemptRow, 'user_id' | 'correct_pct' | 'created_at' | 'quiz_mode'>[] | null) ?? []) {
@@ -219,7 +220,7 @@ export default function DashboardPage() {
         }
       }
 
-      bumpActivity(row.user_id, row.created_at)
+      bumpCompleted(row.user_id, row.created_at)
     }
 
     for (const row of ((crosswordCompletions as Array<{ user_id: string; completed_at: string }> | null) ?? [])) {
@@ -231,7 +232,7 @@ export default function DashboardPage() {
         crosswordAgg[row.user_id].completions7d += 1
       }
 
-      bumpActivity(row.user_id, row.completed_at)
+      bumpCompleted(row.user_id, row.completed_at)
     }
 
     const studentIds = new Set([
@@ -239,7 +240,7 @@ export default function DashboardPage() {
       ...Object.keys(memoryAgg),
       ...Object.keys(quizAgg),
       ...Object.keys(crosswordAgg),
-      ...Object.keys(activityAgg),
+      ...Object.keys(completedAgg),
     ])
 
     const result: StudentStat[] = [...studentIds]
@@ -261,6 +262,10 @@ export default function DashboardPage() {
           known: progressInfo.known,
           learning: progressInfo.learning,
           total: progressInfo.known + progressInfo.learning,
+          completed_sessions_all: completedAgg[uid]?.all ?? 0,
+          completed_sessions_7d: completedAgg[uid]?.week ?? 0,
+          completed_sessions_30d: completedAgg[uid]?.month ?? 0,
+          completed_sessions_365d: completedAgg[uid]?.year ?? 0,
           vocab_quiz_attempts_7d: quizInfo.vocabAttempts7d,
           grammar_quiz_attempts_7d: quizInfo.grammarAttempts7d,
           memory_sessions_7d: memoryInfo.sessions7d,
@@ -272,15 +277,12 @@ export default function DashboardPage() {
               ? Math.round(quizInfo.grammarTotalPct / quizInfo.grammarCount)
               : null,
           avg_memory_time_ms: memoryInfo.count > 0 ? Math.round(memoryInfo.totalDuration / memoryInfo.count) : null,
-          weekly_activity: activityAgg[uid]?.week ?? 0,
-          monthly_activity: activityAgg[uid]?.month ?? 0,
-          yearly_activity: activityAgg[uid]?.year ?? 0,
-          latest_activity_at: activityAgg[uid]?.latestAt ?? null,
+          latest_activity_at: completedAgg[uid]?.latestAt ?? null,
         }
       })
       .sort((a, b) => {
-        if (b.weekly_activity !== a.weekly_activity) return b.weekly_activity - a.weekly_activity
-        if (b.monthly_activity !== a.monthly_activity) return b.monthly_activity - a.monthly_activity
+        if (b.completed_sessions_7d !== a.completed_sessions_7d) return b.completed_sessions_7d - a.completed_sessions_7d
+        if (b.completed_sessions_all !== a.completed_sessions_all) return b.completed_sessions_all - a.completed_sessions_all
         return b.total - a.total
       })
 
@@ -342,6 +344,10 @@ export default function DashboardPage() {
                 <th className="pb-3 pr-6 font-semibold">Tracked</th>
                 <th className="pb-3 pr-6 font-semibold">Known</th>
                 <th className="pb-3 pr-6 font-semibold">Learning</th>
+                <th className="pb-3 pr-6 font-semibold">Completed All</th>
+                <th className="pb-3 pr-6 font-semibold">Completed 7d</th>
+                <th className="pb-3 pr-6 font-semibold">Completed 30d</th>
+                <th className="pb-3 pr-6 font-semibold">Completed 365d</th>
                 <th className="pb-3 pr-6 font-semibold">Vocab Quiz 7d</th>
                 <th className="pb-3 pr-6 font-semibold">Grammar Quiz 7d</th>
                 <th className="pb-3 pr-6 font-semibold">Memory 7d</th>
@@ -349,9 +355,6 @@ export default function DashboardPage() {
                 <th className="pb-3 pr-6 font-semibold">Avg Vocab Quiz</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Grammar Quiz</th>
                 <th className="pb-3 pr-6 font-semibold">Avg Memory Time</th>
-                <th className="pb-3 pr-6 font-semibold">Study 7d</th>
-                <th className="pb-3 pr-6 font-semibold">Study 30d</th>
-                <th className="pb-3 pr-6 font-semibold">Study 365d</th>
                 <th className="pb-3 font-semibold">Latest Activity</th>
               </tr>
             </thead>
@@ -362,6 +365,10 @@ export default function DashboardPage() {
                   <td className="py-3 pr-6 text-text">{student.total}</td>
                   <td className="py-3 pr-6 text-emerald-400 font-semibold">{student.known}</td>
                   <td className="py-3 pr-6 text-amber-400 font-semibold">{student.learning}</td>
+                  <td className="py-3 pr-6 text-text font-semibold">{student.completed_sessions_all}</td>
+                  <td className="py-3 pr-6 text-text">{student.completed_sessions_7d}</td>
+                  <td className="py-3 pr-6 text-text">{student.completed_sessions_30d}</td>
+                  <td className="py-3 pr-6 text-text">{student.completed_sessions_365d}</td>
                   <td className="py-3 pr-6 text-text">{student.vocab_quiz_attempts_7d}</td>
                   <td className="py-3 pr-6 text-text">{student.grammar_quiz_attempts_7d}</td>
                   <td className="py-3 pr-6 text-text">{student.memory_sessions_7d}</td>
@@ -375,9 +382,6 @@ export default function DashboardPage() {
                   <td className="py-3 pr-6 text-text">
                     {formatDuration(student.avg_memory_time_ms)}
                   </td>
-                  <td className="py-3 pr-6 text-text">{student.weekly_activity}</td>
-                  <td className="py-3 pr-6 text-text">{student.monthly_activity}</td>
-                  <td className="py-3 pr-6 text-text">{student.yearly_activity}</td>
                   <td className="py-3 text-text-subtle">{formatTimestamp(student.latest_activity_at)}</td>
                 </tr>
               ))}
@@ -388,7 +392,7 @@ export default function DashboardPage() {
             <p>`Tracked / Known / Learning` comes only from saved vocabulary and grammar progress.</p>
             <p>`Avg Vocab Quiz` and `Avg Grammar Quiz` are based on saved quiz results for each type.</p>
             <p>`Avg Memory Time` is the average saved memory completion time.</p>
-            <p>`Study 7d / 30d / 365d` combines saved progress reviews, quiz completions, memory sessions, and crossword completions.</p>
+            <p>`Completed` uses the same definition as the home ranking: public memory sessions, public crossword clears, and saved quiz attempts.</p>
           </div>
         </div>
       )}
